@@ -8,7 +8,7 @@ flutter_dojo主要分为下面几个部分：Widgets、UI Pattern、Develop UI K
 
 体验Apk下载：
 
-[flutter_dojo]()  
+[flutter_dojo](https://github.com/xuyisheng/flutter_dojo/raw/master/resource/app-release.apk)  
 
 ## 设计思路
 

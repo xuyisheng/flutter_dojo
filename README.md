@@ -6,6 +6,10 @@ flutter_dojo项目的主要目的是为了帮助Flutter初学者快速入门Flut
 
 flutter_dojo主要分为下面几个部分：Widgets、UI Pattern、Develop UI Kit、Animations、Back-end Util。
 
+体验Apk下载：
+
+[flutter_dojo]()  
+
 ## 设计思路
 
 flutter_dojo的设计主要围绕下面三个部分展开：

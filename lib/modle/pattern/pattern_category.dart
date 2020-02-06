@@ -10,6 +10,7 @@ import 'package:flutter_dojo/pattern/display/avatarlist.dart';
 import 'package:flutter_dojo/pattern/display/badge.dart';
 import 'package:flutter_dojo/pattern/display/bubble.dart';
 import 'package:flutter_dojo/pattern/display/layer.dart';
+import 'package:flutter_dojo/pattern/display/layerblendmode.dart';
 import 'package:flutter_dojo/pattern/display/overflow.dart';
 import 'package:flutter_dojo/pattern/display/toast.dart';
 import 'package:flutter_dojo/pattern/gesture/gesturescale.dart';
@@ -139,6 +140,13 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
       subtitle: 'Layer',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Layer', codePath, LayerWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'LayerBlendMode',
+      subtitle: 'LayerBlendMode',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('LayerBlendMode', codePath, LayerBlendModeWidget()),
     ),
     DemoItem(
       icon: Icons.pages,

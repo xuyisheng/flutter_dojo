@@ -250,6 +250,7 @@ flutter:
     - lib/pattern/display/layer.dart
     - lib/pattern/display/avatarlist.dart
     - lib/pattern/display/overflow.dart
+    - lib/pattern/display/layerblendmode.dart
 
     - lib/pattern/gesture/gesturescale.dart
 

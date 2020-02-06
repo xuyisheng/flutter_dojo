@@ -13,6 +13,7 @@ class _DrawStyleWidgetState extends State<DrawStyleWidget> {
   var strokeJoin;
   var style;
   var maskFilter;
+  var isClip = true;
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +62,30 @@ class _DrawStyleWidgetState extends State<DrawStyleWidget> {
         ),
         Container(
           color: Colors.yellow,
-          constraints: const BoxConstraints.expand(height: 500),
+          constraints: const BoxConstraints.expand(height: 400),
           child: CustomPaint(
             painter: PaintTest(strokeWidth, strokeCap, strokeJoin, style, maskFilter),
           ),
         ),
+        SubtitleWidget('限制CustomPaint的绘制尺寸-clip方式'),
+        Container(
+          color: Colors.yellow,
+          constraints: const BoxConstraints.expand(height: 100),
+          child: CustomPaint(
+            painter: PaintTest1(isClip),
+          ),
+        ),
+        Row(
+          children: <Widget>[
+            Text('限制尺寸'),
+            Switch(
+              value: isClip,
+              onChanged: (v) {
+                setState(() => isClip = v);
+              },
+            ),
+          ],
+        )
       ],
     );
   }
@@ -108,6 +128,34 @@ class PaintTest extends CustomPainter {
     canvas.drawLine(offset1, offset2, mPaint);
     canvas.drawLine(offset2, offset3, mPaint);
     canvas.drawCircle(circle0, 50, mPaint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class PaintTest1 extends CustomPainter {
+  final isClip;
+
+  PaintTest1(this.isClip);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    var rect = Rect.fromLTRB(0.0, 0.0, size.width, size.height);
+    if (isClip) {
+      canvas.clipRect(rect);
+    }
+    canvas.drawRect(
+      rect,
+      Paint()..color = Colors.blue,
+    );
+    canvas.drawCircle(
+      Offset(size.width / 2, 0),
+      size.height,
+      Paint()..color = Colors.red,
+    );
   }
 
   @override

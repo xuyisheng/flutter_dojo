@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/backend/catcherror.dart';
 import 'package:flutter_dojo/backend/file.dart';
 import 'package:flutter_dojo/backend/json.dart';
+import 'package:flutter_dojo/backend/key.dart';
 import 'package:flutter_dojo/backend/lifecycle.dart';
 import 'package:flutter_dojo/backend/pageroute.dart';
 import 'package:flutter_dojo/backend/provider.dart';
@@ -26,6 +27,13 @@ List<DemoItem> buildBackendCategoryList = [
     subtitle: 'File',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('File', codePath, FileWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Key',
+    subtitle: 'Key',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('Key', codePath, KeyWidget()),
   ),
   DemoItem(
     icon: Icons.build,

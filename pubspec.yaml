@@ -303,6 +303,7 @@ flutter:
     - lib/backend/json.dart
     - lib/backend/lifecycle.dart
     - lib/backend/catcherror.dart
+    - lib/backend/key.dart
 
     - lib/animation/tween/tweenanimationbuilder.dart
     - lib/animation/tween/testanim1.dart

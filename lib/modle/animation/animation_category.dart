@@ -11,6 +11,7 @@ import 'package:flutter_dojo/animation/animbutton/progressbutton.dart';
 import 'package:flutter_dojo/animation/animlist/animlist.dart';
 import 'package:flutter_dojo/animation/animlist/deleteanimlist.dart';
 import 'package:flutter_dojo/animation/barchat/bar.dart';
+import 'package:flutter_dojo/animation/loading/customprogress.dart';
 import 'package:flutter_dojo/animation/loading/loading.dart';
 import 'package:flutter_dojo/animation/physical/physical.dart';
 import 'package:flutter_dojo/animation/scrollanimation/listtopbottom.dart';
@@ -90,6 +91,13 @@ List<DemoItem> buildLoadingDemoItems(String codePath) {
       subtitle: 'Loading',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Loading', codePath, LoadingWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'CustomProgress',
+      subtitle: 'CustomProgress',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CustomProgress', codePath, CustomProgressWidget()),
     ),
   ];
 }

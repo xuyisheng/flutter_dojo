@@ -325,6 +325,7 @@ flutter:
     - lib/animation/animation/wave.dart
 
     - lib/animation/loading/loading.dart
+    - lib/animation/loading/customprogress.dart
 
     - lib/animation/scrollanimation/scrollinganimation1.dart
     - lib/animation/scrollanimation/scrollinganimation2.dart

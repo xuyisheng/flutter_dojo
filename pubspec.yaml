@@ -273,6 +273,8 @@ flutter:
     - lib/pattern/list/searchlist.dart
     - lib/pattern/list/backdrop.dart
 
+    - lib/pattern/custompaint/custompaint1.dart
+
     - lib/uikit/size.dart
     - lib/uikit/position.dart
     - lib/uikit/keyboard.dart

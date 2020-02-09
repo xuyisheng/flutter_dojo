@@ -6,6 +6,7 @@ import 'package:flutter_dojo/pattern/appbar/appbar.dart';
 import 'package:flutter_dojo/pattern/appbar/customappbar.dart';
 import 'package:flutter_dojo/pattern/appbar/floatingappbar.dart';
 import 'package:flutter_dojo/pattern/appbar/titledbottombar.dart';
+import 'package:flutter_dojo/pattern/custompaint/custompaint1.dart';
 import 'package:flutter_dojo/pattern/display/avatarlist.dart';
 import 'package:flutter_dojo/pattern/display/badge.dart';
 import 'package:flutter_dojo/pattern/display/bubble.dart';
@@ -32,6 +33,10 @@ List<Entry> buildPatternData = <Entry>[
   Entry(
     'Appbar',
     buildAppbarDemoItems('lib/pattern/appbar/'),
+  ),
+  Entry(
+    'CustomPaint',
+    buildCustomPaintDemoItems('lib/pattern/custompaint/'),
   ),
   Entry(
     'Gesture',
@@ -292,6 +297,18 @@ List<DemoItem> buildProfileDemoItems(String codePath) {
       subtitle: 'Profile1',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Profile1', codePath, Profile1Widget()),
+    ),
+  ];
+}
+
+List<DemoItem> buildCustomPaintDemoItems(String codePath) {
+  return [
+    DemoItem(
+      icon: Icons.pages,
+      title: 'CustomPaint1',
+      subtitle: 'CustomPaint1',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CustomPaint', codePath, CustomPaint1Widget()),
     ),
   ];
 }

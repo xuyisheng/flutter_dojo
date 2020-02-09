@@ -307,7 +307,7 @@ class HourHandWidget extends CustomPainter {
     final radius = min(size.width, size.height) * 0.15;
     var rect = Rect.fromCircle(center: Offset(0, -size.height * 0.2), radius: radius * 1.2);
 
-    final Gradient gradient = new LinearGradient(
+    final Gradient gradient = LinearGradient(
       colors: [
         taichiTheme[_Element.indicatorColor].withOpacity(0.1),
         taichiTheme[_Element.indicatorColor],

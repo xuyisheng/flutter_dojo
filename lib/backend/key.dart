@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class KeyWidget extends StatefulWidget {
   @override
@@ -19,7 +20,8 @@ class _KeyWidgetState extends State<KeyWidget> {
   var isUseKey = false;
   var isTop = true;
 
-  var slider = 20.0;
+  var globalSlider = GlobalKey();
+  var globalCheck = GlobalKey<_NewWidgetState>();
 
   @override
   void initState() {
@@ -103,6 +105,29 @@ class _KeyWidgetState extends State<KeyWidget> {
           onPressed: changeColor,
           child: Text('Change Color'),
         ),
+        MainTitleWidget('GlobalKey的基本使用'),
+        SubtitleWidget('GlobalKey类似保存的全局变量'),
+        Container(
+          color: Colors.grey.shade200,
+          height: 100,
+          child: PageView(
+            controller: PageController(),
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              GlobalKeyWidget(key: globalSlider),
+              GlobalKeyWidget(key: globalSlider),
+              GlobalKeyWidget(key: globalSlider),
+            ],
+          ),
+        ),
+        SubtitleWidget('GlobalKey传递给其它页面'),
+        NewWidget(key: globalCheck),
+        RaisedButton(
+          onPressed: () {
+            globalCheck.currentState.changeState();
+          },
+          child: Text('在一个Widget中控制另一个Widget'),
+        ),
       ],
     );
   }
@@ -142,5 +167,57 @@ class _StatefulItemState extends State<StatefulItem> {
       height: 100,
       color: color,
     );
+  }
+}
+
+class GlobalKeyWidget extends StatefulWidget {
+  @override
+  _GlobalKeyWidgetState createState() => _GlobalKeyWidgetState();
+
+  GlobalKeyWidget({Key key}) : super(key: key);
+}
+
+class _GlobalKeyWidgetState extends State<GlobalKeyWidget> {
+  var slide = 0.2;
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Container(
+        height: 50,
+        child: Slider(
+          value: slide,
+          onChanged: (v) {
+            setState(() => slide = v);
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class NewWidget extends StatefulWidget {
+  NewWidget({Key key}) : super(key: key);
+
+  @override
+  _NewWidgetState createState() => _NewWidgetState();
+}
+
+class _NewWidgetState extends State<NewWidget> {
+  var isGlobalKeyCheck = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      child: Switch(
+        value: isGlobalKeyCheck,
+        onChanged: (v) {},
+      ),
+    );
+  }
+
+  changeState() {
+    setState(() => isGlobalKeyCheck = !isGlobalKeyCheck);
   }
 }

@@ -17,6 +17,7 @@ import 'package:flutter_dojo/pattern/display/toast.dart';
 import 'package:flutter_dojo/pattern/gesture/gesturescale.dart';
 import 'package:flutter_dojo/pattern/list/backdrop.dart';
 import 'package:flutter_dojo/pattern/list/searchlist.dart';
+import 'package:flutter_dojo/pattern/list/tree.dart';
 import 'package:flutter_dojo/pattern/listitem/itemlayout.dart';
 import 'package:flutter_dojo/pattern/login/login1.dart';
 import 'package:flutter_dojo/pattern/perspective/flipcard.dart';
@@ -249,6 +250,13 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'Backdrop',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Backdrop', codePath, BackdropWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Tree',
+      subtitle: 'Tree',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Tree', codePath, TreeWidget()),
     ),
   ];
 }

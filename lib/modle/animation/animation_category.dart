@@ -26,6 +26,7 @@ import 'package:flutter_dojo/animation/tween/tweenanimationbuilder.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/pages/pattern/pattern_mainpage.dart';
+import 'package:flutter_dojo/animation/scrollanimation/scrollparallax.dart';
 
 var codePath = 'lib/animation/';
 
@@ -267,6 +268,13 @@ List<DemoItem> buildScrollAnimationDemoItems(String codePath) {
       subtitle: 'ListTopBottom',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('ListTopBottom', codePath, ListTopBottomWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'ScrollParallax',
+      subtitle: 'ScrollParallax',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ScrollParallax', codePath, ScrollParallaxWidget()),
     ),
   ];
 }

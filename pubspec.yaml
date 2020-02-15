@@ -335,6 +335,7 @@ flutter:
     - lib/animation/scrollanimation/scrollinganimation2.dart
     - lib/animation/scrollanimation/scrollinganimation3.dart
     - lib/animation/scrollanimation/listtopbottom.dart
+    - lib/animation/scrollanimation/scrollparallax.dart
 
   fonts:
     - family: RubikMonoOne

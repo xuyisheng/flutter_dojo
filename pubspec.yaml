@@ -269,6 +269,7 @@ flutter:
     - lib/pattern/listitem/itemlayout.dart
 
     - lib/pattern/setting/setting1.dart
+    - lib/pattern/setting/menusetting.dart
 
     - lib/pattern/list/searchlist.dart
     - lib/pattern/list/backdrop.dart

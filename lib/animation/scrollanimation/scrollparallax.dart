@@ -36,6 +36,7 @@ class _ScrollParallaxWidgetState extends State<ScrollParallaxWidget> {
 
   @override
   void dispose() {
+    scrollController.dispose();
     super.dispose();
   }
 

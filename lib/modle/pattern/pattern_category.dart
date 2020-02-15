@@ -24,6 +24,7 @@ import 'package:flutter_dojo/pattern/perspective/flipcard.dart';
 import 'package:flutter_dojo/pattern/perspective/rollcard.dart';
 import 'package:flutter_dojo/pattern/perspective/show3dpage.dart';
 import 'package:flutter_dojo/pattern/profile/profile1.dart';
+import 'package:flutter_dojo/pattern/setting/menusetting.dart';
 import 'package:flutter_dojo/pattern/setting/setting1.dart';
 import 'package:flutter_dojo/pattern/viewpager/anim_slider.dart';
 import 'package:flutter_dojo/pattern/viewpager/pagechangeanim.dart';
@@ -293,6 +294,13 @@ List<DemoItem> buildSettingDemoItems(String codePath) {
       subtitle: 'Setting1',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Setting1', codePath, Setting1Widget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'MenuSetting',
+      subtitle: 'MenuSetting',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('MenuSetting', codePath, MenuSettingWidget()),
     ),
   ];
 }

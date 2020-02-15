@@ -30,6 +30,7 @@ import 'package:flutter_dojo/pattern/viewpager/anim_slider.dart';
 import 'package:flutter_dojo/pattern/viewpager/pagechangeanim.dart';
 import 'package:flutter_dojo/pattern/viewpager/parallaxviewpager.dart';
 import 'package:flutter_dojo/pattern/viewpager/slider.dart';
+import 'package:flutter_dojo/pattern/viewpager/transformslider.dart';
 
 List<Entry> buildPatternData = <Entry>[
   Entry(
@@ -82,6 +83,13 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
   return [
     DemoItem(
       icon: Icons.pages,
+      title: 'AnimSlider',
+      subtitle: 'AnimSlider',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('AnimSlider', codePath, AnimSliderWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
       title: 'ParallaxViewPager',
       subtitle: 'Parallax ViewPager',
       documentationUrl: '',
@@ -103,10 +111,10 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
-      title: 'AnimSlider',
-      subtitle: 'AnimSlider',
+      title: 'TransformSlider',
+      subtitle: 'TransformSlider',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('AnimSlider', codePath, AnimSliderWidget()),
+      buildRoute: (context) => BaseWidget('TransformSlider', codePath, TransformSliderWidget()),
     ),
   ];
 }

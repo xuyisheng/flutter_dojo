@@ -243,6 +243,7 @@ flutter:
     - lib/pattern/viewpager/parallaxviewpager.dart
     - lib/pattern/viewpager/slider.dart
     - lib/pattern/viewpager/anim_slider.dart
+    - lib/pattern/viewpager/transformslider.dart
 
     - lib/pattern/display/bubble.dart
     - lib/pattern/display/badge.dart

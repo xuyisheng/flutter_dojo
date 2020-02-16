@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 import 'package:flutter_dojo/common/multi_selection_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class FittedBoxWidget extends StatefulWidget {
   @override
@@ -16,6 +17,7 @@ class _FittedBoxWidgetState extends State<FittedBoxWidget> {
     return ListView(
       children: <Widget>[
         MainTitleWidget('设置Child的Scale和Position'),
+        SubtitleWidget('负责将Child在Parent组件中的位置和大小进行调整'),
         MultiSelectionWidget(
           'BoxFit',
           BoxFit.values,

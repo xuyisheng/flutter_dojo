@@ -15,6 +15,7 @@ class _TextWidgetState extends State<TextWidget> {
   var overflowSelection = TextOverflow.ellipsis;
   var textAlign = TextAlign.left;
   var justifyEnable = false;
+  var textScaleFactor = 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -152,6 +153,23 @@ class _TextWidgetState extends State<TextWidget> {
               leading: 2,
             ),
           ),
+        ),
+        MainTitleWidget('textScaleFactor'),
+        Text(
+          'textScaleFactor',
+          textScaleFactor: textScaleFactor,
+        ),
+        Row(
+          children: <Widget>[
+            Text('ScaleFactor'),
+            Slider(
+                max: 3,
+                min: 0.1,
+                value: textScaleFactor,
+                onChanged: (v) {
+                  setState(() => textScaleFactor = v);
+                }),
+          ],
         ),
         MainTitleWidget('SelectableText'),
         SelectableText(

@@ -275,6 +275,7 @@ flutter:
     - lib/pattern/list/searchlist.dart
     - lib/pattern/list/backdrop.dart
     - lib/pattern/list/tree.dart
+    - lib/pattern/list/listdetail.dart
 
     - lib/pattern/custompaint/custompaint1.dart
 

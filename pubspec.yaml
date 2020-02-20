@@ -244,6 +244,8 @@ flutter:
     - lib/pattern/viewpager/slider.dart
     - lib/pattern/viewpager/anim_slider.dart
     - lib/pattern/viewpager/transformslider.dart
+    - lib/pattern/viewpager/cardflip.dart
+    - lib/pattern/viewpager/guide.dart
 
     - lib/pattern/display/bubble.dart
     - lib/pattern/display/badge.dart
@@ -252,6 +254,9 @@ flutter:
     - lib/pattern/display/avatarlist.dart
     - lib/pattern/display/overflow.dart
     - lib/pattern/display/layerblendmode.dart
+    - lib/pattern/display/delline.dart
+    - lib/pattern/display/autofold.dart
+    - lib/pattern/display/shadowmask.dart
 
     - lib/pattern/gesture/gesturescale.dart
 
@@ -330,6 +335,7 @@ flutter:
     - lib/animation/animation/bouncing.dart
     - lib/animation/animation/staggeranimation.dart
     - lib/animation/animation/wave.dart
+    - lib/animation/animation/showup.dart
 
     - lib/animation/loading/loading.dart
     - lib/animation/loading/customprogress.dart

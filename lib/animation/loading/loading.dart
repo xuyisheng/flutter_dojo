@@ -5,6 +5,7 @@ import 'package:flutter_dojo/animation/loading/loadingtype2.dart';
 import 'package:flutter_dojo/animation/loading/loadingtype3.dart';
 import 'package:flutter_dojo/animation/loading/loadingtype4.dart';
 import 'package:flutter_dojo/animation/loading/loadingtype5.dart';
+import 'package:flutter_dojo/animation/loading/loadingtype6.dart';
 
 class LoadingWidget extends StatelessWidget {
   @override
@@ -53,6 +54,10 @@ class LoadingWidget extends StatelessWidget {
         Align(
           alignment: Alignment.topLeft,
           child: LoadingType5(size: Size(200, 200)),
+        ),
+        Align(
+          alignment: Alignment.topLeft,
+          child: LoadingType6(),
         ),
       ],
     );

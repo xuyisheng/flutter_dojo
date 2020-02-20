@@ -7,9 +7,12 @@ import 'package:flutter_dojo/pattern/appbar/customappbar.dart';
 import 'package:flutter_dojo/pattern/appbar/floatingappbar.dart';
 import 'package:flutter_dojo/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/pattern/custompaint/custompaint1.dart';
+import 'package:flutter_dojo/pattern/display/autofold.dart';
 import 'package:flutter_dojo/pattern/display/avatarlist.dart';
 import 'package:flutter_dojo/pattern/display/badge.dart';
+import 'package:flutter_dojo/pattern/display/shadowmask.dart';
 import 'package:flutter_dojo/pattern/display/bubble.dart';
+import 'package:flutter_dojo/pattern/display/delline.dart';
 import 'package:flutter_dojo/pattern/display/layer.dart';
 import 'package:flutter_dojo/pattern/display/layerblendmode.dart';
 import 'package:flutter_dojo/pattern/display/overflow.dart';
@@ -28,6 +31,8 @@ import 'package:flutter_dojo/pattern/profile/profile1.dart';
 import 'package:flutter_dojo/pattern/setting/menusetting.dart';
 import 'package:flutter_dojo/pattern/setting/setting1.dart';
 import 'package:flutter_dojo/pattern/viewpager/anim_slider.dart';
+import 'package:flutter_dojo/pattern/viewpager/cardflip.dart';
+import 'package:flutter_dojo/pattern/viewpager/guide.dart';
 import 'package:flutter_dojo/pattern/viewpager/pagechangeanim.dart';
 import 'package:flutter_dojo/pattern/viewpager/parallaxviewpager.dart';
 import 'package:flutter_dojo/pattern/viewpager/slider.dart';
@@ -91,6 +96,20 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
+      title: 'CardFlip',
+      subtitle: 'CardFlip',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CardFlip', codePath, CardFlipWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Guide',
+      subtitle: 'Guide',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Guide', codePath, GuideWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
       title: 'ParallaxViewPager',
       subtitle: 'Parallax ViewPager',
       documentationUrl: '',
@@ -124,10 +143,31 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
   return [
     DemoItem(
       icon: Icons.pages,
+      title: 'AutoFold',
+      subtitle: 'AutoFold',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('AutoFold', codePath, AutoFoldWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'AvatarList',
+      subtitle: 'AvatarList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('AvatarList', codePath, AvatarListWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
       title: 'Badge',
       subtitle: 'Badge',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Badge', codePath, BadgeWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'ShadowMask',
+      subtitle: 'ShadowMask',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ShadowMask', codePath, ShadowMaskWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -138,10 +178,10 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
-      title: 'AvatarList',
-      subtitle: 'AvatarList',
+      title: 'DelLine',
+      subtitle: 'DelLine',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('AvatarList', codePath, AvatarListWidget()),
+      buildRoute: (context) => BaseWidget('DelLine', codePath, DelLineWidget()),
     ),
     DemoItem(
       icon: Icons.pages,

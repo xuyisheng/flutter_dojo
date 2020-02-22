@@ -315,6 +315,7 @@ flutter:
     - lib/backend/lifecycle.dart
     - lib/backend/catcherror.dart
     - lib/backend/key.dart
+    - lib/backend/statemanagement.dart
 
     - lib/animation/tween/tweenanimationbuilder.dart
     - lib/animation/tween/testanim1.dart

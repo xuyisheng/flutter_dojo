@@ -4,6 +4,7 @@ import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/appbar.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/bottomappbar.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/bottomnavigationbar.dart';
+import 'package:flutter_dojo/widgets/appstructurenavigation/defaulttabcontroller.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/drawer.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/safearea.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/searchdelegate.dart';
@@ -11,7 +12,7 @@ import 'package:flutter_dojo/widgets/appstructurenavigation/sliverappbar.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/tabpageselector.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/widgetsapp.dart';
 import 'package:flutter_dojo/widgets/basic/scaffold.dart';
-import 'package:flutter_dojo/widgets/buttons/tabbar.dart';
+import 'package:flutter_dojo/widgets/appstructurenavigation/tabbar.dart';
 import 'package:flutter_dojo/widgets/styling/material.dart';
 
 List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
@@ -37,6 +38,13 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
       subtitle: 'Bottom navigation bars make it easy to explore and switch between top-level views in a single tap.',
       documentationUrl: 'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
       buildRoute: (context) => BaseWidget('BottomNavigationBar', codePath, BottomNavigationBarWidget()),
+    ),
+    DemoItem(
+      icon: Icons.desktop_mac,
+      title: 'DefaultTabController',
+      subtitle: 'DefaultTabController',
+      documentationUrl: 'https://api.flutter.dev/flutter/material/DefaultTabController-class.html',
+      buildRoute: (context) => BaseWidget('DefaultTabController', codePath, DefaultTabControllerWidget()),
     ),
     DemoItem(
       icon: Icons.desktop_mac,

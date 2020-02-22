@@ -10,12 +10,13 @@ import 'package:flutter_dojo/pattern/custompaint/custompaint1.dart';
 import 'package:flutter_dojo/pattern/display/autofold.dart';
 import 'package:flutter_dojo/pattern/display/avatarlist.dart';
 import 'package:flutter_dojo/pattern/display/badge.dart';
-import 'package:flutter_dojo/pattern/display/shadowmask.dart';
 import 'package:flutter_dojo/pattern/display/bubble.dart';
 import 'package:flutter_dojo/pattern/display/delline.dart';
 import 'package:flutter_dojo/pattern/display/layer.dart';
 import 'package:flutter_dojo/pattern/display/layerblendmode.dart';
 import 'package:flutter_dojo/pattern/display/overflow.dart';
+import 'package:flutter_dojo/pattern/display/popup.dart';
+import 'package:flutter_dojo/pattern/display/shadowmask.dart';
 import 'package:flutter_dojo/pattern/display/toast.dart';
 import 'package:flutter_dojo/pattern/gesture/gesturescale.dart';
 import 'package:flutter_dojo/pattern/list/backdrop.dart';
@@ -164,13 +165,6 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
-      title: 'ShadowMask',
-      subtitle: 'ShadowMask',
-      documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ShadowMask', codePath, ShadowMaskWidget()),
-    ),
-    DemoItem(
-      icon: Icons.pages,
       title: 'Bubble',
       subtitle: 'Bubble',
       documentationUrl: '',
@@ -182,13 +176,6 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
       subtitle: 'DelLine',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('DelLine', codePath, DelLineWidget()),
-    ),
-    DemoItem(
-      icon: Icons.pages,
-      title: 'Toast',
-      subtitle: 'Toast',
-      documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Toast', codePath, ToastWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -210,6 +197,27 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
       subtitle: 'Overflow',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Overflow', codePath, OverflowWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Popup',
+      subtitle: 'Popup',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Popup', codePath, PopupWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'ShadowMask',
+      subtitle: 'ShadowMask',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ShadowMask', codePath, ShadowMaskWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Toast',
+      subtitle: 'Toast',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Toast', codePath, ToastWidget()),
     ),
   ];
 }

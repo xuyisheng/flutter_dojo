@@ -84,6 +84,8 @@ flutter:
     - lib/widgets/appstructurenavigation/tabpageselector.dart
     - lib/widgets/appstructurenavigation/widgetsapp.dart
     - lib/widgets/appstructurenavigation/safearea.dart
+    - lib/widgets/appstructurenavigation/tabbar.dart
+    - lib/widgets/appstructurenavigation/defaulttabcontroller.dart
 
     - lib/widgets/assetsimageicon/assetbundle.dart
     - lib/widgets/assetsimageicon/icon.dart
@@ -110,7 +112,6 @@ flutter:
     - lib/widgets/buttons/popupmenubutton.dart
     - lib/widgets/buttons/raisedbutton.dart
     - lib/widgets/buttons/rawmaterialbutton.dart
-    - lib/widgets/buttons/tabbar.dart
     - lib/widgets/buttons/backbutton.dart
     - lib/widgets/buttons/togglebutton.dart
 
@@ -256,6 +257,7 @@ flutter:
     - lib/pattern/display/layerblendmode.dart
     - lib/pattern/display/delline.dart
     - lib/pattern/display/autofold.dart
+    - lib/pattern/display/popup.dart
     - lib/pattern/display/shadowmask.dart
 
     - lib/pattern/gesture/gesturescale.dart

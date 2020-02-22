@@ -9,6 +9,7 @@ class ToastWidget extends StatelessWidget {
       children: <Widget>[
         MainTitleWidget('通过Overlay实现'),
         SubtitleWidget('Overlay可以认为是一个悬浮在UI层之上的蒙版层'),
+        SubtitleWidget('Overlay是一个Stack布局，所以可以通过Positioned或者AnimatedPositioned在Overlay中进行定位'),
         RaisedButton(
           onPressed: () {
             Toast.show(context, 'toast in Overlay');

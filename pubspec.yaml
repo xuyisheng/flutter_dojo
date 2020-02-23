@@ -25,7 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_markdown: ^0.3.3
   share: ^0.6.3+5
-  provider: ^3.1.0+1
+  provider: ^4.0.4
   shared_preferences: ^0.5.6+1
   path_provider: ^1.6.0
   sqflite: ^1.2.0
@@ -316,6 +316,7 @@ flutter:
     - lib/backend/catcherror.dart
     - lib/backend/key.dart
     - lib/backend/statemanagement.dart
+    - lib/backend/providerstate.dart
 
     - lib/animation/tween/tweenanimationbuilder.dart
     - lib/animation/tween/testanim1.dart

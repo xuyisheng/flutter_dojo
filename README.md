@@ -12,6 +12,8 @@ flutter_dojo主要分为下面几个部分：Widgets、UI Pattern、Develop UI K
 
 [flutter_dojo](https://github.com/xuyisheng/flutter_dojo/raw/master/resource/app-release.apk)  
 
+[Github Actions APK download](https://github.com/xuyisheng/flutter_dojo/releases/download/v1.0.0/app-release.apk)
+
 ## 设计思路
 
 flutter_dojo的设计主要围绕下面三个部分展开：

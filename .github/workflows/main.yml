@@ -4,8 +4,6 @@ jobs:
   build:
     name: Build APK
     runs-on: ubuntu-latest
-    container:
-      image:  google/dart:latest
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-java@v1.3.0
@@ -16,7 +14,7 @@ jobs:
       with:
         flutter-version: '1.12.13+hotfix.8'
     - run: flutter pub get
-    - run: flutter build apk --release --split-per-abi
+    - run: flutter build apk
     - name: Create a Release APK
       uses: ncipollo/release-action@v1
       with:

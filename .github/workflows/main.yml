@@ -9,7 +9,6 @@ jobs:
     - uses: actions/setup-java@v1.3.0
       with:
         java-version: '12.x'
-    - run: apt-get install xz-utils
     - uses: subosito/flutter-action@v1.1.1
       with:
         flutter-version: '1.12.13+hotfix.8'

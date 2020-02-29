@@ -1,4 +1,7 @@
-on: push
+on:
+  push:
+    tags:
+      - '*'
 name: Flutter dojo Release apk
 jobs:
   build:

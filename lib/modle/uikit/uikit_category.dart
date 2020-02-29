@@ -9,6 +9,7 @@ import 'package:flutter_dojo/uikit/drawtext.dart';
 import 'package:flutter_dojo/uikit/feedback.dart';
 import 'package:flutter_dojo/uikit/gesturepainter.dart';
 import 'package:flutter_dojo/uikit/keyboard.dart';
+import 'package:flutter_dojo/uikit/linemetrics.dart';
 import 'package:flutter_dojo/uikit/matrix4.dart';
 import 'package:flutter_dojo/uikit/nstar.dart';
 import 'package:flutter_dojo/uikit/position.dart';
@@ -72,6 +73,13 @@ List<DemoItem> buildUIKitCategoryList = [
     subtitle: 'GesturePainter',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('GesturePainter', codePath, GesturePainterWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'LineMetrics',
+    subtitle: 'LineMetrics',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('LineMetrics', codePath, LineMetricsWidget()),
   ),
   DemoItem(
     icon: Icons.pages,

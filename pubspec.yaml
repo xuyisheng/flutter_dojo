@@ -99,6 +99,7 @@ flutter:
     - lib/widgets/async/futurebuilder.dart
     - lib/widgets/async/inheritedmodel.dart
     - lib/widgets/async/inheritedwidget.dart
+    - lib/widgets/async/valuenotifier.dart
 
     - lib/widgets/basic/placeholder.dart
     - lib/widgets/basic/scaffold.dart
@@ -217,6 +218,7 @@ flutter:
     - lib/widgets/singlechildlayout/sizedbox.dart
     - lib/widgets/singlechildlayout/sizedoverflowbox.dart
     - lib/widgets/singlechildlayout/transform.dart
+    - lib/widgets/singlechildlayout/customsinglechildlayout.dart
 
     - lib/widgets/styling/flexible.dart
     - lib/widgets/styling/spacer.dart
@@ -259,6 +261,7 @@ flutter:
     - lib/pattern/display/autofold.dart
     - lib/pattern/display/popup.dart
     - lib/pattern/display/shadowmask.dart
+    - lib/pattern/display/rating.dart
 
     - lib/pattern/gesture/gesturescale.dart
 
@@ -283,6 +286,9 @@ flutter:
     - lib/pattern/list/backdrop.dart
     - lib/pattern/list/tree.dart
     - lib/pattern/list/listdetail.dart
+    - lib/pattern/list/sliverheader.dart
+    - lib/pattern/list/sliverheaderwitheffect.dart
+    - lib/pattern/list/zoom.dart
 
     - lib/pattern/custompaint/custompaint1.dart
 
@@ -305,6 +311,7 @@ flutter:
     - lib/uikit/visibility.dart
     - lib/uikit/curves.dart
     - lib/uikit/pullrefresh.dart
+    - lib/uikit/linemetrics.dart
 
     - lib/backend/provider.dart
     - lib/backend/stream.dart
@@ -340,6 +347,7 @@ flutter:
     - lib/animation/animation/staggeranimation.dart
     - lib/animation/animation/wave.dart
     - lib/animation/animation/showup.dart
+    - lib/animation/animation/curveline.dart
 
     - lib/animation/loading/loading.dart
     - lib/animation/loading/customprogress.dart

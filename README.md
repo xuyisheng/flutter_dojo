@@ -1,5 +1,7 @@
 # flutter_dojo
 
+[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Dojo，源自日语「道場」。
 
 flutter_dojo项目的主要目的是为了帮助Flutter初学者快速入门Flutter开发，并借助该项目快速建立起Flutter的知识体系架构。
@@ -44,13 +46,13 @@ Back-end Util这部分主要是针对Flutter中的非UI场景知识点进行的�
 
 所有的展示界面，都以演示效果为目的，展示该Widget最主要的属性，并通过实例演示更改属性后的效果，举例如下。
 
-![](resource/6.png)
+<img src="resource/6.png" width="240px"/>
 
 修改对应的属性后，可以直接展示修改效果，从而了解到该属性的作用。
 
 同时，Demo代码可以直接查看。
 
-![](resource/61.png)
+<img src="resource/61.png" width="240px"/>
 
 而且代码也可以直接分享出来，分享出来的代码几乎是可以直接Copy使用的代码。
 
@@ -58,51 +60,51 @@ Back-end Util这部分主要是针对Flutter中的非UI场景知识点进行的�
 
 Widgets部分包含了Flutter官方Category中的几乎所有Widget，是的你没看错，按照官网的Category划分，穷举了官方列出的所有Widget，同时也新增了一些未出现在Category中，但却很常用的Widget。
 
-![](resource/1.png)
+<img src="resource/1.png" width="240px"/>
 
 在每个Category中，都按照A-Z的顺序展示Widget。
 
-![](resource/11.png)
+<img src="resource/11.png" width="240px"/>
 
 ## UI Pattern
 
 UI Pattern部分包含了APP中常用的界面开发模板元素，例如APPBar、Banner、Login、Setting等等，在UI Pattern中，开发者可以找到各自分解的UI元素，了解如何使用Flutter来构建这些UI组件。
 
-![](resource/2.png)
+<img src="resource/2.png" width="240px"/>
 
 在UI Pattern中，我分类列举了很多不同的模板类型。
 
-![](resource/21.png)
+<img src="resource/21.png" width="240px"/>
 
 ## Develop UI Kit
 
 Develop UI Kit列举了UI开发中的一些常用工具类和开发模板代码，开发者可以使用这些工具类来完成一些UI功能开发。
 
-![](resource/3.png)
+<img src="resource/3.png" width="240px"/>
 
 在Develop UI Kit中，按照A-Z对相关代码进行了排列。
 
-![](resource/31.png)
+<img src="resource/31.png" width="240px"/>
 
 ## Animations
 
 由于动画在APP开发中的重要性，这里特地将Animations作为一项单独列出。开发者可以在这里找到不同的Animation开发模式，了解不同的Animation使用方法。
 
-![](resource/4.png)
+<img src="resource/4.png" width="240px"/>
 
 在Animations中，同样是根据不同的功能进行了划分。
 
-![](resource/41.png)
+<img src="resource/41.png" width="240px"/>
 
 ## Back-end Util
 
 Back-end Util中列举了非UI的一些Flutter知识点。
 
-![](resource/5.png)
+<img src="resource/5.png" width="240px"/>
 
 Flutter不仅仅是一个UI跨平台框架，同样是一个完整的APP开发框架，所以，这里列举了除了UI开发之外的一些功能。
 
-![](resource/51.png)
+<img src="resource/51.png" width="240px"/>
 
 ## 协作
 
@@ -112,11 +114,11 @@ Flutter不仅仅是一个UI跨平台框架，同样是一个完整的APP开发�
 
 有兴趣一起协作的开发者可以添加我的微信。
 
-![](resource/7.jpeg)
+<img src="resource/7.jpeg" width="240px"/>
 
 或者感兴趣的开发者可以加入我的Flutter修仙群，加我微信我拉你进群。
 
 ## 打赏
 
-![](resource/8.png)
+<img src="resource/8.png" width="400px"/>
 

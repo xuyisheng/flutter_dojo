@@ -1,64 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/common/main_title_widget.dart';
 
 class CustomMultiChildLayoutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomMultiChildLayout(
-      delegate: _CustomLayout(margin: 5),
+    return Column(
       children: <Widget>[
-        LayoutId(
-          id: Custom.up,
-          child: SizedBox(
-            height: 50.0,
-            width: 50.0,
-            child: DecoratedBox(
-                decoration: BoxDecoration(
-              color: Colors.blue,
-            )),
-          ),
-        ),
-        LayoutId(
-          id: Custom.center,
-          child: SizedBox(
-            height: 50.0,
-            width: 50.0,
-            child: DecoratedBox(
-                decoration: BoxDecoration(
-              color: Colors.red,
-            )),
-          ),
-        ),
-        LayoutId(
-          id: Custom.down,
-          child: SizedBox(
-            height: 50.0,
-            width: 50.0,
-            child: DecoratedBox(
-                decoration: BoxDecoration(
-              color: Colors.green,
-            )),
-          ),
-        ),
-        LayoutId(
-          id: Custom.right,
-          child: SizedBox(
-            height: 50.0,
-            width: 50.0,
-            child: DecoratedBox(
-                decoration: BoxDecoration(
-              color: Colors.limeAccent,
-            )),
-          ),
-        ),
-        LayoutId(
-          id: Custom.left,
-          child: SizedBox(
-            height: 50.0,
-            width: 50.0,
-            child: DecoratedBox(
-                decoration: BoxDecoration(
-              color: Colors.deepOrange,
-            )),
+        MainTitleWidget('自定义视图示例'),
+        Container(
+          width: 300,
+          height: 200,
+          color: Colors.grey.shade200,
+          child: CustomMultiChildLayout(
+            delegate: CustomLayout(),
+            children: <Widget>[
+              LayoutId(
+                id: CustomID.topLeft,
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.blue,
+                ),
+              ),
+              LayoutId(
+                id: CustomID.center,
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.red,
+                ),
+              ),
+              LayoutId(
+                id: CustomID.bottomRight,
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.green,
+                ),
+              ),
+            ],
           ),
         ),
       ],
@@ -66,62 +46,41 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
   }
 }
 
-enum Custom {
-  up,
+enum CustomID {
+  topLeft,
   center,
-  down,
-  left,
-  right,
+  bottomRight,
 }
 
-class _CustomLayout extends MultiChildLayoutDelegate {
-  _CustomLayout({this.margin: 3.0});
-
-  //外边距
-  final double margin;
-
-  @override //性能布局
+class CustomLayout extends MultiChildLayoutDelegate {
+  @override
   void performLayout(Size size) {
     final BoxConstraints box = BoxConstraints.loose(size);
-    Size upSize;
     Size centerSize;
-    Size downSize;
-    Size leftSize;
-    Size rightSize;
-    if (hasChild(Custom.up)) {
-      upSize = layoutChild(Custom.up, box);
-      final dx = (size.width - upSize.width) / 2;
-      final dy = (size.height - upSize.height) / 2 - upSize.height - margin;
-      positionChild(Custom.up, Offset(dx, dy));
+    Size bottomRightSize;
+    if (hasChild(CustomID.topLeft)) {
+      // 即使位置与元素尺寸无关，layoutChild也必须调用，用于获取元素尺寸
+      layoutChild(CustomID.topLeft, box);
+      final dx = .0;
+      final dy = .0;
+      positionChild(CustomID.topLeft, Offset(dx, dy));
     }
-    if (hasChild(Custom.center)) {
-      centerSize = layoutChild(Custom.center, box);
+    if (hasChild(CustomID.center)) {
+      centerSize = layoutChild(CustomID.center, box);
       final dx = (size.width - centerSize.width) / 2;
       final dy = (size.height - centerSize.height) / 2;
-      positionChild(Custom.center, Offset(dx, dy));
+      positionChild(CustomID.center, Offset(dx, dy));
     }
-    if (hasChild(Custom.down)) {
-      downSize = layoutChild(Custom.down, box);
-      final dx = (size.width - downSize.width) / 2;
-      final dy = (size.height - downSize.height) / 2 + downSize.height + margin;
-      positionChild(Custom.down, Offset(dx, dy));
-    }
-    if (hasChild(Custom.left)) {
-      leftSize = layoutChild(Custom.left, box);
-      final dx = (size.width - leftSize.width) / 2 - leftSize.width - margin;
-      final dy = (size.height - leftSize.height) / 2;
-      positionChild(Custom.left, Offset(dx, dy));
-    }
-    if (hasChild(Custom.right)) {
-      rightSize = layoutChild(Custom.right, box);
-      final dx = (size.width - rightSize.width) / 2 + rightSize.width + margin;
-      final dy = (size.height - rightSize.height) / 2;
-      positionChild(Custom.right, Offset(dx, dy));
+    if (hasChild(CustomID.bottomRight)) {
+      bottomRightSize = layoutChild(CustomID.bottomRight, box);
+      final dx = size.width - bottomRightSize.width;
+      final dy = size.height - bottomRightSize.height;
+      positionChild(CustomID.bottomRight, Offset(dx, dy));
     }
   }
 
-  @override //是否应该重绘
-  bool shouldRelayout(_CustomLayout oldDelegate) {
-    return oldDelegate.margin != margin;
+  @override
+  bool shouldRelayout(CustomLayout oldDelegate) {
+    return false;
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class FlowWidget extends StatefulWidget {
   @override
@@ -16,10 +18,6 @@ class _FlowWidgetState extends State<FlowWidget> with SingleTickerProviderStateM
     Icons.menu,
   ];
 
-  void _updateMenu(IconData icon) {
-    if (icon != Icons.menu) setState(() => lastTapped = icon);
-  }
-
   @override
   void initState() {
     super.initState();
@@ -30,22 +28,21 @@ class _FlowWidgetState extends State<FlowWidget> with SingleTickerProviderStateM
   }
 
   Widget flowMenuItem(IconData icon) {
-    final double buttonDiameter = MediaQuery.of(context).size.width / menuItems.length;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: RawMaterialButton(
-        fillColor: lastTapped == icon ? Colors.amber[700] : Colors.blue,
-        splashColor: Colors.amber[100],
-        shape: CircleBorder(),
-        constraints: BoxConstraints.tight(Size(buttonDiameter, buttonDiameter)),
-        onPressed: () {
-          _updateMenu(icon);
+      child: GestureDetector(
+        onTap: () {
           menuAnimation.status == AnimationStatus.completed ? menuAnimation.reverse() : menuAnimation.forward();
         },
-        child: Icon(
-          icon,
-          color: Colors.white,
-          size: 45.0,
+        child: Container(
+          width: 40,
+          height: 40,
+          color: Colors.blue,
+          child: Icon(
+            icon,
+            color: Colors.white,
+            size: 30,
+          ),
         ),
       ),
     );
@@ -53,11 +50,18 @@ class _FlowWidgetState extends State<FlowWidget> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Flow(
-        delegate: FlowMenuDelegate(menuAnimation: menuAnimation),
-        children: menuItems.map<Widget>((IconData icon) => flowMenuItem(icon)).toList(),
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        MainTitleWidget('Flow基本使用'),
+        SubtitleWidget('关键在于对Child的定位'),
+        Container(
+          child: Flow(
+            delegate: FlowMenuDelegate(menuAnimation: menuAnimation),
+            children: menuItems.map<Widget>((IconData icon) => flowMenuItem(icon)).toList(),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -73,15 +77,20 @@ class FlowMenuDelegate extends FlowDelegate {
   }
 
   @override
+  Size getSize(BoxConstraints constraints) {
+    return Size(double.infinity, 400);
+  }
+
+  @override
   void paintChildren(FlowPaintingContext context) {
-    double dx = 0.0;
+    double dy = 0.0;
     for (int i = 0; i < context.childCount; ++i) {
-      dx = context.getChildSize(i).width * i;
+      dy = context.getChildSize(i).height * i;
       context.paintChild(
         i,
         transform: Matrix4.translationValues(
-          dx * menuAnimation.value,
           0,
+          dy * menuAnimation.value,
           0,
         ),
       );

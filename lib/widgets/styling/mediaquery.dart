@@ -13,6 +13,11 @@ class MediaQueryWidget extends StatelessWidget {
         Text('size.height : ${data.size.height}'),
         Text('devicePixelRatio : ${data.devicePixelRatio}'),
         Text('orientation : ${data.orientation}'),
+        MainTitleWidget('MediaQuery修改参数'),
+        MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 2),
+          child: Container(child: Text('Change TextScaleFactor')),
+        ),
       ],
     );
   }

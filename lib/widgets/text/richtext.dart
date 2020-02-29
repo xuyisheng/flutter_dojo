@@ -1,4 +1,4 @@
-import 'dart:ui' as ui show ParagraphBuilder, PlaceholderAlignment;
+import 'dart:ui' as ui show PlaceholderAlignment;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

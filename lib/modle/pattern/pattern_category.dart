@@ -16,13 +16,17 @@ import 'package:flutter_dojo/pattern/display/layer.dart';
 import 'package:flutter_dojo/pattern/display/layerblendmode.dart';
 import 'package:flutter_dojo/pattern/display/overflow.dart';
 import 'package:flutter_dojo/pattern/display/popup.dart';
+import 'package:flutter_dojo/pattern/display/rating.dart';
 import 'package:flutter_dojo/pattern/display/shadowmask.dart';
 import 'package:flutter_dojo/pattern/display/toast.dart';
 import 'package:flutter_dojo/pattern/gesture/gesturescale.dart';
 import 'package:flutter_dojo/pattern/list/backdrop.dart';
 import 'package:flutter_dojo/pattern/list/listdetail.dart';
 import 'package:flutter_dojo/pattern/list/searchlist.dart';
+import 'package:flutter_dojo/pattern/list/sliverheader.dart';
+import 'package:flutter_dojo/pattern/list/sliverheaderwitheffect.dart';
 import 'package:flutter_dojo/pattern/list/tree.dart';
+import 'package:flutter_dojo/pattern/list/zoom.dart';
 import 'package:flutter_dojo/pattern/listitem/itemlayout.dart';
 import 'package:flutter_dojo/pattern/login/login1.dart';
 import 'package:flutter_dojo/pattern/perspective/flipcard.dart';
@@ -35,6 +39,7 @@ import 'package:flutter_dojo/pattern/viewpager/anim_slider.dart';
 import 'package:flutter_dojo/pattern/viewpager/cardflip.dart';
 import 'package:flutter_dojo/pattern/viewpager/guide.dart';
 import 'package:flutter_dojo/pattern/viewpager/pagechangeanim.dart';
+import 'package:flutter_dojo/pattern/viewpager/pagereveal.dart';
 import 'package:flutter_dojo/pattern/viewpager/parallaxviewpager.dart';
 import 'package:flutter_dojo/pattern/viewpager/slider.dart';
 import 'package:flutter_dojo/pattern/viewpager/transformslider.dart';
@@ -125,6 +130,13 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
+      title: 'PageReveal',
+      subtitle: 'PageReveal',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('PageReveal', codePath, PageRevealWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
       title: 'Slider',
       subtitle: 'Slider',
       documentationUrl: '',
@@ -204,6 +216,13 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
       subtitle: 'Popup',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Popup', codePath, PopupWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Rating',
+      subtitle: 'Rating',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Rating', codePath, RatingWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -311,6 +330,20 @@ List<DemoItem> buildListDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
+      title: 'SliverHeader',
+      subtitle: 'SliverHeader',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('SliverHeader', codePath, SliverHeaderWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'SliverHeaderWithEffect',
+      subtitle: 'SliverHeaderWithEffect',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('SliverHeaderWithEffect', codePath, SliverHeaderWithEffectWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
       title: 'Tree',
       subtitle: 'Tree',
       documentationUrl: '',
@@ -322,6 +355,13 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'ListDetail',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('ListDetail', codePath, ListDetailWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Zoom',
+      subtitle: 'Zoom',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Zoom', codePath, ZoomWidget()),
     ),
   ];
 }

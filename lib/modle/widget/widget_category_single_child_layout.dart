@@ -8,6 +8,7 @@ import 'package:flutter_dojo/widgets/singlechildlayout/center.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/circleavatar.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/constrainedbox.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/container.dart';
+import 'package:flutter_dojo/widgets/singlechildlayout/customsinglechildlayout.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/fittedbox.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/fractionallysizedbox.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/intrinsicheight.dart';
@@ -77,7 +78,7 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       title: 'CustomSingleChildLayout',
       subtitle: 'A widget that defers the layout of its single child to a delegate.',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CustomSingleChildLayout-class.html',
-      buildRoute: (context) => BaseWidget('CustomSingleChildLayout', codePath, Container()),
+      buildRoute: (context) => BaseWidget('CustomSingleChildLayout', codePath, CustomSingleChildLayoutWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,

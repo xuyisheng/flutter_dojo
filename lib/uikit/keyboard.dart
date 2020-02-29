@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
-import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class KeyboardWidget extends StatefulWidget {
   @override
@@ -62,7 +61,6 @@ class _KeyboardWidgetState extends State<KeyboardWidget> with WidgetsBindingObse
           child: Text('Show keyboard'),
         ),
         MainTitleWidget('键盘是否弹起'),
-        SubtitleWidget('有bug'),
         Text('是否弹起：$isShowUp')
       ],
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/animation/animation/bouncing.dart';
 import 'package:flutter_dojo/animation/animation/curve.dart';
+import 'package:flutter_dojo/animation/animation/curveline.dart';
 import 'package:flutter_dojo/animation/animation/focus.dart';
 import 'package:flutter_dojo/animation/animation/sequence.dart';
 import 'package:flutter_dojo/animation/animation/showup.dart';
@@ -19,6 +20,7 @@ import 'package:flutter_dojo/animation/scrollanimation/listtopbottom.dart';
 import 'package:flutter_dojo/animation/scrollanimation/scrollinganimation1.dart';
 import 'package:flutter_dojo/animation/scrollanimation/scrollinganimation2.dart';
 import 'package:flutter_dojo/animation/scrollanimation/scrollinganimation3.dart';
+import 'package:flutter_dojo/animation/scrollanimation/scrollparallax.dart';
 import 'package:flutter_dojo/animation/tween/slidecard.dart';
 import 'package:flutter_dojo/animation/tween/testanim1.dart';
 import 'package:flutter_dojo/animation/tween/testanim2.dart';
@@ -27,7 +29,6 @@ import 'package:flutter_dojo/animation/tween/tweenanimationbuilder.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/pages/pattern/pattern_mainpage.dart';
-import 'package:flutter_dojo/animation/scrollanimation/scrollparallax.dart';
 
 var codePath = 'lib/animation/';
 
@@ -119,6 +120,13 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
       subtitle: 'Curve',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Curve', codePath, CurveWidget()),
+    ),
+    DemoItem(
+      icon: Icons.date_range,
+      title: 'CurveLine',
+      subtitle: 'CurveLine',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CurveLine', codePath, CurveLineWidget()),
     ),
     DemoItem(
       icon: Icons.date_range,
@@ -247,6 +255,7 @@ List<DemoItem> buildBarChatDemoItems(String codePath) {
     ),
   ];
 }
+
 List<DemoItem> buildScrollAnimationDemoItems(String codePath) {
   return [
     DemoItem(

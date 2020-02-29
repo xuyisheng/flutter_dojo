@@ -9,10 +9,10 @@ import 'package:flutter_dojo/widgets/appstructurenavigation/drawer.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/safearea.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/searchdelegate.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/sliverappbar.dart';
+import 'package:flutter_dojo/widgets/appstructurenavigation/tabbar.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/tabpageselector.dart';
 import 'package:flutter_dojo/widgets/appstructurenavigation/widgetsapp.dart';
 import 'package:flutter_dojo/widgets/basic/scaffold.dart';
-import 'package:flutter_dojo/widgets/appstructurenavigation/tabbar.dart';
 import 'package:flutter_dojo/widgets/styling/material.dart';
 
 List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {

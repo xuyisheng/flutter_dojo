@@ -6,6 +6,7 @@ import 'package:flutter_dojo/widgets/async/inheritedmodel.dart';
 import 'package:flutter_dojo/widgets/async/inheritedwidget.dart';
 import 'package:flutter_dojo/widgets/async/streambuilder.dart';
 import 'package:flutter_dojo/widgets/async/valuelistenablebuilder.dart';
+import 'package:flutter_dojo/widgets/async/valuenotifier.dart';
 
 List<DemoItem> buildAsyncDemoItems(String codePath) {
   return [
@@ -43,6 +44,13 @@ List<DemoItem> buildAsyncDemoItems(String codePath) {
       subtitle: 'ValueListenableBuilder',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html',
       buildRoute: (context) => BaseWidget('ValueListenableBuilder', codePath, ValueListenableBuilderWidget()),
-    )
+    ),
+    DemoItem(
+      icon: Icons.network_wifi,
+      title: 'ValueNotifier',
+      subtitle: 'ValueNotifier',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/ValueNotifier-class.html',
+      buildRoute: (context) => BaseWidget('ValueNotifier', codePath, ValueNotifierWidget()),
+    ),
   ];
 }

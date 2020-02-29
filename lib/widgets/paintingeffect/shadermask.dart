@@ -35,7 +35,7 @@ class _ShaderMaskWidgetState extends State<ShaderMaskWidget> {
         Text(
           'Hello Gradients!',
           key: myTextKey,
-          style: new TextStyle(
+          style: TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
             foreground: Paint()..shader = getTextGradient(myTextRenderBox),

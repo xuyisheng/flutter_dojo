@@ -1,6 +1,6 @@
 # flutter_dojo
 
-[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![Flutter dojo Release apk](https://github.com/xuyisheng/flutter_dojo/workflows/Flutter%20dojo%20Release%20apk/badge.svg)
 
 Dojo，源自日语「道場」。
 

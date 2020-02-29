@@ -15,10 +15,9 @@ jobs:
       with:
         flutter-version: '1.12.13+hotfix.8'
     - run: flutter pub get
-    - run: flutter test
-    - run: flutter build apk --debug --split-per-abi
+    - run: flutter build apk --release --split-per-abi
     - name: Create a Release APK
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "build/app/outputs/apk/debug/*.apk"
+        artifacts: "build/app/outputs/apk/release/*.apk"
         token: ${{ secrets.CI }}

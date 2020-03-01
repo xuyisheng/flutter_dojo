@@ -74,6 +74,7 @@ class _AnimatedSwitcherWidgetState extends State<AnimatedSwitcherWidget> {
           child: Text('Switch'),
         ),
         MainTitleWidget('自定义AnimatedSwitcher'),
+        SubtitleWidget('当child发生改变时（子widget的key和类型不同时相等则认为发生了改变），对旧child执行reverse动画，对新child执行forward动画'),
         AnimatedSwitcher(
           duration: const Duration(milliseconds: 500),
           transitionBuilder: (Widget child, Animation<double> animation) {
@@ -82,9 +83,26 @@ class _AnimatedSwitcherWidgetState extends State<AnimatedSwitcherWidget> {
           child: Text(
             '$_count',
             key: ValueKey<int>(_count),
-            style: Theme.of(context).textTheme.display1,
+            style: Theme.of(context).textTheme.display4,
           ),
         ),
+        SubtitleWidget('左右平移不像缩放动画可以直接处理reverse和forward，所以需要对reverse动画单独处理'),
+        AnimatedSwitcher(
+          duration: const Duration(milliseconds: 500),
+          transitionBuilder: (Widget child, Animation<double> animation) {
+            var tween = Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0));
+            return CustomSlideTransition(
+              child: child,
+              position: tween.animate(animation),
+            );
+          },
+          child: Text(
+            '$_count',
+            key: ValueKey<int>(_count),
+            style: Theme.of(context).textTheme.display4,
+          ),
+        ),
+        SubtitleWidget('增加ClipRect，控制显示区域'),
         AnimatedSwitcher(
           duration: const Duration(milliseconds: 500),
           transitionBuilder: (Widget child, Animation<double> animation) {
@@ -131,6 +149,33 @@ class _AnimatedSwitcherWidgetState extends State<AnimatedSwitcherWidget> {
           },
         ),
       ],
+    );
+  }
+}
+
+class CustomSlideTransition extends AnimatedWidget {
+  CustomSlideTransition({
+    Key key,
+    @required Animation<Offset> position,
+    this.transformHitTests = true,
+    this.child,
+  })  : assert(position != null),
+        super(key: key, listenable: position);
+
+  Animation<Offset> get position => listenable;
+  final bool transformHitTests;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    Offset offset = position.value;
+    if (position.status == AnimationStatus.reverse) {
+      offset = Offset(-offset.dx, offset.dy);
+    }
+    return FractionalTranslation(
+      translation: offset,
+      transformHitTests: transformHitTests,
+      child: child,
     );
   }
 }

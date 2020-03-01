@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 import 'package:flutter_dojo/common/multi_selection_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class StackWidget extends StatefulWidget {
   @override
@@ -70,6 +71,8 @@ class _StackWidgetState extends State<StackWidget> {
           },
         ),
         MainTitleWidget('Stack fit'),
+        SubtitleWidget('fit用于确定没有定位的子组件如何去适应Stack的大小'),
+        SubtitleWidget('StackFit.loose表示使用子组件的大小，StackFit.expand表示扩伸到Stack的大小'),
         MultiSelectionWidget(
           'Fit',
           StackFit.values,

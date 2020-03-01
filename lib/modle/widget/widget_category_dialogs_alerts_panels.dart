@@ -3,6 +3,7 @@ import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/widgets/dialogsalertspanels/alertdialog.dart';
 import 'package:flutter_dojo/widgets/dialogsalertspanels/bottomsheet.dart';
+import 'package:flutter_dojo/widgets/dialogsalertspanels/datepicker.dart';
 import 'package:flutter_dojo/widgets/dialogsalertspanels/expansionpanel.dart';
 import 'package:flutter_dojo/widgets/dialogsalertspanels/simpledialog.dart';
 import 'package:flutter_dojo/widgets/dialogsalertspanels/snackbar.dart';
@@ -23,6 +24,13 @@ List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
       subtitle: 'Bottom sheets slide up from the bottom of the screen to reveal more content.',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/BottomSheet-class.html',
       buildRoute: (context) => BaseWidget('BottomSheet', codePath, BottomSheetWidget()),
+    ),
+    DemoItem(
+      icon: Icons.dialpad,
+      title: 'DatePicker',
+      subtitle: 'DatePicker',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/DatePicker-class.html',
+      buildRoute: (context) => BaseWidget('DatePicker', codePath, DatePickerWidget()),
     ),
     DemoItem(
       icon: Icons.dialpad,

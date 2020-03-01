@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/uikit/clock.dart';
+import 'package:flutter_dojo/uikit/color.dart';
 import 'package:flutter_dojo/uikit/curves.dart';
 import 'package:flutter_dojo/uikit/dashedline.dart';
 import 'package:flutter_dojo/uikit/drawstyle.dart';
@@ -38,6 +39,13 @@ List<DemoItem> buildUIKitCategoryList = [
     subtitle: 'Clock',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('Clock', codePath, ClockWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'Color',
+    subtitle: 'Color',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('Color', codePath, ColorWidget()),
   ),
   DemoItem(
     icon: Icons.pages,

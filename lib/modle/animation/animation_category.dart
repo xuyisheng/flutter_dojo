@@ -3,6 +3,7 @@ import 'package:flutter_dojo/animation/animation/bouncing.dart';
 import 'package:flutter_dojo/animation/animation/curve.dart';
 import 'package:flutter_dojo/animation/animation/curveline.dart';
 import 'package:flutter_dojo/animation/animation/focus.dart';
+import 'package:flutter_dojo/animation/animation/implicitlyanimatedwidget.dart';
 import 'package:flutter_dojo/animation/animation/sequence.dart';
 import 'package:flutter_dojo/animation/animation/showup.dart';
 import 'package:flutter_dojo/animation/animation/staggeranimation.dart';
@@ -134,6 +135,13 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
       subtitle: 'Focus',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Sequence', codePath, FocusWidget()),
+    ),
+    DemoItem(
+      icon: Icons.date_range,
+      title: 'ImplicitlyAnimatedWidget',
+      subtitle: 'ImplicitlyAnimatedWidget',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ImplicitlyAnimatedWidget', codePath, ImplicitlyAnimatedWidgetWidget()),
     ),
     DemoItem(
       icon: Icons.date_range,

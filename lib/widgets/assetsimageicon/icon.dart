@@ -20,6 +20,22 @@ class IconWidget extends StatelessWidget {
           color: Colors.red,
           size: 50.0,
         ),
+        MainTitleWidget('使用Material Design Icon'),
+        SubtitleWidget('直接使用Font中的定义'),
+        Text(
+          '\uE936' + '\uE001',
+          style: TextStyle(
+            fontFamily: "MaterialIcons",
+            fontSize: 48,
+            color: Colors.blue,
+          ),
+        ),
+        SubtitleWidget('使用Icons的封装,Icons类中包含了所有Material Design的静态变量值'),
+        Icon(
+          Icons.ac_unit,
+          color: Colors.blue,
+          size: 48,
+        ),
       ],
     );
   }

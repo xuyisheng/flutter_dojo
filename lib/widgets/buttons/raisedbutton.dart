@@ -16,6 +16,12 @@ class _RaisedButtonWidgetState extends State<RaisedButtonWidget> {
           onPressed: () {},
           child: Text('RaisedButton'),
         ),
+        MainTitleWidget('RaisedButton.icon'),
+        RaisedButton.icon(
+          onPressed: () {},
+          icon: Icon(Icons.keyboard),
+          label: Text('Keyboard'),
+        ),
         MainTitleWidget('RaisedButton In ButtonBar'),
         ButtonBar(
           alignment: MainAxisAlignment.center,

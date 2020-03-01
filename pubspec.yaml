@@ -142,6 +142,7 @@ flutter:
     - lib/widgets/dialogsalertspanels/bottomsheet.dart
     - lib/widgets/dialogsalertspanels/simpledialog.dart
     - lib/widgets/dialogsalertspanels/snackbar.dart
+    - lib/widgets/dialogsalertspanels/datepicker.dart
 
     - lib/widgets/input/form.dart
     - lib/widgets/input/rawkeyboardlistener.dart
@@ -311,6 +312,7 @@ flutter:
     - lib/uikit/visibility.dart
     - lib/uikit/curves.dart
     - lib/uikit/pullrefresh.dart
+    - lib/uikit/color.dart
     - lib/uikit/linemetrics.dart
 
     - lib/backend/provider.dart
@@ -348,6 +350,7 @@ flutter:
     - lib/animation/animation/wave.dart
     - lib/animation/animation/showup.dart
     - lib/animation/animation/curveline.dart
+    - lib/animation/animation/implicitlyanimatedwidget.dart
 
     - lib/animation/loading/loading.dart
     - lib/animation/loading/customprogress.dart

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/item_util.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 import 'package:flutter_dojo/common/multi_selection_widget.dart';
-import 'package:flutter_dojo/common/single_selection_item.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class AlignWidget extends StatefulWidget {
   @override
@@ -106,21 +106,19 @@ class _AlignWidgetState extends State<AlignWidget> {
               setState(() => heightFactor = value);
             },
           ),
+          MainTitleWidget('FractionalOffset'),
+          SubtitleWidget('FractionalOffset通过坐标来控制偏移,继承自Alignment'),
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.yellow,
+            child: Align(
+              alignment: FractionalOffset(0.2, 0.8),
+              child: FlutterLogo(size: 40),
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
-const SelectionValue<Alignment> alignmentTopLeft = SelectionValue(Alignment.topLeft, 'topLeft', 'topLeft');
-const SelectionValue<Alignment> alignmentTopCenter = SelectionValue(Alignment.topCenter, 'topCenter', 'topCenter');
-const SelectionValue<Alignment> alignmentTopRight = SelectionValue(Alignment.topRight, 'topRight', 'topRight');
-const SelectionValue<Alignment> alignmentBottomCenter =
-    SelectionValue(Alignment.bottomCenter, 'bottomCenter', 'bottomCenter');
-const SelectionValue<Alignment> alignmentBottomLeft = SelectionValue(Alignment.bottomLeft, 'bottomLeft', 'bottomLeft');
-const SelectionValue<Alignment> alignmentBottomRight =
-    SelectionValue(Alignment.bottomRight, 'bottomRight', 'bottomRight');
-const SelectionValue<Alignment> alignmentCenter = SelectionValue(Alignment.center, 'center', 'center');
-const SelectionValue<Alignment> alignmentCenterLeft = SelectionValue(Alignment.centerLeft, 'centerLeft', 'centerLeft');
-const SelectionValue<Alignment> alignmentCenterRight =
-    SelectionValue(Alignment.centerRight, 'centerRight', 'centerRight');

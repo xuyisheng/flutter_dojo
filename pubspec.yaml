@@ -31,6 +31,7 @@ dependencies:
   sqflite: ^1.2.0
   build_runner: ^1.7.3
   json_serializable: ^3.2.5
+  url_launcher: ^5.4.2
 
 dev_dependencies:
   flutter_test:
@@ -263,6 +264,7 @@ flutter:
     - lib/pattern/display/popup.dart
     - lib/pattern/display/shadowmask.dart
     - lib/pattern/display/rating.dart
+    - lib/pattern/display/floating.dart
 
     - lib/pattern/gesture/gesturescale.dart
 
@@ -326,6 +328,7 @@ flutter:
     - lib/backend/key.dart
     - lib/backend/statemanagement.dart
     - lib/backend/providerstate.dart
+    - lib/backend/singleton.dart
 
     - lib/animation/tween/tweenanimationbuilder.dart
     - lib/animation/tween/testanim1.dart

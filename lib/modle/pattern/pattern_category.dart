@@ -12,6 +12,7 @@ import 'package:flutter_dojo/pattern/display/avatarlist.dart';
 import 'package:flutter_dojo/pattern/display/badge.dart';
 import 'package:flutter_dojo/pattern/display/bubble.dart';
 import 'package:flutter_dojo/pattern/display/delline.dart';
+import 'package:flutter_dojo/pattern/display/floating.dart';
 import 'package:flutter_dojo/pattern/display/layer.dart';
 import 'package:flutter_dojo/pattern/display/layerblendmode.dart';
 import 'package:flutter_dojo/pattern/display/overflow.dart';
@@ -188,6 +189,13 @@ List<DemoItem> buildWidgetDisplayDemoItems(String codePath) {
       subtitle: 'DelLine',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('DelLine', codePath, DelLineWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Floating',
+      subtitle: 'Floating',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Floating', codePath, FloatingWidget()),
     ),
     DemoItem(
       icon: Icons.pages,

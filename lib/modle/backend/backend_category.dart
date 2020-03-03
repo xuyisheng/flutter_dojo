@@ -8,6 +8,7 @@ import 'package:flutter_dojo/backend/pageroute.dart';
 import 'package:flutter_dojo/backend/provider.dart';
 import 'package:flutter_dojo/backend/providerstate.dart';
 import 'package:flutter_dojo/backend/sharedpreferences.dart';
+import 'package:flutter_dojo/backend/singleton.dart';
 import 'package:flutter_dojo/backend/sqflite.dart';
 import 'package:flutter_dojo/backend/statemanagement.dart';
 import 'package:flutter_dojo/backend/stream.dart';
@@ -71,6 +72,13 @@ List<DemoItem> buildBackendCategoryList = [
     subtitle: 'State management',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('Provider', codePath, ProviderStateWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Singleton',
+    subtitle: 'Singleton',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('Singleton', codePath, SingletonWidget()),
   ),
   DemoItem(
     icon: Icons.build,

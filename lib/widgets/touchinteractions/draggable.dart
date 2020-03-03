@@ -9,12 +9,14 @@ class DraggableWidget extends StatefulWidget {
 
 class _DraggableWidgetState extends State<DraggableWidget> {
   var axis = Axis.horizontal;
+  var show = '';
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         MainTitleWidget('Draggable基本使用'),
+        Text(show),
         Container(
           child: Draggable<Color>(
             child: Container(
@@ -48,6 +50,12 @@ class _DraggableWidgetState extends State<DraggableWidget> {
               ),
             ),
             data: Colors.green,
+            onDragStarted: () {
+              setState(() => show = 'Drag start');
+            },
+            onDragEnd: (details) {
+              setState(() => show = 'Drag end');
+            },
           ),
         ),
         MainTitleWidget('Draggable限制Axis'),

@@ -8,6 +8,7 @@ class DragTargetWidget extends StatefulWidget {
 
 class _DragTargetWidgetState extends State<DragTargetWidget> {
   String status = '';
+  bool isAccept = false;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +27,9 @@ class _DragTargetWidgetState extends State<DragTargetWidget> {
                 child: Draggable(
                   onDraggableCanceled: (v, f) {
                     setState(() => status = 'onDraggableCanceled');
+                  },
+                  onDragStarted: () {
+                    setState(() => isAccept = false);
                   },
                   data: 1.0,
                   child: Container(
@@ -60,7 +64,13 @@ class _DragTargetWidgetState extends State<DragTargetWidget> {
                       height: 80,
                       alignment: Alignment.center,
                       color: Colors.red,
-                      child: Text('Target'),
+                      child: isAccept
+                          ? Container(
+                              width: 30,
+                              height: 30,
+                              color: Colors.green,
+                            )
+                          : Text('Target'),
                     );
                   },
                   onWillAccept: (double value) {
@@ -68,7 +78,10 @@ class _DragTargetWidgetState extends State<DragTargetWidget> {
                     return true;
                   },
                   onAccept: (double value) {
-                    setState(() => status = 'onAccept: $value');
+                    setState(() {
+                      isAccept = true;
+                      return status = 'onAccept: $value';
+                    });
                   },
                   onLeave: (double value) {
                     setState(() => status = 'onLeave: $value');

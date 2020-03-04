@@ -9,7 +9,7 @@ import 'widget_category_basic.dart';
 import 'widget_category_buttons.dart';
 import 'widget_category_cupertino.dart';
 import 'widget_category_dialogs_alerts_panels.dart';
-import 'widget_category_information_displays .dart';
+import 'widget_category_information_displays.dart';
 import 'widget_category_input.dart';
 import 'widget_category_input_selections.dart';
 import 'widget_category_layout.dart';

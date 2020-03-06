@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class PopupWidget extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class _PopupWidgetState extends State<PopupWidget> {
   OverlayEntry textFormOverlayEntry;
   OverlayEntry popupOverlayEntry;
   LayerLink layerLink = LayerLink();
+  var locationKey = GlobalKey();
 
   @override
   void initState() {
@@ -52,24 +54,29 @@ class _PopupWidgetState extends State<PopupWidget> {
         onTap: () => clear(),
         child: Container(
           color: Colors.white, // 必须要有颜色才能响应点击
-          child: Column(
-            children: <Widget>[
-              MainTitleWidget('通过Overlay实现Popup'),
-              RaisedButton(
-                onPressed: () => showPopupView(),
-                child: Text('showWeixinButtonView()'),
-              ),
-              MainTitleWidget('通过Overlay和CompositedTransformTarget实现Popup定位'),
-              CompositedTransformTarget(
-                link: layerLink,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: '请输入',
-                  ),
-                  focusNode: focusNode,
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                MainTitleWidget('通过Overlay实现Popup'),
+                RaisedButton(
+                  key: locationKey,
+                  onPressed: () => showPopupView(),
+                  child: Text('showWeixinButtonView()'),
                 ),
-              ),
-            ],
+                MainTitleWidget('通过Overlay和CompositedTransformTarget实现Popup定位'),
+                SubtitleWidget('CompositedTransformTarget还可以自动处理滑动时popup位置的更新'),
+                CompositedTransformTarget(
+                  link: layerLink,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: '请输入',
+                    ),
+                    focusNode: focusNode,
+                  ),
+                ),
+                SizedBox(height: 500),
+              ],
+            ),
           ),
         ),
       ),
@@ -126,33 +133,34 @@ class _PopupWidgetState extends State<PopupWidget> {
 
   showPopupView() {
     clear();
+    RenderBox renderObject = locationKey.currentContext.findRenderObject();
+    var size = renderObject.size;
+    var offset = renderObject.localToGlobal(Offset.zero);
     popupOverlayEntry = OverlayEntry(
       builder: (context) {
         return Positioned(
-          top: 250,
-          right: 24,
-          width: 200,
-          height: 200,
-          child: SafeArea(
-            child: Material(
-              child: Container(
-                color: Colors.grey.shade200,
-                child: Column(
-                  children: <Widget>[
-                    Expanded(
-                      child: ListTile(
-                        leading: Icon(Icons.add),
-                        title: Text('发起群聊'),
-                      ),
+          left: offset.dx,
+          top: offset.dy + size.height,
+          width: size.width,
+          child: Material(
+            child: Container(
+              height: 100,
+              color: Colors.grey.shade200,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: ListTile(
+                      leading: Icon(Icons.add),
+                      title: Text('发起群聊'),
                     ),
-                    Expanded(
-                      child: ListTile(
-                        leading: Icon(Icons.add),
-                        title: Text('添加朋友'),
-                      ),
+                  ),
+                  Expanded(
+                    child: ListTile(
+                      leading: Icon(Icons.add),
+                      title: Text('添加朋友'),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

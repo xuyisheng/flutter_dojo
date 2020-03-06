@@ -190,6 +190,8 @@ flutter:
     - lib/widgets/paintingeffect/rotatedbox.dart
     - lib/widgets/paintingeffect/shadermask.dart
 
+    - lib/widgets/routing/navigator.dart
+
     - lib/widgets/scrolling/customscrollview.dart
     - lib/widgets/scrolling/nestedscrollview.dart
     - lib/widgets/scrolling/draggablescrollablesheet.dart

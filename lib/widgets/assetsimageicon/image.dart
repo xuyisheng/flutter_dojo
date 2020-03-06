@@ -60,6 +60,7 @@ class _ImageWidgetState extends State<ImageWidget> {
     return ListView(
       children: <Widget>[
         MainTitleWidget('Image From Asset'),
+        SubtitleWidget('gaplessPlayback可以防止图片快速切换时图片闪烁'),
         Image(
           image: AssetImage('images/book.jpg'),
           height: 300,
@@ -97,6 +98,13 @@ class _ImageWidgetState extends State<ImageWidget> {
         ),
         MainTitleWidget('PrecacheImage'),
         preCacheImage,
+        MainTitleWidget('Image tint'),
+        Image(
+          image: AssetImage('images/logo.png'),
+          height: 150,
+          width: 150,
+          color: Colors.blueAccent,
+        ),
         MainTitleWidget('Image ColorBlendModes'),
         Image(
           image: AssetImage('images/logo.png'),

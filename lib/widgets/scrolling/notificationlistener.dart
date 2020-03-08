@@ -58,7 +58,7 @@ class _NotificationListenerWidgetState extends State<NotificationListenerWidget>
                   break;
               }
               _controller.add('depth:${notification.depth}\n'
-                  'state:$state}'
+                  'state:$state\n'
                   'metrics\n'
                   '-axisDirection:${notification.metrics.axisDirection}\n'
                   '-axis:${notification.metrics.axis}\n'

@@ -33,7 +33,7 @@ class _CustomProgressState extends State<CustomProgress> {
         onPanUpdate: doUpdate,
         child: CustomPaint(
           key: customKey,
-          painter: CustomProgressPainter(progress),
+          painter: CustomProgressPainter(progress.clamp(0, 1)),
         ),
       ),
     );

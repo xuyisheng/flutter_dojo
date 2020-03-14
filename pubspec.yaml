@@ -337,6 +337,8 @@ flutter:
     - lib/animation/tween/testanim2.dart
     - lib/animation/tween/testanim3.dart
     - lib/animation/tween/slidecard.dart
+    - lib/animation/tween/rotatemenu.dart
+    - lib/animation/tween/gift.dart
 
     - lib/animation/barchat/bar.dart
 

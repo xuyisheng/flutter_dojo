@@ -22,6 +22,8 @@ import 'package:flutter_dojo/animation/scrollanimation/scrollinganimation1.dart'
 import 'package:flutter_dojo/animation/scrollanimation/scrollinganimation2.dart';
 import 'package:flutter_dojo/animation/scrollanimation/scrollinganimation3.dart';
 import 'package:flutter_dojo/animation/scrollanimation/scrollparallax.dart';
+import 'package:flutter_dojo/animation/tween/gift.dart';
+import 'package:flutter_dojo/animation/tween/rotatemenu.dart';
 import 'package:flutter_dojo/animation/tween/slidecard.dart';
 import 'package:flutter_dojo/animation/tween/testanim1.dart';
 import 'package:flutter_dojo/animation/tween/testanim2.dart';
@@ -229,6 +231,20 @@ List<DemoItem> buildTweenAnimDemoItems(String codePath) {
       subtitle: 'Anim3',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Anim3', codePath, TestAnim3Widget()),
+    ),
+    DemoItem(
+      icon: Icons.video_library,
+      title: 'Gift',
+      subtitle: 'Gift',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Gift', codePath, GiftWidget()),
+    ),
+    DemoItem(
+      icon: Icons.video_library,
+      title: 'RotateMenu',
+      subtitle: 'RotateMenu',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('RotateMenu', codePath, RotateMenuWidget()),
     ),
     DemoItem(
       icon: Icons.video_library,

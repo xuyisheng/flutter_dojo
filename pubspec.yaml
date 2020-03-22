@@ -318,6 +318,8 @@ flutter:
     - lib/uikit/pullrefresh.dart
     - lib/uikit/color.dart
     - lib/uikit/linemetrics.dart
+    - lib/uikit/interpolator.dart
+    - lib/uikit/curvefitting.dart
 
     - lib/backend/provider.dart
     - lib/backend/stream.dart

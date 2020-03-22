@@ -3,12 +3,14 @@ import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/uikit/clock.dart';
 import 'package:flutter_dojo/uikit/color.dart';
+import 'package:flutter_dojo/uikit/curvefitting.dart';
 import 'package:flutter_dojo/uikit/curves.dart';
 import 'package:flutter_dojo/uikit/dashedline.dart';
 import 'package:flutter_dojo/uikit/drawstyle.dart';
 import 'package:flutter_dojo/uikit/drawtext.dart';
 import 'package:flutter_dojo/uikit/feedback.dart';
 import 'package:flutter_dojo/uikit/gesturepainter.dart';
+import 'package:flutter_dojo/uikit/interpolator.dart';
 import 'package:flutter_dojo/uikit/keyboard.dart';
 import 'package:flutter_dojo/uikit/linemetrics.dart';
 import 'package:flutter_dojo/uikit/matrix4.dart';
@@ -32,6 +34,13 @@ List<DemoItem> buildUIKitCategoryList = [
     subtitle: 'Curves',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('Curves', codePath, CurvesWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'CurveFitting',
+    subtitle: 'CurveFitting',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('CurveFitting', codePath, CurveFittingWidget()),
   ),
   DemoItem(
     icon: Icons.pages,
@@ -81,6 +90,13 @@ List<DemoItem> buildUIKitCategoryList = [
     subtitle: 'GesturePainter',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('GesturePainter', codePath, GesturePainterWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'Interpolator',
+    subtitle: 'Interpolator',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('Interpolator', codePath, InterpolatorWidget()),
   ),
   DemoItem(
     icon: Icons.pages,

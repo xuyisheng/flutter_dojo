@@ -39,6 +39,17 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       children: <Widget>[
         MainTitleWidget('TextField基本用法'),
         TextField(),
+        MainTitleWidget('设置TextField可输入最大行数'),
+        Container(
+          constraints: BoxConstraints(maxHeight: 80),
+          child: TextField(
+            maxLines: null,
+            decoration: InputDecoration(
+              isDense: true,
+              contentPadding: EdgeInsets.symmetric(vertical: 10),
+            ),
+          ),
+        ),
         MainTitleWidget('选择TextField输入模式'),
         MultiSelectionWidget(
           'Type',

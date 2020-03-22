@@ -19,6 +19,7 @@ import 'package:flutter_dojo/uikit/nstar.dart';
 import 'package:flutter_dojo/uikit/position.dart';
 import 'package:flutter_dojo/uikit/pullrefresh.dart';
 import 'package:flutter_dojo/uikit/randomcolor.dart';
+import 'package:flutter_dojo/uikit/repaintboundary.dart';
 import 'package:flutter_dojo/uikit/roundimage.dart';
 import 'package:flutter_dojo/uikit/screenorientation.dart';
 import 'package:flutter_dojo/uikit/screenshot.dart';
@@ -154,6 +155,13 @@ List<DemoItem> buildUIKitCategoryList = [
     subtitle: 'RandomColor',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('RandomColor', codePath, RandomColorWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'RepaintBoundary',
+    subtitle: 'RepaintBoundary',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('RepaintBoundary', codePath, RepaintBoundaryWidget()),
   ),
   DemoItem(
     icon: Icons.pages,

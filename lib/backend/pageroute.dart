@@ -75,7 +75,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
           },
           child: Text("Goto Page2 路由移除"),
         ),
-        MainTitleWidget('自定义PageRoute'),
+        MainTitleWidget('自定义PageRoute动画'),
         MultiSelectionWidget(
           'transition',
           [
@@ -103,6 +103,40 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
             );
           },
           child: Text("Goto 自定义PageRoute Page2"),
+        ),
+        SubtitleWidget('通过设置secondaryAnimation实现进场和出场动画'),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageRouteBuilder(
+                opaque: false,
+                pageBuilder: (BuildContext context, anim1, anim2) {
+                  return Page2('');
+                },
+                transitionDuration: Duration(seconds: 1),
+                transitionsBuilder: (BuildContext context,
+                    Animation<double> animation,
+                    Animation<double> secondaryAnimation,
+                    Widget child,) {
+                  return SlideTransition(
+                    position: Tween<Offset>(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).animate(animation),
+                    child: SlideTransition(
+                      position: Tween<Offset>(
+                        begin: Offset.zero,
+                        end: const Offset(-1.0, 0.0),
+                      ).animate(secondaryAnimation),
+                      child: child,
+                    ),
+                  );
+                },
+              ),
+            );
+          },
+          child: Text("Page2进场出场动画"),
         ),
         MainTitleWidget('通过GlobalKey<NavigatorState>保存NavigatorState'),
         RaisedButton(
@@ -208,6 +242,41 @@ class Page2 extends StatelessWidget {
               child: Text('Back to Page1 with value'),
               onPressed: () {
                 Navigator.pop(context, ['Page2 value1', 'Page2 value2']);
+              },
+            ),
+            RaisedButton(
+              child: Text('Goto new page'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    opaque: false,
+                    pageBuilder: (BuildContext context, anim1, anim2) {
+                      return Page2('');
+                    },
+                    transitionDuration: Duration(seconds: 1),
+                    transitionsBuilder: (
+                      BuildContext context,
+                      Animation<double> animation,
+                      Animation<double> secondaryAnimation,
+                      Widget child,
+                    ) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(1.0, 0.0),
+                          end: Offset.zero,
+                        ).animate(animation),
+                        child: SlideTransition(
+                          position: Tween<Offset>(
+                            begin: Offset.zero,
+                            end: const Offset(-1.0, 0.0),
+                          ).animate(secondaryAnimation),
+                          child: child,
+                        ),
+                      );
+                    },
+                  ),
+                );
               },
             ),
           ],

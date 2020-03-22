@@ -11,6 +11,7 @@ class _VisibilityWidgetState extends State<VisibilityWidget> {
   bool flag1 = true;
   bool flag2 = true;
   bool flag3 = true;
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +89,28 @@ class _VisibilityWidgetState extends State<VisibilityWidget> {
             value: flag3,
             onChanged: (value) {
               setState(() => flag3 = value);
+            },
+          ),
+          MainTitleWidget('通过IndexedStack实现'),
+          IndexedStack(
+            index: index,
+            children: <Widget>[
+              Icon(
+                Icons.add,
+                size: 40.0,
+                color: Colors.red,
+              ),
+              Icon(
+                Icons.ac_unit,
+                size: 40.0,
+                color: Colors.red,
+              ),
+            ],
+          ),
+          Switch(
+            value: index == 0,
+            onChanged: (value) {
+              setState(() => index = value ? 0 : 1);
             },
           ),
         ],

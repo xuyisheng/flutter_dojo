@@ -20,6 +20,7 @@ import 'package:flutter_dojo/widgets/singlechildlayout/padding.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/sizedbox.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/sizedoverflowbox.dart';
 import 'package:flutter_dojo/widgets/singlechildlayout/transform.dart';
+import 'package:flutter_dojo/widgets/singlechildlayout/unconstrainedbox.dart';
 
 List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
   return [
@@ -159,6 +160,13 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       subtitle: 'A widget that applies a transformation before painting its child.',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Transform-class.html',
       buildRoute: (context) => BaseWidget('Transform', codePath, TransformWidget()),
+    ),
+    DemoItem(
+      icon: Icons.child_care,
+      title: 'UnconstraindBox',
+      subtitle: 'UnconstraindBox',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/UnconstraindBox-class.html',
+      buildRoute: (context) => BaseWidget('UnconstraindBox', codePath, UnconstrainedBoxWidget()),
     ),
   ];
 }

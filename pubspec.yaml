@@ -223,6 +223,7 @@ flutter:
     - lib/widgets/singlechildlayout/sizedoverflowbox.dart
     - lib/widgets/singlechildlayout/transform.dart
     - lib/widgets/singlechildlayout/customsinglechildlayout.dart
+    - lib/widgets/singlechildlayout/unconstrainedbox.dart
 
     - lib/widgets/styling/flexible.dart
     - lib/widgets/styling/spacer.dart
@@ -321,6 +322,7 @@ flutter:
     - lib/uikit/interpolator.dart
     - lib/uikit/curvefitting.dart
     - lib/uikit/drawimage.dart
+    - lib/uikit/repaintboundary.dart
 
     - lib/backend/provider.dart
     - lib/backend/stream.dart

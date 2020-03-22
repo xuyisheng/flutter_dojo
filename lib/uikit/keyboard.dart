@@ -44,9 +44,10 @@ class _KeyboardWidgetState extends State<KeyboardWidget> with WidgetsBindingObse
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('build');
     return ListView(
       children: <Widget>[
-        MainTitleWidget('点击其它区域隐藏软键盘'),
+        MainTitleWidget('软键盘'),
         TextField(focusNode: focusNode),
         RaisedButton(
           onPressed: () {
@@ -61,7 +62,7 @@ class _KeyboardWidgetState extends State<KeyboardWidget> with WidgetsBindingObse
           child: Text('Show keyboard'),
         ),
         MainTitleWidget('键盘是否弹起'),
-        Text('是否弹起：$isShowUp')
+        Text('是否弹起：$isShowUp'),
       ],
     );
   }

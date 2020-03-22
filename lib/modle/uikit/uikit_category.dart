@@ -6,6 +6,7 @@ import 'package:flutter_dojo/uikit/color.dart';
 import 'package:flutter_dojo/uikit/curvefitting.dart';
 import 'package:flutter_dojo/uikit/curves.dart';
 import 'package:flutter_dojo/uikit/dashedline.dart';
+import 'package:flutter_dojo/uikit/drawimage.dart';
 import 'package:flutter_dojo/uikit/drawstyle.dart';
 import 'package:flutter_dojo/uikit/drawtext.dart';
 import 'package:flutter_dojo/uikit/feedback.dart';
@@ -55,6 +56,13 @@ List<DemoItem> buildUIKitCategoryList = [
     subtitle: 'Color',
     documentationUrl: '',
     buildRoute: (context) => BaseWidget('Color', codePath, ColorWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'DrawImage',
+    subtitle: 'DrawImage',
+    documentationUrl: '',
+    buildRoute: (context) => BaseWidget('DrawImage', codePath, DrawImageWidget()),
   ),
   DemoItem(
     icon: Icons.pages,

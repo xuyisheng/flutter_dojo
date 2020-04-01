@@ -209,7 +209,7 @@ List<DemoItem> buildTweenAnimDemoItems(String codePath) {
       title: 'TweenAnimationBuilder',
       subtitle: 'TweenAnimationBuilder',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('GestureScale', codePath, TweenAnimationBuilderWidget()),
+      buildRoute: (context) => BaseWidget('TweenAnimationBuilder', codePath, TweenAnimationBuilderWidget()),
     ),
     DemoItem(
       icon: Icons.video_library,

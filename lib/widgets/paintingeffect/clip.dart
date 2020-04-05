@@ -47,7 +47,29 @@ class _ClipWidgetState extends State<ClipWidget> {
             height: 240,
             child: Image.asset('images/flower.jpg'),
           ),
-        )
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Container(
+            width: 300,
+            child: Stack(
+              children: <Widget>[
+                ClipPath(
+                  clipper: PathClipper(0),
+                  child: Image.asset('images/flower.jpg',fit: BoxFit.cover),
+                ),
+                ClipPath(
+                  clipper: PathClipper(1),
+                  child: Image.asset('images/flower.jpg',fit: BoxFit.cover),
+                ),
+                ClipPath(
+                  clipper: PathClipper(2),
+                  child: Image.asset('images/flower.jpg',fit: BoxFit.cover),
+                ),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -132,6 +154,46 @@ class BezierClipper extends CustomClipper<Path> {
     path2.quadraticBezierTo(0.0, 0.0, 0.0, size.height);
     path2.quadraticBezierTo(size.width, size.height, size.width, 0.0);
     return Path.combine(PathOperation.union, path1, path2);
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return true;
+  }
+}
+
+class PathClipper extends CustomClipper<Path> {
+  var type = 0;
+
+  PathClipper(this.type);
+
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    switch (type) {
+      case 0:
+        path.moveTo(0.0, 0.0);
+        path.lineTo(0.0, size.height);
+        path.lineTo(size.width * 0.2725, size.height);
+        path.lineTo(size.width * 0.3725, 0);
+        path.close();
+        break;
+      case 1:
+        path.moveTo(size.width * 0.40, 0.0);
+        path.lineTo(size.width * 0.3, size.height);
+        path.lineTo(size.width * 0.5725, size.height);
+        path.lineTo(size.width * 0.6725, 0);
+        path.close();
+        break;
+      default:
+        path.moveTo(size.width * 0.7, 0.0);
+        path.lineTo(size.width * 0.6, size.height);
+        path.lineTo(size.width, size.height);
+        path.lineTo(size.width, 0);
+        path.close();
+        break;
+    }
+    return path;
   }
 
   @override

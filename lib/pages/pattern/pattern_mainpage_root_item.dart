@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
-import 'package:flutter_dojo/pages/pattern/pattern_mainpage.dart';
 
 class PatternMainPageListItem extends StatelessWidget {
-  final Entry entryData;
+  final DemoItemCategory entryData;
 
   PatternMainPageListItem(this.entryData);
 
-  Widget _buildRootTiles(BuildContext context, Entry root) {
-    if (root.children.isEmpty) {
-      return ListTile(title: Text(root.title));
+  Widget _buildRootTiles(BuildContext context, DemoItemCategory root) {
+    if (root.list.isEmpty) {
+      return ListTile(title: Text(root.name));
     }
     return Theme(
       data: ThemeData(
@@ -17,12 +16,12 @@ class PatternMainPageListItem extends StatelessWidget {
         unselectedWidgetColor: Colors.white,
       ),
       child: ExpansionTile(
-        key: PageStorageKey<Entry>(root),
+        key: PageStorageKey<DemoItemCategory>(root),
         title: Text(
-          root.title,
+          root.name,
           style: TextStyle(color: Colors.white),
         ),
-        children: root.children.map((demo) => _buildChildTiles(context, demo)).toList(),
+        children: root.list.map((demo) => _buildChildTiles(context, demo)).toList(),
       ),
     );
   }

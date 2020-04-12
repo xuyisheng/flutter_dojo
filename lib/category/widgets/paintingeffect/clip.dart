@@ -56,15 +56,15 @@ class _ClipWidgetState extends State<ClipWidget> {
               children: <Widget>[
                 ClipPath(
                   clipper: PathClipper(0),
-                  child: Image.asset('images/flower.jpg',fit: BoxFit.cover),
+                  child: Image.asset('images/flower.jpg', fit: BoxFit.cover),
                 ),
                 ClipPath(
                   clipper: PathClipper(1),
-                  child: Image.asset('images/flower.jpg',fit: BoxFit.cover),
+                  child: Image.asset('images/flower.jpg', fit: BoxFit.cover),
                 ),
                 ClipPath(
                   clipper: PathClipper(2),
-                  child: Image.asset('images/flower.jpg',fit: BoxFit.cover),
+                  child: Image.asset('images/flower.jpg', fit: BoxFit.cover),
                 ),
               ],
             ),

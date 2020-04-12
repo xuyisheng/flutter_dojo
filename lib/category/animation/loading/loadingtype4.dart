@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype3.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype3.dart';
 
 class LoadingType4 extends StatefulWidget {
   final Color dotOneColor;

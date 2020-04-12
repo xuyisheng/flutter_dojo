@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/animation/loading/loadingflip.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype1.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype2.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype3.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype4.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype5.dart';
-import 'package:flutter_dojo/animation/loading/loadingtype6.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingflip.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype1.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype2.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype3.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype4.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype5.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype6.dart';
 
 class LoadingWidget extends StatelessWidget {
   @override

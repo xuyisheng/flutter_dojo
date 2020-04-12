@@ -115,10 +115,12 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
                   return Page2('');
                 },
                 transitionDuration: Duration(seconds: 1),
-                transitionsBuilder: (BuildContext context,
-                    Animation<double> animation,
-                    Animation<double> secondaryAnimation,
-                    Widget child,) {
+                transitionsBuilder: (
+                  BuildContext context,
+                  Animation<double> animation,
+                  Animation<double> secondaryAnimation,
+                  Widget child,
+                ) {
                   return SlideTransition(
                     position: Tween<Offset>(
                       begin: const Offset(1.0, 0.0),

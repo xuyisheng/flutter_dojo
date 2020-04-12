@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/common/demo_item.dart';
 import 'package:flutter_dojo/modle/pattern/pattern_category.dart';
 
 import 'pattern_mainpage_root_item.dart';
@@ -22,11 +21,4 @@ class PatternMainPage extends StatelessWidget {
       ),
     );
   }
-}
-
-class Entry {
-  final String title;
-  final List<DemoItem> children;
-
-  Entry(this.title, this.children);
 }

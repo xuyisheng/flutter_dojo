@@ -15,6 +15,12 @@ class _TestAnim3WidgetState extends State<TestAnim3Widget> with SingleTickerProv
   }
 
   @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: controller,

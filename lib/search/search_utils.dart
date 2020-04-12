@@ -9,12 +9,16 @@ class SearchUtils {
   ///默认的搜索策略的基础上新增支持多个单词
   Set<String> defaultMultipleSearchStrategy(List<String> words) {
     Set<String> result = new Set();
-    if (words == null || words.length == 0) {
+    if (words == null ||
+        words.length == 0 ||
+        (words.length == 1 && (words[0] == null || words[0] == ""))) {
       result.addAll(_dictionaryList);
       return result;
     }
     words.forEach((word) {
-      result.addAll(defaultSearchStrategy(word));
+      if (word != null && word != '') {
+        result.addAll(defaultSearchStrategy(word));
+      }
     });
 
     return result;

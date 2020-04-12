@@ -6,11 +6,33 @@ class SearchUtils {
   List<String> _prefixSearchResult;
   List<String> _similaritySearchResult;
 
+  ///默认的搜索策略的基础上新增支持多个单词
+  Set<String> defaultMultipleSearchStrategy(List<String> words) {
+    Set<String> result = new Set();
+    if (words == null ||
+        words.length == 0 ||
+        (words.length == 1 && (words[0] == null || words[0] == ""))) {
+      result.addAll(_dictionaryList);
+      return result;
+    }
+    words.forEach((word) {
+      if (word != null && word != '') {
+        result.addAll(defaultSearchStrategy(word));
+      }
+    });
+
+    return result;
+  }
+
   ///默认的搜索策略
   ///默认的最大编辑距离是字符串长度整除4,起码允许打错1个字符
   ///结果用Set返回，去除了重复数据
   Set<String> defaultSearchStrategy(String word) {
     Set<String> result = new Set();
+    if (word == null || word == '') {
+      result.addAll(_dictionaryList);
+      return result;
+    }
 
     int defaultDistance = word.length ~/ 4;
     if (defaultDistance < 1) {
@@ -26,6 +48,12 @@ class SearchUtils {
     if (_similaritySearchResult == null) {
       _similaritySearchResult = List();
     }
+    if (inputWord == null || inputWord == '') {
+      _similaritySearchResult.clear();
+      _similaritySearchResult.addAll(_dictionaryList);
+      return _similaritySearchResult;
+    }
+
     for (String wordInDictionary in _dictionaryList) {
       if (_matchSimilarWords(wordInDictionary, inputWord, distance)) {
         _similaritySearchResult.add(wordInDictionary);
@@ -71,6 +99,11 @@ class SearchUtils {
   List<String> searchWordsInTrie(String prefix) {
     if (_dictionaryTree == null) {
       return new List<String>();
+    }
+    if (prefix == null || prefix == '') {
+      _prefixSearchResult = List<String>();
+      _prefixSearchResult.addAll(_dictionaryList);
+      return _prefixSearchResult;
     }
     _copy = _dictionaryTree;
     _prefixSearchResult = new List<String>();

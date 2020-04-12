@@ -3,7 +3,7 @@ import 'package:flutter_dojo/pages/main/navigatormanager.dart';
 import 'package:flutter_dojo/pages/notfound/notfound.dart';
 import 'package:flutter_dojo/pages/splash/slpash.dart';
 
-import 'backend/pageroute.dart';
+import 'category/backend/pageroute.dart';
 
 void main() => runApp(MyApp());
 

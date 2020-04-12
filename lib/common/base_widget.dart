@@ -63,7 +63,7 @@ class BaseWidget extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MarkdownPage(codePath + title.toLowerCase() + '.dart'),
+                builder: (context) => MarkdownPage(codePath + '.dart'),
               ),
             );
           },
@@ -72,7 +72,7 @@ class BaseWidget extends StatelessWidget {
           icon: Icon(Icons.share),
           color: Colors.black54,
           onPressed: () {
-            String path = codePath + title.toLowerCase() + '.dart';
+            String path = codePath + '.dart';
             getExampleCode(context, path, DefaultAssetBundle.of(context)).then<void>((String code) {
               var shareText = code ?? 'Example code not found';
               Share.share(shareText);

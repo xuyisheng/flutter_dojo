@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/pages/main/aboutme.dart';
 
+import '../../search/search_mainpage_container.dart';
+
 class MainPagePageHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,17 @@ class MainPagePageHeader extends StatelessWidget {
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(left: 16),
-                child: FlutterLogo(),
+                child: GestureDetector(
+                  child: FlutterLogo(),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SearchMainPage(),
+                      ),
+                    );
+                  },
+                ),
               ),
               Spacer(),
               GestureDetector(

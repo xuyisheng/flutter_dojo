@@ -3,7 +3,6 @@ import 'package:flutter_dojo/pages/animation/animation_mainpage.dart';
 import 'package:flutter_dojo/pages/backend/backend_manpage.dart';
 import 'package:flutter_dojo/pages/main/mainpage_page_header.dart';
 import 'package:flutter_dojo/pages/pattern/pattern_mainpage.dart';
-import 'package:flutter_dojo/pages/uikit/uikit_mainpage.dart';
 import 'package:flutter_dojo/pages/widget/widget_mainpage.dart';
 
 import 'mainpage_page_layout.dart';
@@ -83,14 +82,6 @@ class _MainPageScrollContainerState extends State<MainPageScrollContainer> {
                           'images/pattern_bg.png',
                           () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => PatternMainPage()));
-                          },
-                        ),
-                        PageWidget(
-                          'Develop UI Kit',
-                          'Show Flutter demo code in different category',
-                          'images/uikit_bg.jpg',
-                          () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => UIKitMainPage()));
                           },
                         ),
                         PageWidget(

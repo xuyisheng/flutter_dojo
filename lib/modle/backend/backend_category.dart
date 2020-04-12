@@ -1,111 +1,151 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/backend/catcherror.dart';
-import 'package:flutter_dojo/backend/file.dart';
-import 'package:flutter_dojo/backend/json.dart';
-import 'package:flutter_dojo/backend/key.dart';
-import 'package:flutter_dojo/backend/lifecycle.dart';
-import 'package:flutter_dojo/backend/pageroute.dart';
-import 'package:flutter_dojo/backend/provider.dart';
-import 'package:flutter_dojo/backend/providerstate.dart';
-import 'package:flutter_dojo/backend/sharedpreferences.dart';
-import 'package:flutter_dojo/backend/singleton.dart';
-import 'package:flutter_dojo/backend/sqflite.dart';
-import 'package:flutter_dojo/backend/statemanagement.dart';
-import 'package:flutter_dojo/backend/stream.dart';
+import 'package:flutter_dojo/category/backend/catcherror.dart';
+import 'package:flutter_dojo/category/backend/file.dart';
+import 'package:flutter_dojo/category/backend/json.dart';
+import 'package:flutter_dojo/category/backend/key.dart';
+import 'package:flutter_dojo/category/backend/keyboard.dart';
+import 'package:flutter_dojo/category/backend/lifecycle.dart';
+import 'package:flutter_dojo/category/backend/pageroute.dart';
+import 'package:flutter_dojo/category/backend/provider.dart';
+import 'package:flutter_dojo/category/backend/providerstate.dart';
+import 'package:flutter_dojo/category/backend/screenshot.dart';
+import 'package:flutter_dojo/category/backend/sharedpreferences.dart';
+import 'package:flutter_dojo/category/backend/singleton.dart';
+import 'package:flutter_dojo/category/backend/sqflite.dart';
+import 'package:flutter_dojo/category/backend/statemanagement.dart';
+import 'package:flutter_dojo/category/backend/stream.dart';
+import 'package:flutter_dojo/category/backend/timer.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 
-var codePath = 'lib/backend/';
+var codePath = 'lib/category/backend/';
 List<DemoItem> buildBackendCategoryList = [
   DemoItem(
     icon: Icons.build,
     title: 'CatchError',
     subtitle: 'CatchError',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('CatchError', codePath, CatchErrorWidget()),
+    keyword: 'CatchError',
+    buildRoute: (context) => BaseWidget('CatchError', codePath + 'catcherror', CatchErrorWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'File',
     subtitle: 'File',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('File', codePath, FileWidget()),
-  ),
-  DemoItem(
-    icon: Icons.build,
-    title: 'Key',
-    subtitle: 'Key',
-    documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Key', codePath, KeyWidget()),
-  ),
-  DemoItem(
-    icon: Icons.build,
-    title: 'LifeCycle',
-    subtitle: 'LifeCycle',
-    documentationUrl: '',
-    buildRoute: (context) => BaseWidget('LifeCycle', codePath, LifeCycleWidget()),
+    keyword: 'File',
+    buildRoute: (context) => BaseWidget('File', codePath + 'file', FileWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'Json',
     subtitle: 'Json',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Json', codePath, JsonWidget()),
+    keyword: 'Json',
+    buildRoute: (context) => BaseWidget('Json', codePath + 'json', JsonWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Key',
+    subtitle: 'Key',
+    documentationUrl: '',
+    keyword: 'Key',
+    buildRoute: (context) => BaseWidget('Key', codePath + 'key', KeyWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'Keyboard',
+    subtitle: 'Keyboard',
+    documentationUrl: '',
+    keyword: 'Keyboard',
+    buildRoute: (context) => BaseWidget('Keyboard', codePath + 'keyboard', KeyboardWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'LifeCycle',
+    subtitle: 'LifeCycle',
+    documentationUrl: '',
+    keyword: 'LifeCycle',
+    buildRoute: (context) => BaseWidget('LifeCycle', codePath + 'lifecycle', LifeCycleWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'PageRoute',
     subtitle: 'PageRoute',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('PageRoute', codePath, PageRouteWidget()),
+    keyword: 'PageRoute',
+    buildRoute: (context) => BaseWidget('PageRoute', codePath + 'pageroute', PageRouteWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'Provider',
     subtitle: 'State management',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Provider', codePath, ProviderWidget()),
+    keyword: 'Provider',
+    buildRoute: (context) => BaseWidget('Provider', codePath + 'provider', ProviderWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'ProviderState',
     subtitle: 'State management',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Provider', codePath, ProviderStateWidget()),
+    keyword: 'ProviderState',
+    buildRoute: (context) => BaseWidget('Provider', codePath + 'providerstate', ProviderStateWidget()),
   ),
   DemoItem(
-    icon: Icons.build,
-    title: 'Singleton',
-    subtitle: 'Singleton',
+    icon: Icons.pages,
+    title: 'Screenshot',
+    subtitle: 'Screenshot',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Singleton', codePath, SingletonWidget()),
-  ),
-  DemoItem(
-    icon: Icons.build,
-    title: 'StateManagement',
-    subtitle: 'State management',
-    documentationUrl: '',
-    buildRoute: (context) => BaseWidget('StateManagement', codePath, StateManagementWidget()),
-  ),
-  DemoItem(
-    icon: Icons.build,
-    title: 'Stream',
-    subtitle: 'Stream',
-    documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Stream', codePath, StreamWidget()),
+    keyword: 'Screenshot',
+    buildRoute: (context) => BaseWidget('Screenshot', codePath + 'screenshot', ScreenshotWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'SharedPreferences',
     subtitle: 'SharedPreferences',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('SharedPreferences', codePath, SharedPreferencesWidget()),
+    keyword: 'SharedPreferences',
+    buildRoute: (context) => BaseWidget('SharedPreferences', codePath + 'sharedpreferences', SharedPreferencesWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Singleton',
+    subtitle: 'Singleton',
+    documentationUrl: '',
+    keyword: 'Singleton',
+    buildRoute: (context) => BaseWidget('Singleton', codePath + 'singleton', SingletonWidget()),
   ),
   DemoItem(
     icon: Icons.build,
     title: 'Sqflite',
     subtitle: 'Sqflite',
     documentationUrl: '',
-    buildRoute: (context) => BaseWidget('Sqflite', codePath, SqfliteWidget()),
+    keyword: 'Sqflite',
+    buildRoute: (context) => BaseWidget('Sqflite', codePath + 'sqflite', SqfliteWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'StateManagement',
+    subtitle: 'State management',
+    documentationUrl: '',
+    keyword: 'StateManagement',
+    buildRoute: (context) => BaseWidget('StateManagement', codePath + 'statemanagement', StateManagementWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Stream',
+    subtitle: 'Stream',
+    documentationUrl: '',
+    keyword: 'Stream',
+    buildRoute: (context) => BaseWidget('Stream', codePath + 'stream', StreamWidget()),
+  ),
+  DemoItem(
+    icon: Icons.pages,
+    title: 'Timer',
+    subtitle: 'Timer',
+    documentationUrl: '',
+    keyword: 'Timer',
+    buildRoute: (context) => BaseWidget('Timer', codePath + 'timer', TimerWidget()),
   ),
 ];

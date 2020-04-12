@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/animation/tween/testanim2.dart';
-import 'package:flutter_dojo/pages/pattern/pattern_mainpage.dart';
+import 'package:flutter_dojo/category/animation/listanimation/testanim2.dart';
+import 'package:flutter_dojo/common/demo_item.dart';
 
 class AnimationMainPageListItem extends StatefulWidget {
-  final Entry demoItem;
+  final DemoItemCategory demoItem;
 
   AnimationMainPageListItem(this.demoItem);
 
@@ -34,8 +34,8 @@ class _AnimationMainPageListItemState extends State<AnimationMainPageListItem> w
         child: AnimCategoryContainer(
           CategoryBean(
             Icons.directions_bike,
-            widget.demoItem.title,
-            widget.demoItem.children.map((v) {
+            widget.demoItem.name,
+            widget.demoItem.list.map((v) {
               return CategoryBean(Icons.missed_video_call, v.title, [], () {
                 Navigator.push(
                   context,

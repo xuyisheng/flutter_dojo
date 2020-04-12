@@ -30,8 +30,7 @@ class MainPagePageHeader extends StatelessWidget {
               Spacer(),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutMeWidget()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AboutMeWidget()));
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 16),

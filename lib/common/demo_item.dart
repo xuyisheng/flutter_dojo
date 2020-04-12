@@ -10,6 +10,7 @@ class DemoItem {
     this.documentationUrl,
     this.buildRoute,
     this.codePath,
+    this.keyword,
   });
 
   final String title;
@@ -20,6 +21,7 @@ class DemoItem {
   final WidgetBuilder buildRoute;
   final String documentationUrl;
   final String codePath;
+  final String keyword;
 
   @override
   String toString() {

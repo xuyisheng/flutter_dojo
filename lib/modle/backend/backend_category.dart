@@ -25,6 +25,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'CatchError',
     subtitle: 'CatchError',
     documentationUrl: '',
+    keyword: 'CatchError',
     buildRoute: (context) => BaseWidget('CatchError', codePath + 'catcherror', CatchErrorWidget()),
   ),
   DemoItem(
@@ -32,6 +33,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'File',
     subtitle: 'File',
     documentationUrl: '',
+    keyword: 'File',
     buildRoute: (context) => BaseWidget('File', codePath + 'file', FileWidget()),
   ),
   DemoItem(
@@ -39,6 +41,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Json',
     subtitle: 'Json',
     documentationUrl: '',
+    keyword: 'Json',
     buildRoute: (context) => BaseWidget('Json', codePath + 'json', JsonWidget()),
   ),
   DemoItem(
@@ -46,6 +49,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Key',
     subtitle: 'Key',
     documentationUrl: '',
+    keyword: 'Key',
     buildRoute: (context) => BaseWidget('Key', codePath + 'key', KeyWidget()),
   ),
   DemoItem(
@@ -53,6 +57,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Keyboard',
     subtitle: 'Keyboard',
     documentationUrl: '',
+    keyword: 'Keyboard',
     buildRoute: (context) => BaseWidget('Keyboard', codePath + 'keyboard', KeyboardWidget()),
   ),
   DemoItem(
@@ -60,6 +65,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'LifeCycle',
     subtitle: 'LifeCycle',
     documentationUrl: '',
+    keyword: 'LifeCycle',
     buildRoute: (context) => BaseWidget('LifeCycle', codePath + 'lifecycle', LifeCycleWidget()),
   ),
   DemoItem(
@@ -67,6 +73,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'PageRoute',
     subtitle: 'PageRoute',
     documentationUrl: '',
+    keyword: 'PageRoute',
     buildRoute: (context) => BaseWidget('PageRoute', codePath + 'pageroute', PageRouteWidget()),
   ),
   DemoItem(
@@ -74,6 +81,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Provider',
     subtitle: 'State management',
     documentationUrl: '',
+    keyword: 'Provider',
     buildRoute: (context) => BaseWidget('Provider', codePath + 'provider', ProviderWidget()),
   ),
   DemoItem(
@@ -81,6 +89,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'ProviderState',
     subtitle: 'State management',
     documentationUrl: '',
+    keyword: 'ProviderState',
     buildRoute: (context) => BaseWidget('Provider', codePath + 'providerstate', ProviderStateWidget()),
   ),
   DemoItem(
@@ -88,6 +97,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Screenshot',
     subtitle: 'Screenshot',
     documentationUrl: '',
+    keyword: 'Screenshot',
     buildRoute: (context) => BaseWidget('Screenshot', codePath + 'screenshot', ScreenshotWidget()),
   ),
   DemoItem(
@@ -95,6 +105,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'SharedPreferences',
     subtitle: 'SharedPreferences',
     documentationUrl: '',
+    keyword: 'SharedPreferences',
     buildRoute: (context) => BaseWidget('SharedPreferences', codePath + 'sharedpreferences', SharedPreferencesWidget()),
   ),
   DemoItem(
@@ -102,6 +113,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Singleton',
     subtitle: 'Singleton',
     documentationUrl: '',
+    keyword: 'Singleton',
     buildRoute: (context) => BaseWidget('Singleton', codePath + 'singleton', SingletonWidget()),
   ),
   DemoItem(
@@ -109,6 +121,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Sqflite',
     subtitle: 'Sqflite',
     documentationUrl: '',
+    keyword: 'Sqflite',
     buildRoute: (context) => BaseWidget('Sqflite', codePath + 'sqflite', SqfliteWidget()),
   ),
   DemoItem(
@@ -116,6 +129,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'StateManagement',
     subtitle: 'State management',
     documentationUrl: '',
+    keyword: 'StateManagement',
     buildRoute: (context) => BaseWidget('StateManagement', codePath + 'statemanagement', StateManagementWidget()),
   ),
   DemoItem(
@@ -123,6 +137,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Stream',
     subtitle: 'Stream',
     documentationUrl: '',
+    keyword: 'Stream',
     buildRoute: (context) => BaseWidget('Stream', codePath + 'stream', StreamWidget()),
   ),
   DemoItem(
@@ -130,6 +145,7 @@ List<DemoItem> buildBackendCategoryList = [
     title: 'Timer',
     subtitle: 'Timer',
     documentationUrl: '',
+    keyword: 'Timer',
     buildRoute: (context) => BaseWidget('Timer', codePath + 'timer', TimerWidget()),
   ),
 ];

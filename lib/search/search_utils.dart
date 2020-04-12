@@ -11,6 +11,10 @@ class SearchUtils {
   ///结果用Set返回，去除了重复数据
   Set<String> defaultSearchStrategy(String word) {
     Set<String> result = new Set();
+    if (word == null || word == '') {
+      result.addAll(_dictionaryList);
+      return result;
+    }
 
     int defaultDistance = word.length ~/ 4;
     if (defaultDistance < 1) {
@@ -26,6 +30,12 @@ class SearchUtils {
     if (_similaritySearchResult == null) {
       _similaritySearchResult = List();
     }
+    if (inputWord == null || inputWord == '') {
+      _similaritySearchResult.clear();
+      _similaritySearchResult.addAll(_dictionaryList);
+      return _similaritySearchResult;
+    }
+
     for (String wordInDictionary in _dictionaryList) {
       if (_matchSimilarWords(wordInDictionary, inputWord, distance)) {
         _similaritySearchResult.add(wordInDictionary);
@@ -71,6 +81,11 @@ class SearchUtils {
   List<String> searchWordsInTrie(String prefix) {
     if (_dictionaryTree == null) {
       return new List<String>();
+    }
+    if (prefix == null || prefix == '') {
+      _prefixSearchResult = List<String>();
+      _prefixSearchResult.addAll(_dictionaryList);
+      return _prefixSearchResult;
     }
     _copy = _dictionaryTree;
     _prefixSearchResult = new List<String>();

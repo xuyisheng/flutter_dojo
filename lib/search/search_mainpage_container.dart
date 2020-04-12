@@ -45,6 +45,7 @@ class SearchState extends State<SearchMainPage> {
 //    'Provider',
 //    'ProviderState'
 //  ];
+  static const String KEY_SPLIT = ',';
   List<DemoItem> demoList = buildBackendCategoryList;
   String input = ''; //用户在输入框输入的文字
   Set<String> result; //返回的关键词搜索结果
@@ -74,7 +75,7 @@ class SearchState extends State<SearchMainPage> {
     // defaultSearchStrategy是默认的搜索关键词匹配策略，
     // 也可以用searchSimilarWords匹配相似单词，用searchWordsInTrie匹配前缀，自己设定参数
     // 如果把单词倒过来加入字典，还可以用searchWordsInTrie匹配到后缀
-    result = searchUtils.defaultSearchStrategy(input);
+    result = searchUtils.defaultMultipleSearchStrategy(input.split(KEY_SPLIT));
     result.forEach((item) {
       textList.add(getItem(item));
     });

@@ -2,7 +2,10 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
+import 'package:flutter_dojo/modle/animation/animation_category.dart';
 import 'package:flutter_dojo/modle/backend/backend_category.dart';
+import 'package:flutter_dojo/modle/pattern/pattern_category.dart';
+import 'package:flutter_dojo/modle/widget/widget_category.dart';
 import 'package:flutter_dojo/search/search_utils.dart';
 
 class SearchMainPage extends StatefulWidget {
@@ -13,40 +16,8 @@ class SearchMainPage extends StatefulWidget {
 }
 
 class SearchState extends State<SearchMainPage> {
-  //测试用数据，后期可以换成map来支持页面跳转
-//  List<String> testDictionary = [
-//    'Accessibility',
-//    'Animation and motion',
-//    'Async',
-//    'App stucture and navigation',
-//    'Assets,images,and icon',
-//    'Basic',
-//    'Buttons',
-//    'Cupertino',
-//    'Dialog,alerts,and panels',
-//    'Information displays',
-//    'Input',
-//    'Input and selections',
-//    'Layout',
-//    'Multu-child layout',
-//    'Painting and effet',
-//    'Routing',
-//    'Scrolling',
-//    'Single-child layout widgets',
-//    'Styling',
-//    'Text',
-//    'Touch interactions',
-//    'CatchError',
-//    'File',
-//    'Key',
-//    'LifeCycle',
-//    'Json',
-//    'PageRoute',
-//    'Provider',
-//    'ProviderState'
-//  ];
   static const String KEY_SPLIT = ',';
-  List<DemoItem> demoList = buildBackendCategoryList;
+  List<DemoItem> demoList = [];
   String input = ''; //用户在输入框输入的文字
   Set<String> result; //返回的关键词搜索结果
   TextEditingController _controller = TextEditingController();
@@ -57,6 +28,16 @@ class SearchState extends State<SearchMainPage> {
   void initState() {
     super.initState();
 //    SearchUtils().updateWords(); //把字典加入搜索工具中
+    buildWidgetCategoryList.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    buildPatternData.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    buildAnimationCategoryList.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    demoList.addAll(buildBackendCategoryList);
     demoList.forEach((demoItem) {
       searchUtils.addWord(demoItem.keyword);
       searchMap[demoItem.keyword] = demoItem;
@@ -156,26 +137,26 @@ class SearchState extends State<SearchMainPage> {
   }
 
   getItem(String s) {
-    return Container(
-      padding: EdgeInsets.only(top: 5, bottom: 5),
-      child: GestureDetector(
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      child: Container(
+        padding: EdgeInsets.only(top: 5, bottom: 5),
         child: Row(
           children: <Widget>[
             Icon(searchMap[s]?.icon),
             Container(
-              margin: EdgeInsets.only(left: 10),
+              margin: EdgeInsets.all(8),
               child: Text(
                 s,
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 20),
               ),
             ),
           ],
         ),
-        onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
-        },
       ),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
+      },
     );
   }
 }

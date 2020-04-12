@@ -10,7 +10,7 @@ class DemoItem {
     this.documentationUrl,
     this.buildRoute,
     this.codePath,
-    this.keyword,
+    this.keyword = '',
   });
 
   final String title;

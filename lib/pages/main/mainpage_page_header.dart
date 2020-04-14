@@ -13,18 +13,16 @@ class MainPagePageHeader extends StatelessWidget {
           height: kToolbarHeight,
           child: Row(
             children: <Widget>[
-              Container(
-                margin: EdgeInsets.only(left: 16),
-                child: GestureDetector(
-                  child: FlutterLogo(),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SearchMainPage(),
-                      ),
-                    );
-                  },
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => SearchMainPage()));
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 16),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               Spacer(),

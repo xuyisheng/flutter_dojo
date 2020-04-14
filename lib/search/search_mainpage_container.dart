@@ -1,4 +1,11 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/common/demo_item.dart';
+import 'package:flutter_dojo/modle/animation/animation_category.dart';
+import 'package:flutter_dojo/modle/backend/backend_category.dart';
+import 'package:flutter_dojo/modle/pattern/pattern_category.dart';
+import 'package:flutter_dojo/modle/widget/widget_category.dart';
 import 'package:flutter_dojo/search/search_utils.dart';
 
 class SearchMainPage extends StatefulWidget {
@@ -9,46 +16,32 @@ class SearchMainPage extends StatefulWidget {
 }
 
 class SearchState extends State<SearchMainPage> {
-  //测试用数据，后期可以换成map来支持页面跳转
-  List<String> testDictionary = [
-    'Accessibility',
-    'Animation and motion',
-    'Async',
-    'App stucture and navigation',
-    'Assets,images,and icon',
-    'Basic',
-    'Buttons',
-    'Cupertino',
-    'Dialog,alerts,and panels',
-    'Information displays',
-    'Input',
-    'Input and selections',
-    'Layout',
-    'Multu-child layout',
-    'Painting and effet',
-    'Routing',
-    'Scrolling',
-    'Single-child layout widgets',
-    'Styling',
-    'Text',
-    'Touch interactions',
-    'CatchError',
-    'File',
-    'Key',
-    'LifeCycle',
-    'Json',
-    'PageRoute',
-    'Provider',
-    'ProviderState'
-  ];
-  String input = '';//用户在输入框输入的文字
-  Set<String> result;//返回的关键词搜索结果
+  static const String KEY_SPLIT = ',';
+  List<DemoItem> demoList = [];
+  String input = ''; //用户在输入框输入的文字
+  Set<String> result; //返回的关键词搜索结果
   TextEditingController _controller = TextEditingController();
+  SearchUtils searchUtils = SearchUtils();
+  HashMap<String, DemoItem> searchMap = HashMap<String, DemoItem>();
 
   @override
   void initState() {
     super.initState();
-    SearchUtils().updateWords(testDictionary);//把字典加入搜索工具中
+//    SearchUtils().updateWords(); //把字典加入搜索工具中
+    buildWidgetCategoryList.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    buildPatternData.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    buildAnimationCategoryList.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    demoList.addAll(buildBackendCategoryList);
+    demoList.forEach((demoItem) {
+      searchUtils.addWord(demoItem.keyword);
+      searchMap[demoItem.keyword] = demoItem;
+    });
     _controller.addListener(() {
       setState(() {
         input = _controller?.text;
@@ -60,21 +53,20 @@ class SearchState extends State<SearchMainPage> {
   Widget build(BuildContext context) {
     List<Widget> textList = new List();
 
-    if (input != null && input.trim() != "") {
-      // defaultSearchStrategy是默认的搜索关键词匹配策略，
-      // 也可以用searchSimilarWords匹配相似单词，用searchWordsInTrie匹配前缀，自己设定参数
-      // 如果把单词倒过来加入字典，还可以用searchWordsInTrie匹配到后缀
-      result = SearchUtils().defaultSearchStrategy(input);
-      result.forEach((item) {
-        textList.add(getItem(item));
-      });
-    }
+    // defaultSearchStrategy是默认的搜索关键词匹配策略，
+    // 也可以用searchSimilarWords匹配相似单词，用searchWordsInTrie匹配前缀，自己设定参数
+    // 如果把单词倒过来加入字典，还可以用searchWordsInTrie匹配到后缀
+    result = searchUtils.defaultMultipleSearchStrategy(input.split(KEY_SPLIT));
+    result.forEach((item) {
+      textList.add(getItem(item));
+    });
+
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         margin: EdgeInsets.only(top: 30),
-        padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+        padding: EdgeInsets.only(left: 15, right: 15, top: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -95,7 +87,6 @@ class SearchState extends State<SearchMainPage> {
 
   getSearchBar(context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
       child: Row(
         children: <Widget>[
           Expanded(
@@ -146,12 +137,26 @@ class SearchState extends State<SearchMainPage> {
   }
 
   getItem(String s) {
-    return Container(
-      padding: EdgeInsets.only(top: 5, bottom: 5),
-      child: Text(
-        s,
-        style: TextStyle(fontSize: 16),
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      child: Container(
+        padding: EdgeInsets.only(top: 5, bottom: 5),
+        child: Row(
+          children: <Widget>[
+            Icon(searchMap[s]?.icon),
+            Container(
+              margin: EdgeInsets.all(8),
+              child: Text(
+                s,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ],
+        ),
       ),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
+      },
     );
   }
 }

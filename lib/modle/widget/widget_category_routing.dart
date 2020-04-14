@@ -10,6 +10,7 @@ List<DemoItem> buildRoutingDemoItems(String codePath) {
       icon: Icons.router,
       title: 'Hero',
       subtitle: 'A widget that marks its child as being a candidate for hero animations.',
+      keyword: 'Hero',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Hero-class.html',
       buildRoute: (context) => BaseWidget('Hero', 'lib/category/widgets/animationmotion/hero', HeroWidget()),
     ),
@@ -17,6 +18,7 @@ List<DemoItem> buildRoutingDemoItems(String codePath) {
       icon: Icons.router,
       title: 'Navigator',
       subtitle: 'A widget that manages a set of child widgets with a stack discipline.',
+      keyword: 'Navigator',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Navigator-class.html',
       buildRoute: (context) => BaseWidget('Navigator', codePath + 'navigator', NavigatorWidget()),
     )

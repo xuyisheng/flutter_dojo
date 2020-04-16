@@ -1,3 +1,4 @@
+import 'dart:collection';
 import 'dart:math';
 
 class SearchUtils {
@@ -9,7 +10,9 @@ class SearchUtils {
   ///默认的搜索策略的基础上新增支持多个单词
   Set<String> defaultMultipleSearchStrategy(List<String> words) {
     Set<String> result = new Set();
-    if (words == null || words.length == 0 || (words.length == 1 && (words[0] == null || words[0] == ""))) {
+    if (words == null ||
+        words.length == 0 ||
+        (words.length == 1 && (words[0] == null || words[0] == ""))) {
       result.addAll(_dictionaryList);
       return result;
     }
@@ -19,6 +22,17 @@ class SearchUtils {
       }
     });
 
+    return result;
+  }
+
+  ///任意位置的前缀匹配
+  Set<String> multiPositionSearchStrategy(List<String> words) {
+    Set<String> result = Set();
+    for (String word in words) {
+      if (result.length == 0 || word != null && word.length > 0) {
+        result.addAll(enhancedTriesSearch(word));
+      }
+    }
     return result;
   }
 
@@ -99,12 +113,10 @@ class SearchUtils {
       return new List<String>();
     }
     if (prefix == null || prefix == '') {
-      _prefixSearchResult = List<String>();
-      _prefixSearchResult.addAll(_dictionaryList);
-      return _prefixSearchResult;
+      return _dictionaryList;
     }
     _copy = _dictionaryTree;
-    _prefixSearchResult = new List<String>();
+    _prefixSearchResult = new List();
     String matchedPrefix = "";
     for (int i = 0; i < prefix.length; i++) {
       if (!_matchLetter(prefix[i])) {
@@ -115,6 +127,69 @@ class SearchUtils {
     }
     _searchAllWords(matchedPrefix, _copy);
     return _prefixSearchResult;
+  }
+
+  ///从字典单词的任意位置开始匹配前缀
+  HashMap<TreeNode, String> matchedList;
+
+  Set<String> enhancedTriesSearch(String prefix) {
+    if (_dictionaryTree == null) {
+      return Set<String>();
+    }
+    if (prefix == null || prefix == '') {
+      return Set.from(_dictionaryList);
+    }
+    _copy = _dictionaryTree;
+    matchedList = HashMap();
+    _matchFirstLetter(_copy, prefix, "");
+
+    Iterable<TreeNode> keys = matchedList.keys;
+
+    _prefixSearchResult = new List();
+    for (TreeNode node in keys) {
+      _searchAllWords(matchedList[node], node);
+    }
+
+    return Set.from(_prefixSearchResult);
+  }
+
+  ///找到字典树中所有出现过首字母的地方，并以这些地方开始向下搜索
+  Queue<TreeNode> queue = Queue();
+
+  void _matchFirstLetter(
+      TreeNode startNode, String target, String matchedString) {
+    for (TreeNode node in startNode.children) {
+      matchedString = matchedString + node.val;
+      if (node.val.toLowerCase() == target[0].toLowerCase()) {
+        _matchRestLetter(node, matchedString, target);
+      }
+      _matchFirstLetter(node, target, matchedString);
+      matchedString = matchedString.substring(0, matchedString.length - 1); //回溯
+    }
+  }
+
+  ///匹配首字母以外的其他字母
+  void _matchRestLetter(TreeNode node, String matchedString, String target) {
+    if (target.length == 1) {
+      matchedList[node] = matchedString;
+    } else {
+      for (int i = 1; i < target.length; i++) {
+        bool isMatched = false;
+        for (TreeNode child in node.children) {
+          if (child.val.toLowerCase() == target[i].toLowerCase()) {
+            node = child;
+            matchedString = matchedString + child.val;
+            isMatched = true;
+            break;
+          }
+        }
+        if (!isMatched) {
+          return;
+        }
+      }
+      print("lizheren   " + matchedString);
+      matchedList[node] = matchedString;
+    }
   }
 
   bool _matchLetter(String letter) {
@@ -160,6 +235,7 @@ class SearchUtils {
     }
   }
 
+  ///把单词添加到字典树
   _addWordInTrie(String c, bool endFlag) {
     bool containFlag = false;
     for (TreeNode child in _copy.children) {

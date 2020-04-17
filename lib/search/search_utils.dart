@@ -28,11 +28,35 @@ class SearchUtils {
   ///任意位置的前缀匹配
   Set<String> multiPositionSearchStrategy(List<String> words) {
     Set<String> result = Set();
+    var time1 = DateTime.now().microsecondsSinceEpoch;
     for (String word in words) {
       if (result.length == 0 || word != null && word.length > 0) {
         result.addAll(enhancedTriesSearch(word));
       }
     }
+/*    print("lizheren1   ${result.length}");
+
+    var time2 = DateTime.now().microsecondsSinceEpoch;
+    for (String word in words) {
+      for (String s in _dictionaryList) {
+        if (s.toLowerCase().contains(word.toLowerCase())) {
+          result.add(s);
+        }
+      }
+    }
+    print("lizheren2   ${result.length}");
+
+    var time3 = DateTime.now().microsecondsSinceEpoch;
+    for (String word in words) {
+      for (String s in _dictionaryList) {
+        if (kmpMatch(s.toLowerCase(), word.toLowerCase())) {
+          result.add(s);
+        }
+      }
+    }
+    print("lizheren3   ${result.length}");
+    var time4 = DateTime.now().microsecondsSinceEpoch;
+    print("lizheren   ${time2 - time1}   ${time3 - time2}   ${time4 - time3}");*/
     return result;
   }
 
@@ -125,12 +149,12 @@ class SearchUtils {
         matchedPrefix = matchedPrefix + _copy.val;
       }
     }
-    _searchAllWords(matchedPrefix, _copy);
+    _searchAllWords(_copy);
     return _prefixSearchResult;
   }
 
   ///从字典单词的任意位置开始匹配前缀
-  LinkedHashMap<TreeNode, String> matchedList;
+  List<TreeNode> matchedList;
 
   Set<String> enhancedTriesSearch(String prefix) {
     if (_dictionaryTree == null) {
@@ -140,68 +164,48 @@ class SearchUtils {
       return Set.from(_dictionaryList);
     }
     _copy = _dictionaryTree;
-    matchedList = LinkedHashMap();
 
-    LinkedHashMap<TreeNode, String> tempMap = LinkedHashMap();
-    tempMap[_copy] = "";
-    Queue<LinkedHashMap<TreeNode, String>> queue = Queue(); //广度优先搜索队列
-    queue.add(tempMap);
+    matchedList = List();
+    Queue<TreeNode> queue = Queue(); //广度优先搜索队列
+    queue.add(_copy);
     _matchFirstLetter(queue, prefix);
 
-    Iterable<TreeNode> keys = matchedList.keys;
-
     _prefixSearchResult = new List();
-    for (TreeNode node in keys) {
-      _searchAllWords(matchedList[node], node);
+    for (TreeNode node in matchedList) {
+      _searchAllWords(node);
     }
 
     return Set.from(_prefixSearchResult);
   }
 
   ///找到字典树中所有出现过首字母的地方，并以这些地方开始向下搜索(层次遍历)
-  void _matchFirstLetter(
-      Queue<LinkedHashMap<TreeNode, String>> nodeQueue, String target) {
-    Queue<LinkedHashMap<TreeNode, String>> backtrackQueue = Queue();
+  void _matchFirstLetter(Queue<TreeNode> nodeQueue, String target) {
+    Queue<TreeNode> nextQueue = Queue();
     if (nodeQueue.length == 0) {
       return;
     }
     while (nodeQueue.length > 0) {
-      LinkedHashMap<TreeNode, String> tempMap = nodeQueue.removeLast();
-
-      for (TreeNode node in tempMap.keys) {
-        String matchedString = tempMap[node] + node.val;
-        if (node.val.toLowerCase() == target[0].toLowerCase()) {
-          TreeNode backupNode = node;
-          _matchRestLetter(backupNode, matchedString, target);
-        }
-
-        LinkedHashMap<TreeNode, String> backtrackMap = LinkedHashMap();
-        node.children.forEach((child) {
-          backtrackMap[child] = matchedString;
-        });
-
-        backtrackQueue.add(backtrackMap);
-        if (node.val != "") {
-          matchedString =
-              matchedString.substring(0, matchedString.length - 1); //回溯
-        }
+      TreeNode tempNode = nodeQueue.removeLast();
+      if (tempNode.val.toLowerCase() == target[0].toLowerCase()) {
+        TreeNode backupNode = tempNode;
+        _matchRestLetter(backupNode, target);
       }
+      tempNode.children.forEach((childNode) => nextQueue.add(childNode));
     }
 
-    _matchFirstLetter(backtrackQueue, target);
+    _matchFirstLetter(nextQueue, target);
   }
 
   ///匹配首字母以外的其他字母
-  void _matchRestLetter(TreeNode node, String matchedString, String target) {
+  void _matchRestLetter(TreeNode node, String target) {
     if (target.length == 1) {
-      matchedList[node] = matchedString;
+      matchedList.add(node);
     } else {
       for (int i = 1; i < target.length; i++) {
         bool isMatched = false;
         for (TreeNode child in node.children) {
           if (child.val.toLowerCase() == target[i].toLowerCase()) {
             node = child;
-            matchedString = matchedString + child.val;
             isMatched = true;
             break;
           }
@@ -210,8 +214,8 @@ class SearchUtils {
           return;
         }
       }
-      if (!matchedList.containsKey(node)) {
-        matchedList[node] = matchedString;
+      if (!matchedList.contains(node)) {
+        matchedList.add(node);
       }
     }
   }
@@ -226,7 +230,7 @@ class SearchUtils {
     return false;
   }
 
-  void _searchAllWords(String result, TreeNode copy) {
+  void _searchAllWords(TreeNode copy) {
     _prefixSearchResult.addAll(copy.intactWord);
 //    if (copy.endFlag) {
 //      _prefixSearchResult.add(result);
@@ -280,6 +284,45 @@ class SearchUtils {
     if (_copy.endFlag == null || !_copy.endFlag) {
       _copy.endFlag = endFlag;
     }
+  }
+
+  ///KMP
+  bool kmpMatch(String s, String t) {
+    List<int> next = getNextArray(t);
+    int i = 0, j = 0;
+    while (i < s.length && j < t.length) {
+      if (j == -1 || s[i] == t[j]) {
+        i++;
+        j++;
+      } else
+        j = next[j];
+    }
+    if (j == t.length)
+//      return i - j;
+      return true;
+    else
+//      return -1;
+      return false;
+  }
+
+  List<int> getNextArray(String t) {
+    List<int> next = new List(200);
+    next[0]=-1;
+    next[1]=0;
+    int k;
+    for (int j = 2; j < t.length; j++) {
+      k = next[j - 1];
+      while (k != -1) {
+        if (t[j - 1] == t[k]) {
+          next[j] = k + 1;
+          break;
+        } else {
+          k = next[k];
+        }
+        next[j] = 0; //当k==-1而跳出循环时，next[j] = 0，否则next[j]会在break之前被赋值
+      }
+    }
+    return next;
   }
 
   ///清空整个字典

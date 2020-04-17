@@ -227,12 +227,13 @@ class SearchUtils {
   }
 
   void _searchAllWords(String result, TreeNode copy) {
-    if (copy.endFlag) {
-      _prefixSearchResult.add(result);
-    }
-    for (TreeNode child in copy.children) {
-      _searchAllWords(result + child.val, child);
-    }
+    _prefixSearchResult.addAll(copy.intactWord);
+//    if (copy.endFlag) {
+//      _prefixSearchResult.add(result);
+//    }
+//    for (TreeNode child in copy.children) {
+//      _searchAllWords(result + child.val, child);
+//    }
   }
 
   ///更新单词组
@@ -255,12 +256,12 @@ class SearchUtils {
     }
     _copy = _dictionaryTree;
     for (int i = 0; i < word.length; i++) {
-      _addWordInTrie(word[i], i == word.length - 1);
+      _addWordInTrie(word[i], word, i == word.length - 1);
     }
   }
 
   ///把单词添加到字典树
-  _addWordInTrie(String c, bool endFlag) {
+  _addWordInTrie(String c, String intactWord, bool endFlag) {
     bool containFlag = false;
     for (TreeNode child in _copy.children) {
       if (child.val.toLowerCase() == c.toLowerCase()) {
@@ -274,6 +275,8 @@ class SearchUtils {
       _copy.children.add(childNode);
       _copy = childNode;
     }
+
+    _copy.intactWord.add(intactWord);
     if (_copy.endFlag == null || !_copy.endFlag) {
       _copy.endFlag = endFlag;
     }
@@ -296,7 +299,7 @@ class SearchUtils {
 
 class TreeNode {
   List<TreeNode> children = new List();
-  List<int> index;
+  List<String> intactWord = new List();
   String val;
   bool endFlag;
 

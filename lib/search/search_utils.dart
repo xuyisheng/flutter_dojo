@@ -130,7 +130,7 @@ class SearchUtils {
   }
 
   ///从字典单词的任意位置开始匹配前缀
-  HashMap<TreeNode, String> matchedList;
+  LinkedHashMap<TreeNode, String> matchedList;
 
   Set<String> enhancedTriesSearch(String prefix) {
     if (_dictionaryTree == null) {
@@ -140,8 +140,13 @@ class SearchUtils {
       return Set.from(_dictionaryList);
     }
     _copy = _dictionaryTree;
-    matchedList = HashMap();
-    _matchFirstLetter(_copy, prefix, "");
+    matchedList = LinkedHashMap();
+
+    LinkedHashMap<TreeNode, String> tempMap = LinkedHashMap();
+    tempMap[_copy] = "";
+    Queue<LinkedHashMap<TreeNode, String>> queue = Queue(); //广度优先搜索队列
+    queue.add(tempMap);
+    _matchFirstLetter(queue, prefix);
 
     Iterable<TreeNode> keys = matchedList.keys;
 
@@ -153,19 +158,37 @@ class SearchUtils {
     return Set.from(_prefixSearchResult);
   }
 
-  ///找到字典树中所有出现过首字母的地方，并以这些地方开始向下搜索
-  Queue<TreeNode> queue = Queue();
-
+  ///找到字典树中所有出现过首字母的地方，并以这些地方开始向下搜索(层次遍历)
   void _matchFirstLetter(
-      TreeNode startNode, String target, String matchedString) {
-    for (TreeNode node in startNode.children) {
-      matchedString = matchedString + node.val;
-      if (node.val.toLowerCase() == target[0].toLowerCase()) {
-        _matchRestLetter(node, matchedString, target);
-      }
-      _matchFirstLetter(node, target, matchedString);
-      matchedString = matchedString.substring(0, matchedString.length - 1); //回溯
+      Queue<LinkedHashMap<TreeNode, String>> nodeQueue, String target) {
+    Queue<LinkedHashMap<TreeNode, String>> backtrackQueue = Queue();
+    if (nodeQueue.length == 0) {
+      return;
     }
+    while (nodeQueue.length > 0) {
+      LinkedHashMap<TreeNode, String> tempMap = nodeQueue.removeLast();
+
+      for (TreeNode node in tempMap.keys) {
+        String matchedString = tempMap[node] + node.val;
+        if (node.val.toLowerCase() == target[0].toLowerCase()) {
+          TreeNode backupNode = node;
+          _matchRestLetter(backupNode, matchedString, target);
+        }
+
+        LinkedHashMap<TreeNode, String> backtrackMap = LinkedHashMap();
+        node.children.forEach((child) {
+          backtrackMap[child] = matchedString;
+        });
+
+        backtrackQueue.add(backtrackMap);
+        if (node.val != "") {
+          matchedString =
+              matchedString.substring(0, matchedString.length - 1); //回溯
+        }
+      }
+    }
+
+    _matchFirstLetter(backtrackQueue, target);
   }
 
   ///匹配首字母以外的其他字母
@@ -187,8 +210,9 @@ class SearchUtils {
           return;
         }
       }
-      print("lizheren   " + matchedString);
-      matchedList[node] = matchedString;
+      if (!matchedList.containsKey(node)) {
+        matchedList[node] = matchedString;
+      }
     }
   }
 
@@ -272,6 +296,7 @@ class SearchUtils {
 
 class TreeNode {
   List<TreeNode> children = new List();
+  List<int> index;
   String val;
   bool endFlag;
 

@@ -14,7 +14,7 @@ class IconWidget extends StatelessWidget {
           size: 50,
         ),
         MainTitleWidget('显示Asset数据'),
-        SubtitleWidget('修改Icon颜色、Size'),
+        SubtitleWidget('使用ImageIcon修改Icon颜色、Size'),
         ImageIcon(
           AssetImage('images/logo.png'),
           color: Colors.red,

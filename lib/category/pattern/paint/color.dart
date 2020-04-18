@@ -34,15 +34,24 @@ class _ColorWidgetState extends State<ColorWidget> {
             child: Text('change color luminance'),
           ),
           MainTitleWidget('MaterialColor'),
-          for (int i = 0; i < 10; i++) ...[
+          for (int i = 1; i < 10; i++) ...[
             Container(
               height: 50,
               width: double.infinity,
               color: Colors.blue[100 * i],
+              child: Center(
+                  child: Text(
+                formatColorString(Colors.blue[100 * i]),
+                style: TextStyle(color: Colors.white),
+              )),
             )
           ],
         ],
       ),
     );
+  }
+
+  String formatColorString(Color color) {
+    return '#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}';
   }
 }

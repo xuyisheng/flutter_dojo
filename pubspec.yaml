@@ -73,6 +73,7 @@ flutter:
     - lib/category/widgets/animationmotion/fadeinimage.dart
     - lib/category/widgets/animationmotion/hero.dart
     - lib/category/widgets/animationmotion/positionedtransition.dart
+    - lib/category/widgets/animationmotion/relativepositionedtransition.dart
     - lib/category/widgets/animationmotion/rotationtransition.dart
     - lib/category/widgets/animationmotion/animatedtheme.dart
 

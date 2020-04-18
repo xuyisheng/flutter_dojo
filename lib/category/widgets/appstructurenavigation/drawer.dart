@@ -5,13 +5,26 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('DrawerWidget'),
-      ),
       body: Body(),
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
+            DrawerHeader(
+              margin: EdgeInsets.all(16),
+              child: Text(
+                'Android群英传',
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(16),
+                image: DecorationImage(
+                  image: AssetImage('images/book.jpg'),
+                  fit: BoxFit.contain,
+                  alignment: Alignment.centerRight,
+                ),
+              ),
+            ),
             UserAccountsDrawerHeader(
               accountName: Text('XuYisheng'),
               accountEmail: Text('XuYisheng89@163.com'),

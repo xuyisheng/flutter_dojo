@@ -16,9 +16,17 @@ class IconThemeWidget extends StatelessWidget {
                 color: Colors.white,
                 opacity: 0.5,
               ),
-              child: Container(
-                padding: EdgeInsets.all(20),
-                child: Icon(Icons.account_balance),
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    child: Icon(Icons.account_balance),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    child: Icon(Icons.access_alarm),
+                  ),
+                ],
               ),
             ),
           ],

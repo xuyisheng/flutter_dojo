@@ -81,6 +81,15 @@ class _AppbarWidgetState extends State<AppbarWidget> with SingleTickerProviderSt
             ],
           ),
         ),
+        AppBar(
+          title: Text('With Shape'),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(16),
+              bottomRight: Radius.circular(16),
+            ),
+          ),
+        ),
         MainTitleWidget('Appbar With Tabs'),
         Expanded(
           child: AppBar(

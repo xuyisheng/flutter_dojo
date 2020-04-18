@@ -24,8 +24,11 @@ class GridPaperWidget extends StatelessWidget {
                   ),
                 ),
                 GridPaper(
+                  interval: 50,
+                  divisions: 4,
+                  subdivisions: 4,
                   child: Text(
-                    "Text2",
+                    "二次划分",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

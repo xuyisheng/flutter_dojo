@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/widgets/buttons/backbutton.dart';
 import 'package:flutter_dojo/category/widgets/buttons/buttonbar.dart';
 import 'package:flutter_dojo/category/widgets/buttons/dropdownbutton.dart';
+import 'package:flutter_dojo/category/widgets/buttons/expandicon.dart';
 import 'package:flutter_dojo/category/widgets/buttons/flatbutton.dart';
 import 'package:flutter_dojo/category/widgets/buttons/floatingactionbutton.dart';
 import 'package:flutter_dojo/category/widgets/buttons/iconbutton.dart';
@@ -38,6 +39,14 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
       keyword: 'DropdownButton',
       documentationUrl: 'https://api.flutter.dev/flutter/material/DropdownButton-class.html',
       buildRoute: (context) => BaseWidget('DropdownButton', codePath + 'dropdownbutton', DropdownButtonWidget()),
+    ),
+    DemoItem(
+      icon: Icons.check_box,
+      title: 'ExpandIcon',
+      subtitle: 'ExpandIcon',
+      keyword: 'ExpandIcon',
+      documentationUrl: 'https://api.flutter.dev/flutter/material/ExpandIcon-class.html',
+      buildRoute: (context) => BaseWidget('ExpandIcon', codePath + 'expandicon', ExpandIconWidget()),
     ),
     DemoItem(
       icon: Icons.check_box,

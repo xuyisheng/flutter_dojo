@@ -21,6 +21,7 @@ class _ImageWidgetState extends State<ImageWidget> {
   Uint8List bmp;
   BMP332Header header;
   Random r = Random();
+  BoxFit fit = BoxFit.none;
 
   @override
   void initState() {
@@ -105,6 +106,21 @@ class _ImageWidgetState extends State<ImageWidget> {
           width: 150,
           color: Colors.blueAccent,
         ),
+        MainTitleWidget('Image BoxFit'),
+        Align(
+          child: Container(
+            width: 150,
+            height: 250,
+            color: Colors.blueAccent,
+            child: Image.asset(
+              'images/book.jpg',
+              fit: fit,
+            ),
+          ),
+        ),
+        MultiSelectionWidget('BoxFit', BoxFit.values, BoxFit.values, (value) {
+          setState(() => fit = value);
+        }),
         MainTitleWidget('Image ColorBlendModes'),
         Image(
           image: AssetImage('images/logo.png'),

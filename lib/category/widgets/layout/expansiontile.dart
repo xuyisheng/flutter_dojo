@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
-class ExpansionTileWidget extends StatelessWidget {
-  const ExpansionTileWidget({Key key}) : super(key: key);
+class ExpansionTileWidget extends StatefulWidget {
+  @override
+  _ExpansionTileWidgetState createState() => _ExpansionTileWidgetState();
+}
+
+class _ExpansionTileWidgetState extends State<ExpansionTileWidget> {
+  var selection = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +19,38 @@ class ExpansionTileWidget extends StatelessWidget {
           child: ListView.builder(
             itemBuilder: (BuildContext context, int index) => EntryItem(data[index]),
             itemCount: data.length,
+          ),
+        ),
+        SubtitleWidget('单个实现'),
+        Expanded(
+          child: ExpansionTile(
+            leading: Icon(Icons.star),
+            title: Text("My Book"),
+            onExpansionChanged: (value) {},
+            initiallyExpanded: true,
+            children: <Widget>[
+              CheckboxListTile(
+                value: selection == 0,
+                onChanged: (v) {
+                  setState(() => selection = 0);
+                },
+                title: Text('Android群英传'),
+              ),
+              CheckboxListTile(
+                value: selection == 1,
+                onChanged: (v) {
+                  setState(() => selection = 1);
+                },
+                title: Text('神兵利器'),
+              ),
+              CheckboxListTile(
+                value: selection == 2,
+                onChanged: (v) {
+                  setState(() => selection = 2);
+                },
+                title: Text('修仙指南'),
+              ),
+            ],
           ),
         ),
       ],

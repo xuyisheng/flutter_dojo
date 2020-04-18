@@ -2,88 +2,23 @@ import 'dart:collection';
 import 'dart:math';
 
 class SearchUtils {
-  static TreeNode _dictionaryTree, _copy;
-  static List<String> _dictionaryList;
+  TreeNode _dictionaryTree, _copy;
+  List<String> _dictionaryList;
   List<String> _prefixSearchResult;
   List<String> _similaritySearchResult;
 
-  ///默认的搜索策略的基础上新增支持多个单词
-  Set<String> defaultMultipleSearchStrategy(List<String> words) {
-    Set<String> result = new Set();
-    if (words == null ||
-        words.length == 0 ||
-        (words.length == 1 && (words[0] == null || words[0] == ""))) {
-      result.addAll(_dictionaryList);
-      return result;
-    }
-    words.forEach((word) {
-      if (word != null && word != '') {
-        result.addAll(defaultSearchStrategy(word));
-      }
-    });
-
-    return result;
+  ///用这个方法搜索字典，在search_strategy里可以自定义搜索策略
+  Set<String> searchInStrategy(SearchStrategy strategy, List<String> words) {
+    return strategy.searchInStrategy(this, words);
   }
 
-  ///任意位置的前缀匹配
-  Set<String> multiPositionSearchStrategy(List<String> words) {
-    Set<String> result = Set();
-    var time1 = DateTime.now().microsecondsSinceEpoch;
-    for (String word in words) {
-      if (result.length == 0 || word != null && word.length > 0) {
-        result.addAll(enhancedTriesSearch(word));
-      }
-    }
-/*    print("lizheren1   ${result.length}");
-
-    var time2 = DateTime.now().microsecondsSinceEpoch;
-    for (String word in words) {
-      for (String s in _dictionaryList) {
-        if (s.toLowerCase().contains(word.toLowerCase())) {
-          result.add(s);
-        }
-      }
-    }
-    print("lizheren2   ${result.length}");
-
-    var time3 = DateTime.now().microsecondsSinceEpoch;
-    for (String word in words) {
-      for (String s in _dictionaryList) {
-        if (kmpMatch(s.toLowerCase(), word.toLowerCase())) {
-          result.add(s);
-        }
-      }
-    }
-    print("lizheren3   ${result.length}");
-    var time4 = DateTime.now().microsecondsSinceEpoch;
-    print("lizheren   ${time2 - time1}   ${time3 - time2}   ${time4 - time3}");*/
-    return result;
-  }
-
-  ///默认的搜索策略
-  ///默认的最大编辑距离是字符串长度整除4,起码允许打错1个字符
-  ///结果用Set返回，去除了重复数据
-  Set<String> defaultSearchStrategy(String word) {
-    Set<String> result = new Set();
-    if (word == null || word == '') {
-      result.addAll(_dictionaryList);
-      return result;
-    }
-
-    int defaultDistance = word.length ~/ 4;
-    if (defaultDistance < 1) {
-      defaultDistance = 1;
-    }
-    result.addAll(searchSimilarWords(word, defaultDistance));
-    result.addAll(searchWordsInTrie(word));
-    return result;
+  Set<String> getDictionary() {
+    return Set.from(_dictionaryList);
   }
 
   ///从字典中搜索和input相似的单词，编辑距离小等于distance
   List<String> searchSimilarWords(String inputWord, int distance) {
-    if (_similaritySearchResult == null) {
-      _similaritySearchResult = List();
-    }
+    _similaritySearchResult = List();
     if (inputWord == null || inputWord == '') {
       _similaritySearchResult.clear();
       _similaritySearchResult.addAll(_dictionaryList);
@@ -91,6 +26,9 @@ class SearchUtils {
     }
 
     for (String wordInDictionary in _dictionaryList) {
+      if ((wordInDictionary.length - inputWord.length).abs() > distance) {
+        continue;
+      }
       if (_matchSimilarWords(wordInDictionary, inputWord, distance)) {
         _similaritySearchResult.add(wordInDictionary);
       }
@@ -240,6 +178,45 @@ class SearchUtils {
 //    }
   }
 
+  ///KMP
+  bool kmpMatch(String s, String t) {
+    List<int> next = getNextArray(t);
+    int i = 0, j = 0;
+    while (i < s.length && j < t.length) {
+      if (j == -1 || s[i] == t[j]) {
+        i++;
+        j++;
+      } else
+        j = next[j];
+    }
+    if (j == t.length)
+//      return i - j;
+      return true;
+    else
+//      return -1;
+      return false;
+  }
+
+  List<int> getNextArray(String t) {
+    List<int> next = new List(t.length);
+    next[0] = -1;
+    next[1] = 0;
+    int k;
+    for (int j = 2; j < t.length; j++) {
+      k = next[j - 1];
+      while (k != -1) {
+        if (t[j - 1] == t[k]) {
+          next[j] = k + 1;
+          break;
+        } else {
+          k = next[k];
+        }
+        next[j] = 0; //当k==-1而跳出循环时，next[j] = 0，否则next[j]会在break之前被赋值
+      }
+    }
+    return next;
+  }
+
   ///更新单词组
   updateWords(List<String> words) {
     clearDictionary();
@@ -286,45 +263,6 @@ class SearchUtils {
     }
   }
 
-  ///KMP
-  bool kmpMatch(String s, String t) {
-    List<int> next = getNextArray(t);
-    int i = 0, j = 0;
-    while (i < s.length && j < t.length) {
-      if (j == -1 || s[i] == t[j]) {
-        i++;
-        j++;
-      } else
-        j = next[j];
-    }
-    if (j == t.length)
-//      return i - j;
-      return true;
-    else
-//      return -1;
-      return false;
-  }
-
-  List<int> getNextArray(String t) {
-    List<int> next = new List(t.length);
-    next[0] = -1;
-    next[1] = 0;
-    int k;
-    for (int j = 2; j < t.length; j++) {
-      k = next[j - 1];
-      while (k != -1) {
-        if (t[j - 1] == t[k]) {
-          next[j] = k + 1;
-          break;
-        } else {
-          k = next[k];
-        }
-        next[j] = 0; //当k==-1而跳出循环时，next[j] = 0，否则next[j]会在break之前被赋值
-      }
-    }
-    return next;
-  }
-
   ///清空整个字典
   void clearDictionary() {
     _dictionaryList = null;
@@ -338,6 +276,10 @@ class SearchUtils {
     _prefixSearchResult = null;
     _similaritySearchResult = null;
   }
+}
+
+abstract class SearchStrategy {
+  Set<String> searchInStrategy(SearchUtils utils, List<String> words);
 }
 
 class TreeNode {

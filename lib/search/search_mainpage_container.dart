@@ -1,4 +1,5 @@
 import 'dart:collection';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
@@ -39,8 +40,14 @@ class SearchState extends State<SearchMainPage> {
     });
     demoList.addAll(buildBackendCategoryList);
     demoList.forEach((demoItem) {
-      searchUtils.addWord(demoItem.keyword);
-      searchMap[demoItem.keyword] = demoItem;
+      //后续支持多个keyword用空格分隔
+      List<String> splitArray = demoItem.keyword.split(" ");
+      for (String keyword in splitArray) {
+        if (keyword.length > 0) {
+          searchUtils.addWord(demoItem.keyword);
+          searchMap[keyword] = demoItem;
+        }
+      }
     });
     _controller.addListener(() {
       setState(() {
@@ -66,18 +73,23 @@ class SearchState extends State<SearchMainPage> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        margin: EdgeInsets.only(top: 30),
+        margin:
+            EdgeInsets.only(top: MediaQueryData.fromWindow(window).padding.top),
         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             getSearchBar(context),
             Expanded(
-              child: ListView.builder(
-                itemCount: textList.length,
-                itemBuilder: (context, position) {
-                  return textList[position];
-                },
+              child: MediaQuery.removePadding(
+                context: context,
+                removeTop: true,
+                child: ListView.builder(
+                  itemCount: textList.length,
+                  itemBuilder: (context, position) {
+                    return textList[position];
+                  },
+                ),
               ),
             ),
           ],
@@ -116,6 +128,17 @@ class SearchState extends State<SearchMainPage> {
                       controller: _controller,
                     ),
                   ),
+                  Visibility(
+                    visible: _controller.text.length > 0,
+                    child: GestureDetector(
+                      child: Icon(
+                        Icons.clear,
+                      ),
+                      onTap: () {
+                        _controller.clear();
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -147,9 +170,29 @@ class SearchState extends State<SearchMainPage> {
             Icon(searchMap[s]?.icon),
             Container(
               margin: EdgeInsets.all(8),
-              child: Text(
-                s,
-                style: TextStyle(fontSize: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                    width: MediaQuery.of(context).size.width - 70,
+                    child: Text(
+                      searchMap[s]?.title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width - 70,
+                    margin: EdgeInsets.only(top: 5),
+                    child: Text(
+                      searchMap[s]?.subtitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 14),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

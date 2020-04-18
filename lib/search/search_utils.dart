@@ -306,9 +306,9 @@ class SearchUtils {
   }
 
   List<int> getNextArray(String t) {
-    List<int> next = new List(200);
-    next[0]=-1;
-    next[1]=0;
+    List<int> next = new List(t.length);
+    next[0] = -1;
+    next[1] = 0;
     int k;
     for (int j = 2; j < t.length; j++) {
       k = next[j - 1];

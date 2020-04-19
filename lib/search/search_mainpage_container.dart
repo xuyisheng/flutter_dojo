@@ -41,11 +41,11 @@ class SearchState extends State<SearchMainPage> {
     });
     demoList.addAll(buildBackendCategoryList);
     demoList.forEach((demoItem) {
-      //后续支持多个keyword用空格分隔
-      List<String> splitArray = demoItem.keyword.split(" ");
+      //支持多个keyword用空格分隔
+      List<String> splitArray = demoItem.keyword.split(KEY_SPLIT);
       for (String keyword in splitArray) {
         if (keyword.length > 0) {
-          searchUtils.addWord(demoItem.keyword);
+          searchUtils.addWord(keyword);
           searchMap[keyword] = demoItem;
         }
       }
@@ -63,9 +63,14 @@ class SearchState extends State<SearchMainPage> {
 
     // SearchStrategy是搜索关键词匹配策略，
     // 也可以用searchSimilarWords匹配相似单词，用searchWordsInTrie匹配前缀，自己设定参数
-    result = searchUtils.searchInStrategy(MultiPositionSearchStrategy(), input.split(KEY_SPLIT));
+    result = searchUtils.searchInStrategy(
+        MultiPositionSearchStrategy(), input.split(KEY_SPLIT));
+    bufferTitle = List();
     result.forEach((item) {
-      textList.add(getItem(item));
+      var textItem = getItem(item);
+      if (textItem != null) {
+        textList.add(textItem);
+      }
     });
 
     return Scaffold(
@@ -158,7 +163,21 @@ class SearchState extends State<SearchMainPage> {
     );
   }
 
+  List<String> bufferTitle = List();//多个关键字可能会出现重复的demoItem，用这个list去掉重复的title保证demoItem的唯一性
+
   getItem(String s) {
+    //对title和subtitle做判空处理，防止这两个字段漏写造成闪退
+    var title = searchMap[s]?.title != null
+        ? searchMap[s]?.title
+        : searchMap[s]?.keyword;
+    var subtitle = searchMap[s]?.subtitle != null ? searchMap[s]?.subtitle : "";
+    //缓存已经显示出来的title去重
+    if (bufferTitle.contains(title)) {
+      return;
+    } else {
+      bufferTitle.add(title);
+    }
+
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       child: Container(
@@ -174,7 +193,7 @@ class SearchState extends State<SearchMainPage> {
                   Container(
                     width: MediaQuery.of(context).size.width - 70,
                     child: Text(
-                      searchMap[s]?.title,
+                      title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 20),
@@ -184,7 +203,7 @@ class SearchState extends State<SearchMainPage> {
                     width: MediaQuery.of(context).size.width - 70,
                     margin: EdgeInsets.only(top: 5),
                     child: Text(
-                      searchMap[s]?.subtitle,
+                      subtitle,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 14),

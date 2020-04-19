@@ -19,6 +19,7 @@ import 'package:flutter_dojo/category/widgets/singlechildlayout/sizedbox.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/sizedoverflowbox.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/transform.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/unconstrainedbox.dart';
+import 'package:flutter_dojo/category/widgets/singlechildlayout/visibility.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
 
@@ -189,6 +190,14 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       keyword: 'UnconstraindBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/UnconstraindBox-class.html',
       buildRoute: (context) => BaseWidget('UnconstraindBox', codePath + 'unconstrainedbox', UnconstrainedBoxWidget()),
+    ),
+    DemoItem(
+      icon: Icons.child_care,
+      title: 'Visibility',
+      subtitle: 'Visibility',
+      keyword: 'Visibility',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/Visibility-class.html',
+      buildRoute: (context) => BaseWidget('Visibility', codePath + 'visibility', VisibilityWidget()),
     ),
   ];
 }

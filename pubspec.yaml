@@ -246,6 +246,7 @@ flutter:
     - lib/category/widgets/singlechildlayout/transform.dart
     - lib/category/widgets/singlechildlayout/customsinglechildlayout.dart
     - lib/category/widgets/singlechildlayout/unconstrainedbox.dart
+    - lib/category/widgets/singlechildlayout/visibility.dart
 
     - lib/category/widgets/styling/flexible.dart
     - lib/category/widgets/styling/spacer.dart

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/pages/main/aboutme.dart';
 
-import '../../search/search_mainpage_container.dart';
+import '../search/search_mainpage_container.dart';
 
 class MainPagePageHeader extends StatelessWidget {
   @override
@@ -19,9 +19,12 @@ class MainPagePageHeader extends StatelessWidget {
                 },
                 child: Container(
                   margin: EdgeInsets.only(left: 16),
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.white,
+                  child: Hero(
+                    tag: 'search',
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

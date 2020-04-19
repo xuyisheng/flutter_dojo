@@ -63,8 +63,7 @@ class SearchState extends State<SearchMainPage> {
 
     // SearchStrategy是搜索关键词匹配策略，
     // 也可以用searchSimilarWords匹配相似单词，用searchWordsInTrie匹配前缀，自己设定参数
-    result = searchUtils.searchInStrategy(
-        MultiPositionSearchStrategy(), input.split(KEY_SPLIT));
+    result = searchUtils.searchInStrategy(MultiPositionSearchStrategy(), input.split(KEY_SPLIT));
     result.forEach((item) {
       textList.add(getItem(item));
     });
@@ -73,8 +72,7 @@ class SearchState extends State<SearchMainPage> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        margin:
-            EdgeInsets.only(top: MediaQueryData.fromWindow(window).padding.top),
+        margin: EdgeInsets.only(top: MediaQueryData.fromWindow(window).padding.top),
         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -199,8 +197,7 @@ class SearchState extends State<SearchMainPage> {
         ),
       ),
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
+        Navigator.push(context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
       },
     );
   }

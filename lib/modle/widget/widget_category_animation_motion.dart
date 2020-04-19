@@ -231,8 +231,8 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'RelativePositionedTransition',
       keyword: 'RelativePositionedTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RelativePositionedTransition-class.html',
-      buildRoute: (context) =>
-          BaseWidget('RelativePositionedTransition', codePath + 'relativepositionedtransition', RelativePositionedTransitionWidget()),
+      buildRoute: (context) => BaseWidget('RelativePositionedTransition', codePath + 'relativepositionedtransition',
+          RelativePositionedTransitionWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,

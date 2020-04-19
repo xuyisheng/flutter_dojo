@@ -73,6 +73,7 @@ flutter:
     - lib/category/widgets/animationmotion/fadeinimage.dart
     - lib/category/widgets/animationmotion/hero.dart
     - lib/category/widgets/animationmotion/positionedtransition.dart
+    - lib/category/widgets/animationmotion/relativepositionedtransition.dart
     - lib/category/widgets/animationmotion/rotationtransition.dart
     - lib/category/widgets/animationmotion/animatedtheme.dart
 
@@ -207,6 +208,7 @@ flutter:
 
     - lib/category/widgets/scrolling/customscrollview.dart
     - lib/category/widgets/scrolling/nestedscrollview.dart
+    - lib/category/widgets/scrolling/flexiblespacebar.dart
     - lib/category/widgets/scrolling/draggablescrollablesheet.dart
     - lib/category/widgets/scrolling/gridview.dart
     - lib/category/widgets/scrolling/listview.dart
@@ -217,6 +219,12 @@ flutter:
     - lib/category/widgets/scrolling/scrollbar.dart
     - lib/category/widgets/scrolling/singlechildscrollview.dart
     - lib/category/widgets/scrolling/scrollconfiguration.dart
+    - lib/category/widgets/scrolling/sliverfillviewport.dart
+    - lib/category/widgets/scrolling/slivergrid.dart
+    - lib/category/widgets/scrolling/sliverlist.dart
+    - lib/category/widgets/scrolling/sliveropacity.dart
+    - lib/category/widgets/scrolling/sliverpadding.dart
+    - lib/category/widgets/scrolling/sliverpersistentheader.dart
 
     - lib/category/widgets/singlechildlayout/align.dart
     - lib/category/widgets/singlechildlayout/aspectratio.dart

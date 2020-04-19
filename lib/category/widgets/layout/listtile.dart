@@ -16,6 +16,10 @@ class ListTileWidget extends StatelessWidget {
           dense: true,
         ),
         ListTile(
+          title: Text('title text without dense'),
+          dense: false,
+        ),
+        ListTile(
           title: Text('title'),
           leading: Text('leading'),
         ),

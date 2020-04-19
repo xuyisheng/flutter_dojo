@@ -21,6 +21,18 @@ class CircleAvatarWidget extends StatelessWidget {
             backgroundImage: AssetImage('images/book.jpg'),
           ),
         ),
+        SizedBox(height: 20),
+        Container(
+          child: CircleAvatar(
+            radius: 50,
+            backgroundImage: AssetImage('images/book.jpg'),
+            child: Icon(
+              Icons.star,
+              color: Colors.blueAccent,
+              size: 40,
+            ),
+          ),
+        ),
       ],
     );
   }

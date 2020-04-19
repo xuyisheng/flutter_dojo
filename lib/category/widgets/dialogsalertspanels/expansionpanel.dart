@@ -15,6 +15,7 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
       children: <Widget>[
         MainTitleWidget('ExpansionPanel基本使用'),
         Container(
+          padding: EdgeInsets.symmetric(horizontal: 2),
           child: buildPanel(),
         ),
       ],
@@ -35,6 +36,7 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
               title: Text(item.headerValue),
             );
           },
+          canTapOnHeader: true,
           body: ListTile(
               title: Text(item.expandedValue),
               subtitle: Text('Click to delete'),

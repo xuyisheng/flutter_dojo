@@ -91,6 +91,7 @@ class AlertDialogWidget extends StatelessWidget {
               },
             ),
           ],
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         );
       },
     );

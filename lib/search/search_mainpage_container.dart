@@ -77,8 +77,7 @@ class SearchState extends State<SearchMainPage> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        margin:
-            EdgeInsets.only(top: MediaQueryData.fromWindow(window).padding.top),
+        margin: EdgeInsets.only(top: MediaQueryData.fromWindow(window).padding.top),
         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -217,8 +216,7 @@ class SearchState extends State<SearchMainPage> {
         ),
       ),
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
+        Navigator.push(context, MaterialPageRoute(builder: searchMap[s]?.buildRoute));
       },
     );
   }

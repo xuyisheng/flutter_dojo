@@ -20,6 +20,7 @@ import 'package:flutter_dojo/category/widgets/animationmotion/fadeinimage.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/fadetransition.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/hero.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/positionedtransition.dart';
+import 'package:flutter_dojo/category/widgets/animationmotion/relativepositionedtransition.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/rotationtransition.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
@@ -223,6 +224,15 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RotationTransition-class.html',
       buildRoute: (context) =>
           BaseWidget('RotationTransition', codePath + 'rotationtransition', RotationTransitionWidget()),
+    ),
+    DemoItem(
+      icon: Icons.move_to_inbox,
+      title: 'RelativePositionedTransition',
+      subtitle: 'RelativePositionedTransition',
+      keyword: 'RelativePositionedTransition',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/RelativePositionedTransition-class.html',
+      buildRoute: (context) => BaseWidget('RelativePositionedTransition', codePath + 'relativepositionedtransition',
+          RelativePositionedTransitionWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,

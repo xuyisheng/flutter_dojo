@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/customscrollview.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/draggablescrollablesheet.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/flexiblespacebar.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/gridview.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/listview.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/nestedscrollview.dart';
@@ -11,6 +12,12 @@ import 'package:flutter_dojo/category/widgets/scrolling/scrollbar.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/scrollconfiguration.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/scrollcontroller.dart';
 import 'package:flutter_dojo/category/widgets/scrolling/singlechildscrollview.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/sliverfillviewport.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/slivergrid.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/sliverlist.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/sliveropacity.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/sliverpadding.dart';
+import 'package:flutter_dojo/category/widgets/scrolling/sliverpersistentheader.dart';
 import 'package:flutter_dojo/category/widgets/touchinteractions/scrollable.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
@@ -33,6 +40,14 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html',
       buildRoute: (context) => BaseWidget(
           'DraggableScrollableSheet', codePath + 'draggablescrollablesheet', DraggableScrollableSheetWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'FlexibleSpaceBar',
+      subtitle: 'FlexibleSpaceBar',
+      keyword: 'FlexibleSpaceBar',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/FlexibleSpaceBar-class.html',
+      buildRoute: (context) => BaseWidget('FlexibleSpaceBar', codePath + 'flexiblespacebar', FlexibleSpaceBarWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -131,6 +146,65 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html',
       buildRoute: (context) =>
           BaseWidget('SingleChildScrollView', codePath + 'singlechildscrollview', SingleChildScrollViewWidget()),
-    )
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverFillViewport',
+      subtitle: 'SliverFillViewport',
+      keyword: 'SliverFillViewport',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverFillViewport-class.html',
+      buildRoute: (context) =>
+          BaseWidget('SliverFillViewport', codePath + 'sliverfillviewport', SliverFillViewportWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverFixedExtentList',
+      subtitle: 'SliverFixedExtentList',
+      keyword: 'SliverFixedExtentList',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverFixedExtentList-class.html',
+      buildRoute: (context) =>
+          BaseWidget('SliverFixedExtentList', codePath + 'customscrollview', CustomScrollViewWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverGrid',
+      subtitle: 'SliverGrid',
+      keyword: 'SliverGrid',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverGrid-class.html',
+      buildRoute: (context) => BaseWidget('SliverGrid', codePath + 'slivergrid', SliverGridWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverList',
+      subtitle: 'SliverList',
+      keyword: 'SliverList',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverList-class.html',
+      buildRoute: (context) => BaseWidget('SliverList', codePath + 'sliverlist', SliverListWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverOpacity',
+      subtitle: 'SliverOpacity',
+      keyword: 'SliverOpacity',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverOpacity-class.html',
+      buildRoute: (context) => BaseWidget('SliverOpacity', codePath + 'sliveropacity', SliverOpacityWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverPadding',
+      subtitle: 'SliverPadding',
+      keyword: 'SliverPadding',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverPadding-class.html',
+      buildRoute: (context) => BaseWidget('SliverPadding', codePath + 'sliverpadding', SliverPaddingWidget()),
+    ),
+    DemoItem(
+      icon: Icons.screen_rotation,
+      title: 'SliverPersistentHeader',
+      subtitle: 'SliverPersistentHeader',
+      keyword: 'SliverPersistentHeader',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverPersistentHeader-class.html',
+      buildRoute: (context) =>
+          BaseWidget('SliverPersistentHeader', codePath + 'sliverpersistentheader', SliverPersistentHeaderWidget()),
+    ),
   ];
 }

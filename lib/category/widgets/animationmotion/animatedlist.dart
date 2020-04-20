@@ -30,7 +30,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
       int id = 0;
       listKey.currentState.removeItem(
         id,
-        (context, animation) => _buildItem(context, 0, animation),
+        (context, animation) => _buildItem1(context, 0, animation),
         duration: const Duration(milliseconds: 250),
       );
       list.removeAt(id);
@@ -48,6 +48,16 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     );
   }
 
+  Widget _buildItem1(BuildContext context, int index, Animation<double> animation) {
+    return SlideTransition(
+      position: animation.drive(CurveTween(curve: Curves.easeIn)).drive(Tween<Offset>(begin: Offset(1, 1), end: Offset(0, 1))),
+      key: ValueKey<int>(index),
+      child: ListTile(
+        title: Text(list[index]),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -56,7 +66,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
         Expanded(
           child: AnimatedList(
             key: listKey,
-            itemBuilder: (context, index, animation) => _buildItem(context, index, animation),
+            itemBuilder: (context, index, animation) => _buildItem1(context, index, animation),
             initialItemCount: list.length,
           ),
         ),

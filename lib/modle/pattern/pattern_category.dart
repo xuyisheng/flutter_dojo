@@ -6,6 +6,7 @@ import 'package:flutter_dojo/category/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/category/pattern/curve/curvefitting.dart';
 import 'package:flutter_dojo/category/pattern/curve/curves.dart';
 import 'package:flutter_dojo/category/pattern/curve/interpolator.dart';
+import 'package:flutter_dojo/category/pattern/curve/shapeborder.dart';
 import 'package:flutter_dojo/category/pattern/display/backdrop.dart';
 import 'package:flutter_dojo/category/pattern/display/dashedline.dart';
 import 'package:flutter_dojo/category/pattern/display/delline.dart';
@@ -667,6 +668,14 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       keyword: 'Interpolator',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Interpolator', codePath, InterpolatorWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'ShapeBorder',
+      subtitle: 'ShapeBorder',
+      keyword: 'ShapeBorder',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ShapeBorder', codePath, ShapeBorderWidget()),
     ),
   ];
 }

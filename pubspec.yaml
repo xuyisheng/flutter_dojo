@@ -14,7 +14,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.3.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -278,6 +278,7 @@ flutter:
     - lib/category/pattern/curve/curvefitting.dart
     - lib/category/pattern/curve/curves.dart
     - lib/category/pattern/curve/interpolator.dart
+    - lib/category/pattern/curve/shapeborder.dart
 
     - lib/category/pattern/display/backdrop.dart
     - lib/category/pattern/display/dashedline.dart
@@ -364,7 +365,9 @@ flutter:
     - lib/category/backend/sqflite.dart
     - lib/category/backend/statemanagement.dart
     - lib/category/backend/stream.dart
+    - lib/category/backend/templatewidget.dart
     - lib/category/backend/timer.dart
+    - lib/category/backend/keeppressing.dart
 
     - lib/category/animation/barchat/bar.dart
 
@@ -375,6 +378,8 @@ flutter:
     - lib/category/animation/infomationdisplay/showup.dart
     - lib/category/animation/infomationdisplay/testanim3.dart
     - lib/category/animation/infomationdisplay/typewriter.dart
+    - lib/category/animation/infomationdisplay/customhero.dart
+    - lib/category/animation/infomationdisplay/favor.dart
 
     - lib/category/animation/loading/loading.dart
     - lib/category/animation/loading/customprogress.dart

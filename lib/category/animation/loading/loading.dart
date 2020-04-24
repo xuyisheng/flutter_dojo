@@ -6,6 +6,8 @@ import 'package:flutter_dojo/category/animation/loading/loadingtype3.dart';
 import 'package:flutter_dojo/category/animation/loading/loadingtype4.dart';
 import 'package:flutter_dojo/category/animation/loading/loadingtype5.dart';
 import 'package:flutter_dojo/category/animation/loading/loadingtype6.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype7.dart';
+import 'package:flutter_dojo/category/animation/loading/loadingtype8.dart';
 
 class LoadingWidget extends StatelessWidget {
   @override
@@ -59,6 +61,17 @@ class LoadingWidget extends StatelessWidget {
           alignment: Alignment.topLeft,
           child: LoadingType6(),
         ),
+        SizedBox(height: 24),
+        Align(
+          alignment: Alignment.center,
+          child: LoadingType7(),
+        ),
+        SizedBox(height: 24),
+        Align(
+          alignment: Alignment.center,
+          child: LoadingType8(),
+        ),
+        SizedBox(height: 24),
       ],
     );
   }

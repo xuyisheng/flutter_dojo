@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/backend/catcherror.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
 import 'package:flutter_dojo/category/backend/json.dart';
+import 'package:flutter_dojo/category/backend/keeppressing.dart';
 import 'package:flutter_dojo/category/backend/key.dart';
 import 'package:flutter_dojo/category/backend/keyboard.dart';
 import 'package:flutter_dojo/category/backend/lifecycle.dart';
@@ -14,6 +15,7 @@ import 'package:flutter_dojo/category/backend/singleton.dart';
 import 'package:flutter_dojo/category/backend/sqflite.dart';
 import 'package:flutter_dojo/category/backend/statemanagement.dart';
 import 'package:flutter_dojo/category/backend/stream.dart';
+import 'package:flutter_dojo/category/backend/templatewidget.dart';
 import 'package:flutter_dojo/category/backend/timer.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
@@ -43,6 +45,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'Json',
     buildRoute: (context) => BaseWidget('Json', codePath + 'json', JsonWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'KeepPressing',
+    subtitle: 'KeepPressing',
+    documentationUrl: '',
+    keyword: 'KeepPressing',
+    buildRoute: (context) => BaseWidget('KeepPressing', codePath + 'keeppressing', KeepPressingWidget()),
   ),
   DemoItem(
     icon: Icons.build,
@@ -139,6 +149,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'Stream',
     buildRoute: (context) => BaseWidget('Stream', codePath + 'stream', StreamWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'TemplateWidget',
+    subtitle: 'TemplateWidget',
+    documentationUrl: '',
+    keyword: 'TemplateWidget',
+    buildRoute: (context) => BaseWidget('TemplateWidget', codePath + 'templatewidget', TemplateWidget()),
   ),
   DemoItem(
     icon: Icons.pages,

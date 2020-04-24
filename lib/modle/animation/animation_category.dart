@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/animation/barchat/bar.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/curve.dart';
+import 'package:flutter_dojo/category/animation/infomationdisplay/customhero.dart';
+import 'package:flutter_dojo/category/animation/infomationdisplay/favor.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/foldablebutton.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/gift.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/rotatemenu.dart';
@@ -74,6 +76,22 @@ List<DemoItem> buildInformationDisplayDemoItems(String codePath) {
       keyword: 'Curve',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Curve', codePath + 'curve', CurveWidget()),
+    ),
+    DemoItem(
+      icon: Icons.date_range,
+      title: 'CustomHero',
+      subtitle: 'CustomHero',
+      keyword: 'CustomHero',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CustomHero', codePath + 'customhero', CustomHeroWidget()),
+    ),
+    DemoItem(
+      icon: Icons.date_range,
+      title: 'Favor',
+      subtitle: 'Favor',
+      keyword: 'Favor',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Favor', codePath + 'favor', FavorWidget()),
     ),
     DemoItem(
       icon: Icons.center_focus_strong,

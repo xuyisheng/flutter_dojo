@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ShaderMaskWidget extends StatefulWidget {
   @override
@@ -21,27 +22,45 @@ class _ShaderMaskWidgetState extends State<ShaderMaskWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        MainTitleWidget('图形遮罩'),
-        ShaderMask(
-          shaderCallback: (rect) {
-            return LinearGradient(colors: [Colors.red, Colors.blue], stops: [0, 0.5]).createShader(rect);
-          },
-          child: Image.asset('images/logo.png'),
-          blendMode: BlendMode.srcIn,
-        ),
-        MainTitleWidget('文字遮罩'),
-        Text(
-          'Hello Gradients!',
-          key: myTextKey,
-          style: TextStyle(
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-            foreground: Paint()..shader = getTextGradient(myTextRenderBox),
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          MainTitleWidget('图形遮罩'),
+          SubtitleWidget('线性渐变'),
+          ShaderMask(
+            shaderCallback: (rect) {
+              return LinearGradient(
+                colors: [Colors.red, Colors.blue],
+                stops: [0, 0.5],
+              ).createShader(rect);
+            },
+            child: Image.asset('images/logo.png'),
+            blendMode: BlendMode.srcIn,
           ),
-        )
-      ],
+          SubtitleWidget('角度渐变'),
+          ShaderMask(
+            shaderCallback: (rect) {
+              return RadialGradient(
+                center: Alignment.topLeft,
+                radius: 1.0,
+                tileMode: TileMode.mirror,
+                colors: [Colors.red, Colors.yellow, Colors.blue],
+              ).createShader(rect);
+            },
+            child: Image.asset('images/logo.png'),
+          ),
+          MainTitleWidget('文字遮罩'),
+          Text(
+            'Hello Gradients!',
+            key: myTextKey,
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+              foreground: Paint()..shader = getTextGradient(myTextRenderBox),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

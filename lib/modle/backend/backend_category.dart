@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/backend/catcherror.dart';
+import 'package:flutter_dojo/category/backend/eventbus.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
 import 'package:flutter_dojo/category/backend/json.dart';
 import 'package:flutter_dojo/category/backend/keeppressing.dart';
@@ -29,6 +30,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'CatchError',
     buildRoute: (context) => BaseWidget('CatchError', codePath + 'catcherror', CatchErrorWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'EventBus',
+    subtitle: 'EventBus',
+    documentationUrl: '',
+    keyword: 'EventBus',
+    buildRoute: (context) => BaseWidget('EventBus', codePath + 'eventbus', EventBusWidget()),
   ),
   DemoItem(
     icon: Icons.build,

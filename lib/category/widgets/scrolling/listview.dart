@@ -171,7 +171,18 @@ class _ListViewWidgetState extends State<ListViewWidget> {
               },
             ),
           ],
-        )
+        ),
+        MainTitleWidget('Infinite ListView'),
+        Container(
+          height: 300,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text('row $index'),
+              );
+            },
+          ),
+        ),
       ],
     );
   }

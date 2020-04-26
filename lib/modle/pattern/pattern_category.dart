@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/pattern/appbar/appbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/customappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/floatingappbar.dart';
+import 'package:flutter_dojo/category/pattern/appbar/gallerybar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/category/pattern/curve/curvefitting.dart';
 import 'package:flutter_dojo/category/pattern/curve/curves.dart';
@@ -26,6 +27,7 @@ import 'package:flutter_dojo/category/pattern/list/sliverheaderwitheffect.dart';
 import 'package:flutter_dojo/category/pattern/list/tree.dart';
 import 'package:flutter_dojo/category/pattern/list/zoom.dart';
 import 'package:flutter_dojo/category/pattern/login/login1.dart';
+import 'package:flutter_dojo/category/pattern/login/login2.dart';
 import 'package:flutter_dojo/category/pattern/paint/bubble.dart';
 import 'package:flutter_dojo/category/pattern/paint/clock.dart';
 import 'package:flutter_dojo/category/pattern/paint/color.dart';
@@ -71,59 +73,59 @@ import 'package:flutter_dojo/common/demo_item.dart';
 List<DemoItemCategory> buildPatternData = <DemoItemCategory>[
   DemoItemCategory(
     name: "AppBar",
-    list: buildAppbarDemoItems('lib/category/widgets/pattern/appbar/'),
+    list: buildAppbarDemoItems('lib/category/pattern/appbar/'),
   ),
   DemoItemCategory(
     name: "Curve",
-    list: buildCurveDemoItems('lib/category/widgets/pattern/curve/'),
+    list: buildCurveDemoItems('lib/category/pattern/curve/'),
   ),
   DemoItemCategory(
     name: "Display",
-    list: buildDisplayDemoItems('lib/category/widgets/pattern/display/'),
+    list: buildDisplayDemoItems('lib/category/pattern/display/'),
   ),
   DemoItemCategory(
     name: "ImageEffect",
-    list: buildImageEffectDemoItems('lib/category/widgets/pattern/imageeffect/'),
+    list: buildImageEffectDemoItems('lib/category/pattern/imageeffect/'),
   ),
   DemoItemCategory(
     name: "List",
-    list: buildListDemoItems('lib/category/widgets/pattern/list/'),
+    list: buildListDemoItems('lib/category/pattern/list/'),
   ),
   DemoItemCategory(
     name: "Login",
-    list: buildLoginDemoItems('lib/category/widgets/pattern/login/'),
+    list: buildLoginDemoItems('lib/category/pattern/login/'),
   ),
   DemoItemCategory(
     name: "Paint",
-    list: buildPaintDemoItems('lib/category/widgets/pattern/paint/'),
+    list: buildPaintDemoItems('lib/category/pattern/paint/'),
   ),
   DemoItemCategory(
     name: "Popup",
-    list: buildPopupDemoItems('lib/category/widgets/pattern/popup/'),
+    list: buildPopupDemoItems('lib/category/pattern/popup/'),
   ),
   DemoItemCategory(
     name: "Profile",
-    list: buildProfileDemoItems('lib/category/widgets/pattern/profile/'),
+    list: buildProfileDemoItems('lib/category/pattern/profile/'),
   ),
   DemoItemCategory(
     name: "Perspective",
-    list: buildPerspectiveDemoItems('lib/category/widgets/pattern/perspective/'),
+    list: buildPerspectiveDemoItems('lib/category/pattern/perspective/'),
   ),
   DemoItemCategory(
     name: "RenderInfo",
-    list: buildRenderInfoDemoItems('lib/category/widgets/pattern/renderinfo/'),
+    list: buildRenderInfoDemoItems('lib/category/pattern/renderinfo/'),
   ),
   DemoItemCategory(
     name: "Setting",
-    list: buildSettingDemoItems('lib/category/widgets/pattern/setting/'),
+    list: buildSettingDemoItems('lib/category/pattern/setting/'),
   ),
   DemoItemCategory(
     name: "TextEffect",
-    list: buildTextEffectDemoItems('lib/category/widgets/pattern/texteffect/'),
+    list: buildTextEffectDemoItems('lib/category/pattern/texteffect/'),
   ),
   DemoItemCategory(
     name: 'ViewPager',
-    list: buildViewPagerDemoItems('lib/category/widgets/pattern/viewpager/'),
+    list: buildViewPagerDemoItems('lib/category/pattern/viewpager/'),
   ),
 ];
 
@@ -135,7 +137,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'AnimSlider',
       keyword: 'AnimSlider',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('AnimSlider', codePath, AnimSliderWidget()),
+      buildRoute: (context) => BaseWidget('AnimSlider', codePath + 'animslider', AnimSliderWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -143,7 +145,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'CardFlip',
       keyword: 'CardFlip',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('CardFlip', codePath, CardFlipWidget()),
+      buildRoute: (context) => BaseWidget('CardFlip', codePath + 'cardflip', CardFlipWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -151,7 +153,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'Guide',
       keyword: 'Guide',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Guide', codePath, GuideWidget()),
+      buildRoute: (context) => BaseWidget('Guide', codePath + 'guide', GuideWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -159,7 +161,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'Page Change Anim',
       keyword: 'PageChangeAnim',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('PageChangeAnim', codePath, PageChangeAnimWidget()),
+      buildRoute: (context) => BaseWidget('PageChangeAnim', codePath + 'pagechangeanim', PageChangeAnimWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -167,7 +169,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'PageReveal',
       keyword: 'PageReveal',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('PageReveal', codePath, PageRevealWidget()),
+      buildRoute: (context) => BaseWidget('PageReveal', codePath + 'pagereveal', PageRevealWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -175,7 +177,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'Parallax ViewPager',
       keyword: 'ParallaxViewPager',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ParallaxViewPager', codePath, ParallaxViewPagerWidget()),
+      buildRoute: (context) => BaseWidget('ParallaxViewPager', codePath + 'parallaxviewpager', ParallaxViewPagerWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -183,7 +185,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'Slider',
       keyword: 'Slider',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Slider', codePath, SliderWidget()),
+      buildRoute: (context) => BaseWidget('Slider', codePath + 'slider', SliderWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -191,7 +193,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'TransformSlider',
       keyword: 'TransformSlider',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('TransformSlider', codePath, TransformSliderWidget()),
+      buildRoute: (context) => BaseWidget('TransformSlider', codePath + 'transformslider', TransformSliderWidget()),
     ),
   ];
 }
@@ -204,7 +206,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       subtitle: 'Appbar',
       keyword: 'Appbar',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Appbar', codePath, AppbarWidget()),
+      buildRoute: (context) => BaseWidget('Appbar', codePath + 'appbar', AppbarWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -212,7 +214,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       subtitle: 'CustomAppbar',
       keyword: 'CustomAppbar',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('CustomAppbar', codePath, CustomAppBarWidget()),
+      buildRoute: (context) => BaseWidget('CustomAppbar', codePath + 'customappbar', CustomAppBarWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -220,7 +222,15 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       subtitle: 'FloatingAppBar',
       keyword: 'FloatingAppBar',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('FloatingAppBar', codePath, FloatingAppBarWidget()),
+      buildRoute: (context) => BaseWidget('FloatingAppBar', codePath + 'floatingappbar', FloatingAppBarWidget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'GalleryBar',
+      subtitle: 'GalleryBar',
+      keyword: 'GalleryBar',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('GalleryBar', codePath + 'gallerybar', GalleryBar()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -228,7 +238,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       subtitle: 'TitledBottomBar',
       keyword: 'TitledBottomBar',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('TitledBottomBar', codePath, TitledBottomBarWidget()),
+      buildRoute: (context) => BaseWidget('TitledBottomBar', codePath + 'titledbottombar', TitledBottomBarWidget()),
     ),
   ];
 }
@@ -241,7 +251,7 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       subtitle: 'FlipCard',
       keyword: 'FlipCard',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('FlipCard', codePath, FlipCardWidget()),
+      buildRoute: (context) => BaseWidget('FlipCard', codePath + 'flipcard', FlipCardWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -249,7 +259,7 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       subtitle: 'RollCard',
       keyword: 'RollCard',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('RollCard', codePath, RollCardWidget()),
+      buildRoute: (context) => BaseWidget('RollCard', codePath + 'rollcard', RollCardWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -257,7 +267,7 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       subtitle: 'Show3DPage',
       keyword: 'Show3DPage',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Show3DPage', codePath, Show3DPageWidget()),
+      buildRoute: (context) => BaseWidget('Show3DPage', codePath + 'show3dpage', Show3DPageWidget()),
     ),
   ];
 }
@@ -270,7 +280,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'AvatarList',
       keyword: 'AvatarList',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('AvatarList', codePath, AvatarListWidget()),
+      buildRoute: (context) => BaseWidget('AvatarList', codePath + 'avatarlist', AvatarListWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -278,7 +288,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'ItemLayout',
       keyword: 'ItemLayout',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ItemLayout', codePath, ItemLayoutWidget()),
+      buildRoute: (context) => BaseWidget('ItemLayout', codePath + 'itemlayout', ItemLayoutWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -286,7 +296,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'ListDetail',
       keyword: 'ListDetail',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ListDetail', codePath, ListDetailWidget()),
+      buildRoute: (context) => BaseWidget('ListDetail', codePath + 'listdetail', ListDetailWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -294,7 +304,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'Overflow',
       keyword: 'Overflow',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Overflow', codePath, OverflowWidget()),
+      buildRoute: (context) => BaseWidget('Overflow', codePath + 'overflow', OverflowWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -302,7 +312,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'PullRefresh',
       keyword: 'PullRefresh',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('PullRefresh', codePath, PullRefreshWidget()),
+      buildRoute: (context) => BaseWidget('PullRefresh', codePath + 'pullrefresh', PullRefreshWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -310,7 +320,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'SearchList',
       keyword: 'SearchList',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('SearchList', codePath, SearchListWidget()),
+      buildRoute: (context) => BaseWidget('SearchList', codePath + 'searchlist', SearchListWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -318,7 +328,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'SliverHeader',
       keyword: 'SliverHeader',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('SliverHeader', codePath, SliverHeaderWidget()),
+      buildRoute: (context) => BaseWidget('SliverHeader', codePath + 'sliverheader', SliverHeaderWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -326,7 +336,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'SliverHeaderWithEffect',
       keyword: 'SliverHeaderWithEffect',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('SliverHeaderWithEffect', codePath, SliverHeaderWithEffectWidget()),
+      buildRoute: (context) => BaseWidget('SliverHeaderWithEffect', codePath + 'sliverheaderwitheffect', SliverHeaderWithEffectWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -334,7 +344,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'Tree',
       keyword: 'Tree',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Tree', codePath, TreeWidget()),
+      buildRoute: (context) => BaseWidget('Tree', codePath + 'tree', TreeWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -342,7 +352,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'Zoom',
       keyword: 'Zoom',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Zoom', codePath, ZoomWidget()),
+      buildRoute: (context) => BaseWidget('Zoom', codePath + 'zoom', ZoomWidget()),
     ),
   ];
 }
@@ -355,7 +365,15 @@ List<DemoItem> buildLoginDemoItems(String codePath) {
       subtitle: 'Login1',
       keyword: 'Login1',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Login1', codePath, Login1Widget()),
+      buildRoute: (context) => BaseWidget('Login1', codePath + 'login1', Login1Widget()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
+      title: 'Login2',
+      subtitle: 'Login2',
+      keyword: 'Login2',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Login2', codePath + 'login2', Login2()),
     ),
   ];
 }
@@ -368,7 +386,7 @@ List<DemoItem> buildSettingDemoItems(String codePath) {
       subtitle: 'MenuSetting',
       keyword: 'MenuSetting',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('MenuSetting', codePath, MenuSettingWidget()),
+      buildRoute: (context) => BaseWidget('MenuSetting', codePath + 'menusetting', MenuSettingWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -376,7 +394,7 @@ List<DemoItem> buildSettingDemoItems(String codePath) {
       subtitle: 'Setting1',
       keyword: 'Setting1',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Setting1', codePath, Setting1Widget()),
+      buildRoute: (context) => BaseWidget('Setting1', codePath + 'setting1', Setting1Widget()),
     ),
   ];
 }
@@ -389,7 +407,7 @@ List<DemoItem> buildProfileDemoItems(String codePath) {
       subtitle: 'Profile1',
       keyword: 'Profile1',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Profile1', codePath, Profile1Widget()),
+      buildRoute: (context) => BaseWidget('Profile1', codePath + 'profile1', Profile1Widget()),
     ),
   ];
 }
@@ -402,7 +420,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       subtitle: 'AutoFold',
       keyword: 'AutoFold',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('AutoFold', codePath, AutoFoldWidget()),
+      buildRoute: (context) => BaseWidget('AutoFold', codePath + 'autofold', AutoFoldWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -410,7 +428,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       subtitle: 'Badge',
       keyword: 'Badge',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Badge', codePath, BadgeWidget()),
+      buildRoute: (context) => BaseWidget('Badge', codePath + 'badge', BadgeWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -418,7 +436,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       subtitle: 'DrawText',
       keyword: 'DrawText',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('DrawText', codePath, DrawTextWidget()),
+      buildRoute: (context) => BaseWidget('DrawText', codePath + 'drawtext', DrawTextWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -426,7 +444,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       subtitle: 'LineMetrics',
       keyword: 'LineMetrics',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('LineMetrics', codePath, LineMetricsWidget()),
+      buildRoute: (context) => BaseWidget('LineMetrics', codePath + 'linemetrics', LineMetricsWidget()),
     ),
   ];
 }
@@ -439,7 +457,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       subtitle: 'Widget Position',
       keyword: 'Position',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Position', codePath, PositionWidget()),
+      buildRoute: (context) => BaseWidget('Position', codePath + 'position', PositionWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -447,7 +465,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       subtitle: 'ScreenOrientation',
       keyword: 'ScreenOrientation',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ScreenOrientation', codePath, ScreenOrientationWidget()),
+      buildRoute: (context) => BaseWidget('ScreenOrientation', codePath + 'screenorientation', ScreenOrientationWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -455,7 +473,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       subtitle: 'Widget Size',
       keyword: 'Size',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Size', codePath, SizeWidget()),
+      buildRoute: (context) => BaseWidget('Size', codePath + 'size', SizeWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -463,7 +481,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       subtitle: 'SystemUI',
       keyword: 'SystemUI',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('SystemUI', codePath, SystemUIWidget()),
+      buildRoute: (context) => BaseWidget('SystemUI', codePath + 'systemui', SystemUIWidget()),
     ),
   ];
 }
@@ -476,7 +494,7 @@ List<DemoItem> buildPopupDemoItems(String codePath) {
       subtitle: 'Floating',
       keyword: 'Floating',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Floating', codePath, FloatingWidget()),
+      buildRoute: (context) => BaseWidget('Floating', codePath + 'floating', FloatingWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -484,7 +502,7 @@ List<DemoItem> buildPopupDemoItems(String codePath) {
       subtitle: 'Popup',
       keyword: 'Popup',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Popup', codePath, PopupWidget()),
+      buildRoute: (context) => BaseWidget('Popup', codePath + 'popup', PopupWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -492,7 +510,7 @@ List<DemoItem> buildPopupDemoItems(String codePath) {
       subtitle: 'Toast',
       keyword: 'Toast',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Toast', codePath, ToastWidget()),
+      buildRoute: (context) => BaseWidget('Toast', codePath + 'toast', ToastWidget()),
     ),
   ];
 }
@@ -505,7 +523,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'Bubble',
       keyword: 'Bubble',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Bubble', codePath, BubbleWidget()),
+      buildRoute: (context) => BaseWidget('Bubble', codePath + 'bubble', BubbleWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -513,7 +531,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'Clock',
       keyword: 'Clock',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Clock', codePath, ClockWidget()),
+      buildRoute: (context) => BaseWidget('Clock', codePath + 'clock', ClockWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -521,7 +539,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'Color',
       keyword: 'Color',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Color', codePath, ColorWidget()),
+      buildRoute: (context) => BaseWidget('Color', codePath + 'color', ColorWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -529,7 +547,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'CustomPaint',
       keyword: 'CustomPaint',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('CustomPaint', codePath, CustomPaint1Widget()),
+      buildRoute: (context) => BaseWidget('CustomPaint', codePath + 'custompaint1', CustomPaint1Widget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -537,7 +555,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'DrawStyle',
       keyword: 'DrawStyle',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('DrawStyle', codePath, DrawStyleWidget()),
+      buildRoute: (context) => BaseWidget('DrawStyle', codePath + 'drawstyle', DrawStyleWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -545,7 +563,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'Feedback',
       keyword: 'Feedback',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Feedback', codePath, FeedbackWidget()),
+      buildRoute: (context) => BaseWidget('Feedback', codePath + 'feedback', FeedbackWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -553,7 +571,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'GesturePainter',
       keyword: 'GesturePainter',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('GesturePainter', codePath, GesturePainterWidget()),
+      buildRoute: (context) => BaseWidget('GesturePainter', codePath + 'gesturepainter', GesturePainterWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -561,7 +579,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'GestureScale',
       keyword: 'GestureScale',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('GestureScale', codePath, GestureScaleWidget()),
+      buildRoute: (context) => BaseWidget('GestureScale', codePath + 'gesturescale', GestureScaleWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -569,7 +587,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'Layer',
       keyword: 'Layer',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Layer', codePath, LayerWidget()),
+      buildRoute: (context) => BaseWidget('Layer', codePath + 'layer', LayerWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -577,7 +595,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'LayerBlendMode',
       keyword: 'LayerBlendMode',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('LayerBlendMode', codePath, LayerBlendModeWidget()),
+      buildRoute: (context) => BaseWidget('LayerBlendMode', codePath + 'layerblendmode', LayerBlendModeWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -585,7 +603,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'Matrix4',
       keyword: 'Matrix4',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Matrix4', codePath, Matrix4Widget()),
+      buildRoute: (context) => BaseWidget('Matrix4', codePath + 'matrix4', Matrix4Widget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -593,7 +611,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'NStar',
       keyword: 'NStar',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('NStar', codePath, NStarWidget()),
+      buildRoute: (context) => BaseWidget('NStar', codePath + 'nstar', NStarWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -601,7 +619,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'RandomColor',
       keyword: 'RandomColor',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('RandomColor', codePath, RandomColorWidget()),
+      buildRoute: (context) => BaseWidget('RandomColor', codePath + 'randomcolor', RandomColorWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -609,7 +627,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'RepaintBoundary',
       keyword: 'RepaintBoundary',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('RepaintBoundary', codePath, RepaintBoundaryWidget()),
+      buildRoute: (context) => BaseWidget('RepaintBoundary', codePath + 'repaintboundary', RepaintBoundaryWidget()),
     ),
   ];
 }
@@ -622,7 +640,7 @@ List<DemoItem> buildImageEffectDemoItems(String codePath) {
       subtitle: 'DrawImage',
       keyword: 'DrawImage',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('DrawImage', codePath, DrawImageWidget()),
+      buildRoute: (context) => BaseWidget('DrawImage', codePath + 'drawimage', DrawImageWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -630,7 +648,7 @@ List<DemoItem> buildImageEffectDemoItems(String codePath) {
       subtitle: 'RoundImage',
       keyword: 'RoundImage',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('RoundImage', codePath, RoundImageWidget()),
+      buildRoute: (context) => BaseWidget('RoundImage', codePath + 'roundimage', RoundImageWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -638,7 +656,7 @@ List<DemoItem> buildImageEffectDemoItems(String codePath) {
       subtitle: 'ShadowMask',
       keyword: 'ShadowMask',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ShadowMask', codePath, ShadowMaskWidget()),
+      buildRoute: (context) => BaseWidget('ShadowMask', codePath + 'shadowmask', ShadowMaskWidget()),
     ),
   ];
 }
@@ -651,7 +669,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       subtitle: 'CurveFitting',
       keyword: 'CurveFitting',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('CurveFitting', codePath, CurveFittingWidget()),
+      buildRoute: (context) => BaseWidget('CurveFitting', codePath + 'curvefitting', CurveFittingWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -659,7 +677,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       subtitle: 'Curves',
       keyword: 'Curves',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Curves', codePath, CurvesWidget()),
+      buildRoute: (context) => BaseWidget('Curves', codePath + 'curves', CurvesWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -667,7 +685,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       subtitle: 'Interpolator',
       keyword: 'Interpolator',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Interpolator', codePath, InterpolatorWidget()),
+      buildRoute: (context) => BaseWidget('Interpolator', codePath + 'interpolator', InterpolatorWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -675,7 +693,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       subtitle: 'ShapeBorder',
       keyword: 'ShapeBorder',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ShapeBorder', codePath, ShapeBorderWidget()),
+      buildRoute: (context) => BaseWidget('ShapeBorder', codePath + 'shapeborder', ShapeBorderWidget()),
     ),
   ];
 }
@@ -688,7 +706,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       subtitle: 'Backdrop',
       keyword: 'Backdrop',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Backdrop', codePath, BackdropWidget()),
+      buildRoute: (context) => BaseWidget('Backdrop', codePath + 'backdrop', BackdropWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -696,7 +714,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       subtitle: 'DashedLine',
       keyword: 'DashedLine',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('DashedLine', codePath, DashedLineWidget()),
+      buildRoute: (context) => BaseWidget('DashedLine', codePath + 'dashedline', DashedLineWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -704,7 +722,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       subtitle: 'DelLine',
       keyword: 'DelLine',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('DelLine', codePath, DelLineWidget()),
+      buildRoute: (context) => BaseWidget('DelLine', codePath + 'delline', DelLineWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -712,7 +730,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       subtitle: 'Rating',
       keyword: 'Rating',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Rating', codePath, RatingWidget()),
+      buildRoute: (context) => BaseWidget('Rating', codePath + 'rating', RatingWidget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -720,7 +738,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       subtitle: 'Visibility',
       keyword: 'Visibility',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('Visibility', codePath, VisibilityWidget()),
+      buildRoute: (context) => BaseWidget('Visibility', codePath + 'visibility', VisibilityWidget()),
     ),
   ];
 }

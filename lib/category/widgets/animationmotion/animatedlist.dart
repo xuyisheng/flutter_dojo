@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/multi_selection_widget.dart';
 
 class AnimatedListWidget extends StatefulWidget {
   @override
@@ -11,13 +12,14 @@ class AnimatedListWidget extends StatefulWidget {
 class _AnimatedListWidgetState extends State<AnimatedListWidget> {
   List<String> list = ['0', '1', '2', '3'];
   GlobalKey<AnimatedListState> listKey = GlobalKey();
+  int item = 0;
 
   _addItem() {
     setState(() {
       listKey.currentState.insertItem(
         list.length,
         duration: const Duration(
-          seconds: 1,
+          milliseconds: 2000,
         ),
       );
       int id = Random().nextInt(100);
@@ -30,8 +32,18 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
       int id = 0;
       listKey.currentState.removeItem(
         id,
-        (context, animation) => _buildItem1(context, 0, animation),
-        duration: const Duration(milliseconds: 250),
+        (context, animation) {
+          if (item == 0) {
+            return _buildItem(context, 0, animation);
+          } else if (item == 1) {
+            return _buildItem1(context, 0, animation);
+          } else if (item == 2) {
+            return _buildItem2(context, 0, animation);
+          } else {
+            return _buildItem2(context, 0, animation);
+          }
+        },
+        duration: const Duration(milliseconds: 2000),
       );
       list.removeAt(id);
     });
@@ -58,6 +70,19 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     );
   }
 
+  Widget _buildItem2(BuildContext context, int index, Animation<double> animation) {
+    return FadeTransition(
+      opacity: CurvedAnimation(parent: animation, curve: Interval(0.5, 1.0)),
+      child: SizeTransition(
+        sizeFactor: CurvedAnimation(parent: animation, curve: Interval(0.0, 1.0)),
+        axisAlignment: 0.0,
+        child: ListTile(
+          title: Text(list[index]),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -66,9 +91,27 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
         Expanded(
           child: AnimatedList(
             key: listKey,
-            itemBuilder: (context, index, animation) => _buildItem1(context, index, animation),
+            itemBuilder: (context, index, animation) {
+              if (item == 0) {
+                return _buildItem(context, index, animation);
+              } else if (item == 1) {
+                return _buildItem1(context, index, animation);
+              } else if (item == 2) {
+                return _buildItem2(context, index, animation);
+              } else {
+                return _buildItem2(context, index, animation);
+              }
+            },
             initialItemCount: list.length,
           ),
+        ),
+        MultiSelectionWidget(
+          'Anim type',
+          [0, 1, 2],
+          ['Type1', 'Type2', 'Type3'],
+          (v) {
+            setState(() => item = v);
+          },
         ),
         ButtonBar(
           alignment: MainAxisAlignment.start,

@@ -273,6 +273,7 @@ flutter:
     - lib/category/pattern/appbar/appbar.dart
     - lib/category/pattern/appbar/customappbar.dart
     - lib/category/pattern/appbar/floatingappbar.dart
+    - lib/category/pattern/appbar/gallerybar.dart
     - lib/category/pattern/appbar/titledbottombar.dart
 
     - lib/category/pattern/curve/curvefitting.dart
@@ -302,6 +303,7 @@ flutter:
     - lib/category/pattern/list/zoom.dart
 
     - lib/category/pattern/login/login1.dart
+    - lib/category/pattern/login/login2.dart
 
     - lib/category/pattern/paint/bubble.dart
     - lib/category/pattern/paint/clock.dart
@@ -368,6 +370,7 @@ flutter:
     - lib/category/backend/templatewidget.dart
     - lib/category/backend/timer.dart
     - lib/category/backend/keeppressing.dart
+    - lib/category/backend/eventbus.dart
 
     - lib/category/animation/barchat/bar.dart
 

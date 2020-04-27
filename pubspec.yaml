@@ -342,6 +342,7 @@ flutter:
     - lib/category/pattern/texteffect/badge.dart
     - lib/category/pattern/texteffect/drawtext.dart
     - lib/category/pattern/texteffect/linemetrics.dart
+    - lib/category/pattern/texteffect/marquee.dart
 
     - lib/category/pattern/viewpager/animslider.dart
     - lib/category/pattern/viewpager/cardflip.dart
@@ -371,6 +372,8 @@ flutter:
     - lib/category/backend/timer.dart
     - lib/category/backend/keeppressing.dart
     - lib/category/backend/eventbus.dart
+    - lib/category/backend/pagestate.dart
+    - lib/category/backend/pagestoragekey.dart
 
     - lib/category/animation/barchat/bar.dart
 
@@ -379,7 +382,7 @@ flutter:
     - lib/category/animation/infomationdisplay/gift.dart
     - lib/category/animation/infomationdisplay/rotatemenu.dart
     - lib/category/animation/infomationdisplay/showup.dart
-    - lib/category/animation/infomationdisplay/testanim3.dart
+    - lib/category/animation/infomationdisplay/textshader.dart
     - lib/category/animation/infomationdisplay/typewriter.dart
     - lib/category/animation/infomationdisplay/customhero.dart
     - lib/category/animation/infomationdisplay/favor.dart
@@ -406,6 +409,7 @@ flutter:
     - lib/category/animation/sequence/tweenanimationbuilder.dart
 
     - lib/category/animation/simulation/physical.dart
+    - lib/category/animation/simulation/particle.dart
 
     - lib/category/animation/waveandcurve/curveline.dart
     - lib/category/animation/waveandcurve/wave.dart

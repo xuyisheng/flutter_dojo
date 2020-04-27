@@ -205,6 +205,38 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         SubtitleWidget('焦点的监听'),
         Text('TextNode1焦点 $isFocus'),
         SizedBox(height: 50),
+        MainTitleWidget('TextField与Container组合'),
+        SubtitleWidget('通过isDense和contentPadding解决居中问题'),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          alignment: Alignment.centerLeft,
+          height: 30,
+          decoration: new BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: new BorderRadius.circular(4),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.star, size: 10),
+              SizedBox(width: 20),
+              Expanded(
+                child: TextField(
+                  cursorColor: Colors.grey,
+                  decoration: InputDecoration(
+                      hintText: "input",
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.all(0),
+                      isDense: true,
+                      hintStyle: TextStyle(fontSize: 15)),
+                  style: TextStyle(fontSize: 15),
+                  showCursor: true,
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

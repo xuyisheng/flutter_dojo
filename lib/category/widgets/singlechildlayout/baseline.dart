@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class BaselineWidget extends StatelessWidget {
   @override
@@ -25,6 +26,8 @@ class BaselineWidget extends StatelessWidget {
           ),
         ),
         MainTitleWidget('根据child baseline定位child widget'),
+        SubtitleWidget('如果child有baseline，则根据child的baseline属性，调整child的位置'),
+        SubtitleWidget('如果child没有baseline，则根据child的bottom，来调整child的位置'),
         Row(
           children: <Widget>[
             Baseline(

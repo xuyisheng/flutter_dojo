@@ -8,6 +8,8 @@ import 'package:flutter_dojo/category/backend/key.dart';
 import 'package:flutter_dojo/category/backend/keyboard.dart';
 import 'package:flutter_dojo/category/backend/lifecycle.dart';
 import 'package:flutter_dojo/category/backend/pageroute.dart';
+import 'package:flutter_dojo/category/backend/pagestate.dart';
+import 'package:flutter_dojo/category/backend/pagestoragekey.dart';
 import 'package:flutter_dojo/category/backend/provider.dart';
 import 'package:flutter_dojo/category/backend/providerstate.dart';
 import 'package:flutter_dojo/category/backend/screenshot.dart';
@@ -94,6 +96,22 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'PageRoute',
     buildRoute: (context) => BaseWidget('PageRoute', codePath + 'pageroute', PageRouteWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'PageState',
+    subtitle: 'PageState',
+    documentationUrl: '',
+    keyword: 'PageState',
+    buildRoute: (context) => BaseWidget('PageState', codePath + 'pagestate', PageStateWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'PageStorageKey',
+    subtitle: 'PageStorageKey',
+    documentationUrl: '',
+    keyword: 'PageStorageKey',
+    buildRoute: (context) => BaseWidget('PageStorageKey', codePath + 'pagestoragekey', PageStorageKeyWidget()),
   ),
   DemoItem(
     icon: Icons.build,

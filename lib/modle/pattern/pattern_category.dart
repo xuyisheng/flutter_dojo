@@ -59,6 +59,7 @@ import 'package:flutter_dojo/category/pattern/texteffect/autofold.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/badge.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/drawtext.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/linemetrics.dart';
+import 'package:flutter_dojo/category/pattern/texteffect/marquee.dart';
 import 'package:flutter_dojo/category/pattern/viewpager/animslider.dart';
 import 'package:flutter_dojo/category/pattern/viewpager/cardflip.dart';
 import 'package:flutter_dojo/category/pattern/viewpager/guide.dart';
@@ -445,6 +446,13 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       keyword: 'LineMetrics',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('LineMetrics', codePath + 'linemetrics', LineMetricsWidget()),
+    ),DemoItem(
+      icon: Icons.pages,
+      title: 'Marquee',
+      subtitle: 'Marquee',
+      keyword: 'Marquee',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Marquee', codePath + 'marquee', MarqueeWidget()),
     ),
   ];
 }

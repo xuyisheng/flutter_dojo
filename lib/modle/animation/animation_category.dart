@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/animation/barchat/bar.dart';
+import 'package:flutter_dojo/category/animation/infomationdisplay/bouncetext.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/curve.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/customhero.dart';
 import 'package:flutter_dojo/category/animation/infomationdisplay/favor.dart';
@@ -70,6 +71,14 @@ List<DemoItemCategory> buildAnimationCategoryList = <DemoItemCategory>[
 
 List<DemoItem> buildInformationDisplayDemoItems(String codePath) {
   return [
+    DemoItem(
+      icon: Icons.date_range,
+      title: 'BounceText',
+      subtitle: 'BounceText',
+      keyword: 'BounceText',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('BounceText', codePath + 'bouncetext', BounceTextWidget()),
+    ),
     DemoItem(
       icon: Icons.date_range,
       title: 'Curve',

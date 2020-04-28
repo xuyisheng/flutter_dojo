@@ -78,13 +78,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
         MainTitleWidget('自定义PageRoute动画'),
         MultiSelectionWidget(
           'transition',
-          [
-            buildTransitionScale,
-            buildTransitionSlide,
-            buildTransitionFade,
-            buildTransitionRotate,
-            buildTransitionCompose
-          ],
+          [buildTransitionScale, buildTransitionSlide, buildTransitionFade, buildTransitionRotate, buildTransitionCompose],
           ['Scale', 'Slide', 'Fade', 'Rotate', 'Compose'],
           (value) => setState(() => transitionSelection = value),
         ),
@@ -154,6 +148,21 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
           },
           child: Text("Goto Page2"),
         ),
+        MainTitleWidget('FullscreenDialog style page'),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return FullscreenDialogPage();
+                },
+                fullscreenDialog: true,
+              ),
+            );
+          },
+          child: Text("Goto FullscreenDialog Page"),
+        ),
         MainTitleWidget('路由监听'),
         RaisedButton(
           onPressed: () {
@@ -216,6 +225,18 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
         opacity: tween2.chain(CurveTween(curve: Curves.easeIn)).animate(anim1),
         child: child,
       ),
+    );
+  }
+}
+
+class FullscreenDialogPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: Colors.black,
     );
   }
 }

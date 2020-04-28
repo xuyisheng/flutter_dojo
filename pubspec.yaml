@@ -32,6 +32,7 @@ dependencies:
   build_runner: ^1.7.3
   json_serializable: ^3.2.5
   url_launcher: ^5.4.2
+  async: ^2.4.0
 
 dev_dependencies:
   flutter_test:
@@ -274,6 +275,7 @@ flutter:
     - lib/category/pattern/appbar/customappbar.dart
     - lib/category/pattern/appbar/floatingappbar.dart
     - lib/category/pattern/appbar/gallerybar.dart
+    - lib/category/pattern/appbar/gradientcolorbar.dart
     - lib/category/pattern/appbar/titledbottombar.dart
 
     - lib/category/pattern/curve/curvefitting.dart
@@ -386,6 +388,7 @@ flutter:
     - lib/category/animation/infomationdisplay/typewriter.dart
     - lib/category/animation/infomationdisplay/customhero.dart
     - lib/category/animation/infomationdisplay/favor.dart
+    - lib/category/animation/infomationdisplay/bouncetext.dart
 
     - lib/category/animation/loading/loading.dart
     - lib/category/animation/loading/customprogress.dart

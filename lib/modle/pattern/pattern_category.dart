@@ -3,6 +3,7 @@ import 'package:flutter_dojo/category/pattern/appbar/appbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/customappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/floatingappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/gallerybar.dart';
+import 'package:flutter_dojo/category/pattern/appbar/gradientcolorbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/category/pattern/curve/curvefitting.dart';
 import 'package:flutter_dojo/category/pattern/curve/curves.dart';
@@ -235,6 +236,14 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.pages,
+      title: 'GradientColorBar',
+      subtitle: 'GradientColorBar',
+      keyword: 'GradientColorBar',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('GradientColorBar', codePath + 'gradientcolorbar', GradientColorBar()),
+    ),
+    DemoItem(
+      icon: Icons.pages,
       title: 'TitledBottomBar',
       subtitle: 'TitledBottomBar',
       keyword: 'TitledBottomBar',
@@ -446,7 +455,8 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       keyword: 'LineMetrics',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('LineMetrics', codePath + 'linemetrics', LineMetricsWidget()),
-    ),DemoItem(
+    ),
+    DemoItem(
       icon: Icons.pages,
       title: 'Marquee',
       subtitle: 'Marquee',

@@ -13,8 +13,7 @@ class BaseWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final appbar = buildAppBar(context);
     final mediaQuery = MediaQuery.of(context);
-    final contentHeight =
-        mediaQuery.size.height - mediaQuery.padding.top - mediaQuery.padding.bottom - appbar.preferredSize.height;
+    final contentHeight = mediaQuery.size.height - mediaQuery.padding.top - mediaQuery.padding.bottom - appbar.preferredSize.height;
 
     return Scaffold(
       appBar: appbar,
@@ -55,6 +54,7 @@ class BaseWidget extends StatelessWidget {
           Navigator.maybePop(context);
         },
       ),
+      brightness: Brightness.light,
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.code),

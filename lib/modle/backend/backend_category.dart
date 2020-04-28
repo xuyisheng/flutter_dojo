@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/category/backend/asyncmemoizer.dart';
 import 'package:flutter_dojo/category/backend/catcherror.dart';
 import 'package:flutter_dojo/category/backend/eventbus.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
@@ -25,6 +26,14 @@ import 'package:flutter_dojo/common/demo_item.dart';
 
 var codePath = 'lib/category/backend/';
 List<DemoItem> buildBackendCategoryList = [
+  DemoItem(
+    icon: Icons.build,
+    title: 'AsyncMemoizer',
+    subtitle: 'AsyncMemoizer',
+    documentationUrl: '',
+    keyword: 'AsyncMemoizer',
+    buildRoute: (context) => BaseWidget('AsyncMemoizer', codePath + 'asyncmemoizer', AsyncMemoizerWidget()),
+  ),
   DemoItem(
     icon: Icons.build,
     title: 'CatchError',

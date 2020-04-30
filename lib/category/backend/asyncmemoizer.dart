@@ -19,6 +19,7 @@ class _AsyncMemoizerWidgetState extends State<AsyncMemoizerWidget> {
         MainTitleWidget('AsyncMemoizer的基本使用'),
         SubtitleWidget('类似FutureBuilder之类的Widget，在setState后会重新执行future，通过AsyncMemoizer可以限制只执行一次'),
         SubtitleWidget('AsyncMemoizer可以将同一个函数的执行结果保存，多次调用只运行一次'),
+        SubtitleWidget('除此之外，还可以将获取数据的方法放在initState中，只获取一次'),
         Row(
           children: <Widget>[
             Text('Enable AsyncMemoizer'),

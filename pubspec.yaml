@@ -376,6 +376,7 @@ flutter:
     - lib/category/backend/eventbus.dart
     - lib/category/backend/pagestate.dart
     - lib/category/backend/pagestoragekey.dart
+    - lib/category/backend/platform.dart
 
     - lib/category/animation/barchat/bar.dart
 

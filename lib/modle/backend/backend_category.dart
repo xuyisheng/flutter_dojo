@@ -11,6 +11,7 @@ import 'package:flutter_dojo/category/backend/lifecycle.dart';
 import 'package:flutter_dojo/category/backend/pageroute.dart';
 import 'package:flutter_dojo/category/backend/pagestate.dart';
 import 'package:flutter_dojo/category/backend/pagestoragekey.dart';
+import 'package:flutter_dojo/category/backend/platform.dart';
 import 'package:flutter_dojo/category/backend/provider.dart';
 import 'package:flutter_dojo/category/backend/providerstate.dart';
 import 'package:flutter_dojo/category/backend/screenshot.dart';
@@ -121,6 +122,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'PageStorageKey',
     buildRoute: (context) => BaseWidget('PageStorageKey', codePath + 'pagestoragekey', PageStorageKeyWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Platform',
+    subtitle: 'Platform',
+    documentationUrl: '',
+    keyword: 'Platform',
+    buildRoute: (context) => BaseWidget('Platform', codePath + 'platform', PlatformWidget()),
   ),
   DemoItem(
     icon: Icons.build,

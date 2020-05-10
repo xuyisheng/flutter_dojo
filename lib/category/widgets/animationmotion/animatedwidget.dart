@@ -13,6 +13,7 @@ class _AnimatedWidgetWidgetState extends State<AnimatedWidgetWidget> with Single
   Animation<double> _animationRotation;
   Animation<double> _animationSize;
   Animation<Offset> _animationSlide;
+  Animation<double> _animationOutline;
   bool status = false;
 
   @override
@@ -26,6 +27,7 @@ class _AnimatedWidgetWidgetState extends State<AnimatedWidgetWidget> with Single
     _animationRotation = Tween(begin: 0.0, end: 2.0).animate(_controller);
     _animationSize = Tween(begin: 0.0, end: 1.0).animate(_controller);
     _animationSlide = Tween(begin: Offset(0, 0), end: Offset(0.5, 0.5)).animate(_controller);
+    _animationOutline = Tween(begin: 2.0, end: 8.0).animate(_controller);
   }
 
   @override
@@ -74,14 +76,36 @@ class _AnimatedWidgetWidgetState extends State<AnimatedWidgetWidget> with Single
             child: Text('SlideTransition'),
           ),
         ),
+        MainTitleWidget('自定义AnimatedWidget'),
+        Padding(
+          padding: EdgeInsets.all(30),
+          child: OutlineTransition(
+            borderWidth: _animationOutline,
+          ),
+        ),
         RaisedButton(
           onPressed: () {
             status = !status;
             return status ? _controller.forward() : _controller.reverse();
           },
           child: Text('Start anim'),
-        )
+        ),
       ],
+    );
+  }
+}
+
+class OutlineTransition extends AnimatedWidget {
+  const OutlineTransition({borderWidth}) : super(listenable: borderWidth);
+
+  Animation<double> get borderWidth => listenable;
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlineButton(
+      onPressed: () {},
+      borderSide: BorderSide(width: borderWidth.value),
+      child: Text('Custom AnimatedWidget'),
     );
   }
 }

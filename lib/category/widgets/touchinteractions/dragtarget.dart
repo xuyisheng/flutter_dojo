@@ -83,8 +83,8 @@ class _DragTargetWidgetState extends State<DragTargetWidget> {
                       return status = 'onAccept: $value';
                     });
                   },
-                  onLeave: (double value) {
-                    setState(() => status = 'onLeave: $value');
+                  onLeave: (v){
+                    setState(() => status = 'onLeave: $v');
                   },
                 ),
               ),

@@ -84,7 +84,7 @@ List<DemoItem> buildBackendCategoryList = [
     buildRoute: (context) => BaseWidget('Key', codePath + 'key', KeyWidget()),
   ),
   DemoItem(
-    icon: Icons.pages,
+    icon: Icons.build,
     title: 'Keyboard',
     subtitle: 'Keyboard',
     documentationUrl: '',
@@ -148,7 +148,7 @@ List<DemoItem> buildBackendCategoryList = [
     buildRoute: (context) => BaseWidget('Provider', codePath + 'providerstate', ProviderStateWidget()),
   ),
   DemoItem(
-    icon: Icons.pages,
+    icon: Icons.build,
     title: 'Screenshot',
     subtitle: 'Screenshot',
     documentationUrl: '',
@@ -204,7 +204,7 @@ List<DemoItem> buildBackendCategoryList = [
     buildRoute: (context) => BaseWidget('TemplateWidget', codePath + 'templatewidget', TemplateWidget()),
   ),
   DemoItem(
-    icon: Icons.pages,
+    icon: Icons.build,
     title: 'Timer',
     subtitle: 'Timer',
     documentationUrl: '',

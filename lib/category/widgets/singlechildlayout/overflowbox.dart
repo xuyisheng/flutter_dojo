@@ -20,17 +20,19 @@ class _OverflowBoxWidgetState extends State<OverflowBoxWidget> {
             height: 200,
             color: Colors.red,
             child: Align(
-              alignment: const Alignment(1, 1),
-              child: SizedBox(
-                width: 10,
-                height: 20,
+              alignment: Alignment.bottomRight,
+              child: Container(
+                // 用于辅助定位
+                color: Colors.grey,
+                width: 50,
+                height: 50,
                 child: OverflowBox(
                   minWidth: 0,
                   maxWidth: 100,
                   minHeight: 0,
-                  maxHeight: 50,
+                  maxHeight: 100,
                   child: Container(
-                    color: Colors.blue,
+                    color: Colors.blue.withOpacity(0.3),
                   ),
                 ),
               ),

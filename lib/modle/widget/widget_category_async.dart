@@ -48,8 +48,7 @@ List<DemoItem> buildAsyncDemoItems(String codePath) {
       subtitle: 'ValueListenableBuilder',
       keyword: 'ValueListenableBuilder',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html',
-      buildRoute: (context) =>
-          BaseWidget('ValueListenableBuilder', codePath + 'valuelistenablebuilder', ValueListenableBuilderWidget()),
+      buildRoute: (context) => BaseWidget('ValueListenableBuilder', codePath + 'valuelistenablebuilder', ValueListenableBuilderWidget()),
     ),
     DemoItem(
       icon: Icons.network_wifi,

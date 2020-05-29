@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class RaisedButtonWidget extends StatefulWidget {
   @override
@@ -35,6 +36,28 @@ class _RaisedButtonWidgetState extends State<RaisedButtonWidget> {
               child: Text('RaisedButton Disabled'),
             ),
           ],
+        ),
+        MainTitleWidget('设置RaisedButton的宽度'),
+        SubtitleWidget('修改ButtonTheme'),
+        Center(
+          child: ButtonTheme(
+            minWidth: 200,
+            height: 100,
+            child: RaisedButton(
+              onPressed: () {},
+              child: Text('Button'),
+            ),
+          ),
+        ),
+        SubtitleWidget('通过SizedBox设置'),
+        Center(
+          child: SizedBox(
+            width: 100,
+            child: RaisedButton(
+              onPressed: () {},
+              child: Text('Button'),
+            ),
+          ),
         ),
         MainTitleWidget('Custom RaisedButton'),
         RaisedButton(

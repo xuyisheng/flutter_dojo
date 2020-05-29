@@ -43,9 +43,7 @@ class _FloatingAppBarWidgetState extends State<FloatingAppBarWidget> with Single
                   children: <Widget>[
                     //浮动图标
                     Positioned(
-                      top: controller.value <= 0.5
-                          ? (controller.value * height - height * 0.2)
-                          : (1 - controller.value) * height - height * 0.2,
+                      top: controller.value <= 0.5 ? (controller.value * height - height * 0.2) : (1 - controller.value) * height - height * 0.2,
                       left: moveProgress * itemWidth + itemWidth / 2 - floatingIconRadius,
                       child: CircleAvatar(
                         radius: floatingIconRadius,
@@ -95,16 +93,15 @@ class _FloatingAppBarWidgetState extends State<FloatingAppBarWidget> with Single
     double newPosition = newIndex.toDouble();
     if (oldPosition != newPosition && controller.status != AnimationStatus.forward) {
       controller.reset();
-      animation = Tween(begin: oldPosition, end: newPosition)
-          .animate(CurvedAnimation(parent: controller, curve: Curves.easeInOutCubic))
-            ..addListener(() {
-              setState(() => moveProgress = animation.value);
-            })
-            ..addStatusListener((AnimationStatus status) {
-              if (status == AnimationStatus.completed) {
-                setState(() => currentIndex = newIndex);
-              }
-            });
+      animation = Tween(begin: oldPosition, end: newPosition).animate(CurvedAnimation(parent: controller, curve: Curves.easeInOutCubic))
+        ..addListener(() {
+          setState(() => moveProgress = animation.value);
+        })
+        ..addStatusListener((AnimationStatus status) {
+          if (status == AnimationStatus.completed) {
+            setState(() => currentIndex = newIndex);
+          }
+        });
       controller.forward();
     }
   }

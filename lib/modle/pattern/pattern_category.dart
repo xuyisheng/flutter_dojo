@@ -10,10 +10,15 @@ import 'package:flutter_dojo/category/pattern/curve/curves.dart';
 import 'package:flutter_dojo/category/pattern/curve/interpolator.dart';
 import 'package:flutter_dojo/category/pattern/curve/shapeborder.dart';
 import 'package:flutter_dojo/category/pattern/display/backdrop.dart';
+import 'package:flutter_dojo/category/pattern/display/centeredge.dart';
 import 'package:flutter_dojo/category/pattern/display/dashedline.dart';
 import 'package:flutter_dojo/category/pattern/display/delline.dart';
 import 'package:flutter_dojo/category/pattern/display/rating.dart';
 import 'package:flutter_dojo/category/pattern/display/visibility.dart';
+import 'package:flutter_dojo/category/pattern/gesture/custompaint1.dart';
+import 'package:flutter_dojo/category/pattern/gesture/gesturecard.dart';
+import 'package:flutter_dojo/category/pattern/gesture/gesturepainter.dart';
+import 'package:flutter_dojo/category/pattern/gesture/gesturescale.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/drawimage.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/roundimage.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/shadowmask.dart';
@@ -25,6 +30,7 @@ import 'package:flutter_dojo/category/pattern/list/pullrefresh.dart';
 import 'package:flutter_dojo/category/pattern/list/searchlist.dart';
 import 'package:flutter_dojo/category/pattern/list/sliverheader.dart';
 import 'package:flutter_dojo/category/pattern/list/sliverheaderwitheffect.dart';
+import 'package:flutter_dojo/category/pattern/list/snaplist.dart';
 import 'package:flutter_dojo/category/pattern/list/tree.dart';
 import 'package:flutter_dojo/category/pattern/list/zoom.dart';
 import 'package:flutter_dojo/category/pattern/login/login1.dart';
@@ -32,17 +38,15 @@ import 'package:flutter_dojo/category/pattern/login/login2.dart';
 import 'package:flutter_dojo/category/pattern/paint/bubble.dart';
 import 'package:flutter_dojo/category/pattern/paint/clock.dart';
 import 'package:flutter_dojo/category/pattern/paint/color.dart';
-import 'package:flutter_dojo/category/pattern/paint/custompaint1.dart';
 import 'package:flutter_dojo/category/pattern/paint/drawstyle.dart';
 import 'package:flutter_dojo/category/pattern/paint/feedback.dart';
-import 'package:flutter_dojo/category/pattern/paint/gesturepainter.dart';
-import 'package:flutter_dojo/category/pattern/paint/gesturescale.dart';
 import 'package:flutter_dojo/category/pattern/paint/layer.dart';
 import 'package:flutter_dojo/category/pattern/paint/layerblendmode.dart';
 import 'package:flutter_dojo/category/pattern/paint/matrix4.dart';
 import 'package:flutter_dojo/category/pattern/paint/nstar.dart';
 import 'package:flutter_dojo/category/pattern/paint/randomcolor.dart';
 import 'package:flutter_dojo/category/pattern/paint/repaintboundary.dart';
+import 'package:flutter_dojo/category/pattern/paint/spiral.dart';
 import 'package:flutter_dojo/category/pattern/perspective/flipcard.dart';
 import 'package:flutter_dojo/category/pattern/perspective/rollcard.dart';
 import 'package:flutter_dojo/category/pattern/perspective/show3dpage.dart';
@@ -84,6 +88,10 @@ List<DemoItemCategory> buildPatternData = <DemoItemCategory>[
   DemoItemCategory(
     name: "Display",
     list: buildDisplayDemoItems('lib/category/pattern/display/'),
+  ),
+  DemoItemCategory(
+    name: "Gesture",
+    list: buildGestureDemoItems('lib/category/pattern/gesture/'),
   ),
   DemoItemCategory(
     name: "ImageEffect",
@@ -134,7 +142,7 @@ List<DemoItemCategory> buildPatternData = <DemoItemCategory>[
 List<DemoItem> buildViewPagerDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'AnimSlider',
       subtitle: 'AnimSlider',
       keyword: 'AnimSlider',
@@ -142,7 +150,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('AnimSlider', codePath + 'animslider', AnimSliderWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'CardFlip',
       subtitle: 'CardFlip',
       keyword: 'CardFlip',
@@ -150,7 +158,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('CardFlip', codePath + 'cardflip', CardFlipWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'Guide',
       subtitle: 'Guide',
       keyword: 'Guide',
@@ -158,7 +166,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Guide', codePath + 'guide', GuideWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'PageChangeAnim',
       subtitle: 'Page Change Anim',
       keyword: 'PageChangeAnim',
@@ -166,7 +174,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('PageChangeAnim', codePath + 'pagechangeanim', PageChangeAnimWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'PageReveal',
       subtitle: 'PageReveal',
       keyword: 'PageReveal',
@@ -174,7 +182,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('PageReveal', codePath + 'pagereveal', PageRevealWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'ParallaxViewPager',
       subtitle: 'Parallax ViewPager',
       keyword: 'ParallaxViewPager',
@@ -182,7 +190,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('ParallaxViewPager', codePath + 'parallaxviewpager', ParallaxViewPagerWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'Slider',
       subtitle: 'Slider',
       keyword: 'Slider',
@@ -190,7 +198,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Slider', codePath + 'slider', SliderWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.vibration,
       title: 'TransformSlider',
       subtitle: 'TransformSlider',
       keyword: 'TransformSlider',
@@ -203,7 +211,7 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
 List<DemoItem> buildAppbarDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.access_time,
       title: 'Appbar',
       subtitle: 'Appbar',
       keyword: 'Appbar',
@@ -211,7 +219,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Appbar', codePath + 'appbar', AppbarWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.access_time,
       title: 'CustomAppbar',
       subtitle: 'CustomAppbar',
       keyword: 'CustomAppbar',
@@ -219,7 +227,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('CustomAppbar', codePath + 'customappbar', CustomAppBarWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.access_time,
       title: 'FloatingAppBar',
       subtitle: 'FloatingAppBar',
       keyword: 'FloatingAppBar',
@@ -227,7 +235,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('FloatingAppBar', codePath + 'floatingappbar', FloatingAppBarWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.access_time,
       title: 'GalleryBar',
       subtitle: 'GalleryBar',
       keyword: 'GalleryBar',
@@ -235,7 +243,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('GalleryBar', codePath + 'gallerybar', GalleryBar()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.access_time,
       title: 'GradientColorBar',
       subtitle: 'GradientColorBar',
       keyword: 'GradientColorBar',
@@ -243,7 +251,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('GradientColorBar', codePath + 'gradientcolorbar', GradientColorBar()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.access_time,
       title: 'TitledBottomBar',
       subtitle: 'TitledBottomBar',
       keyword: 'TitledBottomBar',
@@ -256,7 +264,7 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
 List<DemoItem> buildPerspectiveDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.perm_device_information,
       title: 'FlipCard',
       subtitle: 'FlipCard',
       keyword: 'FlipCard',
@@ -264,7 +272,7 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('FlipCard', codePath + 'flipcard', FlipCardWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.perm_device_information,
       title: 'RollCard',
       subtitle: 'RollCard',
       keyword: 'RollCard',
@@ -272,7 +280,7 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('RollCard', codePath + 'rollcard', RollCardWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.perm_device_information,
       title: 'Show3DPage',
       subtitle: 'Show3DPage',
       keyword: 'Show3DPage',
@@ -285,7 +293,7 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
 List<DemoItem> buildListDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'AvatarList',
       subtitle: 'AvatarList',
       keyword: 'AvatarList',
@@ -293,7 +301,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('AvatarList', codePath + 'avatarlist', AvatarListWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'ItemLayout',
       subtitle: 'ItemLayout',
       keyword: 'ItemLayout',
@@ -301,7 +309,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('ItemLayout', codePath + 'itemlayout', ItemLayoutWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'ListDetail',
       subtitle: 'ListDetail',
       keyword: 'ListDetail',
@@ -309,7 +317,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('ListDetail', codePath + 'listdetail', ListDetailWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'Overflow',
       subtitle: 'Overflow',
       keyword: 'Overflow',
@@ -317,7 +325,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Overflow', codePath + 'overflow', OverflowWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'PullRefresh',
       subtitle: 'PullRefresh',
       keyword: 'PullRefresh',
@@ -325,7 +333,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('PullRefresh', codePath + 'pullrefresh', PullRefreshWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'SearchList',
       subtitle: 'SearchList',
       keyword: 'SearchList',
@@ -333,7 +341,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('SearchList', codePath + 'searchlist', SearchListWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'SliverHeader',
       subtitle: 'SliverHeader',
       keyword: 'SliverHeader',
@@ -341,7 +349,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('SliverHeader', codePath + 'sliverheader', SliverHeaderWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'SliverHeaderWithEffect',
       subtitle: 'SliverHeaderWithEffect',
       keyword: 'SliverHeaderWithEffect',
@@ -349,7 +357,15 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('SliverHeaderWithEffect', codePath + 'sliverheaderwitheffect', SliverHeaderWithEffectWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
+      title: 'SnapList',
+      subtitle: 'SnapList',
+      keyword: 'SnapList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('SnapList', codePath + 'snaplist', SnapListWidget()),
+    ),
+    DemoItem(
+      icon: Icons.library_add,
       title: 'Tree',
       subtitle: 'Tree',
       keyword: 'Tree',
@@ -357,7 +373,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Tree', codePath + 'tree', TreeWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.library_add,
       title: 'Zoom',
       subtitle: 'Zoom',
       keyword: 'Zoom',
@@ -370,7 +386,7 @@ List<DemoItem> buildListDemoItems(String codePath) {
 List<DemoItem> buildLoginDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.local_gas_station,
       title: 'Login1',
       subtitle: 'Login1',
       keyword: 'Login1',
@@ -378,7 +394,7 @@ List<DemoItem> buildLoginDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Login1', codePath + 'login1', Login1Widget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.local_gas_station,
       title: 'Login2',
       subtitle: 'Login2',
       keyword: 'Login2',
@@ -391,7 +407,7 @@ List<DemoItem> buildLoginDemoItems(String codePath) {
 List<DemoItem> buildSettingDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.send,
       title: 'MenuSetting',
       subtitle: 'MenuSetting',
       keyword: 'MenuSetting',
@@ -399,7 +415,7 @@ List<DemoItem> buildSettingDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('MenuSetting', codePath + 'menusetting', MenuSettingWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.send,
       title: 'Setting1',
       subtitle: 'Setting1',
       keyword: 'Setting1',
@@ -412,7 +428,7 @@ List<DemoItem> buildSettingDemoItems(String codePath) {
 List<DemoItem> buildProfileDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.sync_problem,
       title: 'Profile1',
       subtitle: 'Profile1',
       keyword: 'Profile1',
@@ -425,7 +441,7 @@ List<DemoItem> buildProfileDemoItems(String codePath) {
 List<DemoItem> buildTextEffectDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.text_fields,
       title: 'AutoFold',
       subtitle: 'AutoFold',
       keyword: 'AutoFold',
@@ -433,7 +449,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('AutoFold', codePath + 'autofold', AutoFoldWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.text_fields,
       title: 'Badge',
       subtitle: 'Badge',
       keyword: 'Badge',
@@ -441,7 +457,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Badge', codePath + 'badge', BadgeWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.text_fields,
       title: 'DrawText',
       subtitle: 'DrawText',
       keyword: 'DrawText',
@@ -449,7 +465,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('DrawText', codePath + 'drawtext', DrawTextWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.text_fields,
       title: 'LineMetrics',
       subtitle: 'LineMetrics',
       keyword: 'LineMetrics',
@@ -457,7 +473,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('LineMetrics', codePath + 'linemetrics', LineMetricsWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.text_fields,
       title: 'Marquee',
       subtitle: 'Marquee',
       keyword: 'Marquee',
@@ -470,7 +486,7 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
 List<DemoItem> buildRenderInfoDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.trending_up,
       title: 'Position',
       subtitle: 'Widget Position',
       keyword: 'Position',
@@ -478,7 +494,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Position', codePath + 'position', PositionWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.trending_up,
       title: 'ScreenOrientation',
       subtitle: 'ScreenOrientation',
       keyword: 'ScreenOrientation',
@@ -486,7 +502,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('ScreenOrientation', codePath + 'screenorientation', ScreenOrientationWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.trending_up,
       title: 'Size',
       subtitle: 'Widget Size',
       keyword: 'Size',
@@ -494,7 +510,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Size', codePath + 'size', SizeWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.trending_up,
       title: 'SystemUI',
       subtitle: 'SystemUI',
       keyword: 'SystemUI',
@@ -507,7 +523,7 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
 List<DemoItem> buildPopupDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.polymer,
       title: 'Floating',
       subtitle: 'Floating',
       keyword: 'Floating',
@@ -515,7 +531,7 @@ List<DemoItem> buildPopupDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Floating', codePath + 'floating', FloatingWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.polymer,
       title: 'Popup',
       subtitle: 'Popup',
       keyword: 'Popup',
@@ -523,7 +539,7 @@ List<DemoItem> buildPopupDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Popup', codePath + 'popup', PopupWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.polymer,
       title: 'Toast',
       subtitle: 'Toast',
       keyword: 'Toast',
@@ -536,7 +552,7 @@ List<DemoItem> buildPopupDemoItems(String codePath) {
 List<DemoItem> buildPaintDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'Bubble',
       subtitle: 'Bubble',
       keyword: 'Bubble',
@@ -544,7 +560,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Bubble', codePath + 'bubble', BubbleWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'Clock',
       subtitle: 'Clock',
       keyword: 'Clock',
@@ -552,7 +568,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Clock', codePath + 'clock', ClockWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'Color',
       subtitle: 'Color',
       keyword: 'Color',
@@ -560,15 +576,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Color', codePath + 'color', ColorWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
-      title: 'CustomPaint',
-      subtitle: 'CustomPaint',
-      keyword: 'CustomPaint',
-      documentationUrl: '',
-      buildRoute: (context) => BaseWidget('CustomPaint', codePath + 'custompaint1', CustomPaint1Widget()),
-    ),
-    DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'DrawStyle',
       subtitle: 'DrawStyle',
       keyword: 'DrawStyle',
@@ -576,7 +584,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('DrawStyle', codePath + 'drawstyle', DrawStyleWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'Feedback',
       subtitle: 'Feedback',
       keyword: 'Feedback',
@@ -584,23 +592,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Feedback', codePath + 'feedback', FeedbackWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
-      title: 'GesturePainter',
-      subtitle: 'GesturePainter',
-      keyword: 'GesturePainter',
-      documentationUrl: '',
-      buildRoute: (context) => BaseWidget('GesturePainter', codePath + 'gesturepainter', GesturePainterWidget()),
-    ),
-    DemoItem(
-      icon: Icons.pages,
-      title: 'GestureScale',
-      subtitle: 'GestureScale',
-      keyword: 'GestureScale',
-      documentationUrl: '',
-      buildRoute: (context) => BaseWidget('GestureScale', codePath + 'gesturescale', GestureScaleWidget()),
-    ),
-    DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'Layer',
       subtitle: 'Layer',
       keyword: 'Layer',
@@ -608,7 +600,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Layer', codePath + 'layer', LayerWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'LayerBlendMode',
       subtitle: 'LayerBlendMode',
       keyword: 'LayerBlendMode',
@@ -616,7 +608,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('LayerBlendMode', codePath + 'layerblendmode', LayerBlendModeWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'Matrix4',
       subtitle: 'Matrix4',
       keyword: 'Matrix4',
@@ -624,7 +616,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Matrix4', codePath + 'matrix4', Matrix4Widget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'NStar',
       subtitle: 'NStar',
       keyword: 'NStar',
@@ -632,7 +624,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('NStar', codePath + 'nstar', NStarWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'RandomColor',
       subtitle: 'RandomColor',
       keyword: 'RandomColor',
@@ -640,12 +632,20 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('RandomColor', codePath + 'randomcolor', RandomColorWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.format_paint,
       title: 'RepaintBoundary',
       subtitle: 'RepaintBoundary',
       keyword: 'RepaintBoundary',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('RepaintBoundary', codePath + 'repaintboundary', RepaintBoundaryWidget()),
+    ),
+    DemoItem(
+      icon: Icons.format_paint,
+      title: 'Spiral',
+      subtitle: 'Spiral',
+      keyword: 'Spiral',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Spiral', codePath + 'spiral', SpiralWidget()),
     ),
   ];
 }
@@ -653,7 +653,7 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
 List<DemoItem> buildImageEffectDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.border_left,
       title: 'DrawImage',
       subtitle: 'DrawImage',
       keyword: 'DrawImage',
@@ -661,7 +661,7 @@ List<DemoItem> buildImageEffectDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('DrawImage', codePath + 'drawimage', DrawImageWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.border_left,
       title: 'RoundImage',
       subtitle: 'RoundImage',
       keyword: 'RoundImage',
@@ -669,7 +669,7 @@ List<DemoItem> buildImageEffectDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('RoundImage', codePath + 'roundimage', RoundImageWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.border_left,
       title: 'ShadowMask',
       subtitle: 'ShadowMask',
       keyword: 'ShadowMask',
@@ -682,7 +682,7 @@ List<DemoItem> buildImageEffectDemoItems(String codePath) {
 List<DemoItem> buildCurveDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.center_focus_weak,
       title: 'CurveFitting',
       subtitle: 'CurveFitting',
       keyword: 'CurveFitting',
@@ -690,7 +690,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('CurveFitting', codePath + 'curvefitting', CurveFittingWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.center_focus_weak,
       title: 'Curves',
       subtitle: 'Curves',
       keyword: 'Curves',
@@ -698,7 +698,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Curves', codePath + 'curves', CurvesWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.center_focus_weak,
       title: 'Interpolator',
       subtitle: 'Interpolator',
       keyword: 'Interpolator',
@@ -706,7 +706,7 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Interpolator', codePath + 'interpolator', InterpolatorWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.center_focus_weak,
       title: 'ShapeBorder',
       subtitle: 'ShapeBorder',
       keyword: 'ShapeBorder',
@@ -716,10 +716,47 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
   ];
 }
 
+List<DemoItem> buildGestureDemoItems(String codePath) {
+  return [
+    DemoItem(
+      icon: Icons.gesture,
+      title: 'CustomPaint',
+      subtitle: 'CustomPaint',
+      keyword: 'CustomPaint',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CustomPaint', codePath + 'custompaint1', CustomPaint1Widget()),
+    ),
+    DemoItem(
+      icon: Icons.gesture,
+      title: 'GestureCard',
+      subtitle: 'GestureCard',
+      keyword: 'GestureCard',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('GestureCard', codePath + 'gesturecard', GestureCardWidget()),
+    ),
+    DemoItem(
+      icon: Icons.gesture,
+      title: 'GesturePainter',
+      subtitle: 'GesturePainter',
+      keyword: 'GesturePainter',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('GesturePainter', codePath + 'gesturepainter', GesturePainterWidget()),
+    ),
+    DemoItem(
+      icon: Icons.gesture,
+      title: 'GestureScale',
+      subtitle: 'GestureScale',
+      keyword: 'GestureScale',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('GestureScale', codePath + 'gesturescale', GestureScaleWidget()),
+    ),
+  ];
+}
+
 List<DemoItem> buildDisplayDemoItems(String codePath) {
   return [
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.directions_subway,
       title: 'Backdrop',
       subtitle: 'Backdrop',
       keyword: 'Backdrop',
@@ -727,7 +764,15 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Backdrop', codePath + 'backdrop', BackdropWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.directions_subway,
+      title: 'CenterEdge',
+      subtitle: 'CenterEdge',
+      keyword: 'CenterEdge',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CenterEdge', codePath + 'centeredge', CenterEdgeWidget()),
+    ),
+    DemoItem(
+      icon: Icons.directions_subway,
       title: 'DashedLine',
       subtitle: 'DashedLine',
       keyword: 'DashedLine',
@@ -735,7 +780,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('DashedLine', codePath + 'dashedline', DashedLineWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.directions_subway,
       title: 'DelLine',
       subtitle: 'DelLine',
       keyword: 'DelLine',
@@ -743,7 +788,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('DelLine', codePath + 'delline', DelLineWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.directions_subway,
       title: 'Rating',
       subtitle: 'Rating',
       keyword: 'Rating',
@@ -751,7 +796,7 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       buildRoute: (context) => BaseWidget('Rating', codePath + 'rating', RatingWidget()),
     ),
     DemoItem(
-      icon: Icons.pages,
+      icon: Icons.directions_subway,
       title: 'Visibility',
       subtitle: 'Visibility',
       keyword: 'Visibility',

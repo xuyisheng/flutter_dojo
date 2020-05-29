@@ -20,8 +20,7 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
     DemoItem(
       icon: Icons.desktop_mac,
       title: 'Appbar',
-      subtitle:
-          'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
+      subtitle: 'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
       keyword: 'Appbar',
       documentationUrl: 'https://api.flutter.dev/flutter/material/Appbar-class.html',
       buildRoute: (context) => BaseWidget('Appbar', codePath + 'appbar', AppbarWidget()),
@@ -40,8 +39,7 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
       subtitle: 'Bottom navigation bars make it easy to explore and switch between top-level views in a single tap.',
       keyword: 'BottomNavigationBar',
       documentationUrl: 'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
-      buildRoute: (context) =>
-          BaseWidget('BottomNavigationBar', codePath + 'bottomnavigationbar', BottomNavigationBarWidget()),
+      buildRoute: (context) => BaseWidget('BottomNavigationBar', codePath + 'bottomnavigationbar', BottomNavigationBarWidget()),
     ),
     DemoItem(
       icon: Icons.desktop_mac,
@@ -49,14 +47,12 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
       subtitle: 'DefaultTabController',
       keyword: 'DefaultTabController',
       documentationUrl: 'https://api.flutter.dev/flutter/material/DefaultTabController-class.html',
-      buildRoute: (context) =>
-          BaseWidget('DefaultTabController', codePath + 'defaulttabcontroller', DefaultTabControllerWidget()),
+      buildRoute: (context) => BaseWidget('DefaultTabController', codePath + 'defaulttabcontroller', DefaultTabControllerWidget()),
     ),
     DemoItem(
       icon: Icons.desktop_mac,
       title: 'Drawer',
-      subtitle:
-          'A Material Design panel that slides in horizontally from the edge of a Scaffold to show navigation links in an application.',
+      subtitle: 'A Material Design panel that slides in horizontally from the edge of a Scaffold to show navigation links in an application.',
       keyword: 'Drawer',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Drawer-class.html',
       buildRoute: (context) => BaseWidget('Drawer', codePath + 'drawer', DrawerWidget()),
@@ -64,8 +60,7 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
     DemoItem(
       icon: Icons.desktop_mac,
       title: 'MaterialApp',
-      subtitle:
-          'A convenience widget that wraps a number of widgets that are commonly required for applications implementing Material Design.',
+      subtitle: 'A convenience widget that wraps a number of widgets that are commonly required for applications implementing Material Design.',
       keyword: 'MaterialApp',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/MaterialApp-class.html',
       buildRoute: (context) => BaseWidget('MaterialApp', 'lib/category/widgets/styling/material', MaterialWidget()),
@@ -121,8 +116,7 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
     DemoItem(
       icon: Icons.desktop_mac,
       title: 'TabBarView',
-      subtitle:
-          'A page view that displays the widget which corresponds to the currently selected tab. Typically used in conjunction with a TabBar.',
+      subtitle: 'A page view that displays the widget which corresponds to the currently selected tab. Typically used in conjunction with a TabBar.',
       keyword: 'TabBarView',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/TabBarView-class.html',
       buildRoute: (context) => BaseWidget('TabBarView', codePath + 'tabbar', TabBarWidget()),

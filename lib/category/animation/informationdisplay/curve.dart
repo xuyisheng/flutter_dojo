@@ -544,8 +544,7 @@ class ParentState extends State<Parent> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     controller = AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    growingAnimation =
-        Tween(begin: 10.0, end: 100.0).animate(CurvedAnimation(parent: controller, curve: Curves.easeIn));
+    growingAnimation = Tween(begin: 10.0, end: 100.0).animate(CurvedAnimation(parent: controller, curve: Curves.easeIn));
     animation = Tween(begin: -0.25, end: 0.0).animate(CurvedAnimation(
       parent: controller,
       curve: Curves.easeIn,
@@ -570,19 +569,19 @@ class ParentState extends State<Parent> with TickerProviderStateMixin {
     return AnimatedBuilder(
         animation: controller,
         builder: (BuildContext context, Widget child) {
-          return new Scaffold(
-              body: new Align(
+          return Scaffold(
+              body: Align(
                   alignment: Alignment.center,
-                  child: new Container(
-                      child: new Center(
-                          child: new ListView(shrinkWrap: true, children: <Widget>[
+                  child: Container(
+                      child: Center(
+                          child: ListView(shrinkWrap: true, children: <Widget>[
                     Transform(
                         transform: Matrix4.translationValues(animation.value * width, 0.0, 0.0),
                         child: Center(
                             child: AnimatedBuilder(
                           animation: growingAnimation,
                           builder: (BuildContext context, Widget child) {
-                            return new Center(
+                            return Center(
                                 child: Container(
                               height: growingAnimation.value,
                               width: growingAnimation.value * 2,
@@ -596,8 +595,8 @@ class ParentState extends State<Parent> with TickerProviderStateMixin {
                           0.0,
                           0.0,
                         ),
-                        child: new Center(
-                            child: new Container(
+                        child: Center(
+                            child: Container(
                           padding: const EdgeInsets.only(top: 16.0),
                           child: Container(
                             width: 200.0,

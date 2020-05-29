@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 
@@ -36,6 +38,21 @@ class DashedLineWidget extends StatelessWidget {
                       painter: DashPainter(),
                     );
                   },
+                ),
+              ),
+              Text('Line'),
+            ],
+          ),
+        ),
+        MainTitleWidget('Dashed Lines with PathMetrics'),
+        Container(
+          margin: EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Text('Dashed'),
+              Expanded(
+                child: CustomPaint(
+                  painter: DashPainterWithPathMetrics(progress: 1),
                 ),
               ),
               Text('Line'),
@@ -106,4 +123,46 @@ class DashPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
+}
+
+class DashPainterWithPathMetrics extends CustomPainter {
+  final double progress;
+
+  DashPainterWithPathMetrics({this.progress});
+
+  Paint _paint = Paint()
+    ..color = Colors.black
+    ..strokeWidth = 4
+    ..style = PaintingStyle.stroke
+    ..strokeJoin = StrokeJoin.round;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    var path = Path()
+      ..moveTo(0, size.height / 2)
+      ..lineTo(size.width * progress, size.height / 2);
+
+    Path dashPath = Path();
+
+    double dashWidth = 10;
+    double dashSpace = 6;
+    double distance = 0;
+
+    for (PathMetric pathMetric in path.computeMetrics()) {
+      while (distance < pathMetric.length) {
+        dashPath.addPath(
+          pathMetric.extractPath(distance, distance + dashWidth),
+          Offset.zero,
+        );
+        distance += dashWidth;
+        distance += dashSpace;
+      }
+    }
+    canvas.drawPath(dashPath, _paint);
+  }
+
+  @override
+  bool shouldRepaint(DashPainterWithPathMetrics oldDelegate) {
+    return oldDelegate.progress != progress;
+  }
 }

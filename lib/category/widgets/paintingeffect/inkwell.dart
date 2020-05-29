@@ -33,7 +33,7 @@ class _InkWellWidgetState extends State<InkWellWidget> {
                 borderRadius: BorderRadius.circular(24),
               ),
               child: InkWell(
-                borderRadius: new BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24),
                 onTap: () => setState(() {}),
                 child: Container(
                   width: 100.0,

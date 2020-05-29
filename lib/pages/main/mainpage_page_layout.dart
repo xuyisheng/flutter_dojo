@@ -22,9 +22,9 @@ class PageWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Image.asset(imgUrl),
-            SizedBox(height: 48),
+            Spacer(),
             Container(
-              margin: EdgeInsets.only(left: 24),
+              margin: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 title,
                 style: TextStyle(
@@ -33,9 +33,9 @@ class PageWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 48),
+            Spacer(),
             Container(
-              margin: EdgeInsets.only(left: 24),
+              margin: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 subtitle,
                 style: TextStyle(
@@ -43,6 +43,7 @@ class PageWidget extends StatelessWidget {
                 ),
               ),
             ),
+            Spacer(),
           ],
         ),
       ),

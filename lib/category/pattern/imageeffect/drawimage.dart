@@ -34,7 +34,7 @@ class DrawImage extends CustomPainter {
   DrawImage(this._image);
 
   ui.Image _image;
-  Paint _paint = new Paint();
+  Paint _paint = Paint();
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -60,8 +60,7 @@ class DrawImage extends CustomPainter {
 }
 
 class ImageUtil {
-  static AssetBundle getAssetBundle() =>
-      (rootBundle != null) ? rootBundle : NetworkAssetBundle(Uri.directory(Uri.base.origin));
+  static AssetBundle getAssetBundle() => (rootBundle != null) ? rootBundle : NetworkAssetBundle(Uri.directory(Uri.base.origin));
 
   static Future<ui.Image> load(String url) {
     ImageStream stream = AssetImage(url, bundle: getAssetBundle()).resolve(ImageConfiguration.empty);
@@ -78,9 +77,9 @@ class ImageUtil {
 
   /// 根据Shader裁剪图片
   static Future<ui.Image> drawImageWithClipShader(String imageURL, String shaderURL) {
-    Completer<ui.Image> completer = new Completer<ui.Image>();
+    Completer<ui.Image> completer = Completer<ui.Image>();
     Future.wait([load(imageURL), load(shaderURL)]).then((result) {
-      Paint paint = new Paint();
+      Paint paint = Paint();
       ui.PictureRecorder recorder = ui.PictureRecorder();
       Canvas canvas = Canvas(recorder);
       int shaderWidth = result[1].width;

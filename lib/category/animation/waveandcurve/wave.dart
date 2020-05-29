@@ -148,7 +148,7 @@ class WaveBallPainter extends CustomPainter {
     double translateX = size.width * animationValue;
     double translateX2 = size.width * (1 - animationValue);
 
-    Path path = new Path();
+    Path path = Path();
     path.moveTo(0 - translateX, size.height);
     path.lineTo(0 - translateX, levelHeight);
     for (int i = 1; i <= WaveCount; i++) {
@@ -160,7 +160,7 @@ class WaveBallPainter extends CustomPainter {
     path.lineTo(size.width + translateX, size.height);
     path.close();
 
-    Path path2 = new Path();
+    Path path2 = Path();
     path2.moveTo(0 - translateX2, size.height);
     path2.lineTo(0 - translateX2, levelHeight);
     for (int i = 1; i <= WaveCount; i++) {
@@ -173,13 +173,13 @@ class WaveBallPainter extends CustomPainter {
     path2.lineTo(size.width + translateX2, size.height);
     path2.close();
 
-    Path path3 = new Path();
+    Path path3 = Path();
     path3.addOval(Rect.fromCircle(center: Offset(size.width / 2, size.height / 2), radius: size.width / 2));
     path3.close();
 
     canvas.clipPath(path3, doAntiAlias: true);
 
-    Paint mPaint = new Paint();
+    Paint mPaint = Paint();
 
     mPaint.style = PaintingStyle.fill;
     mPaint.isAntiAlias = true;

@@ -29,7 +29,12 @@ class FixedSizeDelegate extends SingleChildLayoutDelegate {
 
   @override
   BoxConstraints getConstraintsForChild(BoxConstraints constraints) {
-    return new BoxConstraints.tight(size);
+    return BoxConstraints.tight(size);
+  }
+
+  @override
+  Offset getPositionForChild(Size size, Size childSize) {
+    return super.getPositionForChild(size, childSize);
   }
 
   @override

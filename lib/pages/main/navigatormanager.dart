@@ -17,7 +17,7 @@ class NavigatorManager extends NavigatorObserver {
 
   static NavigatorManager getInstance() {
     if (navigatorManager == null) {
-      navigatorManager = new NavigatorManager();
+      navigatorManager = NavigatorManager();
       navigatorManager._streamController = StreamController.broadcast();
     }
     return navigatorManager;

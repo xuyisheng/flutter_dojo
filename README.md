@@ -12,6 +12,24 @@ flutter_dojo主要分为下面几个部分：Widgets、UI Pattern、Develop UI K
 
 [Github Actions APK download](https://github.com/xuyisheng/flutter_dojo/releases)
 
+# flutter_dojo 2.0 Release
+
+flutter_dojo 2.0经过一段时间的开发和总结，总算Release了，2.0版本主要做了下面这些改变。
+
+- Pattern重新设计了分类类型，让新的聚合方式更加合理
+- 整合了一些重复的Demo
+- 新增了搜索功能，支持全部组件的检索，模糊匹配
+- 新增了大量的Widget演示和Pattern功能设计
+- 修复了代码查看的一些bug
+- 修复了大量设计上的适配问题
+- 修复了issue中提到的一些bug
+
+2.0之后，flutter_dojo收录了Flutter官方所有的自带Widget，以及App开发中常用的UI组件和功能，总计370+组件，几乎所有的开发需求，在这里，都能找到答案。
+
+Enjoy your self and have fun.
+
+> 搜索功能由 @lzr2005987 提供，https://github.com/lzr2005987 感谢lzr2005987的PR
+
 ## 设计思路
 
 flutter_dojo的设计主要围绕下面三个部分展开：
@@ -105,6 +123,12 @@ Back-end Util中列举了非UI的一些Flutter知识点。
 Flutter不仅仅是一个UI跨平台框架，同样是一个完整的APP开发框架，所以，这里列举了除了UI开发之外的一些功能。
 
 <img src="resource/51.png" width="240px"/>
+
+## 搜索功能
+
+<img src="resource/32.png" width="240px"/>
+
+搜索界面
 
 ## 协作
 

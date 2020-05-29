@@ -87,7 +87,7 @@ class AvatarListWidget extends StatelessWidget {
   }
 
   List<Widget> _getStackItems(int count) {
-    List<Widget> _list = new List<Widget>();
+    List<Widget> _list = List<Widget>();
     for (var i = 0; i < count; i++) {
       double off = offsetW * i;
       _list.add(

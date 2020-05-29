@@ -17,6 +17,7 @@ class _SizedOverflowBoxWidgetState extends State<SizedOverflowBoxWidget> {
       child: Column(
         children: <Widget>[
           MainTitleWidget('SizedOverflowBox基本使用'),
+          SubtitleWidget('OverflowBox和SizedBox合体'),
           Container(
             color: Colors.red,
             child: SizedOverflowBox(
@@ -40,20 +41,8 @@ class _SizedOverflowBoxWidgetState extends State<SizedOverflowBoxWidget> {
               child: Container(width: 50, height: 50, color: Colors.purple),
             ),
           ),
-          Slider(
-              divisions: 300,
-              min: 0,
-              max: 300,
-              label: 'x:' + x.toStringAsFixed(0),
-              value: x,
-              onChanged: (v) => setState(() => x = v)),
-          Slider(
-              divisions: 300,
-              min: 0,
-              max: 300,
-              label: 'y:' + y.toStringAsFixed(0),
-              value: y,
-              onChanged: (v) => setState(() => y = v)),
+          Slider(divisions: 300, min: 0, max: 300, label: 'x:' + x.toStringAsFixed(0), value: x, onChanged: (v) => setState(() => x = v)),
+          Slider(divisions: 300, min: 0, max: 300, label: 'y:' + y.toStringAsFixed(0), value: y, onChanged: (v) => setState(() => y = v)),
         ],
       ),
     );

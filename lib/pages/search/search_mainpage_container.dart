@@ -59,7 +59,7 @@ class SearchState extends State<SearchMainPage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> textList = new List();
+    List<Widget> textList = List();
     // SearchStrategy是搜索关键词匹配策略，
     // 也可以用searchSimilarWords匹配相似单词，用searchWordsInTrie匹配前缀，自己设定参数
     result = searchUtils.searchInStrategy(MultiPositionSearchStrategy(), input.split(KEY_SPLIT));

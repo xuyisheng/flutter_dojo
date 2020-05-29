@@ -15,7 +15,7 @@ class ThemeWidget extends StatelessWidget {
           ),
           child: FloatingActionButton(
             onPressed: null,
-            child: new Icon(Icons.add),
+            child: Icon(Icons.add),
           ),
         ),
         MainTitleWidget('使用Theme'),

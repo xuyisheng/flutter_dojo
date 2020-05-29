@@ -77,7 +77,7 @@ class CurvePainter extends CustomPainter {
 /// CurveMonotoneX
 class CurveMonotoneX {
   static void drawCurveFittingLine(Canvas canvas, Paint paint, List<Offset> points) {
-    final path = new Path()..moveTo(points.first.dx.toDouble(), points.first.dy.toDouble());
+    final path = Path()..moveTo(points.first.dx.toDouble(), points.first.dy.toDouble());
     MonotoneX.addCurve(path, points);
     canvas.drawPath(path, paint);
   }
@@ -90,7 +90,7 @@ class BezierCurve {
     targetPoints.add(points[0]);
     targetPoints.addAll(points);
     targetPoints.add(points[points.length - 1]);
-    final path = new Path();
+    final path = Path();
     for (int i = 1; i < targetPoints.length - 2; i++) {
       path.moveTo(targetPoints[i].dx.toDouble(), targetPoints[i].dy.toDouble());
       var controllerPoint1 = Offset(
@@ -101,8 +101,8 @@ class BezierCurve {
         targetPoints[i + 1].dx - (targetPoints[i + 2].dx - targetPoints[i].dx) / 4,
         targetPoints[i + 1].dy - (targetPoints[i + 2].dy - targetPoints[i].dy) / 4,
       );
-      path.cubicTo(controllerPoint1.dx, controllerPoint1.dy, controllerPoint2.dx, controllerPoint2.dy,
-          targetPoints[i + 1].dx, targetPoints[i + 1].dy);
+      path.cubicTo(
+          controllerPoint1.dx, controllerPoint1.dy, controllerPoint2.dx, controllerPoint2.dy, targetPoints[i + 1].dx, targetPoints[i + 1].dy);
     }
     canvas.drawPath(path, paint);
   }
@@ -128,8 +128,8 @@ class CubicSplineInterpolation {
     if (!this.spInitialized) {
       num p, qn, sig, un;
       List<num> us;
-      us = new List<num>(n - 1);
-      spY2s = new List<num>(n);
+      us = List<num>(n - 1);
+      spY2s = List<num>(n);
       us[0] = spY2s[0] = 0.0;
       for (int i = 1; i <= n - 2; i++) {
         sig = (xs[i] - xs[i - 1]) / (xs[i + 1] - xs[i - 1]);
@@ -158,7 +158,7 @@ class CubicSplineInterpolation {
     }
     h = xs[khi] - xs[klo];
     if (h == 0.0) {
-      throw new Exception('h==0.0');
+      throw Exception('h==0.0');
     }
     a = (xs[khi] - x) / h;
     b = (x - xs[klo]) / h;
@@ -192,7 +192,7 @@ class CubicSplineInterpolation {
       else
         return 1;
     });
-    final path = new Path();
+    final path = Path();
     path.moveTo(interpolationPoints[0].dx.toDouble(), interpolationPoints[0].dy.toDouble());
     for (int i = 1; i < interpolationPoints.length; i++) {
       path.lineTo(interpolationPoints[i].dx.toDouble(), interpolationPoints[i].dy.toDouble());

@@ -21,7 +21,7 @@ class AppbarWidget extends StatelessWidget {
             ),
           ),
           decoration: BoxDecoration(
-            gradient: new LinearGradient(
+            gradient: LinearGradient(
               colors: [const Color(0xFF3366FF), const Color(0xFF00CCFF)],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(0.5, 0.0),

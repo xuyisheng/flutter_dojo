@@ -171,10 +171,10 @@ class _PopupMenuButtonWidgetState extends State<PopupMenuButtonWidget> {
       context: context,
       position: RelativeRect.fromLTRB(100, 100, 100, 100),
       items: <PopupMenuItem<String>>[
-        new PopupMenuItem<String>(value: 'value01', child: new Text('Item One')),
-        new PopupMenuItem<String>(value: 'value02', child: new Text('Item Two')),
-        new PopupMenuItem<String>(value: 'value03', child: new Text('Item Three')),
-        new PopupMenuItem<String>(value: 'value04', child: new Text('I am Item Four'))
+        PopupMenuItem<String>(value: 'value01', child: Text('Item One')),
+        PopupMenuItem<String>(value: 'value02', child: Text('Item Two')),
+        PopupMenuItem<String>(value: 'value03', child: Text('Item Three')),
+        PopupMenuItem<String>(value: 'value04', child: Text('I am Item Four'))
       ],
     );
   }

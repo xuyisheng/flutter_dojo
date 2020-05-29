@@ -18,12 +18,10 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
     DemoItem(
       icon: Icons.format_bold,
       title: 'Appbar',
-      subtitle:
-          'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
+      subtitle: 'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
       keyword: 'Appbar',
       documentationUrl: 'https://api.flutter.dev/flutter/material/AppBar-class.html',
-      buildRoute: (context) =>
-          BaseWidget('Appbar', 'lib/category/widgets/appstructurenavigation/appbar', AppbarWidget()),
+      buildRoute: (context) => BaseWidget('Appbar', 'lib/category/widgets/appstructurenavigation/appbar', AppbarWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,
@@ -39,8 +37,7 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
       subtitle: 'A convenience widget that combines common painting, positioning, and sizing widgets.',
       keyword: 'Container',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Container-class.html',
-      buildRoute: (context) =>
-          BaseWidget('Container', 'lib/category/widgets/singlechildlayout/container', ContainerWidget()),
+      buildRoute: (context) => BaseWidget('Container', 'lib/category/widgets/singlechildlayout/container', ContainerWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,
@@ -48,8 +45,7 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
       subtitle: 'The Flutter logo, in widget form. This widget respects the IconTheme.',
       keyword: 'FlutterLogo',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/FlutterLogo-class.html',
-      buildRoute: (context) =>
-          BaseWidget('FlutterLogo', 'lib/category/widgets/paintingeffect/flutterlogo', FlutterLogoWidget()),
+      buildRoute: (context) => BaseWidget('FlutterLogo', 'lib/category/widgets/paintingeffect/flutterlogo', FlutterLogoWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,
@@ -78,12 +74,10 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
     DemoItem(
       icon: Icons.format_bold,
       title: 'RaisedButton',
-      subtitle:
-          'A Material Design raised button. A raised button consists of a rectangular piece of material that hovers over the interface.',
+      subtitle: 'A Material Design raised button. A raised button consists of a rectangular piece of material that hovers over the interface.',
       keyword: 'RaisedButton',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RaisedButton-class.html',
-      buildRoute: (context) =>
-          BaseWidget('RaisedButton', codePath + 'lib/category/widgets/buttons/raisedbutton', RaisedButtonWidget()),
+      buildRoute: (context) => BaseWidget('RaisedButton', codePath + 'lib/category/widgets/buttons/raisedbutton', RaisedButtonWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,

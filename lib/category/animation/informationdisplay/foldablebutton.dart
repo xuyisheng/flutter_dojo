@@ -30,13 +30,7 @@ class FoldableOptions extends StatefulWidget {
 }
 
 class _FoldableOptionsState extends State<FoldableOptions> with SingleTickerProviderStateMixin {
-  final List<IconData> options = [
-    Icons.folder,
-    Icons.share,
-    Icons.visibility_off,
-    Icons.star_border,
-    Icons.notifications_none
-  ];
+  final List<IconData> options = [Icons.folder, Icons.share, Icons.visibility_off, Icons.star_border, Icons.notifications_none];
 
   Animation<Alignment> firstAnim;
   Animation<Alignment> secondAnim;
@@ -114,9 +108,7 @@ class _FoldableOptionsState extends State<FoldableOptions> with SingleTickerProv
               ),
               Align(
                   alignment: secondAnim.value,
-                  child: Container(
-                      padding: EdgeInsets.only(left: 50, top: verticalPadding.value),
-                      child: getItem(options.elementAt(1)))),
+                  child: Container(padding: EdgeInsets.only(left: 50, top: verticalPadding.value), child: getItem(options.elementAt(1)))),
               Align(alignment: thirdAnim.value, child: getItem(options.elementAt(2))),
               Align(
                   alignment: fourthAnim.value,
@@ -131,8 +123,7 @@ class _FoldableOptionsState extends State<FoldableOptions> with SingleTickerProv
                     onTap: () {
                       controller.isCompleted ? controller.reverse() : controller.forward();
                     },
-                    child:
-                        buildPrimaryItem(controller.isCompleted || controller.isAnimating ? Icons.close : Icons.add)),
+                    child: buildPrimaryItem(controller.isCompleted || controller.isAnimating ? Icons.close : Icons.add)),
               )
             ],
           );

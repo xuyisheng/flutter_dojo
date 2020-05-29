@@ -7,7 +7,7 @@ class ScrollControllerWidget extends StatefulWidget {
 }
 
 class _ScrollControllerWidgetState extends State<ScrollControllerWidget> {
-  ScrollController _controller = new ScrollController(
+  ScrollController _controller = ScrollController(
     initialScrollOffset: 99,
     keepScrollOffset: true,
   );

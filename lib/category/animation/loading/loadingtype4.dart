@@ -69,14 +69,14 @@ class _LoadingType4State extends State<LoadingType4> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     //print(animation_1.value <= 0.4 ? 2.5 * animation_1.value : (animation_1.value > 0.40 && animation_1.value <= 0.60) ? 1.0 : 2.5 - (2.5 * animation_1.value));
     return Container(
-      child: new Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Opacity(
             opacity: (animation_1.value <= 0.4
                 ? 2.5 * animation_1.value
                 : (animation_1.value > 0.40 && animation_1.value <= 0.60) ? 1.0 : 2.5 - (2.5 * animation_1.value)),
-            child: new Padding(
+            child: Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Dot(
                 radius: 10.0,
@@ -90,7 +90,7 @@ class _LoadingType4State extends State<LoadingType4> with SingleTickerProviderSt
             opacity: (animation_2.value <= 0.4
                 ? 2.5 * animation_2.value
                 : (animation_2.value > 0.40 && animation_2.value <= 0.60) ? 1.0 : 2.5 - (2.5 * animation_2.value)),
-            child: new Padding(
+            child: Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Dot(
                 radius: 10.0,
@@ -104,7 +104,7 @@ class _LoadingType4State extends State<LoadingType4> with SingleTickerProviderSt
             opacity: (animation_3.value <= 0.4
                 ? 2.5 * animation_3.value
                 : (animation_3.value > 0.40 && animation_3.value <= 0.60) ? 1.0 : 2.5 - (2.5 * animation_3.value)),
-            child: new Padding(
+            child: Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Dot(
                 radius: 10.0,
@@ -136,20 +136,19 @@ class Dot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Center(
+    return Center(
       child: type == DotType.icon
           ? Icon(
               icon.icon,
               color: color,
               size: 1.3 * radius,
             )
-          : new Transform.rotate(
+          : Transform.rotate(
               angle: type == DotType.diamond ? pi / 4 : 0.0,
               child: Container(
                 width: radius,
                 height: radius,
-                decoration:
-                    BoxDecoration(color: color, shape: type == DotType.circle ? BoxShape.circle : BoxShape.rectangle),
+                decoration: BoxDecoration(color: color, shape: type == DotType.circle ? BoxShape.circle : BoxShape.rectangle),
               ),
             ),
     );

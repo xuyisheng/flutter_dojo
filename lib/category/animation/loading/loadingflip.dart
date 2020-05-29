@@ -19,8 +19,8 @@ class LoadingTypeFlip extends StatefulWidget {
       this.rotateIcon = true});
 
   @override
-  _LoadingTypeFlipState createState() => _LoadingTypeFlipState(
-      this.loaderBackground, this.iconColor, this.icon, this.animationType, this.shape, this.rotateIcon);
+  _LoadingTypeFlipState createState() =>
+      _LoadingTypeFlipState(this.loaderBackground, this.iconColor, this.icon, this.animationType, this.shape, this.rotateIcon);
 }
 
 class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProviderStateMixin {
@@ -82,21 +82,21 @@ class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProv
         animCtrl = AnimationController(duration: const Duration(milliseconds: 4000), vsync: this);
 
         // Horizontal animation
-        this.rotationHorizontal = Tween<double>(begin: 0.0, end: 1.0)
-            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
+        this.rotationHorizontal =
+            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
 
         // Vertical animation
-        this.rotationVertical = Tween<double>(begin: 0.0, end: 1.0)
-            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
+        this.rotationVertical =
+            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
         break;
       case "full_flip":
       default:
         animCtrl = AnimationController(duration: const Duration(milliseconds: 2000), vsync: this);
 
-        this.rotationHorizontal = Tween<double>(begin: 0.0, end: 1.0)
-            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
-        this.rotationVertical = Tween<double>(begin: 0.0, end: 1.0)
-            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
+        this.rotationHorizontal =
+            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
+        this.rotationVertical =
+            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
         break;
     }
 
@@ -113,11 +113,11 @@ class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProv
   }
 
   Widget buildHalfFlipper(BuildContext context) {
-    return new AnimatedBuilder(
+    return AnimatedBuilder(
       animation: controller,
       builder: (BuildContext context, Widget child) {
         return Container(
-          child: new Transform(
+          child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.006)
               ..rotateX(sin(2 * pi * rotationVertical.value))
@@ -126,15 +126,15 @@ class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProv
             child: Container(
                 decoration: BoxDecoration(
                   shape: shape == "circle" ? BoxShape.circle : BoxShape.rectangle,
-                  borderRadius: shape == "circle" ? null : new BorderRadius.all(const Radius.circular(8.0)),
+                  borderRadius: shape == "circle" ? null : BorderRadius.all(const Radius.circular(8.0)),
                   color: loaderColor,
                 ),
                 width: 40.0,
                 height: 40.0,
                 child: rotateIcon == true
-                    ? new RotationTransition(
+                    ? RotationTransition(
                         turns: rotationHorizontal.value == 1.0 ? rotationVertical : rotationHorizontal,
-                        child: new Center(
+                        child: Center(
                           child: Icon(
                             icon,
                             color: iconColor,
@@ -156,11 +156,11 @@ class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProv
   }
 
   Widget buildFullFlipper(BuildContext context) {
-    return new AnimatedBuilder(
+    return AnimatedBuilder(
       animation: controller,
       builder: (BuildContext context, Widget child) {
         return Container(
-          child: new Transform(
+          child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.006)
               ..rotateX((2 * pi * rotationVertical.value))
@@ -169,12 +169,12 @@ class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProv
             child: Container(
               decoration: BoxDecoration(
                 shape: shape == "circle" ? BoxShape.circle : BoxShape.rectangle,
-                borderRadius: shape == "circle" ? null : new BorderRadius.all(const Radius.circular(8.0)),
+                borderRadius: shape == "circle" ? null : BorderRadius.all(const Radius.circular(8.0)),
                 color: loaderColor,
               ),
               width: 40.0,
               height: 40.0,
-              child: new Center(
+              child: Center(
                 child: Icon(
                   icon,
                   color: iconColor,

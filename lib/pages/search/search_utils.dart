@@ -37,11 +37,11 @@ class SearchUtils {
   }
 
   bool _matchSimilarWords(String word1, String word2, int distance) {
-    List<List<int>> dp = new List();
+    List<List<int>> dp = List();
     int len1 = word1.length;
     int len2 = word2.length;
     for (int i = 0; i < len1; i++) {
-      dp.add(new List(len2));
+      dp.add(List(len2));
     }
     dp[0][0] = word1[0].toLowerCase() == word2[0].toLowerCase() ? 0 : 1;
 
@@ -72,17 +72,17 @@ class SearchUtils {
   ///通过前缀在字典树中查找所有单词
   List<String> searchWordsInTrie(String prefix) {
     if (_dictionaryTree == null) {
-      return new List<String>();
+      return List<String>();
     }
     if (prefix == null || prefix == '') {
       return _dictionaryList;
     }
     _copy = _dictionaryTree;
-    _prefixSearchResult = new List();
+    _prefixSearchResult = List();
     String matchedPrefix = "";
     for (int i = 0; i < prefix.length; i++) {
       if (!_matchLetter(prefix[i])) {
-        return new List<String>();
+        return List<String>();
       } else {
         matchedPrefix = matchedPrefix + _copy.val;
       }
@@ -108,7 +108,7 @@ class SearchUtils {
     queue.add(_copy);
     _matchFirstLetter(queue, prefix);
 
-    _prefixSearchResult = new List();
+    _prefixSearchResult = List();
     for (TreeNode node in matchedList) {
       _searchAllWords(node);
     }
@@ -198,7 +198,7 @@ class SearchUtils {
   }
 
   List<int> getNextArray(String t) {
-    List<int> next = new List(t.length);
+    List<int> next = List(t.length);
     next[0] = -1;
     next[1] = 0;
     int k;
@@ -228,12 +228,12 @@ class SearchUtils {
   ///添加单个的单词
   addWord(String word) {
     if (_dictionaryList == null) {
-      _dictionaryList = new List<String>();
+      _dictionaryList = List<String>();
     }
     _dictionaryList.add(word);
 
     if (_dictionaryTree == null) {
-      _dictionaryTree = new TreeNode("");
+      _dictionaryTree = TreeNode("");
     }
     _copy = _dictionaryTree;
     for (int i = 0; i < word.length; i++) {
@@ -252,7 +252,7 @@ class SearchUtils {
       }
     }
     if (!containFlag) {
-      TreeNode childNode = new TreeNode(c);
+      TreeNode childNode = TreeNode(c);
       _copy.children.add(childNode);
       _copy = childNode;
     }
@@ -283,8 +283,8 @@ abstract class SearchStrategy {
 }
 
 class TreeNode {
-  List<TreeNode> children = new List();
-  List<String> intactWord = new List();
+  List<TreeNode> children = List();
+  List<String> intactWord = List();
   String val;
   bool endFlag;
 

@@ -21,8 +21,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
     Future.delayed(Duration(milliseconds: 300)).then((value) {
       _animationController.forward();
       Future.delayed(Duration(milliseconds: 3000), () {
-        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MainPageScrollContainer()),
-            (Route<dynamic> rout) => false);
+        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MainPageScrollContainer()), (Route<dynamic> rout) => false);
       });
     });
   }

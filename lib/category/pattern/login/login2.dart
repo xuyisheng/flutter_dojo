@@ -419,7 +419,7 @@ class TabIndicationPainter extends CustomPainter {
 
   TabIndicationPainter({this.dxTarget = 125.0, this.dxEntry = 25.0, this.radius = 21.0, this.dy = 25.0, this.pageController})
       : super(repaint: pageController) {
-    painter = new Paint()
+    painter = Paint()
       ..color = Color(0xFFFFFFFF)
       ..style = PaintingStyle.fill;
   }
@@ -432,13 +432,13 @@ class TabIndicationPainter extends CustomPainter {
     double pageOffset = pos.extentBefore / fullExtent;
 
     bool left2right = dxEntry < dxTarget;
-    Offset entry = new Offset(left2right ? dxEntry : dxTarget, dy);
-    Offset target = new Offset(left2right ? dxTarget : dxEntry, dy);
+    Offset entry = Offset(left2right ? dxEntry : dxTarget, dy);
+    Offset target = Offset(left2right ? dxTarget : dxEntry, dy);
 
-    Path path = new Path();
-    path.addArc(new Rect.fromCircle(center: entry, radius: radius), 0.5 * pi, 1 * pi);
-    path.addRect(new Rect.fromLTRB(entry.dx, dy - radius, target.dx, dy + radius));
-    path.addArc(new Rect.fromCircle(center: target, radius: radius), 1.5 * pi, 1 * pi);
+    Path path = Path();
+    path.addArc(Rect.fromCircle(center: entry, radius: radius), 0.5 * pi, 1 * pi);
+    path.addRect(Rect.fromLTRB(entry.dx, dy - radius, target.dx, dy + radius));
+    path.addArc(Rect.fromCircle(center: target, radius: radius), 1.5 * pi, 1 * pi);
 
     canvas.translate(size.width * pageOffset, 0.0);
     canvas.drawShadow(path, Color(0xFFfbab66), 3.0, true);

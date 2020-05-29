@@ -85,12 +85,10 @@ List<DemoItem> buildPaintingEffectDemoItems(String codePath) {
     DemoItem(
       icon: Icons.format_paint,
       title: 'FractionalTranslation',
-      subtitle:
-          '''A widget that applies a translation expressed as a fraction of the box's size before painting its child.''',
+      subtitle: '''A widget that applies a translation expressed as a fraction of the box's size before painting its child.''',
       keyword: 'FractionalTranslation',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/FractionalTranslation-class.html',
-      buildRoute: (context) =>
-          BaseWidget('FractionalTranslation', codePath + 'fractionaltranslation', FractionalTranslationWidget()),
+      buildRoute: (context) => BaseWidget('FractionalTranslation', codePath + 'fractionaltranslation', FractionalTranslationWidget()),
     ),
     DemoItem(
       icon: Icons.format_paint,
@@ -138,8 +136,7 @@ List<DemoItem> buildPaintingEffectDemoItems(String codePath) {
       subtitle: 'A widget that applies a transformation before painting its child.',
       keyword: 'Transform',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Transform-class.html',
-      buildRoute: (context) =>
-          BaseWidget('Transform', 'lib/category/widgets/singlechildlayout/transform', TransformWidget()),
+      buildRoute: (context) => BaseWidget('Transform', 'lib/category/widgets/singlechildlayout/transform', TransformWidget()),
     ),
   ];
 }

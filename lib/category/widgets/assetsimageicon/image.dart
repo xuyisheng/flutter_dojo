@@ -44,7 +44,7 @@ class _ImageWidgetState extends State<ImageWidget> {
   }
 
   Future<ui.Image> _getImage() {
-    Completer<ui.Image> completer = new Completer<ui.Image>();
+    Completer<ui.Image> completer = Completer<ui.Image>();
     Image image = Image.asset('images/book.jpg');
     image.image.resolve(ImageConfiguration()).addListener(
       ImageStreamListener(
@@ -75,9 +75,7 @@ class _ImageWidgetState extends State<ImageWidget> {
             if (loadingProgress == null) return child;
             return Center(
               child: CircularProgressIndicator(
-                value: loadingProgress.expectedTotalBytes != null
-                    ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
-                    : null,
+                value: loadingProgress.expectedTotalBytes != null ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes : null,
               ),
             );
           },
@@ -232,7 +230,7 @@ class BMP332Header {
     int baseHeaderSize = 54;
     _totalHeaderSize = baseHeaderSize + 1024; // base + color map
     int fileLength = _totalHeaderSize + _width * _height; // header + bitmap
-    _bmp = new Uint8List(fileLength);
+    _bmp = Uint8List(fileLength);
     ByteData bd = _bmp.buffer.asByteData();
     bd.setUint8(0, 0x42);
     bd.setUint8(1, 0x4d);

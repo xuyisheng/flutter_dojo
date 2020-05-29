@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 import 'package:flutter_dojo/common/multi_selection_widget.dart';
@@ -78,8 +80,8 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
         MainTitleWidget('自定义PageRoute动画'),
         MultiSelectionWidget(
           'transition',
-          [buildTransitionScale, buildTransitionSlide, buildTransitionFade, buildTransitionRotate, buildTransitionCompose],
-          ['Scale', 'Slide', 'Fade', 'Rotate', 'Compose'],
+          [buildTransitionScale, buildTransitionSlide, buildTransitionFade, buildTransitionRotate, buildTransitionClipPath, buildTransitionCompose],
+          ['Scale', 'Slide', 'Fade', 'Rotate', 'Path', 'Compose'],
           (value) => setState(() => transitionSelection = value),
         ),
         RaisedButton(
@@ -209,6 +211,19 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
   Widget buildTransitionRotate(context, anim1, anim2, Widget child) {
     return RotationTransition(
       turns: anim1.drive(CurveTween(curve: Curves.easeIn)),
+      child: child,
+    );
+  }
+
+  Widget buildTransitionClipPath(context, anim1, anim2, Widget child) {
+    return AnimatedBuilder(
+      animation: anim1,
+      builder: (context, child) {
+        return ClipPath(
+          clipper: CircularReveal(anim1.value),
+          child: child,
+        );
+      },
       child: child,
     );
   }
@@ -349,5 +364,24 @@ class _Page3State extends State<Page3> with RouteAware {
         body: Text('Page3'),
       ),
     );
+  }
+}
+
+class CircularReveal extends CustomClipper<Path> {
+  CircularReveal(this.value);
+
+  final double value;
+
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    double radius = value * sqrt(size.height * size.height + size.width * size.width);
+    path.addOval(Rect.fromLTRB(size.width - radius, -radius, size.width + radius, radius));
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return true;
   }
 }

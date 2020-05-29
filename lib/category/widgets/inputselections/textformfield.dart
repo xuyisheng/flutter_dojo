@@ -9,7 +9,7 @@ class TextFormFieldWidget extends StatefulWidget {
 }
 
 class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
-  final GlobalKey<FormFieldState<String>> _passwordFieldKey = new GlobalKey<FormFieldState<String>>();
+  final GlobalKey<FormFieldState<String>> _passwordFieldKey = GlobalKey<FormFieldState<String>>();
 
   String _name;
   String _phoneNumber;
@@ -18,7 +18,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
 
   String _validateName(String value) {
     if (value.isEmpty) return 'Name is required.';
-    final RegExp nameExp = new RegExp(r'^[A-Za-z ]+$');
+    final RegExp nameExp = RegExp(r'^[A-Za-z ]+$');
     if (!nameExp.hasMatch(value)) return 'Please enter only alphabetical characters.';
     return null;
   }
@@ -94,11 +94,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
         TextFormField(
           keyboardType: TextInputType.number,
           decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Salary',
-              prefixText: '\$',
-              suffixText: 'USD',
-              suffixStyle: TextStyle(color: Colors.green)),
+              border: OutlineInputBorder(), labelText: 'Salary', prefixText: '\$', suffixText: 'USD', suffixStyle: TextStyle(color: Colors.green)),
           maxLines: 1,
         ),
         SizedBox(height: 24.0),
@@ -150,7 +146,7 @@ class PasswordField extends StatefulWidget {
   final ValueChanged<String> onFieldSubmitted;
 
   @override
-  _PasswordFieldState createState() => new _PasswordFieldState();
+  _PasswordFieldState createState() => _PasswordFieldState();
 }
 
 class _PasswordFieldState extends State<PasswordField> {
@@ -158,26 +154,26 @@ class _PasswordFieldState extends State<PasswordField> {
 
   @override
   Widget build(BuildContext context) {
-    return new TextFormField(
+    return TextFormField(
       key: widget.fieldKey,
       obscureText: _obscureText,
       maxLength: 8,
       onSaved: widget.onSaved,
       validator: widget.validator,
       onFieldSubmitted: widget.onFieldSubmitted,
-      decoration: new InputDecoration(
+      decoration: InputDecoration(
         border: const UnderlineInputBorder(),
         filled: true,
         hintText: widget.hintText,
         labelText: widget.labelText,
         helperText: widget.helperText,
-        suffixIcon: new GestureDetector(
+        suffixIcon: GestureDetector(
           onTap: () {
             setState(() {
               _obscureText = !_obscureText;
             });
           },
-          child: new Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+          child: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
         ),
       ),
     );

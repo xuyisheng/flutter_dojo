@@ -6,7 +6,7 @@ import 'search_utils.dart';
 class DefaultSearchStrategy extends SearchStrategy {
   @override
   Set<String> searchInStrategy(SearchUtils utils, List<String> words) {
-    Set<String> result = new Set();
+    Set<String> result = Set();
     if (words == null || words.length == 0) {
       result.addAll(utils.getDictionary());
       return result;

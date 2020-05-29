@@ -74,8 +74,7 @@ class _DraggableCardState extends State<DraggableCard> with SingleTickerProvider
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController.unbounded(vsync: this)
-      ..addListener(() => setState(() => _dragAlignment = _animation.value));
+    _controller = AnimationController.unbounded(vsync: this)..addListener(() => setState(() => _dragAlignment = _animation.value));
   }
 
   @override

@@ -117,7 +117,7 @@ class NStarTest extends CustomPainter {
 
 // N角星路径
 Path nStarPath(int num, double R, double r) {
-  Path path = new Path();
+  Path path = Path();
   double perDeg = 360 / num;
   double degA = perDeg / 2 / 2;
   double degB = 360 / (num - 1) / 2 - degA / 2 + degA;

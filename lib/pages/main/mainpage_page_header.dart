@@ -44,7 +44,7 @@ class MainPagePageHeader extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: kToolbarHeight / 2),
+        SizedBox(height: kToolbarHeight / 3),
         Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,

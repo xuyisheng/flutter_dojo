@@ -76,8 +76,7 @@ List<DemoItem> buildInputSelectionsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.input,
       title: 'Switch',
-      subtitle:
-          'On/off switches toggle the state of a single settings option. The Switch widget implements this component.',
+      subtitle: 'On/off switches toggle the state of a single settings option. The Switch widget implements this component.',
       keyword: 'Switch',
       documentationUrl: 'https://api.flutter.dev/flutter/material/Switch-class.html',
       buildRoute: (context) => BaseWidget('Switch', codePath + 'switch', SwitchWidget()),
@@ -93,8 +92,7 @@ List<DemoItem> buildInputSelectionsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.input,
       title: 'TextField',
-      subtitle:
-          'Touching a text field places the cursor and displays the keyboard. The TextField widget implements this component.',
+      subtitle: 'Touching a text field places the cursor and displays the keyboard. The TextField widget implements this component.',
       keyword: 'TextField',
       documentationUrl: 'https://docs.flutter.io/flutter/material/TextField-class.html',
       buildRoute: (context) => BaseWidget('TextField', codePath + 'textfield', TextFieldWidget()),

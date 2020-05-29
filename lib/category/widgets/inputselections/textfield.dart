@@ -16,8 +16,8 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   var input = '';
   var input2 = '';
   var input3 = '';
-  FocusNode focusNode1 = new FocusNode();
-  FocusNode focusNode2 = new FocusNode();
+  FocusNode focusNode1 = FocusNode();
+  FocusNode focusNode2 = FocusNode();
   FocusScopeNode focusScopeNode;
   var isFocus = '';
 
@@ -212,9 +212,9 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
           padding: EdgeInsets.symmetric(horizontal: 10),
           alignment: Alignment.centerLeft,
           height: 30,
-          decoration: new BoxDecoration(
+          decoration: BoxDecoration(
             color: Colors.grey.shade200,
-            borderRadius: new BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(4),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

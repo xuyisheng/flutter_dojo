@@ -11,7 +11,7 @@ description: A new Flutter application.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 2.0.0+1
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -288,6 +288,12 @@ flutter:
     - lib/category/pattern/display/delline.dart
     - lib/category/pattern/display/rating.dart
     - lib/category/pattern/display/visibility.dart
+    - lib/category/pattern/display/centeredge.dart
+
+    - lib/category/pattern/gesture/gesturepainter.dart
+    - lib/category/pattern/gesture/gesturescale.dart
+    - lib/category/pattern/gesture/custompaint1.dart
+    - lib/category/pattern/gesture/gesturecard.dart
 
     - lib/category/pattern/imageeffect/drawimage.dart
     - lib/category/pattern/imageeffect/roundimage.dart
@@ -303,6 +309,7 @@ flutter:
     - lib/category/pattern/list/sliverheaderwitheffect.dart
     - lib/category/pattern/list/tree.dart
     - lib/category/pattern/list/zoom.dart
+    - lib/category/pattern/list/snaplist.dart
 
     - lib/category/pattern/login/login1.dart
     - lib/category/pattern/login/login2.dart
@@ -310,17 +317,15 @@ flutter:
     - lib/category/pattern/paint/bubble.dart
     - lib/category/pattern/paint/clock.dart
     - lib/category/pattern/paint/color.dart
-    - lib/category/pattern/paint/custompaint1.dart
     - lib/category/pattern/paint/drawstyle.dart
     - lib/category/pattern/paint/feedback.dart
-    - lib/category/pattern/paint/gesturepainter.dart
-    - lib/category/pattern/paint/gesturescale.dart
     - lib/category/pattern/paint/layer.dart
     - lib/category/pattern/paint/layerblendmode.dart
     - lib/category/pattern/paint/matrix4.dart
     - lib/category/pattern/paint/nstar.dart
     - lib/category/pattern/paint/randomcolor.dart
     - lib/category/pattern/paint/repaintboundary.dart
+    - lib/category/pattern/paint/spiral.dart
 
     - lib/category/pattern/perspective/flipcard.dart
     - lib/category/pattern/perspective/rollcard.dart
@@ -380,19 +385,23 @@ flutter:
 
     - lib/category/animation/barchat/bar.dart
 
-    - lib/category/animation/infomationdisplay/curve.dart
-    - lib/category/animation/infomationdisplay/foldablebutton.dart
-    - lib/category/animation/infomationdisplay/gift.dart
-    - lib/category/animation/infomationdisplay/rotatemenu.dart
-    - lib/category/animation/infomationdisplay/showup.dart
-    - lib/category/animation/infomationdisplay/textshader.dart
-    - lib/category/animation/infomationdisplay/typewriter.dart
-    - lib/category/animation/infomationdisplay/customhero.dart
-    - lib/category/animation/infomationdisplay/favor.dart
-    - lib/category/animation/infomationdisplay/bouncetext.dart
+    - lib/category/animation/informationdisplay/curve.dart
+    - lib/category/animation/informationdisplay/foldablebutton.dart
+    - lib/category/animation/informationdisplay/gift.dart
+    - lib/category/animation/informationdisplay/rotatemenu.dart
+    - lib/category/animation/informationdisplay/showup.dart
+    - lib/category/animation/informationdisplay/textshader.dart
+    - lib/category/animation/informationdisplay/typewriter.dart
+    - lib/category/animation/informationdisplay/customhero.dart
+    - lib/category/animation/informationdisplay/favor.dart
+    - lib/category/animation/informationdisplay/bouncetext.dart
+    - lib/category/animation/informationdisplay/radialhero.dart
+    - lib/category/animation/informationdisplay/radialrecthero.dart
 
     - lib/category/animation/loading/loading.dart
     - lib/category/animation/loading/customprogress.dart
+
+    - lib/category/animation/perspective/perspectivecard.dart
 
     - lib/category/animation/listanimation/deleteanimlist.dart
     - lib/category/animation/listanimation/animlist.dart
@@ -414,8 +423,10 @@ flutter:
 
     - lib/category/animation/simulation/physical.dart
     - lib/category/animation/simulation/particle.dart
+    - lib/category/animation/simulation/fling.dart
 
     - lib/category/animation/waveandcurve/curveline.dart
+    - lib/category/animation/waveandcurve/planets.dart
     - lib/category/animation/waveandcurve/wave.dart
 
   fonts:

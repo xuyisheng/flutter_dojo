@@ -68,7 +68,7 @@ class _FormWidgetState extends State<FormWidget> {
                 validator: (value) {
                   Pattern pattern =
                       r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-                  RegExp regex = new RegExp(pattern);
+                  RegExp regex = RegExp(pattern);
                   if (!regex.hasMatch(value))
                     return 'Not Valid Email';
                   else

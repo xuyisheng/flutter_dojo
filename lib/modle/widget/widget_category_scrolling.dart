@@ -38,8 +38,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       subtitle: 'DraggableScrollableSheet',
       keyword: 'DraggableScrollableSheet',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/DraggableScrollableSheet-class.html',
-      buildRoute: (context) => BaseWidget(
-          'DraggableScrollableSheet', codePath + 'draggablescrollablesheet', DraggableScrollableSheetWidget()),
+      buildRoute: (context) => BaseWidget('DraggableScrollableSheet', codePath + 'draggablescrollablesheet', DraggableScrollableSheetWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -70,8 +69,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.screen_rotation,
       title: 'NestedScrollView',
-      subtitle:
-          'A scrolling view inside of which can be nested other scrolling views, with their scroll positions being intrinsically linked.',
+      subtitle: 'A scrolling view inside of which can be nested other scrolling views, with their scroll positions being intrinsically linked.',
       keyword: 'NestedScrollView',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/NestedScrollView-class.html',
       buildRoute: (context) => BaseWidget('NestedScrollView', codePath + 'nestedscrollview', NestedScrollViewWidget()),
@@ -82,8 +80,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       subtitle: 'A widget that listens for Notifications bubbling up the tree.',
       keyword: 'NotificationListener',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/NotificationListener-class.html',
-      buildRoute: (context) =>
-          BaseWidget('NotificationListener', codePath + 'notificationlistener', NotificationListenerWidget()),
+      buildRoute: (context) => BaseWidget('NotificationListener', codePath + 'notificationlistener', NotificationListenerWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -107,8 +104,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       subtitle: 'Controls how Scrollable widgets behave in a subtree.',
       keyword: 'ScrollConfiguration',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ScrollConfiguration-class.html',
-      buildRoute: (context) =>
-          BaseWidget('ScrollConfiguration', codePath + 'scrollconfiguration', ScrollConfigurationWidget()),
+      buildRoute: (context) => BaseWidget('ScrollConfiguration', codePath + 'scrollconfiguration', ScrollConfigurationWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -125,14 +121,12 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
           'Scrollable implements the interaction model for a scrollable widget, including gesture recognition, but does not have an opinion about how the viewport, which actually displays the children, is constructed.',
       keyword: 'Scrollable',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Scrollable-class.html',
-      buildRoute: (context) =>
-          BaseWidget('Scrollable', 'lib/category/widgets/touchinteractions/scrollable', ScrollableWidget()),
+      buildRoute: (context) => BaseWidget('Scrollable', 'lib/category/widgets/touchinteractions/scrollable', ScrollableWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
       title: 'Scrollbar',
-      subtitle:
-          'A Material Design scrollbar. A scrollbar indicates which portion of a Scrollable widget is actually visible.',
+      subtitle: 'A Material Design scrollbar. A scrollbar indicates which portion of a Scrollable widget is actually visible.',
       keyword: 'Scrollbar',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Scrollbar-class.html',
       buildRoute: (context) => BaseWidget('Scrollbar', codePath + 'scrollbar', ScrollbarWidget()),
@@ -144,8 +138,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
           'A box in which a single widget can be scrolled. This widget is useful when you have a single box that will normally be entirely visible, for example a clock face in a time picker, but you need to make sure it can be scrolled if the container gets too small in one axis (the scroll direction).',
       keyword: 'SingleChildScrollView',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html',
-      buildRoute: (context) =>
-          BaseWidget('SingleChildScrollView', codePath + 'singlechildscrollview', SingleChildScrollViewWidget()),
+      buildRoute: (context) => BaseWidget('SingleChildScrollView', codePath + 'singlechildscrollview', SingleChildScrollViewWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -153,8 +146,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       subtitle: 'SliverFillViewport',
       keyword: 'SliverFillViewport',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverFillViewport-class.html',
-      buildRoute: (context) =>
-          BaseWidget('SliverFillViewport', codePath + 'sliverfillviewport', SliverFillViewportWidget()),
+      buildRoute: (context) => BaseWidget('SliverFillViewport', codePath + 'sliverfillviewport', SliverFillViewportWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -162,8 +154,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       subtitle: 'SliverFixedExtentList',
       keyword: 'SliverFixedExtentList',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverFixedExtentList-class.html',
-      buildRoute: (context) =>
-          BaseWidget('SliverFixedExtentList', codePath + 'customscrollview', CustomScrollViewWidget()),
+      buildRoute: (context) => BaseWidget('SliverFixedExtentList', codePath + 'customscrollview', CustomScrollViewWidget()),
     ),
     DemoItem(
       icon: Icons.screen_rotation,
@@ -203,8 +194,7 @@ List<DemoItem> buildScrollingDemoItems(String codePath) {
       subtitle: 'SliverPersistentHeader',
       keyword: 'SliverPersistentHeader',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SliverPersistentHeader-class.html',
-      buildRoute: (context) =>
-          BaseWidget('SliverPersistentHeader', codePath + 'sliverpersistentheader', SliverPersistentHeaderWidget()),
+      buildRoute: (context) => BaseWidget('SliverPersistentHeader', codePath + 'sliverpersistentheader', SliverPersistentHeaderWidget()),
     ),
   ];
 }

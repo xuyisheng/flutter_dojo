@@ -9,8 +9,8 @@ class SharedPreferencesWidget extends StatefulWidget {
 class _SharedPreferencesWidgetState extends State<SharedPreferencesWidget> {
   String _username = 'None';
   int _score = 0;
-  TextEditingController _usernameController = new TextEditingController();
-  TextEditingController _scoreController = new TextEditingController();
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _scoreController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

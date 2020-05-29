@@ -37,17 +37,17 @@ class _MaterialWidgetState extends State<MaterialWidget> {
           SubtitleWidget('调整图形形状'),
           Material(
             color: Colors.redAccent,
-            shape: new BeveledRectangleBorder(
+            shape: BeveledRectangleBorder(
               side: const BorderSide(
                 width: 1.0,
                 style: BorderStyle.none,
               ),
-              borderRadius: new BorderRadius.circular(_value),
+              borderRadius: BorderRadius.circular(_value),
             ),
             clipBehavior: Clip.antiAlias,
-            child: new Container(
+            child: Container(
               padding: const EdgeInsets.all(10.0),
-              child: new Text(
+              child: Text(
                 'Text in Material',
                 style: Theme.of(context).textTheme.display2,
               ),

@@ -194,6 +194,7 @@ class _AnimCategoryContainerState extends State<AnimCategoryContainer> with Sing
                             maxLines: 1,
                           ),
                         ),
+                        SizedBox(width: 8),
                       ],
                     ),
                   ),

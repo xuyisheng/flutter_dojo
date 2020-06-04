@@ -2,14 +2,34 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dojo/category/backend/providercategory.dart';
 import 'package:flutter_dojo/pages/main/navigatormanager.dart';
 import 'package:flutter_dojo/pages/notfound/notfound.dart';
 import 'package:flutter_dojo/pages/splash/slpash.dart';
+import 'package:provider/provider.dart';
 
 import 'category/backend/pageroute.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        Provider(create: (_) => 1008),
+        ChangeNotifierProvider(create: (_) => ChangeNotifyModel()),
+        ValueListenableProvider<ValueNotifyModel>(
+          create: (_) => ValueNotifyModelWrapper(ValueNotifyModel(0)),
+          updateShouldNotify: (previous, current) => previous.value != current.value,
+        ),
+        StreamProvider<int>(
+          create: (_) => ProviderStream().stream,
+          initialData: 0,
+        ),
+        FutureProvider(create: (_) => providerFuture()),
+        ChangeNotifierProvider(create: (_) => SelectorModel()),
+      ],
+      child: MyApp(),
+    ),
+  );
   if (Platform.isAndroid) {
     // 在组件渲染之后，再覆写状态栏颜色
     // 如果使用了APPBar，则需要修改brightness属性

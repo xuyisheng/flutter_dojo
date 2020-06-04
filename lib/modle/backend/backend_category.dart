@@ -13,6 +13,7 @@ import 'package:flutter_dojo/category/backend/pagestate.dart';
 import 'package:flutter_dojo/category/backend/pagestoragekey.dart';
 import 'package:flutter_dojo/category/backend/platform.dart';
 import 'package:flutter_dojo/category/backend/provider.dart';
+import 'package:flutter_dojo/category/backend/providercategory.dart';
 import 'package:flutter_dojo/category/backend/providerstate.dart';
 import 'package:flutter_dojo/category/backend/screenshot.dart';
 import 'package:flutter_dojo/category/backend/sharedpreferences.dart';
@@ -138,6 +139,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'Provider',
     buildRoute: (context) => BaseWidget('Provider', codePath + 'provider', ProviderWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'ProviderCategory',
+    subtitle: 'State management',
+    documentationUrl: '',
+    keyword: 'ProviderCategory',
+    buildRoute: (context) => BaseWidget('ProviderCategory', codePath + 'providercategory', ProviderCategoryWidget()),
   ),
   DemoItem(
     icon: Icons.build,

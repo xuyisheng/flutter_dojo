@@ -25,7 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_markdown: ^0.3.3
   share: ^0.6.3+5
-  provider: ^4.0.4
+  provider: ^4.1.2
   shared_preferences: ^0.5.6+1
   path_provider: ^1.6.0
   sqflite: ^1.2.0
@@ -368,6 +368,7 @@ flutter:
     - lib/category/backend/lifecycle.dart
     - lib/category/backend/pageroute.dart
     - lib/category/backend/provider.dart
+    - lib/category/backend/providercategory.dart
     - lib/category/backend/providerstate.dart
     - lib/category/backend/screenshot.dart
     - lib/category/backend/sharedpreferences.dart

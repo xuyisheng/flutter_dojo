@@ -49,7 +49,7 @@ class _MaterialWidgetState extends State<MaterialWidget> {
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 'Text in Material',
-                style: Theme.of(context).textTheme.display2,
+                style: Theme.of(context).textTheme.headline3,
               ),
             ),
           ),

@@ -36,7 +36,7 @@ class SingletonWidget extends StatelessWidget {
 class MySingleton {
   static final MySingleton _instanceTransfer = MySingleton.__internal();
 
-  StreamController streamController = StreamController<MyData>();
+  StreamController streamController = StreamController<MyData>.broadcast();
 
   get stream => streamController.stream;
 

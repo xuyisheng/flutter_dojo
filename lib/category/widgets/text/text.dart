@@ -29,6 +29,7 @@ class _TextWidgetState extends State<TextWidget> {
           textDirection: TextDirection.rtl,
         ),
         MainTitleWidget('TextAlign'),
+        SubtitleWidget('控制水平方向的对齐方式'),
         MultiSelectionWidget('TextAlign', TextAlign.values, TextAlign.values, (value) {
           setState(() => textAlign = value);
         }),

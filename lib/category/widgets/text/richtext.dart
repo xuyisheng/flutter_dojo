@@ -55,6 +55,25 @@ class _RichTextWidgetState extends State<RichTextWidget> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Text.rich(
+            TextSpan(
+              text: '请阅读用户协议',
+              style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
+              children: [
+                TextSpan(
+                  text: '《服务协议》',
+                  style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      print('onTap');
+                    },
+                ),
+              ],
+            ),
+          ),
+        ),
         MainTitleWidget('RichText with WidgetSpan'),
         RichText(
           text: TextSpan(

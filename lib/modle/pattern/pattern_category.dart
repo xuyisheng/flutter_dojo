@@ -22,6 +22,7 @@ import 'package:flutter_dojo/category/pattern/gesture/gesturescale.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/drawimage.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/roundimage.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/shadowmask.dart';
+import 'package:flutter_dojo/category/pattern/list/animlist.dart';
 import 'package:flutter_dojo/category/pattern/list/avatarlist.dart';
 import 'package:flutter_dojo/category/pattern/list/itemlayout.dart';
 import 'package:flutter_dojo/category/pattern/list/listdetail.dart';
@@ -292,6 +293,14 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
 
 List<DemoItem> buildListDemoItems(String codePath) {
   return [
+    DemoItem(
+      icon: Icons.library_add,
+      title: 'AnimList',
+      subtitle: 'AnimList',
+      keyword: 'AnimList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('AnimList', codePath + 'animlist', AnimListWidget()),
+    ),
     DemoItem(
       icon: Icons.library_add,
       title: 'AvatarList',

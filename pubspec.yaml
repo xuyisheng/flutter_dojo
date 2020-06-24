@@ -299,6 +299,7 @@ flutter:
     - lib/category/pattern/imageeffect/roundimage.dart
     - lib/category/pattern/imageeffect/shadowmask.dart
 
+    - lib/category/pattern/list/animlist.dart
     - lib/category/pattern/list/avatarlist.dart
     - lib/category/pattern/list/itemlayout.dart
     - lib/category/pattern/list/listdetail.dart
@@ -363,6 +364,7 @@ flutter:
     - lib/category/backend/catcherror.dart
     - lib/category/backend/file.dart
     - lib/category/backend/json.dart
+    - lib/category/backend/isolate.dart
     - lib/category/backend/key.dart
     - lib/category/backend/keyboard.dart
     - lib/category/backend/lifecycle.dart

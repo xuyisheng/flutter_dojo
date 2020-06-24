@@ -3,6 +3,7 @@ import 'package:flutter_dojo/category/backend/asyncmemoizer.dart';
 import 'package:flutter_dojo/category/backend/catcherror.dart';
 import 'package:flutter_dojo/category/backend/eventbus.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
+import 'package:flutter_dojo/category/backend/isolate.dart';
 import 'package:flutter_dojo/category/backend/json.dart';
 import 'package:flutter_dojo/category/backend/keeppressing.dart';
 import 'package:flutter_dojo/category/backend/key.dart';
@@ -59,6 +60,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'File',
     buildRoute: (context) => BaseWidget('File', codePath + 'file', FileWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Isolate',
+    subtitle: 'Isolate',
+    documentationUrl: '',
+    keyword: 'Isolate',
+    buildRoute: (context) => BaseWidget('Isolate', codePath + 'isolate', IsolateWidget()),
   ),
   DemoItem(
     icon: Icons.build,

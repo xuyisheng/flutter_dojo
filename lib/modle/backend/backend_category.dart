@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/backend/asyncmemoizer.dart';
 import 'package:flutter_dojo/category/backend/catcherror.dart';
+import 'package:flutter_dojo/category/backend/dio.dart';
 import 'package:flutter_dojo/category/backend/eventbus.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
 import 'package:flutter_dojo/category/backend/isolate.dart';
@@ -44,6 +45,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'CatchError',
     buildRoute: (context) => BaseWidget('CatchError', codePath + 'catcherror', CatchErrorWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Dio',
+    subtitle: 'Dio',
+    documentationUrl: '',
+    keyword: 'Dio',
+    buildRoute: (context) => BaseWidget('Dio', codePath + 'dio', DioWidget()),
   ),
   DemoItem(
     icon: Icons.build,

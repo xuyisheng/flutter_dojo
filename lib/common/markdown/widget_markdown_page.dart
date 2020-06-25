@@ -33,12 +33,15 @@ class _MarkdownPageState extends State<MarkdownPage> {
 
     try {
       DartSyntaxHighlighter(style).format(_markdownCodeString);
-      mdCode = RichText(
-        text: TextSpan(
-          style: const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
-          children: <TextSpan>[
-            DartSyntaxHighlighter(style).format(_markdownCodeString),
-          ],
+      mdCode = Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: RichText(
+          text: TextSpan(
+            style: const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
+            children: <TextSpan>[
+              DartSyntaxHighlighter(style).format(_markdownCodeString),
+            ],
+          ),
         ),
       );
     } catch (err) {

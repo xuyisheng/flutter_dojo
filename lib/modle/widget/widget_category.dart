@@ -50,7 +50,7 @@ DemoItemCategory accessibility = DemoItemCategory(
   name: 'Accessibility',
   subName: 'Make your app accessible.',
   icon: 'images/logo.png',
-  list: buildAccessibilityDemoItems(''),
+  list: buildAccessibilityDemoItems('lib/category/widgets/accessibility/'),
 );
 
 DemoItemCategory animationAndMotion = DemoItemCategory(

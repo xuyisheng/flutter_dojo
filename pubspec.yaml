@@ -33,6 +33,7 @@ dependencies:
   json_serializable: ^3.2.5
   url_launcher: ^5.4.2
   async: ^2.4.0
+  dio: ^3.0.9
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,9 @@ flutter:
   assets:
     - images/
     - assets/json/
+    - lib/category/widgets/accessibility/excludesemantics.dart
+    - lib/category/widgets/accessibility/mergesemantics.dart
+    - lib/category/widgets/accessibility/semantics.dart
 
     - lib/category/widgets/animationmotion/animatedcontainer.dart
     - lib/category/widgets/animationmotion/animatedalign.dart
@@ -364,6 +368,7 @@ flutter:
 
     - lib/category/backend/catcherror.dart
     - lib/category/backend/file.dart
+    - lib/category/backend/dio.dart
     - lib/category/backend/json.dart
     - lib/category/backend/isolate.dart
     - lib/category/backend/key.dart

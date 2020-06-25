@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/category/widgets/dialogsalertspanels/aboutdialog.dart';
 import 'package:flutter_dojo/category/widgets/dialogsalertspanels/alertdialog.dart';
 import 'package:flutter_dojo/category/widgets/dialogsalertspanels/bottomsheet.dart';
 import 'package:flutter_dojo/category/widgets/dialogsalertspanels/datepicker.dart';
@@ -10,6 +11,14 @@ import 'package:flutter_dojo/common/demo_item.dart';
 
 List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
   return [
+    DemoItem(
+      icon: Icons.dialpad,
+      title: 'AboutDialog',
+      subtitle:'AboutDialog',
+      keyword: 'AboutDialog',
+      documentationUrl: 'https://api.flutter.dev/flutter/material/AboutDialog-class.html',
+      buildRoute: (context) => BaseWidget('AboutDialog', codePath + 'aboutdialog', AboutDialogWidget()),
+    ),
     DemoItem(
       icon: Icons.dialpad,
       title: 'AlertDialog',

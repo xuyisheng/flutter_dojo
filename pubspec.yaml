@@ -140,6 +140,7 @@ flutter:
     - lib/category/widgets/cupertino/cupertinoicons.dart
     - lib/category/widgets/cupertino/cupertinocolors.dart
 
+    - lib/category/widgets/dialogsalertspanels/aboutdialog.dart
     - lib/category/widgets/dialogsalertspanels/alertdialog.dart
     - lib/category/widgets/dialogsalertspanels/expansionpanel.dart
     - lib/category/widgets/dialogsalertspanels/bottomsheet.dart

@@ -24,6 +24,7 @@ import 'package:flutter_dojo/category/pattern/imageeffect/roundimage.dart';
 import 'package:flutter_dojo/category/pattern/imageeffect/shadowmask.dart';
 import 'package:flutter_dojo/category/pattern/list/animlist.dart';
 import 'package:flutter_dojo/category/pattern/list/avatarlist.dart';
+import 'package:flutter_dojo/category/pattern/list/cardlist.dart';
 import 'package:flutter_dojo/category/pattern/list/itemlayout.dart';
 import 'package:flutter_dojo/category/pattern/list/listdetail.dart';
 import 'package:flutter_dojo/category/pattern/list/overflow.dart';
@@ -308,6 +309,14 @@ List<DemoItem> buildListDemoItems(String codePath) {
       keyword: 'AvatarList',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('AvatarList', codePath + 'avatarlist', AvatarListWidget()),
+    ),
+    DemoItem(
+      icon: Icons.library_add,
+      title: 'CardList',
+      subtitle: 'CardList',
+      keyword: 'CardList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CardList', codePath + 'cardlist', CardListWidget()),
     ),
     DemoItem(
       icon: Icons.library_add,

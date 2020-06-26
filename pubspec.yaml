@@ -316,6 +316,7 @@ flutter:
     - lib/category/pattern/list/tree.dart
     - lib/category/pattern/list/zoom.dart
     - lib/category/pattern/list/snaplist.dart
+    - lib/category/pattern/list/cardlist.dart
 
     - lib/category/pattern/login/login1.dart
     - lib/category/pattern/login/login2.dart

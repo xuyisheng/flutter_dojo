@@ -50,6 +50,7 @@ import 'package:flutter_dojo/category/pattern/paint/randomcolor.dart';
 import 'package:flutter_dojo/category/pattern/paint/repaintboundary.dart';
 import 'package:flutter_dojo/category/pattern/paint/spiral.dart';
 import 'package:flutter_dojo/category/pattern/perspective/flipcard.dart';
+import 'package:flutter_dojo/category/pattern/perspective/parallax.dart';
 import 'package:flutter_dojo/category/pattern/perspective/rollcard.dart';
 import 'package:flutter_dojo/category/pattern/perspective/show3dpage.dart';
 import 'package:flutter_dojo/category/pattern/popup/floating.dart';
@@ -272,6 +273,14 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       keyword: 'FlipCard',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('FlipCard', codePath + 'flipcard', FlipCardWidget()),
+    ),
+    DemoItem(
+      icon: Icons.perm_device_information,
+      title: 'Parallax',
+      subtitle: 'Parallax',
+      keyword: 'Parallax',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Parallax', codePath + 'parallax', ParallaxWidget()),
     ),
     DemoItem(
       icon: Icons.perm_device_information,

@@ -441,6 +441,28 @@ class _DecoratedBoxWidgetState extends State<DecoratedBoxWidget> with SingleTick
             ),
           ),
           SizedBox(height: 40),
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.transparent,
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0.0, 5.0),
+                  blurRadius: 0.0,
+                  color: Color(0xffd9e2ed),
+                ),
+                BoxShadow(
+                  offset: Offset(0.0, 5.0),
+                  color: Color(0xfffe1ecf7),
+                  blurRadius: 10,
+                  spreadRadius: -8,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 40),
           MainTitleWidget('DecoratedBoxTransition动画'),
           DecoratedBoxTransition(
             decoration: animation,

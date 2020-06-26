@@ -335,6 +335,7 @@ flutter:
     - lib/category/pattern/paint/spiral.dart
 
     - lib/category/pattern/perspective/flipcard.dart
+    - lib/category/pattern/perspective/parallax.dart
     - lib/category/pattern/perspective/rollcard.dart
     - lib/category/pattern/perspective/show3dpage.dart
 

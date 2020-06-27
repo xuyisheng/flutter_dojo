@@ -24,6 +24,7 @@ class _AlignWidgetState extends State<AlignWidget> {
       child: Column(
         children: <Widget>[
           MainTitleWidget('Align value'),
+          SubtitleWidget('当widthFactor和heightFactor为null的时候，child的尺寸会尽量填充父控件'),
           Container(
             margin: EdgeInsets.all(20),
             alignment: useSlider ? Alignment(xAlign, yAlign) : alignSelection,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class OverflowBoxWidget extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class _OverflowBoxWidgetState extends State<OverflowBoxWidget> {
       child: Column(
         children: <Widget>[
           MainTitleWidget('OverflowBox基本使用'),
+          SubtitleWidget('OverflowBox会限制一个范围区域，超出最大值部分会被裁剪，低于最小值会被填充'),
           Container(
             width: 200,
             height: 200,

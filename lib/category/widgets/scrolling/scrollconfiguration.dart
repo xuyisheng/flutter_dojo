@@ -12,6 +12,7 @@ class ScrollConfigurationWidget extends StatelessWidget {
         MainTitleWidget('ScrollConfiguration edge effect'),
         SubtitleWidget('通过修改ScrollBehavior来改变滚动组件的边缘效果，例如ListView边缘半月形闪光'),
         SubtitleWidget('如果要全局生效则需要在MaterialApp下设置'),
+        SubtitleWidget('或者设置ThemeData的TargetPlatform.iOS'),
         Expanded(
           child: ScrollConfiguration(
             behavior: MyBehavior(),

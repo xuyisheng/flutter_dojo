@@ -36,6 +36,16 @@ class ScaffoldWidget extends StatelessWidget {
                 ],
               ),
             ),
+            persistentFooterButtons: <Widget>[
+              RaisedButton(
+                onPressed: () {},
+                child: Text('button1'),
+              ),
+              RaisedButton(
+                onPressed: () {},
+                child: Text('button2'),
+              ),
+            ],
           ),
         ),
       ],

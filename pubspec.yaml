@@ -33,6 +33,8 @@ dependencies:
   json_serializable: ^3.2.5
   url_launcher: ^5.4.2
   async: ^2.4.0
+  visibility_detector: ^0.1.5
+  scrollable_positioned_list: ^0.1.6
   dio: ^3.0.9
 
 dev_dependencies:
@@ -59,6 +61,7 @@ flutter:
     - lib/category/widgets/accessibility/semantics.dart
 
     - lib/category/widgets/animationmotion/animatedcontainer.dart
+    - lib/category/widgets/animationmotion/alwaysstoppedanimation.dart
     - lib/category/widgets/animationmotion/animatedalign.dart
     - lib/category/widgets/animationmotion/animatedbuilder.dart
     - lib/category/widgets/animationmotion/animatedcrossfade.dart
@@ -277,19 +280,24 @@ flutter:
     - lib/category/widgets/touchinteractions/listener.dart
 
     - lib/category/pattern/appbar/appbar.dart
+    - lib/category/pattern/appbar/bottombar.dart
     - lib/category/pattern/appbar/customappbar.dart
     - lib/category/pattern/appbar/floatingappbar.dart
     - lib/category/pattern/appbar/gallerybar.dart
     - lib/category/pattern/appbar/gradientcolorbar.dart
+    - lib/category/pattern/appbar/listappbar.dart
     - lib/category/pattern/appbar/titledbottombar.dart
 
     - lib/category/pattern/curve/curvefitting.dart
     - lib/category/pattern/curve/curves.dart
     - lib/category/pattern/curve/interpolator.dart
     - lib/category/pattern/curve/shapeborder.dart
+    - lib/category/pattern/curve/customprogress.dart
 
     - lib/category/pattern/display/backdrop.dart
     - lib/category/pattern/display/dashedline.dart
+    - lib/category/pattern/display/circlerevel.dart
+    - lib/category/pattern/display/slidepanel.dart
     - lib/category/pattern/display/delline.dart
     - lib/category/pattern/display/rating.dart
     - lib/category/pattern/display/visibility.dart
@@ -313,9 +321,13 @@ flutter:
     - lib/category/pattern/list/searchlist.dart
     - lib/category/pattern/list/sliverheader.dart
     - lib/category/pattern/list/sliverheaderwitheffect.dart
+    - lib/category/pattern/list/scrolltoposition.dart
     - lib/category/pattern/list/tree.dart
     - lib/category/pattern/list/zoom.dart
     - lib/category/pattern/list/snaplist.dart
+    - lib/category/pattern/list/stickyheaderlist.dart
+    - lib/category/pattern/list/linkedlist.dart
+    - lib/category/pattern/list/scrolltoposition1.dart
     - lib/category/pattern/list/cardlist.dart
 
     - lib/category/pattern/login/login1.dart
@@ -349,6 +361,7 @@ flutter:
     - lib/category/pattern/renderinfo/screenorientation.dart
     - lib/category/pattern/renderinfo/size.dart
     - lib/category/pattern/renderinfo/systemui.dart
+    - lib/category/pattern/renderinfo/visibillitydetector.dart
 
     - lib/category/pattern/setting/menusetting.dart
     - lib/category/pattern/setting/setting1.dart
@@ -420,6 +433,7 @@ flutter:
     - lib/category/animation/listanimation/slidecard.dart
     - lib/category/animation/listanimation/testanim1.dart
     - lib/category/animation/listanimation/testanim2.dart
+    - lib/category/animation/listanimation/delayanimlist.dart
 
     - lib/category/animation/scrollanimation/listtopbottom.dart
     - lib/category/animation/scrollanimation/scrollinganimation1.dart
@@ -437,6 +451,7 @@ flutter:
     - lib/category/animation/simulation/fling.dart
 
     - lib/category/animation/waveandcurve/curveline.dart
+    - lib/category/animation/waveandcurve/water.dart
     - lib/category/animation/waveandcurve/planets.dart
     - lib/category/animation/waveandcurve/wave.dart
 

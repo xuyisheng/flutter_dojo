@@ -50,6 +50,26 @@ class _TransformWidgetState extends State<TransformWidget> {
           ),
           SubtitleWidget('通过设置Transform origin属性来修改Transform中心点'),
           SubtitleWidget('通过设置Transform transformHitTests属性来设置是否修改点击区域'),
+          MainTitleWidget('Transform突破容器的边界'),
+          SizedBox(height: 40),
+          Center(
+            child: Container(
+              width: 200,
+              height: 100,
+              color: Colors.blueAccent,
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Transform.translate(
+                  offset: Offset(0, -20),
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.redAccent,
+                  ),
+                ),
+              ),
+            ),
+          ),
           SizedBox(height: 50),
           MainTitleWidget('Transform scale rotate translate'),
           Transform.scale(

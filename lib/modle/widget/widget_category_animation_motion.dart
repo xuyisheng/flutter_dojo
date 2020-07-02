@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/category/widgets/animationmotion/alwaysstoppedanimation.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/animatedalign.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/animatedbuilder.dart';
 import 'package:flutter_dojo/category/widgets/animationmotion/animatedcontainer.dart';
@@ -27,6 +28,14 @@ import 'package:flutter_dojo/common/demo_item.dart';
 
 List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
   return [
+    DemoItem(
+      icon: Icons.move_to_inbox,
+      title: 'AlwaysStoppedAnimation',
+      subtitle: 'AlwaysStoppedAnimation',
+      keyword: 'AlwaysStoppedAnimation',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/AlwaysStoppedAnimation-class.html',
+      buildRoute: (context) => BaseWidget('AlwaysStoppedAnimation', codePath + 'alwaysstoppedanimation', AlwaysStoppedAnimationWidget()),
+    ),
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedAlign',

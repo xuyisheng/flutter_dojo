@@ -139,6 +139,15 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
           },
         ),
         TextField(textInputAction: textInputActionSelection),
+        MainTitleWidget('控制输入内容'),
+        TextField(
+          autofocus: true,
+          controller: controller,
+        ),
+        RaisedButton(
+          onPressed: () => controller.text = 'xys',
+          child: Text('输入xys'),
+        ),
         MainTitleWidget('获取输入内容'),
         TextField(
           autofocus: true,

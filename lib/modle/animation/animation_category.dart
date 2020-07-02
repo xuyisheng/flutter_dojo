@@ -13,6 +13,7 @@ import 'package:flutter_dojo/category/animation/informationdisplay/showup.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/textshader.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/typewriter.dart';
 import 'package:flutter_dojo/category/animation/listanimation/animlist.dart';
+import 'package:flutter_dojo/category/animation/listanimation/delayanimlist.dart';
 import 'package:flutter_dojo/category/animation/listanimation/deleteanimlist.dart';
 import 'package:flutter_dojo/category/animation/listanimation/focus.dart';
 import 'package:flutter_dojo/category/animation/listanimation/slidecard.dart';
@@ -35,6 +36,7 @@ import 'package:flutter_dojo/category/animation/simulation/particle.dart';
 import 'package:flutter_dojo/category/animation/simulation/physical.dart';
 import 'package:flutter_dojo/category/animation/waveandcurve/curveline.dart';
 import 'package:flutter_dojo/category/animation/waveandcurve/planets.dart';
+import 'package:flutter_dojo/category/animation/waveandcurve/water.dart';
 import 'package:flutter_dojo/category/animation/waveandcurve/wave.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
@@ -254,6 +256,14 @@ List<DemoItem> buildListAnimationDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.gavel,
+      title: 'DelayAnimList',
+      subtitle: 'DelayAnimList',
+      keyword: 'DelayAnimList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('DelayAnimList', codePath + 'delayanimlist', DelayAnimListWidget()),
+    ),
+    DemoItem(
+      icon: Icons.gavel,
       title: 'DeleteAnimList',
       subtitle: 'DeleteAnimList',
       keyword: 'DeleteAnimList',
@@ -407,6 +417,14 @@ List<DemoItem> buildWaveAndCurveDemoItems(String codePath) {
       keyword: 'Planets',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Planets', codePath + 'planets', PlanetsWidget()),
+    ),
+    DemoItem(
+      icon: Icons.watch,
+      title: 'Water',
+      subtitle: 'Water',
+      keyword: 'Water',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Water', codePath + 'Water', WaterWidget()),
     ),
     DemoItem(
       icon: Icons.watch,

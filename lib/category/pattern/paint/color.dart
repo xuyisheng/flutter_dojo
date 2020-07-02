@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 
@@ -44,8 +45,16 @@ class _ColorWidgetState extends State<ColorWidget> {
                 formatColorString(Colors.blue[100 * i]),
                 style: TextStyle(color: Colors.white),
               )),
-            )
+            ),
           ],
+          MainTitleWidget('Hex Color'),
+          Container(
+            width: 100,
+            height: 100,
+            color: HexColor("#8A98E8"),
+            child: Text('#8A98E8'),
+            alignment: Alignment.center,
+          ),
         ],
       ),
     );
@@ -53,5 +62,17 @@ class _ColorWidgetState extends State<ColorWidget> {
 
   String formatColorString(Color color) {
     return '#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}';
+  }
+}
+
+class HexColor extends Color {
+  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+
+  static int _getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+    if (hexColor.length == 6) {
+      hexColor = 'FF' + hexColor;
+    }
+    return int.parse(hexColor, radix: 16);
   }
 }

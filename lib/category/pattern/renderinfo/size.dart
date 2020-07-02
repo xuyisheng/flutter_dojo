@@ -54,6 +54,7 @@ class _SizeWidgetState extends State<SizeWidget> {
         MainTitleWidget('通过window获取Size信息'),
         Text('屏幕宽度 ${window.physicalSize.width} 物理像素\n'
             '屏幕高度 ${window.physicalSize.height} 物理像素'),
+        Text('AppBar高度 ${AppBar().preferredSize.height}'),
         MainTitleWidget('通过GlobalKey获取指定Widget的Size信息'),
         SubtitleWidget('需要注意的是，必须在Build之后才能获取Size信息，因为其原理是通过Context获取'),
         Align(

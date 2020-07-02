@@ -10,32 +10,29 @@ import 'package:provider/provider.dart';
 
 import 'category/backend/pageroute.dart';
 
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        Provider(create: (_) => 1008),
-        ChangeNotifierProvider(create: (_) => ChangeNotifyModel()),
-        ValueListenableProvider<ValueNotifyModel>(
-          create: (_) => ValueNotifyModelWrapper(ValueNotifyModel(0)),
-          updateShouldNotify: (previous, current) => previous.value != current.value,
-        ),
-        StreamProvider<int>(
-          create: (_) => ProviderStream().stream,
-          initialData: 0,
-        ),
-        FutureProvider(create: (_) => providerFuture()),
-        ChangeNotifierProvider(create: (_) => SelectorModel()),
-      ],
-      child: MyApp(),
-    ),
-  );
-  if (Platform.isAndroid) {
-    // 在组件渲染之后，再覆写状态栏颜色
-    // 如果使用了APPBar，则需要修改brightness属性
-    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
-    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations(<DeviceOrientation>[DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
+    runApp(
+      MultiProvider(
+        providers: [
+          Provider(create: (_) => 1008),
+          ChangeNotifierProvider(create: (_) => ChangeNotifyModel()),
+          ValueListenableProvider<ValueNotifyModel>(
+            create: (_) => ValueNotifyModelWrapper(ValueNotifyModel(0)),
+            updateShouldNotify: (previous, current) => previous.value != current.value,
+          ),
+          StreamProvider<int>(
+            create: (_) => ProviderStream().stream,
+            initialData: 0,
+          ),
+          FutureProvider(create: (_) => providerFuture()),
+          ChangeNotifierProvider(create: (_) => SelectorModel()),
+        ],
+        child: MyApp(),
+      ),
+    );
+  });
 }
 
 SystemUiOverlayStyle setNavigationBarTextColor(bool light) {
@@ -52,6 +49,12 @@ SystemUiOverlayStyle setNavigationBarTextColor(bool light) {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    if (Platform.isAndroid) {
+      // 在组件渲染之后，再覆写状态栏颜色
+      // 如果使用了APPBar，则需要修改brightness属性
+      SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+      SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+    }
     return MaterialApp(
       title: 'Flutter Dojo',
       theme: ThemeData(

@@ -43,6 +43,23 @@ class _SystemUIWidgetState extends State<SystemUIWidget> {
             );
           },
         ),
+        MainTitleWidget('状态栏Theme'),
+        ButtonBar(
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                setState(() => SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark));
+              },
+              child: Text('Dark'),
+            ),
+            RaisedButton(
+              onPressed: () {
+                setState(() => SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light));
+              },
+              child: Text('Light'),
+            ),
+          ],
+        ),
       ],
     );
   }

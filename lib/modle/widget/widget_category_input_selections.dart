@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/category/pattern/viewpager/slider.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/checkbox.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/checkboxlisttile.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/daypicker.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/radio.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/radiolisttile.dart';
+import 'package:flutter_dojo/category/widgets/inputselections/slider.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/slidertheme.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/switch.dart';
 import 'package:flutter_dojo/category/widgets/inputselections/switchlisttile.dart';

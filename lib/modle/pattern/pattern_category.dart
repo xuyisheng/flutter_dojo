@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/pattern/appbar/appbar.dart';
+import 'package:flutter_dojo/category/pattern/appbar/bottombar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/customappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/floatingappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/gallerybar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/gradientcolorbar.dart';
+import 'package:flutter_dojo/category/pattern/appbar/listappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/category/pattern/curve/curvefitting.dart';
 import 'package:flutter_dojo/category/pattern/curve/curves.dart';
+import 'package:flutter_dojo/category/pattern/curve/customprogress.dart';
 import 'package:flutter_dojo/category/pattern/curve/interpolator.dart';
 import 'package:flutter_dojo/category/pattern/curve/shapeborder.dart';
 import 'package:flutter_dojo/category/pattern/display/backdrop.dart';
 import 'package:flutter_dojo/category/pattern/display/centeredge.dart';
+import 'package:flutter_dojo/category/pattern/display/circlerevel.dart';
 import 'package:flutter_dojo/category/pattern/display/dashedline.dart';
 import 'package:flutter_dojo/category/pattern/display/delline.dart';
 import 'package:flutter_dojo/category/pattern/display/rating.dart';
+import 'package:flutter_dojo/category/pattern/display/slidepanel.dart';
 import 'package:flutter_dojo/category/pattern/display/visibility.dart';
 import 'package:flutter_dojo/category/pattern/gesture/custompaint1.dart';
 import 'package:flutter_dojo/category/pattern/gesture/gesturecard.dart';
@@ -26,13 +31,17 @@ import 'package:flutter_dojo/category/pattern/list/animlist.dart';
 import 'package:flutter_dojo/category/pattern/list/avatarlist.dart';
 import 'package:flutter_dojo/category/pattern/list/cardlist.dart';
 import 'package:flutter_dojo/category/pattern/list/itemlayout.dart';
+import 'package:flutter_dojo/category/pattern/list/linkedlist.dart';
 import 'package:flutter_dojo/category/pattern/list/listdetail.dart';
 import 'package:flutter_dojo/category/pattern/list/overflow.dart';
 import 'package:flutter_dojo/category/pattern/list/pullrefresh.dart';
+import 'package:flutter_dojo/category/pattern/list/scrolltoposition.dart';
+import 'package:flutter_dojo/category/pattern/list/scrolltoposition1.dart';
 import 'package:flutter_dojo/category/pattern/list/searchlist.dart';
 import 'package:flutter_dojo/category/pattern/list/sliverheader.dart';
 import 'package:flutter_dojo/category/pattern/list/sliverheaderwitheffect.dart';
 import 'package:flutter_dojo/category/pattern/list/snaplist.dart';
+import 'package:flutter_dojo/category/pattern/list/stickyheaderlist.dart';
 import 'package:flutter_dojo/category/pattern/list/tree.dart';
 import 'package:flutter_dojo/category/pattern/list/zoom.dart';
 import 'package:flutter_dojo/category/pattern/login/login1.dart';
@@ -61,6 +70,7 @@ import 'package:flutter_dojo/category/pattern/renderinfo/position.dart';
 import 'package:flutter_dojo/category/pattern/renderinfo/screenorientation.dart';
 import 'package:flutter_dojo/category/pattern/renderinfo/size.dart';
 import 'package:flutter_dojo/category/pattern/renderinfo/systemui.dart';
+import 'package:flutter_dojo/category/pattern/renderinfo/visibillitydetector.dart';
 import 'package:flutter_dojo/category/pattern/setting/menusetting.dart';
 import 'package:flutter_dojo/category/pattern/setting/setting1.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/autofold.dart';
@@ -223,6 +233,14 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.access_time,
+      title: 'BottomBar',
+      subtitle: 'BottomBar',
+      keyword: 'BottomBar',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('BottomBar', codePath + 'BottomBar', BottomBarWidget()),
+    ),
+    DemoItem(
+      icon: Icons.access_time,
       title: 'CustomAppbar',
       subtitle: 'CustomAppbar',
       keyword: 'CustomAppbar',
@@ -252,6 +270,14 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       keyword: 'GradientColorBar',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('GradientColorBar', codePath + 'gradientcolorbar', GradientColorBar()),
+    ),
+    DemoItem(
+      icon: Icons.access_time,
+      title: 'ListAppBar',
+      subtitle: 'ListAppBar',
+      keyword: 'ListAppBar',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ListAppBar', codePath + 'listappbar', ListAppBarWidget()),
     ),
     DemoItem(
       icon: Icons.access_time,
@@ -334,6 +360,13 @@ List<DemoItem> buildListDemoItems(String codePath) {
       keyword: 'ItemLayout',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('ItemLayout', codePath + 'itemlayout', ItemLayoutWidget()),
+    ),DemoItem(
+      icon: Icons.library_add,
+      title: 'LinkedList',
+      subtitle: 'LinkedList',
+      keyword: 'LinkedList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('LinkedList', codePath + 'linkedlist', LinkedListWidget()),
     ),
     DemoItem(
       icon: Icons.library_add,
@@ -358,6 +391,21 @@ List<DemoItem> buildListDemoItems(String codePath) {
       keyword: 'PullRefresh',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('PullRefresh', codePath + 'pullrefresh', PullRefreshWidget()),
+    ),
+    DemoItem(
+      icon: Icons.library_add,
+      title: 'ScrollToPosition',
+      subtitle: 'ScrollToPosition',
+      keyword: 'ScrollToPosition',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ScrollToPosition', codePath + 'scrolltoposition', ScrollToPositionWidget()),
+    ), DemoItem(
+      icon: Icons.library_add,
+      title: 'ScrollToPosition2',
+      subtitle: 'ScrollToPosition2',
+      keyword: 'ScrollToPosition2',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ScrollToPosition2', codePath + 'scrolltoposition1', ScrollablePositionedListPage()),
     ),
     DemoItem(
       icon: Icons.library_add,
@@ -390,6 +438,14 @@ List<DemoItem> buildListDemoItems(String codePath) {
       keyword: 'SnapList',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('SnapList', codePath + 'snaplist', SnapListWidget()),
+    ),
+    DemoItem(
+      icon: Icons.library_add,
+      title: 'StickyHeaderList',
+      subtitle: 'StickyHeaderList',
+      keyword: 'StickyHeaderList',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('StickyHeaderList', codePath + 'stickyheaderlist', StickyHeaderListWidget()),
     ),
     DemoItem(
       icon: Icons.library_add,
@@ -543,6 +599,14 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       keyword: 'SystemUI',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('SystemUI', codePath + 'systemui', SystemUIWidget()),
+    ),
+    DemoItem(
+      icon: Icons.trending_up,
+      title: 'VisibilityDetector',
+      subtitle: 'VisibilityDetector',
+      keyword: 'VisibilityDetector',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('VisibilityDetector', codePath + 'visibilitydetector', VisibilityDetectorWidget()),
     ),
   ];
 }
@@ -726,6 +790,14 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.center_focus_weak,
+      title: 'CustomProgress',
+      subtitle: 'CustomProgress',
+      keyword: 'CustomProgress',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CustomProgress', codePath + 'customprogress', CustomProgressWidget()),
+    ),
+    DemoItem(
+      icon: Icons.center_focus_weak,
       title: 'Interpolator',
       subtitle: 'Interpolator',
       keyword: 'Interpolator',
@@ -800,6 +872,14 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.directions_subway,
+      title: 'CircleRevel',
+      subtitle: 'CircleRevel',
+      keyword: 'CircleRevel',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CircleRevel', codePath + 'circlerevel', CircleRevelWidget()),
+    ),
+    DemoItem(
+      icon: Icons.directions_subway,
       title: 'DashedLine',
       subtitle: 'DashedLine',
       keyword: 'DashedLine',
@@ -821,6 +901,14 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       keyword: 'Rating',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Rating', codePath + 'rating', RatingWidget()),
+    ),
+    DemoItem(
+      icon: Icons.directions_subway,
+      title: 'SliderPanel',
+      subtitle: 'SliderPanel',
+      keyword: 'SliderPanel',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('SliderPanel', codePath + 'sliderpanel', SliderPanelWidget()),
     ),
     DemoItem(
       icon: Icons.directions_subway,

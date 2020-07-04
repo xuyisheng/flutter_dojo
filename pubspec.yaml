@@ -371,6 +371,7 @@ flutter:
     - lib/category/pattern/texteffect/drawtext.dart
     - lib/category/pattern/texteffect/linemetrics.dart
     - lib/category/pattern/texteffect/marquee.dart
+    - lib/category/pattern/texteffect/circletext.dart
 
     - lib/category/pattern/viewpager/animslider.dart
     - lib/category/pattern/viewpager/cardflip.dart
@@ -449,6 +450,7 @@ flutter:
     - lib/category/animation/simulation/physical.dart
     - lib/category/animation/simulation/particle.dart
     - lib/category/animation/simulation/fling.dart
+    - lib/category/animation/simulation/writer.dart
 
     - lib/category/animation/waveandcurve/curveline.dart
     - lib/category/animation/waveandcurve/water.dart

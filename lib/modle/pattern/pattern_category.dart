@@ -75,6 +75,7 @@ import 'package:flutter_dojo/category/pattern/setting/menusetting.dart';
 import 'package:flutter_dojo/category/pattern/setting/setting1.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/autofold.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/badge.dart';
+import 'package:flutter_dojo/category/pattern/texteffect/circletext.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/drawtext.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/linemetrics.dart';
 import 'package:flutter_dojo/category/pattern/texteffect/marquee.dart';
@@ -538,6 +539,14 @@ List<DemoItem> buildTextEffectDemoItems(String codePath) {
       keyword: 'Badge',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Badge', codePath + 'badge', BadgeWidget()),
+    ),
+    DemoItem(
+      icon: Icons.text_fields,
+      title: 'CircleText',
+      subtitle: 'CircleText',
+      keyword: 'CircleText',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('CircleText', codePath + 'circletext', CircleTextWidget()),
     ),
     DemoItem(
       icon: Icons.text_fields,

@@ -34,6 +34,7 @@ import 'package:flutter_dojo/category/animation/sequence/tweenanimationbuilder.d
 import 'package:flutter_dojo/category/animation/simulation/fling.dart';
 import 'package:flutter_dojo/category/animation/simulation/particle.dart';
 import 'package:flutter_dojo/category/animation/simulation/physical.dart';
+import 'package:flutter_dojo/category/animation/simulation/writer.dart';
 import 'package:flutter_dojo/category/animation/waveandcurve/curveline.dart';
 import 'package:flutter_dojo/category/animation/waveandcurve/planets.dart';
 import 'package:flutter_dojo/category/animation/waveandcurve/water.dart';
@@ -240,6 +241,14 @@ List<DemoItem> buildSimulationDemoItems(String codePath) {
       keyword: 'Physical',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Physical', codePath + 'physical', PhysicalWidget()),
+    ),
+    DemoItem(
+      icon: Icons.filter_9_plus,
+      title: 'Writer',
+      subtitle: 'Writer',
+      keyword: 'Writer',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('Writer', codePath + 'writer', WriterWidget()),
     ),
   ];
 }

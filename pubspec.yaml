@@ -280,6 +280,7 @@ flutter:
     - lib/category/widgets/touchinteractions/listener.dart
 
     - lib/category/pattern/appbar/appbar.dart
+    - lib/category/pattern/appbar/animappbar.dart
     - lib/category/pattern/appbar/bottombar.dart
     - lib/category/pattern/appbar/customappbar.dart
     - lib/category/pattern/appbar/floatingappbar.dart
@@ -293,6 +294,8 @@ flutter:
     - lib/category/pattern/curve/interpolator.dart
     - lib/category/pattern/curve/shapeborder.dart
     - lib/category/pattern/curve/customprogress.dart
+    - lib/category/pattern/curve/drawinterpolator.dart
+    - lib/category/pattern/curve/drawbezier.dart
 
     - lib/category/pattern/display/backdrop.dart
     - lib/category/pattern/display/dashedline.dart
@@ -451,6 +454,7 @@ flutter:
     - lib/category/animation/simulation/particle.dart
     - lib/category/animation/simulation/fling.dart
     - lib/category/animation/simulation/writer.dart
+    - lib/category/animation/simulation/fire.dart
 
     - lib/category/animation/waveandcurve/curveline.dart
     - lib/category/animation/waveandcurve/water.dart

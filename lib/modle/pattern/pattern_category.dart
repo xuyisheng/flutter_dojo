@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/category/pattern/appbar/animappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/appbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/bottombar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/customappbar.dart';
@@ -10,6 +11,8 @@ import 'package:flutter_dojo/category/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/category/pattern/curve/curvefitting.dart';
 import 'package:flutter_dojo/category/pattern/curve/curves.dart';
 import 'package:flutter_dojo/category/pattern/curve/customprogress.dart';
+import 'package:flutter_dojo/category/pattern/curve/drawbezier.dart';
+import 'package:flutter_dojo/category/pattern/curve/drawinterpolator.dart';
 import 'package:flutter_dojo/category/pattern/curve/interpolator.dart';
 import 'package:flutter_dojo/category/pattern/curve/shapeborder.dart';
 import 'package:flutter_dojo/category/pattern/display/backdrop.dart';
@@ -224,6 +227,14 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
 
 List<DemoItem> buildAppbarDemoItems(String codePath) {
   return [
+    DemoItem(
+      icon: Icons.access_time,
+      title: 'AnimAppBar',
+      subtitle: 'AnimAppBar',
+      keyword: 'AnimAppBar',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('AnimAppBar', codePath + 'animappbar', AnimAppBar()),
+    ),
     DemoItem(
       icon: Icons.access_time,
       title: 'Appbar',
@@ -804,6 +815,22 @@ List<DemoItem> buildCurveDemoItems(String codePath) {
       keyword: 'CustomProgress',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('CustomProgress', codePath + 'customprogress', CustomProgressWidget()),
+    ),
+    DemoItem(
+      icon: Icons.center_focus_weak,
+      title: 'DrawBezier',
+      subtitle: 'DrawBezier',
+      keyword: 'DrawBezier',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('DrawBezier', codePath + 'drawbezier', DrawBezier()),
+    ),
+    DemoItem(
+      icon: Icons.center_focus_weak,
+      title: 'DrawInterpolator',
+      subtitle: 'DrawInterpolator',
+      keyword: 'DrawInterpolator',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('DrawInterpolator', codePath + 'drawinterpolator', DrawInterpolator()),
     ),
     DemoItem(
       icon: Icons.center_focus_weak,

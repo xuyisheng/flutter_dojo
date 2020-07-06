@@ -305,6 +305,7 @@ flutter:
     - lib/category/pattern/display/rating.dart
     - lib/category/pattern/display/visibility.dart
     - lib/category/pattern/display/centeredge.dart
+    - lib/category/pattern/display/drawerimage.dart
 
     - lib/category/pattern/gesture/gesturepainter.dart
     - lib/category/pattern/gesture/gesturescale.dart

@@ -20,6 +20,7 @@ import 'package:flutter_dojo/category/pattern/display/centeredge.dart';
 import 'package:flutter_dojo/category/pattern/display/circlerevel.dart';
 import 'package:flutter_dojo/category/pattern/display/dashedline.dart';
 import 'package:flutter_dojo/category/pattern/display/delline.dart';
+import 'package:flutter_dojo/category/pattern/display/drawerimage.dart';
 import 'package:flutter_dojo/category/pattern/display/rating.dart';
 import 'package:flutter_dojo/category/pattern/display/slidepanel.dart';
 import 'package:flutter_dojo/category/pattern/display/visibility.dart';
@@ -929,6 +930,14 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       keyword: 'DelLine',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('DelLine', codePath + 'delline', DelLineWidget()),
+    ),
+    DemoItem(
+      icon: Icons.directions_subway,
+      title: 'DrawerImage',
+      subtitle: 'DrawerImage',
+      keyword: 'DrawerImage',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('DrawerImage', codePath + 'drawerimage', DrawerImageWidget()),
     ),
     DemoItem(
       icon: Icons.directions_subway,

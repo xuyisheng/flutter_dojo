@@ -8,6 +8,7 @@ import 'package:flutter_dojo/category/animation/informationdisplay/foldablebutto
 import 'package:flutter_dojo/category/animation/informationdisplay/gift.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/radialhero.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/radialrecthero.dart';
+import 'package:flutter_dojo/category/animation/informationdisplay/reversepage.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/rotatemenu.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/showup.dart';
 import 'package:flutter_dojo/category/animation/informationdisplay/textshader.dart';
@@ -147,6 +148,14 @@ List<DemoItem> buildInformationDisplayDemoItems(String codePath) {
       keyword: 'RadialRectHero',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('RadialRectHero', codePath + 'radialrecthero', RadialRectHeroWidget()),
+    ),
+    DemoItem(
+      icon: Icons.date_range,
+      title: 'ReversePage',
+      subtitle: 'ReversePage',
+      keyword: 'ReversePage',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ReversePage', codePath + 'reversepage', ReversePageWidget()),
     ),
     DemoItem(
       icon: Icons.date_range,

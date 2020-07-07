@@ -23,6 +23,7 @@ import 'package:flutter_dojo/category/pattern/display/delline.dart';
 import 'package:flutter_dojo/category/pattern/display/drawerimage.dart';
 import 'package:flutter_dojo/category/pattern/display/rating.dart';
 import 'package:flutter_dojo/category/pattern/display/slidepanel.dart';
+import 'package:flutter_dojo/category/pattern/display/verificationcode.dart';
 import 'package:flutter_dojo/category/pattern/display/visibility.dart';
 import 'package:flutter_dojo/category/pattern/gesture/custompaint1.dart';
 import 'package:flutter_dojo/category/pattern/gesture/gesturecard.dart';
@@ -954,6 +955,14 @@ List<DemoItem> buildDisplayDemoItems(String codePath) {
       keyword: 'SliderPanel',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('SliderPanel', codePath + 'sliderpanel', SliderPanelWidget()),
+    ),
+    DemoItem(
+      icon: Icons.directions_subway,
+      title: 'VerificationCode',
+      subtitle: 'VerificationCode',
+      keyword: 'VerificationCode',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('VerificationCode', codePath + 'verificationcode', VerificationCodeWidget()),
     ),
     DemoItem(
       icon: Icons.directions_subway,

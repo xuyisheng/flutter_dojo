@@ -306,6 +306,7 @@ flutter:
     - lib/category/pattern/display/visibility.dart
     - lib/category/pattern/display/centeredge.dart
     - lib/category/pattern/display/drawerimage.dart
+    - lib/category/pattern/display/verificationcode.dart
 
     - lib/category/pattern/gesture/gesturepainter.dart
     - lib/category/pattern/gesture/gesturescale.dart
@@ -426,6 +427,7 @@ flutter:
     - lib/category/animation/informationdisplay/bouncetext.dart
     - lib/category/animation/informationdisplay/radialhero.dart
     - lib/category/animation/informationdisplay/radialrecthero.dart
+    - lib/category/animation/informationdisplay/reversepage.dart
 
     - lib/category/animation/loading/loading.dart
     - lib/category/animation/loading/customprogress.dart

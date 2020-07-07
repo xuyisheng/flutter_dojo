@@ -60,7 +60,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           },
           // TextInputFormatters are applied in sequence.
           inputFormatters: <TextInputFormatter>[
-            WhitelistingTextInputFormatter.digitsOnly,
+            WhitelistingTextInputFormatter.digitsOnly,//WhitelistingTextInputFormatter(RegExp("[0-9]"))
           ],
         ),
         SizedBox(height: 24.0),

@@ -350,6 +350,7 @@ flutter:
     - lib/category/pattern/paint/randomcolor.dart
     - lib/category/pattern/paint/repaintboundary.dart
     - lib/category/pattern/paint/spiral.dart
+    - lib/category/pattern/paint/generativeartistry.dart
 
     - lib/category/pattern/perspective/flipcard.dart
     - lib/category/pattern/perspective/parallax.dart

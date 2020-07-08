@@ -56,6 +56,7 @@ import 'package:flutter_dojo/category/pattern/paint/clock.dart';
 import 'package:flutter_dojo/category/pattern/paint/color.dart';
 import 'package:flutter_dojo/category/pattern/paint/drawstyle.dart';
 import 'package:flutter_dojo/category/pattern/paint/feedback.dart';
+import 'package:flutter_dojo/category/pattern/paint/generativeartistry.dart';
 import 'package:flutter_dojo/category/pattern/paint/layer.dart';
 import 'package:flutter_dojo/category/pattern/paint/layerblendmode.dart';
 import 'package:flutter_dojo/category/pattern/paint/matrix4.dart';
@@ -703,6 +704,14 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       keyword: 'Feedback',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('Feedback', codePath + 'feedback', FeedbackWidget()),
+    ),
+    DemoItem(
+      icon: Icons.format_paint,
+      title: 'GenerativeArtistry',
+      subtitle: 'GenerativeArtistry',
+      keyword: 'GenerativeArtistry',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('GenerativeArtistry', codePath + 'generativeartistry', GenerativeArtistryWidget()),
     ),
     DemoItem(
       icon: Icons.format_paint,

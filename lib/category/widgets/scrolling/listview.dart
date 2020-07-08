@@ -14,6 +14,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
   var scrollPhysics2 = BouncingScrollPhysics();
   var scrollPhysics3 = ClampingScrollPhysics();
   var scrollDirection = Axis.vertical;
+  var _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -136,24 +137,53 @@ class _ListViewWidgetState extends State<ListViewWidget> {
             controller: FixedExtentScrollController(),
             physics: FixedExtentScrollPhysics(),
             children: <Widget>[
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
-              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('aaaa'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
+              Container(margin: EdgeInsets.all(4), color: Colors.blue, child: Center(child: Text('xys'))),
             ],
             itemExtent: 30.0,
+          ),
+        ),
+        SubtitleWidget('builder模式'),
+        Container(
+          height: 400,
+          child: ListWheelScrollView.useDelegate(
+            controller: FixedExtentScrollController(),
+            diameterRatio: 2,
+            offAxisFraction: 2,
+            itemExtent: 30,
+            onSelectedItemChanged: (index) {
+              setState(() => _currentIndex = index);
+            },
+            childDelegate: ListWheelChildBuilderDelegate(
+                builder: (context, index) {
+                  return Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'xys -- $index',
+                      style: _currentIndex == index
+                          ? TextStyle(color: Colors.redAccent, fontSize: 18)
+                          : TextStyle(
+                              color: Colors.black.withOpacity(.6),
+                              fontSize: 10,
+                            ),
+                    ),
+                  );
+                },
+                childCount: 20),
           ),
         ),
         MainTitleWidget('ListView in Column'),

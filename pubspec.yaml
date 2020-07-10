@@ -434,6 +434,7 @@ flutter:
     - lib/category/animation/loading/customprogress.dart
 
     - lib/category/animation/perspective/perspectivecard.dart
+    - lib/category/animation/perspective/pageeffect.dart
 
     - lib/category/animation/listanimation/deleteanimlist.dart
     - lib/category/animation/listanimation/animlist.dart

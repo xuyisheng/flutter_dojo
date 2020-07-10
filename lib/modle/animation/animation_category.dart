@@ -22,6 +22,7 @@ import 'package:flutter_dojo/category/animation/listanimation/testanim1.dart';
 import 'package:flutter_dojo/category/animation/listanimation/testanim2.dart';
 import 'package:flutter_dojo/category/animation/loading/customprogress.dart';
 import 'package:flutter_dojo/category/animation/loading/loading.dart';
+import 'package:flutter_dojo/category/animation/perspective/pageeffect.dart';
 import 'package:flutter_dojo/category/animation/perspective/perspectivecard.dart';
 import 'package:flutter_dojo/category/animation/scrollanimation/listtopbottom.dart';
 import 'package:flutter_dojo/category/animation/scrollanimation/scrollinganimation1.dart';
@@ -215,6 +216,14 @@ List<DemoItem> buildLoadingDemoItems(String codePath) {
 
 List<DemoItem> buildPerspectiveDemoItems(String codePath) {
   return [
+    DemoItem(
+      icon: Icons.pages,
+      title: 'PageEffect',
+      subtitle: 'PageEffect',
+      keyword: 'PageEffect',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('PageEffect', codePath + 'pageeffect', PageEffectWidget()),
+    ),
     DemoItem(
       icon: Icons.pages,
       title: 'PerspectiveCard',

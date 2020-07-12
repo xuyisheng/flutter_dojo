@@ -8,7 +8,7 @@ class PhysicalModelWidget extends StatelessWidget {
     return Column(
       children: <Widget>[
         MainTitleWidget('PhysicalModel基本使用'),
-        SubtitleWidget('修改组件的物理属性，例如Z轴高度'),
+        SubtitleWidget('修改组件的物理属性，例如Z轴高度，或者裁剪带背景图的容器'),
         PhysicalModel(
           elevation: 6,
           shape: BoxShape.rectangle,
@@ -20,6 +20,20 @@ class PhysicalModelWidget extends StatelessWidget {
             color: Colors.blue[50],
             child: FlutterLogo(
               size: 60,
+            ),
+          ),
+        ),
+        SizedBox(height: 20),
+        PhysicalModel(
+          borderRadius: BorderRadius.circular(12),
+          clipBehavior: Clip.antiAlias,
+          color: Colors.transparent,
+          elevation: 5,
+          child: Container(
+            width: 120,
+            child: Image.asset(
+              'images/book.jpg',
+              fit: BoxFit.cover,
             ),
           ),
         ),

@@ -288,6 +288,7 @@ flutter:
     - lib/category/pattern/appbar/gradientcolorbar.dart
     - lib/category/pattern/appbar/listappbar.dart
     - lib/category/pattern/appbar/titledbottombar.dart
+    - lib/category/pattern/appbar/listalphaappbar.dart
 
     - lib/category/pattern/curve/curvefitting.dart
     - lib/category/pattern/curve/curves.dart

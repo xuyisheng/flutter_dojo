@@ -6,6 +6,7 @@ import 'package:flutter_dojo/category/pattern/appbar/customappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/floatingappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/gallerybar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/gradientcolorbar.dart';
+import 'package:flutter_dojo/category/pattern/appbar/listalphaappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/listappbar.dart';
 import 'package:flutter_dojo/category/pattern/appbar/titledbottombar.dart';
 import 'package:flutter_dojo/category/pattern/curve/curvefitting.dart';
@@ -285,6 +286,13 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       keyword: 'GradientColorBar',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('GradientColorBar', codePath + 'gradientcolorbar', GradientColorBar()),
+    ), DemoItem(
+      icon: Icons.access_time,
+      title: 'ListAlphaAppBar',
+      subtitle: 'ListAlphaAppBar',
+      keyword: 'ListAlphaAppBar',
+      documentationUrl: '',
+      buildRoute: (context) => BaseWidget('ListAlphaAppBar', codePath + 'listalphaappbar', ListAlphaAppBarWidget()),
     ),
     DemoItem(
       icon: Icons.access_time,

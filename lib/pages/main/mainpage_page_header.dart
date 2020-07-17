@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/pages/feed/feedmainpage.dart';
 import 'package:flutter_dojo/pages/main/aboutme.dart';
 
 import '../search/search_mainpage_container.dart';
@@ -29,6 +30,18 @@ class MainPagePageHeader extends StatelessWidget {
                 ),
               ),
               Spacer(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => FeedMainPage()));
+                },
+                child: Container(
+                  margin: EdgeInsets.only(right: 16),
+                  child: Icon(
+                    Icons.rss_feed,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => AboutMeWidget()));

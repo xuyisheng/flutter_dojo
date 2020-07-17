@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class FlipCardWidget extends StatelessWidget {
   @override
@@ -44,6 +45,17 @@ class FlipCardWidget extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             heightFactor: 0.5,
             child: child,
+          ),
+        ),
+        SubtitleWidget('镜像操作'),
+        Transform(
+          alignment: Alignment.center,
+          transform: Matrix4.identity()
+            ..setEntry(3, 2, 0.006)
+            ..rotateY(pi),
+          child: Image.asset(
+            'images/book.jpg',
+            width: 200,
           ),
         ),
       ],

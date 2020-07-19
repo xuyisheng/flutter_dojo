@@ -360,7 +360,7 @@ class CatalogSelectorItem1 extends StatelessWidget {
   Widget build(BuildContext context) {
     print('build item 1');
     return Selector<SelectorModel, int>(
-      builder: (context, value, child) => Text('value1: ${Provider.of<SelectorModel>(context).value1}'),
+      builder: (context, value, child) => Text('value1: $value'),
       selector: (context, value) => value.value1,
     );
   }
@@ -371,7 +371,7 @@ class CatalogSelectorItem2 extends StatelessWidget {
   Widget build(BuildContext context) {
     print('build item 2');
     return Selector<SelectorModel, int>(
-      builder: (context, value, child) => Text('value2: ${Provider.of<SelectorModel>(context).value2}'),
+      builder: (context, value, child) => Text('value2: $value'),
       selector: (context, value) => value.value2,
     );
   }

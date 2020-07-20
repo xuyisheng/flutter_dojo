@@ -31,7 +31,85 @@ class FeedMainPage extends StatelessWidget {
                       var detail = feedList[index];
                       return GestureDetector(
                         onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FeedDetailPage(article: detail))),
-                        child: ListTile(title: Text(detail.title)),
+                        child: Card(
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 16),
+                            child: Column(
+                              children: <Widget>[
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    detail.screenshot.isEmpty
+                                        ? Image.asset(
+                                            'images/book.jpg',
+                                            width: 60,
+                                            height: 80,
+                                          )
+                                        : Image.network(
+                                            '${detail.screenshot}',
+                                            width: 60,
+                                            height: 80,
+                                          ),
+                                    Expanded(
+                                      child: Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: <Widget>[
+                                            Text(
+                                              '${detail.title}',
+                                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                            ),
+                                            SizedBox(height: 8),
+                                            Text(
+                                              '${detail.summaryInfo}',
+                                              maxLines: 4,
+                                              overflow: TextOverflow.ellipsis,
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.grey.shade400,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Container(
+                                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                  child: Row(
+                                    children: <Widget>[
+                                      CircleAvatar(
+                                        radius: 12,
+                                        backgroundImage: NetworkImage('${detail.user.avatarLarge}'),
+                                      ),
+                                      SizedBox(width: 24),
+                                      Text(
+                                        '${detail.user.username}',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey.shade500,
+                                        ),
+                                      ),
+                                      SizedBox(width: 24),
+                                      Text(
+                                        '${detail.createdAt}',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey.shade500,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
                       );
                     },
                     itemCount: feedList.length + 1,

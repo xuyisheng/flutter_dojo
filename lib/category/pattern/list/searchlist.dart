@@ -6,7 +6,7 @@ class SearchListWidget extends StatefulWidget {
 }
 
 class _SearchListWidgetState extends State<SearchListWidget> {
-  final initList = List<String>.generate(10000, (i) => "Search Item $i");
+  final initList = List<String>.generate(10000, (i) => 'Search Item $i');
   TextEditingController editingController = TextEditingController();
   var showItemList = List<String>();
 
@@ -23,8 +23,8 @@ class _SearchListWidgetState extends State<SearchListWidget> {
         TextField(
           controller: editingController,
           decoration: InputDecoration(
-            labelText: "Search",
-            hintText: "Search",
+            labelText: 'Search',
+            hintText: 'Search',
             prefixIcon: Icon(Icons.search),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(24)),

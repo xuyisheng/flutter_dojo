@@ -14,7 +14,7 @@ List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.dialpad,
       title: 'AboutDialog',
-      subtitle:'AboutDialog',
+      subtitle: 'AboutDialog',
       keyword: 'AboutDialog',
       documentationUrl: 'https://api.flutter.dev/flutter/material/AboutDialog-class.html',
       buildRoute: (context) => BaseWidget('AboutDialog', codePath + 'aboutdialog', AboutDialogWidget()),

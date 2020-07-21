@@ -79,7 +79,7 @@ class SearchUtils {
     }
     _copy = _dictionaryTree;
     _prefixSearchResult = List();
-    String matchedPrefix = "";
+    String matchedPrefix = '';
     for (int i = 0; i < prefix.length; i++) {
       if (!_matchLetter(prefix[i])) {
         return List<String>();
@@ -233,7 +233,7 @@ class SearchUtils {
     _dictionaryList.add(word);
 
     if (_dictionaryTree == null) {
-      _dictionaryTree = TreeNode("");
+      _dictionaryTree = TreeNode('');
     }
     _copy = _dictionaryTree;
     for (int i = 0; i < word.length; i++) {

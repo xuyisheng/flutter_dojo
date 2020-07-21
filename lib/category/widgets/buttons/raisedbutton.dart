@@ -155,7 +155,7 @@ class _RaisedButtonWidgetState extends State<RaisedButtonWidget> {
             height: 100.0,
             child: RaisedButton(
               onPressed: () {},
-              child: Text("Change Size"),
+              child: Text('Change Size'),
             ),
           ),
         ),

@@ -45,13 +45,13 @@ class _RotationTransitionWidgetState extends State<RotationTransitionWidget> wit
             status ? controller.forward() : controller.reverse();
             status = !status;
           },
-          child: Text("Change Rotation"),
+          child: Text('Change Rotation'),
         ),
         RaisedButton(
           onPressed: () {
             controller.animateTo(0.125);
           },
-          child: Text("Goto Half"),
+          child: Text('Goto Half'),
         ),
       ],
     );

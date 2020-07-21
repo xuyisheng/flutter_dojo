@@ -24,22 +24,11 @@ class _RestClient implements RestClient {
     ArgumentError.checkNotNull(pageSize, 'pageSize');
     ArgumentError.checkNotNull(sort, 'sort');
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'src': src,
-      r'tagId': tagId,
-      r'page': page,
-      r'pageSize': pageSize,
-      r'sort': sort
-    };
+    final queryParameters = <String, dynamic>{r'src': src, r'tagId': tagId, r'page': page, r'pageSize': pageSize, r'sort': sort};
     final _data = <String, dynamic>{};
-    final Response<Map<String, dynamic>> _result = await _dio.request(
-        '/get_tag_entry',
+    final Response<Map<String, dynamic>> _result = await _dio.request('/get_tag_entry',
         queryParameters: queryParameters,
-        options: RequestOptions(
-            method: 'GET',
-            headers: <String, dynamic>{},
-            extra: _extra,
-            baseUrl: baseUrl),
+        options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl),
         data: _data);
     final value = FeedEntity.fromJson(_result.data);
     return value;

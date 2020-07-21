@@ -32,7 +32,7 @@ class _FlexibleSpaceBarWidgetState extends State<FlexibleSpaceBarWidget> {
                 flexibleSpace: FlexibleSpaceBar(
                   collapseMode: mode,
                   background: Image.asset(
-                    "images/book.jpg",
+                    'images/book.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

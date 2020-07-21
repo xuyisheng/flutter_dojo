@@ -33,7 +33,7 @@ class _EventBusWidgetState extends State<EventBusWidget> {
         TextField(controller: controller),
         RaisedButton(
           onPressed: () {
-            bus.postEvent("event", controller.text);
+            bus.postEvent('event', controller.text);
           },
           child: Text('Send event'),
         ),

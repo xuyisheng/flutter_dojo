@@ -39,16 +39,16 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
               setState(() => show = 'Value from Page2: ${onValue[0]} ${onValue[1]}');
             });
           },
-          child: Text("Goto Page2"),
+          child: Text('Goto Page2'),
         ),
         Text(show),
         MainTitleWidget('静态路由'),
         SubtitleWidget('静态路由可以通过RouteSettings传值'),
         RaisedButton(
           onPressed: () {
-            Navigator.pushNamed(context, "/page2", arguments: 'arguments from named Navigator');
+            Navigator.pushNamed(context, '/page2', arguments: 'arguments from named Navigator');
           },
-          child: Text("Goto Page2"),
+          child: Text('Goto Page2'),
         ),
         MainTitleWidget('路由替换'),
         SubtitleWidget('pushReplacement()、pushReplacementNamed()、popAndPushNamed()会在移除当前栈顶Widget的同时，入栈新的Widget'),
@@ -61,7 +61,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
               }),
             );
           },
-          child: Text("Goto Page2 路由替换"),
+          child: Text('Goto Page2 路由替换'),
         ),
         MainTitleWidget('路由移除'),
         SubtitleWidget('pushAndRemoveUntil()、pushNamedAndRemoveUntil()会移除当前栈的所有Widget，再入栈新的Widget'),
@@ -75,7 +75,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
               (Route<dynamic> rout) => false,
             );
           },
-          child: Text("Goto Page2 路由移除"),
+          child: Text('Goto Page2 路由移除'),
         ),
         MainTitleWidget('自定义PageRoute动画'),
         MultiSelectionWidget(
@@ -98,7 +98,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
               ),
             );
           },
-          child: Text("Goto 自定义PageRoute Page2"),
+          child: Text('Goto 自定义PageRoute Page2'),
         ),
         SubtitleWidget('通过设置secondaryAnimation实现进场和出场动画'),
         RaisedButton(
@@ -134,21 +134,21 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
               ),
             );
           },
-          child: Text("Page2进场出场动画"),
+          child: Text('Page2进场出场动画'),
         ),
         MainTitleWidget('通过GlobalKey<NavigatorState>保存NavigatorState'),
         RaisedButton(
           onPressed: () {
             RouteManager.instance.push(MaterialPageRoute(builder: (context) => Page2('GlobalKey')));
           },
-          child: Text("Goto Page2"),
+          child: Text('Goto Page2'),
         ),
         MainTitleWidget('通过NavigatorObserver保存NavigatorState'),
         RaisedButton(
           onPressed: () {
             NavigatorManager.getInstance().push('/page2', (context) => Page2('NavigatorObserver'));
           },
-          child: Text("Goto Page2"),
+          child: Text('Goto Page2'),
         ),
         MainTitleWidget('FullscreenDialog style page'),
         RaisedButton(
@@ -163,7 +163,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
               ),
             );
           },
-          child: Text("Goto FullscreenDialog Page"),
+          child: Text('Goto FullscreenDialog Page'),
         ),
         MainTitleWidget('路由监听'),
         RaisedButton(
@@ -177,7 +177,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
             var name = NavigatorManager.getInstance().currentRoute.settings.name;
             debugPrint(name);
           },
-          child: Text("Goto Page2 With Observer"),
+          child: Text('Goto Page2 With Observer'),
         ),
       ],
     );

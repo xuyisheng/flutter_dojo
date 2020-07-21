@@ -68,7 +68,7 @@ class _ListenerWidgetState extends State<ListenerWidget> {
                   width: 150,
                   height: 150,
                   alignment: Alignment.center,
-                  child: Text("组件重叠时透明区域的点击测试"),
+                  child: Text('组件重叠时透明区域的点击测试'),
                 ),
                 behavior: HitTestBehavior.translucent,
                 onPointerDown: (event) => debugPrint('onPointerDown 1'),

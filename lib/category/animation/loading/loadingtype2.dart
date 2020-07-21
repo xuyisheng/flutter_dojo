@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 class LoadingType2 extends StatefulWidget {
   final double radius;

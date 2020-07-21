@@ -47,7 +47,7 @@ class _AutoFoldWidgetState extends State<AutoFoldWidget> {
                 setState(() => isExpanded = !isExpanded);
               },
               child: Text(
-                isExpanded ? "less" : "more..",
+                isExpanded ? 'less' : 'more..',
                 style: TextStyle(color: Colors.blue),
               ),
             ),

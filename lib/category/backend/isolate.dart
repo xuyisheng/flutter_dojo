@@ -11,7 +11,7 @@ class IsolateWidget extends StatefulWidget {
 
 class _IsolateWidgetState extends State<IsolateWidget> with SingleTickerProviderStateMixin {
   AnimationController controller;
-  String result = "";
+  String result = '';
   Isolate isolate;
   var sender;
 

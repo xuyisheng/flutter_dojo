@@ -33,7 +33,7 @@ class _ScrollingAnimation3WidgetState extends State<ScrollingAnimation3Widget> {
                       alignment: Alignment.bottomLeft,
                       angle: radians(angle),
                       child: Text(
-                        "FlutteRotate",
+                        'FlutteRotate',
                         style: TextStyle(color: Colors.white, fontSize: 18.0),
                       ),
                     ),
@@ -46,7 +46,7 @@ class _ScrollingAnimation3WidgetState extends State<ScrollingAnimation3Widget> {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return ListTile(title: Text("Flutter / $index"));
+              return ListTile(title: Text('Flutter / $index'));
             },
           ),
         ),

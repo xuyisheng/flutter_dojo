@@ -71,7 +71,7 @@ class _AnimateOnScrollFlutterState extends State<AnimateOnScrollFlutter> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              "Flutter is Awesome ",
+                              'Flutter is Awesome ',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
@@ -98,7 +98,7 @@ class _AnimateOnScrollFlutterState extends State<AnimateOnScrollFlutter> {
           ),
         ),
         SliverList(delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
-          return ListTile(title: Text("Flutter / $index"));
+          return ListTile(title: Text('Flutter / $index'));
         }))
       ],
     );

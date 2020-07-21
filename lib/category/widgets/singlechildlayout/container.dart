@@ -39,7 +39,7 @@ class ContainerWidget extends StatelessWidget {
           child: SizedBox(
             height: 100,
             width: 100,
-            child: Text("DecoratedBox的border会占据子widget的显示区域"),
+            child: Text('DecoratedBox的border会占据子widget的显示区域'),
           ),
         ),
         SizedBox(height: 20),
@@ -50,7 +50,7 @@ class ContainerWidget extends StatelessWidget {
           child: SizedBox(
             height: 100,
             width: 100,
-            child: Text("Container的border会占据子widget的显示区域"),
+            child: Text('Container的border会占据子widget的显示区域'),
           ),
         ),
       ],

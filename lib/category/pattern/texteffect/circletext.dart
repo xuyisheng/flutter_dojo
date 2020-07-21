@@ -40,7 +40,7 @@ class _CircularTextPainter extends CustomPainter {
 
     canvas.save();
     List<TextPainter> _charPainters = [];
-    for (final char in texts.data.split("")) {
+    for (final char in texts.data.split('')) {
       _charPainters.add(
         TextPainter(
           text: TextSpan(

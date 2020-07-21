@@ -110,10 +110,9 @@ class _TabIndicatorState extends State<TabIndicator> with TickerProviderStateMix
       vsync: this,
     );
 
-    dxTargetAnim = Tween<double>(begin: section * (fromIndex * 2 + 1), end: section * (toIndex * 2 + 1))
-        .animate(intervalCurved(begin: 0.0, end: 1.0));
-    dxEntryAnim = Tween<double>(begin: section * (fromIndex * 2 + 1), end: section * (toIndex * 2 + 1))
-        .animate(intervalCurved(begin: 0.5, end: 1.0));
+    dxTargetAnim =
+        Tween<double>(begin: section * (fromIndex * 2 + 1), end: section * (toIndex * 2 + 1)).animate(intervalCurved(begin: 0.0, end: 1.0));
+    dxEntryAnim = Tween<double>(begin: section * (fromIndex * 2 + 1), end: section * (toIndex * 2 + 1)).animate(intervalCurved(begin: 0.5, end: 1.0));
 
     animationController
       ..addListener(() {

@@ -20,7 +20,7 @@ class _RawKeyboardListenerWidgetState extends State<RawKeyboardListenerWidget> {
           print('${event.runtimeType.toString()}');
           if (event.runtimeType.toString() == 'RawKeyDownEvent' && event.data is RawKeyEventDataAndroid) {
             RawKeyEventDataAndroid data = event.data;
-            print("_keyCode: ${data.keyCode}");
+            print('_keyCode: ${data.keyCode}');
             setState(() => text = data.keyCode.toString());
             return true;
           }

@@ -10,7 +10,7 @@ class _FoldableButtonWidgetState extends State<FoldableButtonWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Foldable Options"),
+        title: Text('Foldable Options'),
       ),
       body: Stack(
         children: <Widget>[

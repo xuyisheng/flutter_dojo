@@ -19,19 +19,19 @@ class _CupertinoSlidingSegmentedControlWidgetState extends State<CupertinoSlidin
           children: {
             1: Padding(
               padding: EdgeInsets.all(5.0),
-              child: Text("Segment 1"),
+              child: Text('Segment 1'),
             ),
             2: Padding(
               padding: EdgeInsets.all(5.0),
-              child: Text("Segment 2"),
+              child: Text('Segment 2'),
             ),
             3: Padding(
               padding: EdgeInsets.all(5.0),
-              child: Text("Segment 3"),
+              child: Text('Segment 3'),
             ),
             4: Padding(
               padding: EdgeInsets.all(5.0),
-              child: Text("Segment 4"),
+              child: Text('Segment 4'),
             ),
           },
           onValueChanged: (value) {

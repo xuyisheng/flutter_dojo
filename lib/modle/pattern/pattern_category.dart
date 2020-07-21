@@ -99,59 +99,59 @@ import 'package:flutter_dojo/common/demo_item.dart';
 
 List<DemoItemCategory> buildPatternData = <DemoItemCategory>[
   DemoItemCategory(
-    name: "AppBar",
+    name: 'AppBar',
     list: buildAppbarDemoItems('lib/category/pattern/appbar/'),
   ),
   DemoItemCategory(
-    name: "Curve",
+    name: 'Curve',
     list: buildCurveDemoItems('lib/category/pattern/curve/'),
   ),
   DemoItemCategory(
-    name: "Display",
+    name: 'Display',
     list: buildDisplayDemoItems('lib/category/pattern/display/'),
   ),
   DemoItemCategory(
-    name: "Gesture",
+    name: 'Gesture',
     list: buildGestureDemoItems('lib/category/pattern/gesture/'),
   ),
   DemoItemCategory(
-    name: "ImageEffect",
+    name: 'ImageEffect',
     list: buildImageEffectDemoItems('lib/category/pattern/imageeffect/'),
   ),
   DemoItemCategory(
-    name: "List",
+    name: 'List',
     list: buildListDemoItems('lib/category/pattern/list/'),
   ),
   DemoItemCategory(
-    name: "Login",
+    name: 'Login',
     list: buildLoginDemoItems('lib/category/pattern/login/'),
   ),
   DemoItemCategory(
-    name: "Paint",
+    name: 'Paint',
     list: buildPaintDemoItems('lib/category/pattern/paint/'),
   ),
   DemoItemCategory(
-    name: "Popup",
+    name: 'Popup',
     list: buildPopupDemoItems('lib/category/pattern/popup/'),
   ),
   DemoItemCategory(
-    name: "Profile",
+    name: 'Profile',
     list: buildProfileDemoItems('lib/category/pattern/profile/'),
   ),
   DemoItemCategory(
-    name: "Perspective",
+    name: 'Perspective',
     list: buildPerspectiveDemoItems('lib/category/pattern/perspective/'),
   ),
   DemoItemCategory(
-    name: "RenderInfo",
+    name: 'RenderInfo',
     list: buildRenderInfoDemoItems('lib/category/pattern/renderinfo/'),
   ),
   DemoItemCategory(
-    name: "Setting",
+    name: 'Setting',
     list: buildSettingDemoItems('lib/category/pattern/setting/'),
   ),
   DemoItemCategory(
-    name: "TextEffect",
+    name: 'TextEffect',
     list: buildTextEffectDemoItems('lib/category/pattern/texteffect/'),
   ),
   DemoItemCategory(
@@ -286,7 +286,8 @@ List<DemoItem> buildAppbarDemoItems(String codePath) {
       keyword: 'GradientColorBar',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('GradientColorBar', codePath + 'gradientcolorbar', GradientColorBar()),
-    ), DemoItem(
+    ),
+    DemoItem(
       icon: Icons.access_time,
       title: 'ListAlphaAppBar',
       subtitle: 'ListAlphaAppBar',
@@ -383,7 +384,8 @@ List<DemoItem> buildListDemoItems(String codePath) {
       keyword: 'ItemLayout',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('ItemLayout', codePath + 'itemlayout', ItemLayoutWidget()),
-    ),DemoItem(
+    ),
+    DemoItem(
       icon: Icons.library_add,
       title: 'LinkedList',
       subtitle: 'LinkedList',
@@ -422,7 +424,8 @@ List<DemoItem> buildListDemoItems(String codePath) {
       keyword: 'ScrollToPosition',
       documentationUrl: '',
       buildRoute: (context) => BaseWidget('ScrollToPosition', codePath + 'scrolltoposition', ScrollToPositionWidget()),
-    ), DemoItem(
+    ),
+    DemoItem(
       icon: Icons.library_add,
       title: 'ScrollToPosition2',
       subtitle: 'ScrollToPosition2',

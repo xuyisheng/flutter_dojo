@@ -21,7 +21,7 @@ class _ImplicitlyAnimatedWidgetWidgetState extends State<ImplicitlyAnimatedWidge
               setState(() => _decorationColor = Colors.red);
             },
             child: Text(
-              "change",
+              'change',
               style: TextStyle(color: Colors.white),
             ),
           ),

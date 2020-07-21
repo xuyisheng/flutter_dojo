@@ -29,7 +29,7 @@ class _SafeAreaWidgetState extends State<SafeAreaWidget> {
             ),
             RaisedButton(
               onPressed: () => setState(() => isEnabled == true ? isEnabled = false : isEnabled = true),
-              child: Text(isEnabled ? "Disable SafeArea" : "Enable SafeArea"),
+              child: Text(isEnabled ? 'Disable SafeArea' : 'Enable SafeArea'),
             ),
             RaisedButton(
               onPressed: () {

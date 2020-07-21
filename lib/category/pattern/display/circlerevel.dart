@@ -54,7 +54,7 @@ class _CircleRevelWidgetState extends State<CircleRevelWidget> with SingleTicker
                 height: 250,
                 width: 250,
                 color: Colors.redAccent,
-                child: Text("CircleRevel"),
+                child: Text('CircleRevel'),
               ),
             ),
           ),

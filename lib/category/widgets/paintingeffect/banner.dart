@@ -13,14 +13,14 @@ class BannerWidget extends StatelessWidget {
           height: 100,
           child: ClipRect(
             child: Banner(
-              message: "hello",
+              message: 'hello',
               location: BannerLocation.topEnd,
               color: Colors.red,
               child: Container(
                 color: Colors.yellow,
                 height: 100,
                 child: Center(
-                  child: Text("Banner in corner"),
+                  child: Text('Banner in corner'),
                 ),
               ),
             ),

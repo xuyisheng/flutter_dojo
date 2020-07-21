@@ -22,14 +22,14 @@ class AlertDialogWidget extends StatelessWidget {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  content: Text("Dialog Title"),
+                  content: Text('Dialog Title'),
                   actions: <Widget>[
                     FlatButton(
-                      child: Text("Cancel"),
+                      child: Text('Cancel'),
                       onPressed: () => Navigator.of(context).pop(),
                     ),
                     FlatButton(
-                      child: Text("OK"),
+                      child: Text('OK'),
                       onPressed: () => Navigator.of(context).pop(true),
                     ),
                   ],
@@ -107,7 +107,7 @@ class AlertDialogWidget extends StatelessWidget {
           child: SizedBox(
             width: 200,
             child: AlertDialog(
-              content: Text("Custom Width"),
+              content: Text('Custom Width'),
             ),
           ),
         );

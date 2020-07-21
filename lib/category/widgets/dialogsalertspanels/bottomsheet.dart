@@ -9,7 +9,7 @@ class BottomSheetWidget extends StatefulWidget {
 class _BottomSheetWidgetState extends State<BottomSheetWidget> {
   List list1 = ['Option Item A', 'Option Item B', 'Option Item C'];
   String selection = 'None';
-  List list2 = ["Item1", "Item2", "Item3", "Item4"];
+  List list2 = ['Item1', 'Item2', 'Item3', 'Item4'];
   List icons = [Icons.add, Icons.cached, Icons.vibration, Icons.backup];
   var bottomSheetController;
 

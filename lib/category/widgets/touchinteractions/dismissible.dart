@@ -7,7 +7,7 @@ class DismissibleWidget extends StatefulWidget {
 }
 
 class _DismissibleWidgetState extends State<DismissibleWidget> {
-  List<String> items = List.generate(10, (index) => "item $index");
+  List<String> items = List.generate(10, (index) => 'item $index');
 
   @override
   Widget build(BuildContext context) {

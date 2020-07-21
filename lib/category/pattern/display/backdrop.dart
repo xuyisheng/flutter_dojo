@@ -86,7 +86,7 @@ class _BackPanelState extends State<BackPanel> {
         Center(
           child: Padding(
             padding: const EdgeInsets.only(top: 10.0),
-            child: Text('Front panel is ${panelOpen ? "open" : "closed"}'),
+            child: Text('Front panel is ${panelOpen ? 'open' : 'closed'}'),
           ),
         ),
         Center(

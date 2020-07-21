@@ -26,7 +26,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     controller.addListener(() {
       setState(() => input3 = controller.text);
     });
-    controller1.text = "XuYisheng";
+    controller1.text = 'XuYisheng';
     controller1.selection = TextSelection(
       baseOffset: 2,
       extentOffset: controller1.text.length - 2,
@@ -117,7 +117,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         SubtitleWidget('下划线模式'),
         TextField(
           decoration: InputDecoration(
-            labelText: "Input",
+            labelText: 'Input',
             prefixIcon: Icon(Icons.keyboard),
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.grey),
@@ -234,7 +234,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                 child: TextField(
                   cursorColor: Colors.grey,
                   decoration: InputDecoration(
-                      hintText: "input",
+                      hintText: 'input',
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.all(0),
                       isDense: true,

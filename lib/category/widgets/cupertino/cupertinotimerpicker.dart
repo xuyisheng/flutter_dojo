@@ -31,13 +31,13 @@ class CupertinoTimerPickerWidget extends StatelessWidget {
         print('The position is $position');
       },
       children: [
-        Center(child: Text("0")),
-        Center(child: Text("1")),
-        Center(child: Text("2")),
-        Center(child: Text("3")),
-        Center(child: Text("4")),
-        Center(child: Text("5")),
-        Center(child: Text("6")),
+        Center(child: Text('0')),
+        Center(child: Text('1')),
+        Center(child: Text('2')),
+        Center(child: Text('3')),
+        Center(child: Text('4')),
+        Center(child: Text('5')),
+        Center(child: Text('6')),
       ],
     );
     showCupertinoModalPopup(
@@ -54,7 +54,7 @@ class CupertinoTimerPickerWidget extends StatelessWidget {
   void _showCupertinoDatePicker(BuildContext cxt) {
     final picker = CupertinoDatePicker(
       onDateTimeChanged: (date) {
-        print("the date is ${date.toString()}");
+        print('the date is ${date.toString()}');
       },
       initialDateTime: DateTime(1995),
     );

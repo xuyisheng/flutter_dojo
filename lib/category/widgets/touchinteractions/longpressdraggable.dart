@@ -54,7 +54,7 @@ class _LongPressDraggableWidgetState extends State<LongPressDraggableWidget> {
           });
         },
         onWillAccept: (data) {
-          print("current index: $index, on will accept $data");
+          print('current index: $index, on will accept $data');
           return true;
         },
         onLeave: (data) {

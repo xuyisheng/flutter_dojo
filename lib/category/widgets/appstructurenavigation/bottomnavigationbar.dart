@@ -49,27 +49,27 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           unselectedItemColor: Colors.red,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              title: Text("Home"),
+              title: Text('Home'),
               icon: Icon(Icons.home),
             ),
             BottomNavigationBarItem(
-              title: Text("List"),
+              title: Text('List'),
               icon: Icon(Icons.list),
             ),
             BottomNavigationBarItem(
-              title: Text("Message"),
+              title: Text('Message'),
               icon: Icon(Icons.message),
             ),
             BottomNavigationBarItem(
-              title: Text("add"),
+              title: Text('add'),
               icon: Icon(Icons.add),
             ),
             BottomNavigationBarItem(
-              title: Text("menu"),
+              title: Text('menu'),
               icon: Icon(Icons.menu),
             ),
             BottomNavigationBarItem(
-              title: Text("other"),
+              title: Text('other'),
               icon: Icon(Icons.devices_other),
             ),
           ],
@@ -102,15 +102,15 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
                 items: [
                   BottomNavigationBarItem(
                     icon: Icon(Icons.toys),
-                    title: Text("toys"),
+                    title: Text('toys'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.tap_and_play),
-                    title: Text("play"),
+                    title: Text('play'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.landscape),
-                    title: Text("landscape"),
+                    title: Text('landscape'),
                   ),
                 ],
                 onTap: (page) {

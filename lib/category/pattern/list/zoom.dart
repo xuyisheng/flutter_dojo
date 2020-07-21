@@ -48,7 +48,7 @@ class _ZoomWidgetState extends State<ZoomWidget> {
             controller: controller,
             itemCount: 20,
             itemBuilder: (context, index) {
-              return ListTile(title: Text("Item : $index"));
+              return ListTile(title: Text('Item : $index'));
             },
           ),
         ),

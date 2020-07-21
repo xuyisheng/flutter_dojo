@@ -438,6 +438,7 @@ flutter:
 
     - lib/category/animation/perspective/perspectivecard.dart
     - lib/category/animation/perspective/pageeffect.dart
+    - lib/category/animation/perspective/perspectiveshadow.dart
 
     - lib/category/animation/listanimation/deleteanimlist.dart
     - lib/category/animation/listanimation/animlist.dart
@@ -446,6 +447,7 @@ flutter:
     - lib/category/animation/listanimation/testanim1.dart
     - lib/category/animation/listanimation/testanim2.dart
     - lib/category/animation/listanimation/delayanimlist.dart
+    - lib/category/animation/listanimation/itemanimlist.dart
 
     - lib/category/animation/scrollanimation/listtopbottom.dart
     - lib/category/animation/scrollanimation/scrollinganimation1.dart

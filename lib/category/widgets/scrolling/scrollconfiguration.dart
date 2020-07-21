@@ -3,7 +3,7 @@ import 'package:flutter_dojo/common/main_title_widget.dart';
 import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ScrollConfigurationWidget extends StatelessWidget {
-  final initList = List<String>.generate(20, (i) => "Item $i");
+  final initList = List<String>.generate(20, (i) => 'Item $i');
 
   @override
   Widget build(BuildContext context) {

@@ -10,7 +10,7 @@ class Setting1Widget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              "Setting Area1",
+              'Setting Area1',
               style: TextStyle(color: Colors.grey.shade700),
             ),
           ),
@@ -24,7 +24,7 @@ class Setting1Widget extends StatelessWidget {
                     Icons.person,
                     color: Colors.red,
                   ),
-                  title: Text("Account"),
+                  title: Text('Account'),
                   trailing: Icon(Icons.arrow_right),
                 ),
                 ListTile(
@@ -32,7 +32,7 @@ class Setting1Widget extends StatelessWidget {
                     Icons.mail,
                     color: Colors.red,
                   ),
-                  title: Text("Mail"),
+                  title: Text('Mail'),
                   trailing: Icon(Icons.arrow_right),
                 ),
                 ListTile(
@@ -40,7 +40,7 @@ class Setting1Widget extends StatelessWidget {
                     Icons.sync,
                     color: Colors.red,
                   ),
-                  title: Text("Sync"),
+                  title: Text('Sync'),
                   trailing: Icon(Icons.arrow_right),
                 )
               ],
@@ -49,7 +49,7 @@ class Setting1Widget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              "Setting Area2",
+              'Setting Area2',
               style: TextStyle(color: Colors.grey.shade700),
             ),
           ),
@@ -63,7 +63,7 @@ class Setting1Widget extends StatelessWidget {
                     Icons.network_wifi,
                     color: Colors.blue,
                   ),
-                  title: Text("Network"),
+                  title: Text('Network'),
                   trailing: Switch(value: true, onChanged: (v) {}),
                 ),
                 ListTile(
@@ -71,7 +71,7 @@ class Setting1Widget extends StatelessWidget {
                     Icons.phone,
                     color: Colors.blue,
                   ),
-                  title: Text("Phone"),
+                  title: Text('Phone'),
                   trailing: Icon(Icons.arrow_right),
                 ),
                 ListTile(
@@ -79,7 +79,7 @@ class Setting1Widget extends StatelessWidget {
                     Icons.location_on,
                     color: Colors.blue,
                   ),
-                  title: Text("Address"),
+                  title: Text('Address'),
                   trailing: Icon(Icons.arrow_right),
                 )
               ],

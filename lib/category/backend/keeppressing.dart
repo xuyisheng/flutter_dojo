@@ -40,7 +40,7 @@ class _KeepPressingWidgetState extends State<KeepPressingWidget> {
           ),
           child: Center(
             child: Text(
-              "+" + _counter.toString(),
+              '+' + _counter.toString(),
               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
             ),
           ),

@@ -13,7 +13,7 @@ class SliverOpacityWidget extends StatelessWidget {
           flexibleSpace: FlexibleSpaceBar(
             collapseMode: CollapseMode.parallax,
             background: Image.asset(
-              "images/book.jpg",
+              'images/book.jpg',
               fit: BoxFit.cover,
             ),
           ),

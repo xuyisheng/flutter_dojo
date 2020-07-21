@@ -44,7 +44,7 @@ class _AppbarWidgetState extends State<AppbarWidget> with SingleTickerProviderSt
           ],
         ),
         AppBar(
-          title: Text("Center Title"),
+          title: Text('Center Title'),
           centerTitle: true,
         ),
         AppBar(
@@ -55,11 +55,11 @@ class _AppbarWidgetState extends State<AppbarWidget> with SingleTickerProviderSt
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text(
-                "Title",
+                'Title',
                 style: TextStyle(fontSize: 18.0),
               ),
               Text(
-                "Subtitle",
+                'Subtitle',
                 style: TextStyle(fontSize: 14.0),
               ),
             ],
@@ -75,7 +75,7 @@ class _AppbarWidgetState extends State<AppbarWidget> with SingleTickerProviderSt
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
-                  "Title with image",
+                  'Title with image',
                 ),
               ),
             ],
@@ -106,11 +106,11 @@ class _AppbarWidgetState extends State<AppbarWidget> with SingleTickerProviderSt
               PopupMenuButton<String>(
                   itemBuilder: (BuildContext context) => <PopupMenuItem<String>>[
                         PopupMenuItem<String>(
-                          value: "item1",
+                          value: 'item1',
                           child: Text('item1 value'),
                         ),
                         PopupMenuItem<String>(
-                          value: "item2",
+                          value: 'item2',
                           child: Text('item2 value'),
                         ),
                       ],
@@ -120,11 +120,11 @@ class _AppbarWidgetState extends State<AppbarWidget> with SingleTickerProviderSt
               isScrollable: true,
               controller: _tabController,
               tabs: <Widget>[
-                Tab(text: "Tabs 1"),
-                Tab(text: "Tabs 2"),
-                Tab(text: "Tabs 3"),
-                Tab(text: "Tabs 4"),
-                Tab(text: "Tabs 5"),
+                Tab(text: 'Tabs 1'),
+                Tab(text: 'Tabs 2'),
+                Tab(text: 'Tabs 3'),
+                Tab(text: 'Tabs 4'),
+                Tab(text: 'Tabs 5'),
               ],
             ),
           ),

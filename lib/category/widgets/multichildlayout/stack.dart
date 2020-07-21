@@ -96,7 +96,7 @@ class _StackWidgetState extends State<StackWidget> {
                 height: 50,
               ),
               Text(
-                "show stack demo",
+                'show stack demo',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

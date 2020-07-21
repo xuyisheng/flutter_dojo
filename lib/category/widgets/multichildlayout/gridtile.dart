@@ -19,20 +19,20 @@ class GridTileWidget extends StatelessWidget {
               children: <Widget>[
                 GridTile(
                   header: Text(
-                    "GridTile header",
+                    'GridTile header',
                     style: TextStyle(color: Colors.white),
                   ),
                   child: Container(
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        "GridTile child",
+                        'GridTile child',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
                   footer: Text(
-                    "GridTile footer",
+                    'GridTile footer',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -41,16 +41,16 @@ class GridTileWidget extends StatelessWidget {
                     title: Text('title'),
                     subtitle: Text('subtitle'),
                     leading: Icon(Icons.title),
-                    trailing: Text("trailing"),
+                    trailing: Text('trailing'),
                   ),
                   child: Container(
                     child: Text(
-                      "GridTile child",
+                      'GridTile child',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
                   footer: Text(
-                    "GridTile footer",
+                    'GridTile footer',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

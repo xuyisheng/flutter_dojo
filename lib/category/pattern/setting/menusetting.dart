@@ -131,7 +131,7 @@ class BackgroundPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Close",
+                  'Close',
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 14,
@@ -146,14 +146,14 @@ class BackgroundPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                "Setting1",
+                'Setting1',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                 ),
               ),
               Text(
-                "Subtitle",
+                'Subtitle',
                 style: TextStyle(
                   color: Colors.blueAccent,
                   fontSize: 12,
@@ -167,14 +167,14 @@ class BackgroundPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                "Setting1",
+                'Setting1',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                 ),
               ),
               Text(
-                "Subtitle",
+                'Subtitle',
                 style: TextStyle(
                   color: Colors.blueAccent,
                   fontSize: 12,
@@ -188,14 +188,14 @@ class BackgroundPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                "Setting1",
+                'Setting1',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                 ),
               ),
               Text(
-                "Subtitle",
+                'Subtitle',
                 style: TextStyle(
                   color: Colors.blueAccent,
                   fontSize: 12,
@@ -209,14 +209,14 @@ class BackgroundPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                "Setting1",
+                'Setting1',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                 ),
               ),
               Text(
-                "Subtitle",
+                'Subtitle',
                 style: TextStyle(
                   color: Colors.blueAccent,
                   fontSize: 12,

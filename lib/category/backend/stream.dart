@@ -125,15 +125,15 @@ class _StreamWidgetState extends State<StreamWidget> {
             var streamTransformer = StreamTransformer<int, String>.fromHandlers(
               handleData: (int data, sink) {
                 if (data == 2) {
-                  sink.add("Right ");
+                  sink.add('Right ');
                 } else {
-                  sink.add("Wrong ");
+                  sink.add('Wrong ');
                 }
               },
             );
             stream.transform(streamTransformer).listen((String data) {
               setState(() => showText4 += data);
-            }, onError: (error) => print("Error"));
+            }, onError: (error) => print('Error'));
           },
           child: Text('StreamTransformer[1, 2, 3] 2 is right'),
         ),
@@ -146,7 +146,7 @@ class _StreamWidgetState extends State<StreamWidget> {
           child: Text('Add Data and change UI'),
         ),
         StreamBuilder(
-          initialData: "init data",
+          initialData: 'init data',
           stream: streamController.stream,
           builder: (context, snapshot) {
             return Text('${snapshot.data}');

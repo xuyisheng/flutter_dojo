@@ -7,7 +7,7 @@ class DeleteAnimListWidget extends StatefulWidget {
 
 class _DeleteAnimListWidgetState extends State<DeleteAnimListWidget> with SingleTickerProviderStateMixin {
   List<String> items = List.generate(10, ((i) {
-    return "Item $i";
+    return 'Item $i';
   }));
 
   @override

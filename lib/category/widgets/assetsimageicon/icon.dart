@@ -25,7 +25,7 @@ class IconWidget extends StatelessWidget {
         Text(
           '\uE936' + '\uE001',
           style: TextStyle(
-            fontFamily: "MaterialIcons",
+            fontFamily: 'MaterialIcons',
             fontSize: 48,
             color: Colors.blue,
           ),

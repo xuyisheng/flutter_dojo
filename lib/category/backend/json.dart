@@ -15,7 +15,7 @@ class _JsonWidgetState extends State<JsonWidget> {
         Container(
           margin: EdgeInsets.all(16),
           child: FutureBuilder(
-            future: DefaultAssetBundle.of(context).loadString("assets/json/basicMap.json"),
+            future: DefaultAssetBundle.of(context).loadString('assets/json/basicMap.json'),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 Map<String, dynamic> decodeJson = json.decode(snapshot.data);
@@ -31,7 +31,7 @@ class _JsonWidgetState extends State<JsonWidget> {
             Container(
               margin: EdgeInsets.all(16),
               child: FutureBuilder(
-                future: DefaultAssetBundle.of(context).loadString("assets/json/basicMap.json"),
+                future: DefaultAssetBundle.of(context).loadString('assets/json/basicMap.json'),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     Map<String, dynamic> decodeJson = json.decode(snapshot.data);
@@ -46,7 +46,7 @@ class _JsonWidgetState extends State<JsonWidget> {
             Container(
               margin: EdgeInsets.all(16),
               child: FutureBuilder(
-                future: DefaultAssetBundle.of(context).loadString("assets/json/basicMapWithList.json"),
+                future: DefaultAssetBundle.of(context).loadString('assets/json/basicMapWithList.json'),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     Map<String, dynamic> decodeJson = json.decode(snapshot.data);
@@ -61,7 +61,7 @@ class _JsonWidgetState extends State<JsonWidget> {
             Container(
               margin: EdgeInsets.all(16),
               child: FutureBuilder(
-                future: DefaultAssetBundle.of(context).loadString("assets/json/basicMapWithModel.json"),
+                future: DefaultAssetBundle.of(context).loadString('assets/json/basicMapWithModel.json'),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     Map<String, dynamic> decodeJson = json.decode(snapshot.data);
@@ -76,7 +76,7 @@ class _JsonWidgetState extends State<JsonWidget> {
             Container(
               margin: EdgeInsets.all(16),
               child: FutureBuilder(
-                future: DefaultAssetBundle.of(context).loadString("assets/json/basicMapWithListModel.json"),
+                future: DefaultAssetBundle.of(context).loadString('assets/json/basicMapWithListModel.json'),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     Map<String, dynamic> decodeJson = json.decode(snapshot.data);
@@ -91,7 +91,7 @@ class _JsonWidgetState extends State<JsonWidget> {
             Container(
               margin: EdgeInsets.all(16),
               child: FutureBuilder(
-                future: DefaultAssetBundle.of(context).loadString("assets/json/basicList.json"),
+                future: DefaultAssetBundle.of(context).loadString('assets/json/basicList.json'),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     List<dynamic> decodeJson = json.decode(snapshot.data);

@@ -78,7 +78,7 @@ class _DecoratedBoxTransitionWidgetState extends State<DecoratedBoxTransitionWid
               }
               status = !status;
             },
-            child: Text("Change DecoratedBoxTransition"),
+            child: Text('Change DecoratedBoxTransition'),
           ),
         )
       ],

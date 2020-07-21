@@ -16,7 +16,7 @@ class _DioWidgetState extends State<DioWidget> {
     return DioManager().request<TestEntity>(
       Method.POST,
       TEST_URL_PATH,
-      params: {"account": "421789838@qq.com", "password": "123456"},
+      params: {'account': '421789838@qq.com', 'password': '123456'},
       success: (data) {},
       error: (error) {},
     );

@@ -44,22 +44,22 @@ class _CardSliderState extends State<CardSlider> {
 
     _cardInfoList = [
       CardInfo(
-        userName: "ANDREW MITCHELL",
+        userName: 'ANDREW MITCHELL',
         leftColor: Colors.purpleAccent,
         rightColor: Colors.deepPurple,
       ),
       CardInfo(
-        userName: "ANDREW MITCHELL",
+        userName: 'ANDREW MITCHELL',
         leftColor: Colors.green,
         rightColor: Colors.teal,
       ),
       CardInfo(
-        userName: "ANDREW MITCHELL",
+        userName: 'ANDREW MITCHELL',
         leftColor: Colors.grey,
         rightColor: Colors.black,
       ),
       CardInfo(
-        userName: "ANDREW MITCHELL",
+        userName: 'ANDREW MITCHELL',
         leftColor: Colors.blueAccent,
         rightColor: Colors.blue,
       ),
@@ -124,7 +124,7 @@ class _CardSliderState extends State<CardSlider> {
                       top: (positionYLine2 - positionYLine1) * 0.5,
                       left: 20,
                       child: Text(
-                        "622 828 **** 0278",
+                        '622 828 **** 0278',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -150,7 +150,7 @@ class _CardSliderState extends State<CardSlider> {
                       bottom: (positionYLine2 - positionYLine1) * 0.02,
                       right: 20,
                       child: Image.asset(
-                        "images/book.jpg",
+                        'images/book.jpg',
                         height: 100,
                         width: 80,
                       ),

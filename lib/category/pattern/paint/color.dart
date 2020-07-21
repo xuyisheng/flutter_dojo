@@ -51,7 +51,7 @@ class _ColorWidgetState extends State<ColorWidget> {
           Container(
             width: 100,
             height: 100,
-            color: HexColor("#8A98E8"),
+            color: HexColor('#8A98E8'),
             child: Text('#8A98E8'),
             alignment: Alignment.center,
           ),

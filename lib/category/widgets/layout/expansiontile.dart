@@ -25,7 +25,7 @@ class _ExpansionTileWidgetState extends State<ExpansionTileWidget> {
         Expanded(
           child: ExpansionTile(
             leading: Icon(Icons.star),
-            title: Text("My Book"),
+            title: Text('My Book'),
             onExpansionChanged: (value) {},
             initiallyExpanded: true,
             children: <Widget>[

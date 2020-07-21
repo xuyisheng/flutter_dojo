@@ -11,7 +11,7 @@ class DelLineWidget extends StatelessWidget {
           child: CustomPaint(
             painter: LinePainter(),
             child: Text(
-              "\$999",
+              '\$999',
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.w700,

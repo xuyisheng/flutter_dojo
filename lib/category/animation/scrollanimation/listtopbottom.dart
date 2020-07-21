@@ -6,7 +6,7 @@ class ListTopBottomWidget extends StatefulWidget {
 }
 
 class _ListTopBottomWidgetState extends State<ListTopBottomWidget> {
-  final initList = List<String>.generate(100, (i) => "Item $i");
+  final initList = List<String>.generate(100, (i) => 'Item $i');
   ScrollController scrollController;
   bool showFAB = false;
 

@@ -98,7 +98,7 @@ class _FavorWidgetState extends State<FavorWidget> with TickerProviderStateMixin
           ),
           child: Center(
             child: Text(
-              "+" + _counter.toString(),
+              '+' + _counter.toString(),
               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15.0),
             ),
           ),

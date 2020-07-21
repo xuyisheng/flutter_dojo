@@ -66,7 +66,7 @@ class _TimerWidgetState extends State<TimerWidget> {
     int hour = seconds ~/ 3600;
     int minute = seconds % 3600 ~/ 60;
     int second = seconds % 60;
-    return formatTime(hour) + ":" + formatTime(minute) + ":" + formatTime(second);
+    return formatTime(hour) + ':' + formatTime(minute) + ':' + formatTime(second);
   }
 
   String formatTime(int timeNum) {

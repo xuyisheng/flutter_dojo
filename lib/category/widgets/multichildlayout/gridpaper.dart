@@ -19,7 +19,7 @@ class GridPaperWidget extends StatelessWidget {
               children: <Widget>[
                 GridPaper(
                   child: Text(
-                    "Text1",
+                    'Text1',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -28,7 +28,7 @@ class GridPaperWidget extends StatelessWidget {
                   divisions: 4,
                   subdivisions: 4,
                   child: Text(
-                    "二次划分",
+                    '二次划分',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

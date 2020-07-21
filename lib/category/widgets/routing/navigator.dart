@@ -55,7 +55,7 @@ class PageOne extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text("Goto page 2, data=${MyData.of(context).data}"),
+          child: Text('Goto page 2, data=${MyData.of(context).data}'),
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (_) => PageTwo()));
           },
@@ -74,7 +74,7 @@ class PageTwo extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text("Goto page 3, data= ${MyData.of(context).data}"),
+          child: Text('Goto page 3, data= ${MyData.of(context).data}'),
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (_) => PageThree()));
           },
@@ -93,7 +93,7 @@ class PageThree extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text("Goto page 4, data=${MyData.of(context).data}"),
+          child: Text('Goto page 4, data=${MyData.of(context).data}'),
           onPressed: () => Navigator.pop(context),
         ),
       ),

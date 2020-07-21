@@ -10,7 +10,7 @@ class SqfliteWidget extends StatefulWidget {
 }
 
 class _SqfliteWidgetState extends State<SqfliteWidget> {
-  String show = "";
+  String show = '';
   TextEditingController controller = TextEditingController();
 
   @override
@@ -88,7 +88,7 @@ Future<Database> openDB() async {
     join(await getDatabasesPath(), 'test_database.db'),
     onCreate: (db, version) {
       return db.execute(
-        "CREATE TABLE students(id INTEGER PRIMARY KEY, name TEXT, age INTEGER)",
+        'CREATE TABLE students(id INTEGER PRIMARY KEY, name TEXT, age INTEGER)',
       );
     },
     version: 1,
@@ -126,7 +126,7 @@ Future<void> updateStudent(Student student) async {
   await db.update(
     'students',
     student.toMap(),
-    where: "id = ?",
+    where: 'id = ?',
     whereArgs: [student.id],
   );
 }
@@ -136,7 +136,7 @@ Future<void> deleteStudent(int id) async {
   final db = await openDB();
   await db.delete(
     'students',
-    where: "id = ?",
+    where: 'id = ?',
     whereArgs: [id],
   );
 }

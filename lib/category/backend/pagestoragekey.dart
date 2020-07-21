@@ -28,9 +28,9 @@ class _PageStorageKeyWidgetState extends State<PageStorageKeyWidget> with Single
           isScrollable: true,
           controller: _tabController,
           tabs: <Widget>[
-            Tab(text: "Tabs 1"),
-            Tab(text: "Tabs 2"),
-            Tab(text: "Tabs 3"),
+            Tab(text: 'Tabs 1'),
+            Tab(text: 'Tabs 2'),
+            Tab(text: 'Tabs 3'),
           ],
         ),
       ),

@@ -12,7 +12,7 @@ class ShadowMaskWidget extends StatelessWidget {
             height: 300,
             child: Stack(
               children: <Widget>[
-                Image.asset("images/owl.jpg", fit: BoxFit.cover, width: double.infinity),
+                Image.asset('images/owl.jpg', fit: BoxFit.cover, width: double.infinity),
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -35,7 +35,7 @@ class ShadowMaskWidget extends StatelessWidget {
               color: Colors.black.withOpacity(0.5),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("images/owl.jpg"),
+                image: AssetImage('images/owl.jpg'),
                 colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.4),
                   BlendMode.multiply,

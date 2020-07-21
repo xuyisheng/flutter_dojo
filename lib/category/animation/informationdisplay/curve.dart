@@ -32,7 +32,7 @@ class _CurveWidgetState extends State<CurveWidget> {
           child: ListView(
             children: <Widget>[
               ListTile(
-                title: Text("Loading"),
+                title: Text('Loading'),
                 onTap: () {
                   setState(() {
                     demo = LoadingAnim();
@@ -40,7 +40,7 @@ class _CurveWidgetState extends State<CurveWidget> {
                 },
               ),
               ListTile(
-                title: Text("Easing"),
+                title: Text('Easing'),
                 onTap: () {
                   setState(() {
                     demo = Easing();
@@ -48,7 +48,7 @@ class _CurveWidgetState extends State<CurveWidget> {
                 },
               ),
               ListTile(
-                title: Text("Delay"),
+                title: Text('Delay'),
                 onTap: () {
                   setState(() {
                     demo = Delay();
@@ -56,7 +56,7 @@ class _CurveWidgetState extends State<CurveWidget> {
                 },
               ),
               ListTile(
-                title: Text("Parent"),
+                title: Text('Parent'),
                 onTap: () {
                   setState(() {
                     demo = Parent();
@@ -64,7 +64,7 @@ class _CurveWidgetState extends State<CurveWidget> {
                 },
               ),
               ListTile(
-                title: Text("Demo"),
+                title: Text('Demo'),
                 onTap: () {
                   setState(() {
                     demo = Demo();
@@ -190,7 +190,7 @@ class _DemoState extends State<Demo> with SingleTickerProviderStateMixin {
               opacity: _animationManager.bgOpacity.value,
               child: SizedBox.expand(
                 child: Image.asset(
-                  "images/anim_bg.jpg",
+                  'images/anim_bg.jpg',
                   fit: BoxFit.cover,
                 ),
               ),

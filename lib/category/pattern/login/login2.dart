@@ -81,7 +81,7 @@ class _Login2State extends State<Login2> with TickerProviderStateMixin {
                           highlightColor: Colors.transparent,
                           onPressed: null,
                           child: Text(
-                            "Existing",
+                            'Existing',
                             style: TextStyle(color: left, fontSize: 16.0),
                           ),
                         ),
@@ -92,7 +92,7 @@ class _Login2State extends State<Login2> with TickerProviderStateMixin {
                           highlightColor: Colors.transparent,
                           onPressed: null,
                           child: Text(
-                            "New",
+                            'New',
                             style: TextStyle(color: right, fontSize: 16.0),
                           ),
                         ),

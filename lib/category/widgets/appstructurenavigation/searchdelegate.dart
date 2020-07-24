@@ -98,7 +98,7 @@ class _MySearchDelegate extends SearchDelegate<String> {
               },
               child: Text(
                 this.query,
-                style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.headline4.copyWith(fontWeight: FontWeight.bold),
               ),
             ),
           ],
@@ -155,7 +155,7 @@ class _SuggestionList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme.subhead;
+    final textTheme = Theme.of(context).textTheme.subtitle1;
     return ListView.builder(
       itemCount: suggestions.length,
       itemBuilder: (BuildContext context, int i) {

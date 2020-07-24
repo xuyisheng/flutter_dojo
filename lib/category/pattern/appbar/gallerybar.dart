@@ -474,13 +474,13 @@ class _AnimateTabNavigationState extends State<AnimateTabNavigation> {
       // One one section card is showing: scroll one page forward or back.
       final double centerX = _headingPageController.position.viewportDimension / 2.0;
 
-      int PageIndex = pageIndex;
+      int newPageIndex = pageIndex;
       if (xOffset - centerX > 40 && pageIndex < totalPageCount - 1) {
-        PageIndex++;
+        newPageIndex++;
       } else if (centerX - xOffset > 40 && pageIndex > 0) {
-        PageIndex--;
+        newPageIndex--;
       }
-      _headingPageController.animateToPage(PageIndex, curve: _kScrollCurve, duration: _kScrollDuration);
+      _headingPageController.animateToPage(newPageIndex, curve: _kScrollCurve, duration: _kScrollDuration);
     }
   }
 

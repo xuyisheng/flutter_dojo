@@ -47,10 +47,10 @@ class MyHomePage extends StatelessWidget {
 
 /// Signature for a function that creates a widget for a given index, e.g., in a
 /// list.
-typedef Widget IndexedItemBuilder(BuildContext, int);
+typedef Widget IndexedItemBuilder(buildContext, int);
 
 /// Signature for a function that creates a widget for a value emitted from a [Stream]
-typedef Widget StreamItemBuilder<T>(BuildContext, T);
+typedef Widget StreamItemBuilder<T>(buildContext, T);
 
 /// A widget for flip panel with built-in animation
 /// Content of the panel is built from [IndexedItemBuilder] or [StreamItemBuilder]

@@ -83,7 +83,7 @@ class _AnimatedSwitcherWidgetState extends State<AnimatedSwitcherWidget> {
           child: Text(
             '$_count',
             key: ValueKey<int>(_count),
-            style: Theme.of(context).textTheme.display4,
+            style: Theme.of(context).textTheme.headline1,
           ),
         ),
         SubtitleWidget('左右平移不像缩放动画可以直接处理reverse和forward，所以需要对reverse动画单独处理'),
@@ -99,7 +99,7 @@ class _AnimatedSwitcherWidgetState extends State<AnimatedSwitcherWidget> {
           child: Text(
             '$_count',
             key: ValueKey<int>(_count),
-            style: Theme.of(context).textTheme.display4,
+            style: Theme.of(context).textTheme.headline1,
           ),
         ),
         SubtitleWidget('增加ClipRect，控制显示区域'),
@@ -139,7 +139,7 @@ class _AnimatedSwitcherWidgetState extends State<AnimatedSwitcherWidget> {
           child: Text(
             '$_count',
             key: ValueKey<int>(_count), // 如果变更的组件 不是同一个组件, 或者是不同的state 或者是不同的显示数据与状态 则需要为当前组件每一个状态加入一个Key 强制生效动画效果
-            style: Theme.of(context).textTheme.display4,
+            style: Theme.of(context).textTheme.headline1,
           ),
         ),
         RaisedButton(

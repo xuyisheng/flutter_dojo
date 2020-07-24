@@ -11,9 +11,6 @@ class TextFormFieldWidget extends StatefulWidget {
 class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
   final GlobalKey<FormFieldState<String>> _passwordFieldKey = GlobalKey<FormFieldState<String>>();
 
-  String _name;
-  String _phoneNumber;
-  String _email;
   String _password;
 
   String _validateName(String value) {
@@ -39,7 +36,6 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             labelText: 'Name *',
           ),
           onSaved: (String value) {
-            this._name = value;
           },
           validator: _validateName,
         ),
@@ -56,7 +52,6 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           ),
           keyboardType: TextInputType.phone,
           onSaved: (String value) {
-            this._phoneNumber = value;
           },
           // TextInputFormatters are applied in sequence.
           inputFormatters: <TextInputFormatter>[
@@ -75,7 +70,6 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           ),
           keyboardType: TextInputType.emailAddress,
           onSaved: (String value) {
-            this._email = value;
           },
         ),
         SizedBox(height: 24.0),

@@ -35,7 +35,7 @@ class FrontPanelTitle extends StatelessWidget {
       padding: const EdgeInsets.only(top: 16.0, left: 16.0),
       child: Text(
         'Tap Me',
-        style: Theme.of(context).textTheme.subhead,
+        style: Theme.of(context).textTheme.subtitle1,
       ),
     );
   }

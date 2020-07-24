@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/pages/feed/feed_entity.dart';
+import 'package:share/share.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class FeedDetailPage extends StatefulWidget {
@@ -13,6 +16,7 @@ class FeedDetailPage extends StatefulWidget {
 
 class _FeedDetailPageState extends State<FeedDetailPage> {
   WebViewController _webViewController;
+  Completer<bool> _finishedCompleter = Completer();
 
   ValueNotifier canGoBack = ValueNotifier(false);
   ValueNotifier canGoForward = ValueNotifier(false);
@@ -21,15 +25,31 @@ class _FeedDetailPageState extends State<FeedDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail'),
+        title: Row(
+          children: <Widget>[
+            FutureBuilder<bool>(
+              future: _finishedCompleter.future,
+              initialData: false,
+              builder: (context, snapshot) => snapshot.data
+                  ? SizedBox.shrink()
+                  : Container(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        backgroundColor: Colors.grey.shade200,
+                        strokeWidth: 2,
+                      ),
+                    ),
+            ),
+            SizedBox(width: 16),
+            Expanded(child: Text('Detail')),
+          ],
+        ),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.language),
-            onPressed: () {},
-          ),
-          IconButton(
             icon: Icon(Icons.share),
-            onPressed: () {},
+            onPressed: () => Share.share(widget.article.originalUrl),
           ),
         ],
       ),
@@ -46,7 +66,12 @@ class _FeedDetailPageState extends State<FeedDetailPage> {
             }
           },
           onWebViewCreated: (WebViewController controller) => _webViewController = controller,
-          onPageFinished: (String value) => refreshNavigator(),
+          onPageFinished: (String value) {
+            if (!_finishedCompleter.isCompleted) {
+              _finishedCompleter.complete(true);
+            }
+            refreshNavigator();
+          },
         ),
       ),
       bottomNavigationBar: BottomAppBar(

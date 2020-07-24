@@ -18,7 +18,7 @@ class SingletonWidget extends StatelessWidget {
           stream: singleton.stream,
           initialData: MyData('init data'),
           builder: (context, snapshot) {
-            return Text(snapshot.data.dataStr, style: Theme.of(context).textTheme.display3);
+            return Text(snapshot.data.dataStr, style: Theme.of(context).textTheme.headline2);
           },
         ),
         SizedBox(height: 50),

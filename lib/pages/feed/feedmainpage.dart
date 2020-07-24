@@ -1,3 +1,4 @@
+import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/pages/feed/feed_entity.dart';
 import 'package:flutter_dojo/pages/feed/feeddetailpage.dart';
@@ -16,6 +17,8 @@ class FeedMainPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Flutter Feed'),
+          backgroundColor: Colors.blueAccent,
+          centerTitle: true,
         ),
         body: Consumer<FeedListViewModel>(
           builder: (BuildContext context, FeedListViewModel value, Widget child) {
@@ -97,7 +100,7 @@ class FeedMainPage extends StatelessWidget {
                                       ),
                                       SizedBox(width: 24),
                                       Text(
-                                        '${detail.createdAt}',
+                                        '${formatDate(DateTime.parse(detail.createdAt), [yyyy, '-', mm, '-', dd, ' ', HH, ':', nn])}',
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey.shade500,

@@ -305,8 +305,8 @@ class _PageDraggerState extends State<PageDragger> {
 
   onDragUpdate(DragUpdateDetails details) {
     if (dragStart != null) {
-      final Position = details.globalPosition;
-      final dx = dragStart.dx - Position.dx;
+      final position = details.globalPosition;
+      final dx = dragStart.dx - position.dx;
 
       if (dx > 0 && widget.canDragRightToLeft) {
         slideDirection = SlideDirection.rightToLeft;

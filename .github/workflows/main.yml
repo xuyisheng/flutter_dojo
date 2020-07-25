@@ -14,7 +14,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1.1.1
       with:
-        flutter-version: '1.17.5'
+        flutter-version: 'latest'
     - run: flutter pub get
     - run: flutter build apk
     - name: Create a Release APK

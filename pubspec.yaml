@@ -93,6 +93,7 @@ flutter:
     - lib/category/widgets/appstructurenavigation/bottomnavigationbar.dart
     - lib/category/widgets/appstructurenavigation/drawer.dart
     - lib/category/widgets/appstructurenavigation/sliverappbar.dart
+    - lib/category/widgets/appstructurenavigation/navigationrail.dart
     - lib/category/widgets/appstructurenavigation/searchdelegate.dart
     - lib/category/widgets/appstructurenavigation/tabpageselector.dart
     - lib/category/widgets/appstructurenavigation/widgetsapp.dart

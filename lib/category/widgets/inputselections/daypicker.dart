@@ -85,7 +85,18 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
             firstDate: DateTime(1989),
             lastDate: DateTime(2089),
           ),
-        )
+        ),
+        MainTitleWidget('在新版本CalendarDatePicker替代其它DatePicker'),
+        Container(
+          height: 350,
+          child: CalendarDatePicker(
+            lastDate: DateTime(2089),
+            firstDate: DateTime(1989),
+            initialDate: DateTime.now(),
+            onDateChanged: (DateTime value) {},
+            initialCalendarMode: DatePickerMode.day,
+          ),
+        ),
       ],
     );
   }

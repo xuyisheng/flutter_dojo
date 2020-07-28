@@ -22,6 +22,7 @@ class _ImageWidgetState extends State<ImageWidget> {
   BMP332Header header;
   Random r = Random();
   BoxFit fit = BoxFit.none;
+  ImageRepeat repeat = ImageRepeat.repeatX;
 
   @override
   void initState() {
@@ -105,6 +106,7 @@ class _ImageWidgetState extends State<ImageWidget> {
           color: Colors.blueAccent,
         ),
         MainTitleWidget('Image BoxFit'),
+        SubtitleWidget('BoxFit.none的裁减方式与Alignment的参数相关'),
         Align(
           child: Container(
             width: 150,
@@ -119,6 +121,19 @@ class _ImageWidgetState extends State<ImageWidget> {
         MultiSelectionWidget('BoxFit', BoxFit.values, BoxFit.values, (value) {
           setState(() => fit = value);
         }),
+        MainTitleWidget('Image Repeat'),
+        Image.asset(
+          'images/owl.jpg',
+          width: double.infinity,
+          height: 150,
+          repeat: repeat,
+        ),
+        MultiSelectionWidget(
+          'Repeat',
+          ImageRepeat.values,
+          ImageRepeat.values,
+          (value) => setState(() => repeat = value),
+        ),
         MainTitleWidget('Image ColorBlendModes'),
         Image(
           image: AssetImage('images/logo.png'),
@@ -136,6 +151,29 @@ class _ImageWidgetState extends State<ImageWidget> {
           (value) {
             setState(() => colorBlendModesSelection = value);
           },
+        ),
+        MainTitleWidget('Image Direction'),
+        Row(
+          children: <Widget>[
+            Directionality(
+              textDirection: TextDirection.ltr,
+              child: Image.asset(
+                'images/logo.png',
+                height: 150,
+                width: 150,
+                matchTextDirection: true,
+              ),
+            ),
+            Directionality(
+              textDirection: TextDirection.rtl,
+              child: Image.asset(
+                'images/logo.png',
+                width: 150,
+                height: 150,
+                matchTextDirection: true,
+              ),
+            ),
+          ],
         ),
         MainTitleWidget('Get Image Size'),
         FutureBuilder<ui.Image>(

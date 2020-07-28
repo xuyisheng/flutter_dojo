@@ -4,6 +4,7 @@ import 'package:flutter_dojo/category/widgets/appstructurenavigation/bottomappba
 import 'package:flutter_dojo/category/widgets/appstructurenavigation/bottomnavigationbar.dart';
 import 'package:flutter_dojo/category/widgets/appstructurenavigation/defaulttabcontroller.dart';
 import 'package:flutter_dojo/category/widgets/appstructurenavigation/drawer.dart';
+import 'package:flutter_dojo/category/widgets/appstructurenavigation/navigationrail.dart';
 import 'package:flutter_dojo/category/widgets/appstructurenavigation/safearea.dart';
 import 'package:flutter_dojo/category/widgets/appstructurenavigation/searchdelegate.dart';
 import 'package:flutter_dojo/category/widgets/appstructurenavigation/sliverappbar.dart';
@@ -64,6 +65,14 @@ List<DemoItem> buildAppStructureNavigationDemoItems(String codePath) {
       keyword: 'MaterialApp',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/MaterialApp-class.html',
       buildRoute: (context) => BaseWidget('MaterialApp', 'lib/category/widgets/styling/material', MaterialWidget()),
+    ),
+    DemoItem(
+      icon: Icons.desktop_mac,
+      title: 'NavigationRail',
+      subtitle: 'NavigationRail',
+      keyword: 'NavigationRail',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/NavigationRail-class.html',
+      buildRoute: (context) => BaseWidget('NavigationRail', codePath + 'navigationrail', NavigationRailWidget()),
     ),
     DemoItem(
       icon: Icons.desktop_mac,

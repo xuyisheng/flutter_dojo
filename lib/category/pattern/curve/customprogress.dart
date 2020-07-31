@@ -19,6 +19,13 @@ class _CustomProgressWidgetState extends State<CustomProgressWidget> with Single
   }
 
   @override
+  void dispose() {
+    animationController?.stop();
+    animationController?.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[

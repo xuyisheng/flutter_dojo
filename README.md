@@ -206,3 +206,14 @@ Flutter Dojo开源至今，受到了很多Flutter学习者和爱好者的喜爱�
   <img src="https://user-gold-cdn.xitu.io/2020/7/25/1738463a9fbd479f" width="300"/>
   <img src="https://user-gold-cdn.xitu.io/2020/7/25/1738463bd42440a5" width="300"/>
 </p>
+
+## 编译环境
+
+```
+Flutter 1.17.5 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 8af6b2f038 (4 weeks ago) • 2020-06-30 12:53:55 -0700
+Engine • revision ee76268252
+Tools • Dart 2.8.4
+```
+
+Flutter Dojo 3.0 在GitHub Action CI编译通过。

@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dojo/category/backend/providercategory.dart';
+import 'package:flutter_dojo/common/sp_util.dart';
+import 'package:flutter_dojo/pages/collect/collect_provider.dart';
 import 'package:flutter_dojo/pages/main/navigatormanager.dart';
 import 'package:flutter_dojo/pages/notfound/notfound.dart';
 import 'package:flutter_dojo/pages/splash/slpash.dart';
@@ -12,6 +14,7 @@ import 'category/backend/pageroute.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SpUtil.getInstance();
   await SystemChrome.setPreferredOrientations(
       <DeviceOrientation>[DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
     runApp(
@@ -19,6 +22,7 @@ void main() async {
         providers: [
           Provider(create: (_) => 1008),
           ChangeNotifierProvider(create: (_) => ChangeNotifyModel()),
+          ChangeNotifierProvider(create: (_) => CollectProvider()),
           ValueListenableProvider<ValueNotifyModel>(
             create: (_) => ValueNotifyModelWrapper(ValueNotifyModel(0)),
             updateShouldNotify: (previous, current) => previous.value != current.value,

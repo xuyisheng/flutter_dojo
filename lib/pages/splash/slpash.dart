@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dojo/common/demo_item.dart';
+import 'package:flutter_dojo/modle/animation/animation_category.dart';
+import 'package:flutter_dojo/modle/backend/backend_category.dart';
+import 'package:flutter_dojo/modle/pattern/pattern_category.dart';
+import 'package:flutter_dojo/modle/widget/widget_category.dart';
+import 'package:flutter_dojo/pages/collect/collect_provider.dart';
 import 'package:flutter_dojo/pages/main/mainpage_scroll_container.dart';
 import 'package:flutter_dojo/pages/splash/splashanimmanager.dart';
+import 'package:provider/provider.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -23,6 +30,22 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
       Future.delayed(Duration(milliseconds: 3000), () {
         Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MainPageScrollContainer()), (Route<dynamic> rout) => false);
       });
+    });
+
+    List<DemoItem> demoList = [];
+    //初始化所有demoitem
+    buildWidgetCategoryList.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    buildPatternData.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    buildAnimationCategoryList.forEach((value) {
+      demoList.addAll(value.list);
+    });
+    demoList.addAll(buildBackendCategoryList);
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      Provider.of<CollectProvider>(context,listen: false).setDemos(demoList);
     });
   }
 

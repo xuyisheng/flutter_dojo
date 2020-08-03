@@ -179,6 +179,10 @@ Flutter Dojo经过两个版本的迭代，不仅仅在功能上更加完善了�
 
 本篇是Flutter Dojo解析文章的总纲，后面会有一系列文章来进行分析Flutter Dojo中那些不为人知的秘密。
 
+[Flutter Dojo的设计之道](https://juejin.im/post/6854573219987341326)
+
+[Flutter Dojo设计之道——利用Github打造完善的开源项目](https://juejin.im/post/6856594295660085255)
+
 ## 飞升
 
 Flutter Dojo具体该怎么使用呢？首先，大家可以在GitHub下载最新的Flutter Dojo Apk

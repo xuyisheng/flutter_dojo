@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/demo_item.dart';
@@ -6,26 +5,23 @@ import 'package:flutter_dojo/common/sp_util.dart';
 import 'package:flutter_dojo/pages/collect/collect_provider.dart';
 import 'package:provider/provider.dart';
 
-class CollectPage extends StatefulWidget{
-
+class CollectPage extends StatefulWidget {
   @override
   _CollectPageState createState() {
     return _CollectPageState();
   }
-
 }
 
-class _CollectPageState extends State<CollectPage>{
-
+class _CollectPageState extends State<CollectPage> {
   List<DemoItem> collectDemos = <DemoItem>[];
 
-  void _refresh(){
+  void _refresh() {
     List<String> strs = SpUtil.getStringList('collects');
-    List<DemoItem> demos = Provider.of<CollectProvider>(context,listen: false).demos;
+    List<DemoItem> demos = Provider.of<CollectProvider>(context, listen: false).demos;
     collectDemos.clear();
     strs.forEach((element) {
       int index = demos.indexWhere((d) => d.title == element);
-      if (index != -1){
+      if (index != -1) {
         collectDemos.add(demos[index]);
       }
     });
@@ -51,8 +47,10 @@ class _CollectPageState extends State<CollectPage>{
             Expanded(
               flex: 1,
               child: ListView.separated(
-                separatorBuilder: (_,__) => const SizedBox(height: 6.0,),
-                itemBuilder: (_,index){
+                separatorBuilder: (_, __) => const SizedBox(
+                  height: 6.0,
+                ),
+                itemBuilder: (_, index) {
                   var demoItem = collectDemos[index];
                   return Material(
                     borderRadius: BorderRadius.circular(16.0),
@@ -62,11 +60,9 @@ class _CollectPageState extends State<CollectPage>{
                     child: InkWell(
                       borderRadius: BorderRadius.circular(16.0),
                       child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16.0)
-                        ),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16.0)),
                         padding: const EdgeInsets.all(8.0),
-                        child:  Row(
+                        child: Row(
                           children: <Widget>[
                             CircleAvatar(
                               child: Icon(demoItem.icon),
@@ -117,7 +113,7 @@ class _CollectPageState extends State<CollectPage>{
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: demoItem.buildRoute),
-                        ).then((value){
+                        ).then((value) {
                           setState(() {
                             _refresh();
                           });
@@ -134,5 +130,4 @@ class _CollectPageState extends State<CollectPage>{
       ),
     );
   }
-
 }

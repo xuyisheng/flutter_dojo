@@ -35,8 +35,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             hintText: 'What do people call you?',
             labelText: 'Name *',
           ),
-          onSaved: (String value) {
-          },
+          onSaved: (String value) {},
           validator: _validateName,
         ),
         SizedBox(height: 24.0),
@@ -51,8 +50,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             prefixText: '+86',
           ),
           keyboardType: TextInputType.phone,
-          onSaved: (String value) {
-          },
+          onSaved: (String value) {},
           // TextInputFormatters are applied in sequence.
           inputFormatters: <TextInputFormatter>[
             WhitelistingTextInputFormatter.digitsOnly, //WhitelistingTextInputFormatter(RegExp("[0-9]"))
@@ -69,8 +67,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             labelText: 'E-mail',
           ),
           keyboardType: TextInputType.emailAddress,
-          onSaved: (String value) {
-          },
+          onSaved: (String value) {},
         ),
         SizedBox(height: 24.0),
         // "Life story" form.

@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,8 +11,7 @@ import 'package:synchronized/synchronized.dart';
 /// @Date: 2018/9/8
 /// @Description: Sp Util.
 ///
-class SpUtil{
-
+class SpUtil {
   static SpUtil _singleton;
   static SharedPreferences _prefs;
   static Lock _lock = Lock();
@@ -49,8 +47,7 @@ class SpUtil{
   }
 
   /// get obj list.
-  static List<T> getObjList<T>(String key, T f(Map v),
-      {List<T> defValue = const []}) {
+  static List<T> getObjList<T>(String key, T f(Map v), {List<T> defValue = const []}) {
     List<Map> dataList = getObjectList(key);
     List<T> list = dataList?.map((value) {
       return f(value);
@@ -117,8 +114,7 @@ class SpUtil{
   }
 
   /// get string list.
-  static List<String> getStringList(String key,
-      {List<String> defValue = const []}) {
+  static List<String> getStringList(String key, {List<String> defValue = const []}) {
     if (_prefs == null) return defValue;
     return _prefs.getStringList(key) ?? defValue;
   }

@@ -14,11 +14,9 @@ class BaseWidget extends StatefulWidget {
   _BaseWidgetState createState() {
     return _BaseWidgetState();
   }
-
 }
 
-class _BaseWidgetState extends State<BaseWidget>{
-
+class _BaseWidgetState extends State<BaseWidget> {
   List<String> collects;
   bool collected = false;
 
@@ -29,7 +27,7 @@ class _BaseWidgetState extends State<BaseWidget>{
     final mediaQuery = MediaQuery.of(context);
     final contentHeight = mediaQuery.size.height - mediaQuery.padding.top - mediaQuery.padding.bottom - kToolbarHeight;
     return WillPopScope(
-      onWillPop: (){
+      onWillPop: () {
         Navigator.pop(context, '');
         return Future.value(true);
       },
@@ -41,7 +39,7 @@ class _BaseWidgetState extends State<BaseWidget>{
             icon: const BackButtonIcon(),
             color: Colors.redAccent,
             onPressed: () {
-              Navigator.maybePop(context,null);
+              Navigator.maybePop(context, null);
             },
           ),
           brightness: Brightness.light,
@@ -49,10 +47,10 @@ class _BaseWidgetState extends State<BaseWidget>{
             IconButton(
               icon: Icon(collected ? Icons.star : Icons.star_border),
               color: Colors.black54,
-              onPressed: (){
-                if (mounted){
+              onPressed: () {
+                if (mounted) {
                   setState(() {
-                    if (collected){
+                    if (collected) {
                       collects.remove(widget.title);
                     } else {
                       collects.add(widget.title);

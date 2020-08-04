@@ -32,7 +32,6 @@ class CartItem extends StatefulWidget {
 }
 
 class _CartItemState extends State<CartItem> with TickerProviderStateMixin {
-
   double _size = 180;
   Animation<double> _delayedAnimation;
   Animation<double> _opacityAnimation;

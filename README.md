@@ -6,6 +6,10 @@
 
 [Flutter Dojo Change Log](https://github.com/xuyisheng/flutter_dojo/blob/master/CHANGELOG.md)
 
+## Wiki
+
+[Flutter Dojo Wiki](https://github.com/xuyisheng/flutter_dojo/wiki)
+
 ## 体验APK
 
 [Github Actions APK download](https://github.com/xuyisheng/flutter_dojo/releases)

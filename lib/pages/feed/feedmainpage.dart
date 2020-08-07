@@ -44,14 +44,14 @@ class FeedMainPage extends StatelessWidget {
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    detail.screenshot.isEmpty
+                                    detail.owner.avatarUrl.isEmpty
                                         ? Image.asset(
                                             'images/book.jpg',
                                             width: 60,
                                             height: 80,
                                           )
                                         : Image.network(
-                                            '${detail.screenshot}',
+                                            '${detail.owner.avatarUrl}',
                                             width: 60,
                                             height: 80,
                                           ),
@@ -63,12 +63,12 @@ class FeedMainPage extends StatelessWidget {
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           children: <Widget>[
                                             Text(
-                                              '${detail.title}',
+                                              '${detail.fullName}',
                                               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                                             ),
                                             SizedBox(height: 8),
                                             Text(
-                                              '${detail.summaryInfo}',
+                                              '${detail.description}',
                                               maxLines: 4,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -88,11 +88,11 @@ class FeedMainPage extends StatelessWidget {
                                     children: <Widget>[
                                       CircleAvatar(
                                         radius: 12,
-                                        backgroundImage: NetworkImage('${detail.user.avatarLarge}'),
+                                        backgroundImage: NetworkImage('${detail.owner.avatarUrl}'),
                                       ),
                                       SizedBox(width: 24),
                                       Text(
-                                        '${detail.user.username}',
+                                        '${detail.owner.login}',
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey.shade500,
@@ -125,12 +125,12 @@ class FeedMainPage extends StatelessWidget {
 }
 
 class FeedListViewModel with ChangeNotifier {
-  List<EntryDetail> feedList = List();
+  List<Items> feedList = List();
   int pageIndex = 0;
 
   void getFlutterFeedList() async {
-    var feedEntity = await client.getTagDataList('web', '5a96291f6fb9a0535b535438', pageIndex, 20, 'createdAt');
-    var list = feedEntity.d.entrylist;
+    var feedEntity = await client.getTagDataList('android+in:description,name', 'updated', 'desc', pageIndex, 10);
+    var list = feedEntity.items;
     if (list.length > 0) {
       pageIndex++;
       feedList.addAll(list);

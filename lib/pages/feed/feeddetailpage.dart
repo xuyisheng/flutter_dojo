@@ -6,7 +6,7 @@ import 'package:share/share.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class FeedDetailPage extends StatefulWidget {
-  final EntryDetail article;
+  final Items article;
 
   const FeedDetailPage({Key key, this.article}) : super(key: key);
 
@@ -49,14 +49,14 @@ class _FeedDetailPageState extends State<FeedDetailPage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
-            onPressed: () => Share.share(widget.article.originalUrl),
+            onPressed: () => Share.share(widget.article.htmlUrl),
           ),
         ],
       ),
       body: SafeArea(
         bottom: false,
         child: WebView(
-          initialUrl: widget.article.originalUrl,
+          initialUrl: widget.article.htmlUrl,
           javascriptMode: JavascriptMode.unrestricted,
           navigationDelegate: (NavigationRequest request) {
             if (!request.url.startsWith('http')) {

@@ -4,17 +4,17 @@ import 'package:retrofit/retrofit.dart';
 
 part 'restclient.g.dart';
 
-@RestApi(baseUrl: 'https://timeline-merger-ms.juejin.im/v1/')
+@RestApi(baseUrl: 'https://api.github.com/search/')
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
-  @GET('/get_tag_entry')
+  @GET('/repositories')
   Future<FeedEntity> getTagDataList(
-    @Query('src') String src,
-    @Query('tagId') String tagId,
-    @Query('page') int page,
-    @Query('pageSize') int pageSize,
+    @Query('q') String q,
     @Query('sort') String sort,
+    @Query('order') String order,
+    @Query('page') int page,
+    @Query('per_page') int perPage,
   );
 }
 

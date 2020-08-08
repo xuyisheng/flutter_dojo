@@ -8,38 +8,22 @@ class IconDataWidget extends StatelessWidget {
       children: <Widget>[
         MainTitleWidget('显示系统自带默认Icons数据'),
         Icon(
-          IconData(
-            0xe570,
-            fontFamily: 'MaterialIcons',
-            matchTextDirection: true,
-          ),
+          Icons.train,
           color: Colors.red,
           size: 50,
         ),
         Icon(
-          IconData(
-            0xe571,
-            fontFamily: 'MaterialIcons',
-            matchTextDirection: true,
-          ),
+          Icons.face,
           color: Colors.blue,
           size: 50,
         ),
         Icon(
-          IconData(
-            0xe572,
-            fontFamily: 'MaterialIcons',
-            matchTextDirection: true,
-          ),
+          Icons.vibration,
           color: Colors.green,
           size: 50,
         ),
         Icon(
-          IconData(
-            0xe574,
-            fontFamily: 'MaterialIcons',
-            matchTextDirection: true,
-          ),
+          Icons.g_translate,
           color: Colors.yellow,
           size: 50,
         ),

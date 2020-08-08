@@ -33,7 +33,8 @@ class FeedMainPage extends StatelessWidget {
                       }
                       var detail = feedList[index];
                       return GestureDetector(
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FeedDetailPage(article: detail))),
+                        onTap: () => Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => FeedDetailPage(article: detail))),
                         child: Card(
                           elevation: 2,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -86,9 +87,14 @@ class FeedMainPage extends StatelessWidget {
                                   margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                   child: Row(
                                     children: <Widget>[
-                                      CircleAvatar(
-                                        radius: 12,
-                                        backgroundImage: NetworkImage('${detail.owner.avatarUrl}'),
+                                      Icon(Icons.star, color: Colors.redAccent.withAlpha(125)),
+                                      SizedBox(width: 4),
+                                      Text(
+                                        '${detail.stargazersCount}',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey.shade700,
+                                        ),
                                       ),
                                       SizedBox(width: 24),
                                       Text(
@@ -100,7 +106,17 @@ class FeedMainPage extends StatelessWidget {
                                       ),
                                       SizedBox(width: 24),
                                       Text(
-                                        '${formatDate(DateTime.parse(detail.createdAt), [yyyy, '-', mm, '-', dd, ' ', HH, ':', nn])}',
+                                        '${formatDate(DateTime.parse(detail.createdAt), [
+                                          yyyy,
+                                          '-',
+                                          mm,
+                                          '-',
+                                          dd,
+                                          ' ',
+                                          HH,
+                                          ':',
+                                          nn
+                                        ])}',
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey.shade500,
@@ -129,7 +145,7 @@ class FeedListViewModel with ChangeNotifier {
   int pageIndex = 0;
 
   void getFlutterFeedList() async {
-    var feedEntity = await client.getTagDataList('android+in:description,name', 'updated', 'desc', pageIndex, 10);
+    var feedEntity = await client.getTagDataList('flutter+in:description,name', 'updated', 'desc', pageIndex, 10);
     var list = feedEntity.items;
     if (list.length > 0) {
       pageIndex++;

@@ -4,6 +4,8 @@ import 'package:retrofit/retrofit.dart';
 
 part 'restclient.g.dart';
 
+/// Step 1: flutter pub upgrade
+/// Step 2: flutter pub run build_runner build
 @RestApi(baseUrl: 'https://api.github.com/search/')
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;

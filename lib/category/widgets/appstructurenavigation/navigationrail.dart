@@ -15,10 +15,13 @@ class _NavigationRailWidgetState extends State<NavigationRailWidget> {
         NavigationRail(
           selectedIndex: _selectedIndex,
           onDestinationSelected: (int index) {
-            setState(() {
-              _selectedIndex = index;
-            });
+            setState(() => _selectedIndex = index);
           },
+          leading: IconButton(
+            icon: Icon(Icons.tune),
+            color: Colors.red.shade200,
+            onPressed: () {},
+          ),
           labelType: NavigationRailLabelType.selected,
           destinations: [
             NavigationRailDestination(

@@ -36,8 +36,8 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           value: isCheck,
           activeTrackColor: Colors.green,
           inactiveThumbColor: Colors.black,
-          inactiveThumbImage: AssetImage('images/align.png'),
-          activeThumbImage: AssetImage('images/baseline.png'),
+          inactiveThumbImage: AssetImage('assets/images/align.png'),
+          activeThumbImage: AssetImage('assets/images/baseline.png'),
           inactiveTrackColor: Colors.yellow,
           activeColor: Colors.blue,
           // 激活时原点颜色

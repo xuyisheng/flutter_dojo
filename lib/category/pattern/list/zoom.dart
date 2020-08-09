@@ -39,7 +39,7 @@ class _ZoomWidgetState extends State<ZoomWidget> {
         SizedBox(
           height: _getHeaderHeight(),
           child: Container(
-            child: Image.asset('images/book.jpg', fit: BoxFit.cover),
+            child: Image.asset('assets/images/book.jpg', fit: BoxFit.cover),
           ),
         ),
         Expanded(

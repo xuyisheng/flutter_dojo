@@ -72,7 +72,7 @@ class AvatarListWidget extends StatelessWidget {
           height: 100,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('images/flower.jpg'),
+              image: AssetImage('assets/images/flower.jpg'),
               fit: BoxFit.cover,
             ),
             shape: BoxShape.circle,
@@ -98,7 +98,7 @@ class AvatarListWidget extends StatelessWidget {
             height: sizeW,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/flower.jpg'),
+                image: AssetImage('assets/images/flower.jpg'),
                 fit: BoxFit.cover,
               ),
               shape: BoxShape.circle,

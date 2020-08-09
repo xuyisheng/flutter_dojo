@@ -47,7 +47,7 @@ class FeedMainPage extends StatelessWidget {
                                   children: <Widget>[
                                     detail.owner.avatarUrl.isEmpty
                                         ? Image.asset(
-                                            'images/book.jpg',
+                                            'assets/images/book.jpg',
                                             width: 60,
                                             height: 80,
                                           )

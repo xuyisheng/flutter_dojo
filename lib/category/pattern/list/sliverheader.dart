@@ -26,7 +26,7 @@ class _SliverHeaderWidgetState extends State<SliverHeaderWidget> with SingleTick
             flexibleSpace: FlexibleSpaceBar(
               title: Text('SliverHeader'),
               background: Image.asset(
-                'images/book.jpg',
+                'assets/images/book.jpg',
                 fit: BoxFit.cover,
               ),
             ),

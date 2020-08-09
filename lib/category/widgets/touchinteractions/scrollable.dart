@@ -22,9 +22,9 @@ class ScrollableWidget extends StatelessWidget {
                 slivers: <Widget>[
                   SliverFillViewport(
                     delegate: SliverChildListDelegate([
-                      Image.asset('images/logo.png'),
-                      Image.asset('images/logo.png'),
-                      Image.asset('images/logo.png'),
+                      Image.asset('assets/images/logo.png'),
+                      Image.asset('assets/images/logo.png'),
+                      Image.asset('assets/images/logo.png'),
                       TapWidget(),
                     ]),
                   ),
@@ -50,7 +50,7 @@ class TapWidget extends StatelessWidget {
         ScrollableState state = Scrollable.of(context);
         state.position.jumpTo(0);
       },
-      child: Image.asset('images/book.jpg'),
+      child: Image.asset('assets/images/book.jpg'),
     );
   }
 }

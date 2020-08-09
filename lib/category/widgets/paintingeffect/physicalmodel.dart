@@ -32,7 +32,7 @@ class PhysicalModelWidget extends StatelessWidget {
           child: Container(
             width: 120,
             child: Image.asset(
-              'images/book.jpg',
+              'assets/images/book.jpg',
               fit: BoxFit.cover,
             ),
           ),

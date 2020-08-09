@@ -25,7 +25,7 @@ class CustomAppBarWidget extends StatelessWidget {
                 children: <Widget>[
                   CircleAvatar(
                     child: Image.asset(
-                      'images/logo.png',
+                      'assets/images/logo.png',
                       width: 48,
                       height: 48,
                     ),
@@ -94,7 +94,7 @@ class CustomAppBarWidget extends StatelessWidget {
                               padding: const EdgeInsets.only(left: 16),
                               child: CircleAvatar(
                                 child: Image.asset(
-                                  'images/logo.png',
+                                  'assets/images/logo.png',
                                   width: 36,
                                   height: 36,
                                 ),

@@ -28,7 +28,7 @@ class ListDetailWidget extends StatelessWidget {
                         top: 0,
                         bottom: 20,
                         child: Image.asset(
-                          'images/owl.jpg',
+                          'assets/images/owl.jpg',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -162,7 +162,7 @@ class _DetailPageState extends State<DetailPage> {
       leading: CircleAvatar(
         backgroundColor: Colors.blue,
         radius: 24,
-        backgroundImage: AssetImage('images/owl.jpg'),
+        backgroundImage: AssetImage('assets/images/owl.jpg'),
       ),
       title: Text('XuYisheng'),
       subtitle: Text('zhujia'),
@@ -191,7 +191,7 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
         child: Stack(
           children: <Widget>[
             Image.asset(
-              'images/owl.jpg',
+              'assets/images/owl.jpg',
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),

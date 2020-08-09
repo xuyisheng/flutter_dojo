@@ -66,7 +66,7 @@ class AnimListItem extends StatelessWidget {
               child: Container(
                 width: 200,
                 child: Image.asset(
-                  'images/book.jpg',
+                  'assets/images/book.jpg',
                   fit: BoxFit.cover,
                 ),
               ),

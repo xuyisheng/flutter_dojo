@@ -54,7 +54,7 @@ class FlipCardWidget extends StatelessWidget {
             ..setEntry(3, 2, 0.006)
             ..rotateY(pi),
           child: Image.asset(
-            'images/book.jpg',
+            'assets/images/book.jpg',
             width: 200,
           ),
         ),

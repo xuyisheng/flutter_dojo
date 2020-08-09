@@ -18,14 +18,14 @@ class CircleAvatarWidget extends StatelessWidget {
           child: CircleAvatar(
             backgroundColor: Colors.blue,
             radius: 50,
-            backgroundImage: AssetImage('images/book.jpg'),
+            backgroundImage: AssetImage('assets/images/book.jpg'),
           ),
         ),
         SizedBox(height: 20),
         Container(
           child: CircleAvatar(
             radius: 50,
-            backgroundImage: AssetImage('images/book.jpg'),
+            backgroundImage: AssetImage('assets/images/book.jpg'),
             child: Icon(
               Icons.star,
               color: Colors.blueAccent,

@@ -59,7 +59,7 @@ class _ItemAnimListWidgetState extends State<ItemAnimListWidget> {
                               borderRadius:
                                   BorderRadius.only(topLeft: Radius.circular(15), bottomLeft: Radius.circular(15)),
                               child:
-                                  Image.asset('images/book.jpg', fit: BoxFit.fitWidth, width: (size.width - 40) * 0.45),
+                                  Image.asset('assets/images/book.jpg', fit: BoxFit.fitWidth, width: (size.width - 40) * 0.45),
                             ),
                           ),
                           Column(

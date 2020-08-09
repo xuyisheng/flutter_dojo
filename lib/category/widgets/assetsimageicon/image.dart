@@ -28,7 +28,7 @@ class _ImageWidgetState extends State<ImageWidget> {
   void initState() {
     super.initState();
     preCacheImage = Image.asset(
-      'images/book.jpg',
+      'assets/images/book.jpg',
       height: 300,
       width: 300,
     );
@@ -46,7 +46,7 @@ class _ImageWidgetState extends State<ImageWidget> {
 
   Future<ui.Image> _getImage() {
     Completer<ui.Image> completer = Completer<ui.Image>();
-    Image image = Image.asset('images/book.jpg');
+    Image image = Image.asset('assets/images/book.jpg');
     image.image.resolve(ImageConfiguration()).addListener(
       ImageStreamListener(
         (ImageInfo info, bool _) {
@@ -64,7 +64,7 @@ class _ImageWidgetState extends State<ImageWidget> {
         MainTitleWidget('Image From Asset'),
         SubtitleWidget('gaplessPlayback可以防止图片快速切换时图片闪烁'),
         Image(
-          image: AssetImage('images/book.jpg'),
+          image: AssetImage('assets/images/book.jpg'),
           height: 300,
           width: 300,
           gaplessPlayback: true, // 在新图出现前保持旧的图 防止图片快速切换时图片闪烁
@@ -102,7 +102,7 @@ class _ImageWidgetState extends State<ImageWidget> {
         preCacheImage,
         MainTitleWidget('Image tint'),
         Image(
-          image: AssetImage('images/logo.png'),
+          image: AssetImage('assets/images/logo.png'),
           height: 150,
           width: 150,
           color: Colors.blueAccent,
@@ -115,7 +115,7 @@ class _ImageWidgetState extends State<ImageWidget> {
             height: 250,
             color: Colors.blueAccent,
             child: Image.asset(
-              'images/book.jpg',
+              'assets/images/book.jpg',
               fit: fit,
             ),
           ),
@@ -125,7 +125,7 @@ class _ImageWidgetState extends State<ImageWidget> {
         }),
         MainTitleWidget('Image Repeat'),
         Image.asset(
-          'images/owl.jpg',
+          'assets/images/owl.jpg',
           width: double.infinity,
           height: 150,
           repeat: repeat,
@@ -138,7 +138,7 @@ class _ImageWidgetState extends State<ImageWidget> {
         ),
         MainTitleWidget('Image ColorBlendModes'),
         Image(
-          image: AssetImage('images/logo.png'),
+          image: AssetImage('assets/images/logo.png'),
           height: 150,
           width: 150,
           color: Colors.red,
@@ -160,7 +160,7 @@ class _ImageWidgetState extends State<ImageWidget> {
             Directionality(
               textDirection: TextDirection.ltr,
               child: Image.asset(
-                'images/logo.png',
+                'assets/images/logo.png',
                 height: 150,
                 width: 150,
                 matchTextDirection: true,
@@ -169,7 +169,7 @@ class _ImageWidgetState extends State<ImageWidget> {
             Directionality(
               textDirection: TextDirection.rtl,
               child: Image.asset(
-                'images/logo.png',
+                'assets/images/logo.png',
                 width: 150,
                 height: 150,
                 matchTextDirection: true,
@@ -183,7 +183,7 @@ class _ImageWidgetState extends State<ImageWidget> {
           builder: (BuildContext context, AsyncSnapshot<ui.Image> snapshot) {
             if (snapshot.hasData) {
               return Text(
-                'Image Size : ${snapshot.data.width}x${snapshot.data.height} on Path images/book.jpg',
+                'Image Size : ${snapshot.data.width}x${snapshot.data.height} on Path assets/images/book.jpg',
                 style: TextStyle(fontSize: 24, color: Colors.black),
               );
             } else {
@@ -197,7 +197,7 @@ class _ImageWidgetState extends State<ImageWidget> {
         SubtitleWidget('图像的显示大小必须大于原图'),
         Center(
           child: Image.asset(
-            'images/yidong.png',
+            'assets/images/yidong.png',
             width: 200,
             height: 200,
           ),
@@ -249,7 +249,7 @@ class _ImageWidgetState extends State<ImageWidget> {
         SubtitleWidget('原图大小为70x70，指定centerSlice Rect为中间长度为20的矩形'),
         Center(
           child: Image.asset(
-            'images/yidong.png',
+            'assets/images/yidong.png',
             width: 200,
             height: 200,
             centerSlice: Rect.fromCircle(center: const Offset(35, 35), radius: 10),

@@ -211,7 +211,7 @@ class _DecoratedBoxWidgetState extends State<DecoratedBoxWidget> with SingleTick
                 stops: [0.3, 0.5, 0.9, 1],
               ),
               image: DecorationImage(
-                image: AssetImage('images/logo.png'),
+                image: AssetImage('assets/images/logo.png'),
               ),
             ),
             child: Container(
@@ -231,7 +231,7 @@ class _DecoratedBoxWidgetState extends State<DecoratedBoxWidget> with SingleTick
                 stops: [0.3, 0.5, 0.9, 1],
               ),
               image: DecorationImage(
-                image: AssetImage('images/logo.png'),
+                image: AssetImage('assets/images/logo.png'),
                 colorFilter: ColorFilter.mode(Colors.red.withOpacity(0.5), BlendMode.color),
               ),
             ),
@@ -245,7 +245,7 @@ class _DecoratedBoxWidgetState extends State<DecoratedBoxWidget> with SingleTick
             decoration: BoxDecoration(
               color: Colors.yellow,
               image: DecorationImage(
-                image: AssetImage('images/logo_small.png'),
+                image: AssetImage('assets/images/logo_small.png'),
                 repeat: imageRepeatSelection,
               ),
             ),

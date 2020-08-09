@@ -21,7 +21,7 @@ class CenterEdgeWidget extends StatelessWidget {
                 maxWidth: 100,
                 minHeight: 0,
                 maxHeight: 100,
-                child: Image.asset('images/owl.jpg'),
+                child: Image.asset('assets/images/owl.jpg'),
               ),
             ),
           ),
@@ -36,7 +36,7 @@ class CenterEdgeWidget extends StatelessWidget {
             align: EdgeAlign.bottomLeft,
             offset: Offset(0, -50),
             child: Image.asset(
-              'images/owl.jpg',
+              'assets/images/owl.jpg',
               width: 100,
             ),
           ),

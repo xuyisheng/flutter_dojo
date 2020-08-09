@@ -29,7 +29,7 @@ class _CustomHeroWidgetState extends State<CustomHeroWidget> {
           child: Hero(
             tag: HERO_TAG,
             child: Image.asset(
-              'images/book.jpg',
+              'assets/assets/images/book.jpg',
               width: 100,
             ),
             placeholderBuilder: (context, size, child) {
@@ -68,14 +68,14 @@ class DetailPage extends StatelessWidget {
         children: <Widget>[
           Stack(
             children: <Widget>[
-              Image.asset('images/book1.jpeg'),
+              Image.asset('assets/assets/images/book1.jpeg'),
               Positioned(
                 bottom: 0,
                 right: 0,
                 child: Hero(
                   tag: HERO_TAG,
                   child: Image.asset(
-                    'images/book.jpg',
+                    'assets/images/book.jpg',
                     width: 100,
                   ),
                   flightShuttleBuilder: (

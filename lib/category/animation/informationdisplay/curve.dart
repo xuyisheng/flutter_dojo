@@ -190,7 +190,7 @@ class _DemoState extends State<Demo> with SingleTickerProviderStateMixin {
               opacity: _animationManager.bgOpacity.value,
               child: SizedBox.expand(
                 child: Image.asset(
-                  'images/anim_bg.jpg',
+                  'assets/assets/images/anim_bg.jpg',
                   fit: BoxFit.cover,
                 ),
               ),

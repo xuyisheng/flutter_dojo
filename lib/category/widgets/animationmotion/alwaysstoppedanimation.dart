@@ -42,7 +42,7 @@ class _AlwaysStoppedAnimationWidgetState extends State<AlwaysStoppedAnimationWid
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(60.0)),
-                    child: Image.asset('images/book.jpg'),
+                    child: Image.asset('assets/images/book.jpg'),
                   ),
                 ),
               ),

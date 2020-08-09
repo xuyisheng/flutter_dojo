@@ -41,7 +41,7 @@ class _TransformSliderWidgetState extends State<TransformSliderWidget> {
               ..rotateY(angle),
             alignment: Alignment.center,
             child: Image.asset(
-              'images/owl.jpg',
+              'assets/images/owl.jpg',
               fit: BoxFit.cover,
             ),
           ),

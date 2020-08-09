@@ -22,7 +22,7 @@ class _ScreenshotWidgetState extends State<ScreenshotWidget> {
         children: <Widget>[
           MainTitleWidget('Screenshot'),
           Image.asset(
-            'images/book.jpg',
+            'assets/images/book.jpg',
             width: 200,
           ),
           RaisedButton(

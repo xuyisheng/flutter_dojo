@@ -52,7 +52,7 @@ class TwitterItemWidget extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(8),
                 child: CircleAvatar(
-                  child: Image.asset('images/logo.png'),
+                  child: Image.asset('assets/images/logo.png'),
                 ),
               ),
               Expanded(
@@ -95,7 +95,7 @@ class TwitterItemWidget extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(12),
                                       image: DecorationImage(
                                         fit: BoxFit.cover,
-                                        image: AssetImage('images/widget_bg.png'),
+                                        image: AssetImage('assets/images/widget_bg.png'),
                                       ),
                                     ),
                                   ),
@@ -197,7 +197,7 @@ class TaoBaoItemWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage('images/book.jpg'),
+                      image: AssetImage('assets/images/book.jpg'),
                     ),
                   ),
                 ),
@@ -340,7 +340,7 @@ class WeChatItemWidget extends StatelessWidget {
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(8),
                   image: DecorationImage(
-                    image: AssetImage('images/owl.jpg'),
+                    image: AssetImage('assets/images/owl.jpg'),
                   ),
                 ),
               ),

@@ -57,7 +57,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/
+    - assets/images/
     - assets/json/
     - lib/category/widgets/accessibility/excludesemantics.dart
     - lib/category/widgets/accessibility/mergesemantics.dart
@@ -476,19 +476,19 @@ flutter:
   fonts:
     - family: RubikMonoOne
       fonts:
-        - asset: fonts/RubikMonoOne.ttf
+        - asset: assets/fonts/RubikMonoOne.ttf
           weight: 600
   # To add assets to your application, add an assets section, like this:
   # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  #  - assets/images/a_dot_burr.jpeg
+  #  - assets/images/a_dot_ham.jpeg
   # assets:
-  #  - images/a_dot_burr.jpeg
+  #  - assets/images/a_dot_burr.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # https://flutter.dev/assets-and-assets/images/#resolution-aware.
 
   # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  # https://flutter.dev/assets-and-assets/images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

@@ -9,7 +9,7 @@ class BubbleWidget extends StatelessWidget {
         Container(
             margin: EdgeInsets.fromLTRB(40, 0, 0, 0),
             child: Image.asset(
-              'images/pattern_triangle.png',
+              'assets/images/pattern_triangle.png',
               width: 30,
               height: 18,
             )),
@@ -18,7 +18,7 @@ class BubbleWidget extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               centerSlice: Rect.fromLTWH(19, 13, 8, 8),
-              image: AssetImage('images/pattern_rect.png'),
+              image: AssetImage('assets/images/pattern_rect.png'),
             ),
           ),
           constraints: BoxConstraints(

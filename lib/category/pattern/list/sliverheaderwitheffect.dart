@@ -74,7 +74,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          Container(child: Image.asset('images/flower.jpg', fit: BoxFit.cover)),
+          Container(child: Image.asset('assets/images/flower.jpg', fit: BoxFit.cover)),
           Positioned(
             left: 0,
             right: 0,

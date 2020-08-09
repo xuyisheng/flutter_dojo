@@ -21,7 +21,7 @@ class _DrawerImageWidgetState extends State<DrawerImageWidget> {
             width: 200,
             height: 300,
             child: Image.asset(
-              'images/owl.jpg',
+              'assets/images/owl.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -34,7 +34,7 @@ class _DrawerImageWidgetState extends State<DrawerImageWidget> {
               width: 200,
               height: 300,
               child: Image.asset(
-                'images/book.jpg',
+                'assets/images/book.jpg',
                 fit: BoxFit.cover,
               ),
             ),

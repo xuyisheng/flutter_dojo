@@ -66,7 +66,7 @@ class _ReversePageWidgetState extends State<ReversePageWidget> with TickerProvid
                   Stack(
                     children: <Widget>[
                       Image.asset(
-                        'images/ironman.png',
+                        'assets/images/ironman.png',
                         height: MediaQuery.of(context).size.height * 0.3,
                         width: MediaQuery.of(context).size.width,
                       ),
@@ -114,7 +114,7 @@ class _ReversePageWidgetState extends State<ReversePageWidget> with TickerProvid
                                 return Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(12)),
-                                      image: DecorationImage(image: AssetImage('images/book.jpg'), fit: BoxFit.cover)),
+                                      image: DecorationImage(image: AssetImage('assets/images/book.jpg'), fit: BoxFit.cover)),
                                 );
                               }),
                             ),

@@ -19,7 +19,7 @@ class DrawerWidget extends StatelessWidget {
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
-                  image: AssetImage('images/book.jpg'),
+                  image: AssetImage('assets/images/book.jpg'),
                   fit: BoxFit.contain,
                   alignment: Alignment.centerRight,
                 ),

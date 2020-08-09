@@ -49,7 +49,7 @@ class _IsolateWidgetState extends State<IsolateWidget> with SingleTickerProvider
                 begin: 0,
                 end: 1,
               ).animate(controller),
-              child: Image.asset('images/book.jpg'),
+              child: Image.asset('assets/images/book.jpg'),
             ),
           ),
         ),

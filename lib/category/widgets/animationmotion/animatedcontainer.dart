@@ -74,7 +74,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
                 width: width,
                 duration: Duration(seconds: 3),
                 curve: Curves.easeIn,
-                child: Image.asset('images/logo.png'),
+                child: Image.asset('assets/images/logo.png'),
               );
             },
           ),

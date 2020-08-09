@@ -34,7 +34,7 @@ class _FlingWidgetState extends State<FlingWidget> with SingleTickerProviderStat
                     ..fling(velocity: 0.1)
                     ..addListener(() {});
                 },
-                child: Image.asset('images/owl.jpg')),
+                child: Image.asset('assets/images/owl.jpg')),
           ),
         );
       },

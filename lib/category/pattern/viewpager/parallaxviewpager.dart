@@ -63,7 +63,7 @@ class CardPageWidget extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
               child: Image.asset(
-                'images/pattern_bg.png',
+                'assets/images/pattern_bg.png',
                 alignment: Alignment(-offset.abs(), 0),
                 fit: BoxFit.none,
               ),

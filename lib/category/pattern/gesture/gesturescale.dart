@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class GestureScaleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScaleImage(url: 'images/book.jpg');
+    return ScaleImage(url: 'assets/images/book.jpg');
   }
 }
 

@@ -16,7 +16,7 @@ class _RawImageWidgetState extends State<RawImageWidget> {
   @override
   void initState() {
     super.initState();
-    _loadImageByAsset('images/book.jpg').then((_urlImage) {
+    _loadImageByAsset('assets/images/book.jpg').then((_urlImage) {
       setState(() => _img = _urlImage);
     });
   }

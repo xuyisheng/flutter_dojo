@@ -34,7 +34,7 @@ class _ShaderMaskWidgetState extends State<ShaderMaskWidget> {
                 stops: [0, 0.5],
               ).createShader(rect);
             },
-            child: Image.asset('images/logo.png'),
+            child: Image.asset('assets/images/logo.png'),
             blendMode: BlendMode.srcIn,
           ),
           SubtitleWidget('角度渐变'),
@@ -47,7 +47,7 @@ class _ShaderMaskWidgetState extends State<ShaderMaskWidget> {
                 colors: [Colors.red, Colors.yellow, Colors.blue],
               ).createShader(rect);
             },
-            child: Image.asset('images/logo.png'),
+            child: Image.asset('assets/images/logo.png'),
           ),
           MainTitleWidget('文字遮罩'),
           Text(

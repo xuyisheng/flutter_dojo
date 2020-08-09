@@ -153,8 +153,8 @@ class RadialExpansionDemo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _buildHero(context, 'images/book.jpg', 'Book1'),
-          _buildHero(context, 'images/book1.jpeg', 'Book2'),
+          _buildHero(context, 'assets/images/book.jpg', 'Book1'),
+          _buildHero(context, 'assets/images/book1.jpeg', 'Book2'),
         ],
       ),
     );

@@ -163,19 +163,19 @@ class _GuideWidgetState extends State<GuideWidget> with TickerProviderStateMixin
 
 var pageList = [
   PageModel(
-    imageUrl: 'images/owl.jpg',
+    imageUrl: 'assets/images/owl.jpg',
     title: 'MUSIC',
     body: 'EXPERIENCE WICKED',
     titleGradient: gradients[0],
   ),
   PageModel(
-    imageUrl: 'images/owl.jpg',
+    imageUrl: 'assets/images/owl.jpg',
     title: 'SPA',
     body: 'FEEL THE MAGIC OF WELLNESS',
     titleGradient: gradients[1],
   ),
   PageModel(
-    imageUrl: 'images/owl.jpg',
+    imageUrl: 'assets/images/owl.jpg',
     title: 'TRAVEL',
     body: 'LET\'S HIKE UP',
     titleGradient: gradients[2],

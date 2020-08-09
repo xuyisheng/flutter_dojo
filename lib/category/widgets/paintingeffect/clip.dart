@@ -29,7 +29,7 @@ class _ClipWidgetState extends State<ClipWidget> {
           child: SizedBox(
             width: 320,
             height: 240,
-            child: Image.asset('images/flower.jpg'),
+            child: Image.asset('assets/images/flower.jpg'),
           ),
         ),
         ClipPath(
@@ -37,7 +37,7 @@ class _ClipWidgetState extends State<ClipWidget> {
           child: SizedBox(
             width: 320,
             height: 240,
-            child: Image.asset('images/flower.jpg'),
+            child: Image.asset('assets/images/flower.jpg'),
           ),
         ),
         ClipPath(
@@ -45,7 +45,7 @@ class _ClipWidgetState extends State<ClipWidget> {
           child: SizedBox(
             width: 320,
             height: 240,
-            child: Image.asset('images/flower.jpg'),
+            child: Image.asset('assets/images/flower.jpg'),
           ),
         ),
         ClipRRect(
@@ -56,15 +56,15 @@ class _ClipWidgetState extends State<ClipWidget> {
               children: <Widget>[
                 ClipPath(
                   clipper: PathClipper(0),
-                  child: Image.asset('images/flower.jpg', fit: BoxFit.cover),
+                  child: Image.asset('assets/images/flower.jpg', fit: BoxFit.cover),
                 ),
                 ClipPath(
                   clipper: PathClipper(1),
-                  child: Image.asset('images/flower.jpg', fit: BoxFit.cover),
+                  child: Image.asset('assets/images/flower.jpg', fit: BoxFit.cover),
                 ),
                 ClipPath(
                   clipper: PathClipper(2),
-                  child: Image.asset('images/flower.jpg', fit: BoxFit.cover),
+                  child: Image.asset('assets/images/flower.jpg', fit: BoxFit.cover),
                 ),
               ],
             ),

@@ -31,13 +31,13 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
               top: rateOne,
               left: 0,
               right: 0,
-              child: Image.asset('images/book.jpg'),
+              child: Image.asset('assets/images/book.jpg'),
             ),
             Positioned(
               top: rateTwo,
               left: 0,
               right: 0,
-              child: Image.asset('images/book_logo.jpg'),
+              child: Image.asset('assets/images/book_logo.jpg'),
             ),
             ListView(
               children: <Widget>[

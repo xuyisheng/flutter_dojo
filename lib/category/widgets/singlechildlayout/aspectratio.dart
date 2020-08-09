@@ -14,7 +14,7 @@ class AspectRatioWidget extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: 4 / 3,
             child: Image(
-              image: AssetImage('images/book.jpg'),
+              image: AssetImage('assets/images/book.jpg'),
             ),
           ),
         ),
@@ -24,7 +24,7 @@ class AspectRatioWidget extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: 3 / 4,
             child: Image(
-              image: AssetImage('images/book.jpg'),
+              image: AssetImage('assets/images/book.jpg'),
             ),
           ),
         ),

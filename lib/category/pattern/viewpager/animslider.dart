@@ -64,7 +64,7 @@ class _AnimSliderWidgetState extends State<AnimSliderWidget> with SingleTickerPr
             child: Container(
               margin: EdgeInsets.all(8),
               color: Colors.cyan,
-              child: Image.asset('images/logo.png'),
+              child: Image.asset('assets/images/logo.png'),
             ),
           ),
         );

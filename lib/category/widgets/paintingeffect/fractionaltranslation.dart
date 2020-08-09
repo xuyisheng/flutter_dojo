@@ -28,7 +28,7 @@ class _FractionalTranslationWidgetState extends State<FractionalTranslationWidge
           child: FractionalTranslation(
             translation: Offset(valueSelection, valueSelection),
             transformHitTests: true,
-            child: Image.asset('images/logo.png'),
+            child: Image.asset('assets/images/logo.png'),
           ),
         ),
       ],

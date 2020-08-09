@@ -21,7 +21,7 @@ class _GestureCardWidgetState extends State<GestureCardWidget> {
                   child: AspectRatio(
                     aspectRatio: 0.75,
                     child: Container(
-                      child: Image.asset('images/book.jpg', fit: BoxFit.cover),
+                      child: Image.asset('assets/images/book.jpg', fit: BoxFit.cover),
                     ),
                   ),
                 ),

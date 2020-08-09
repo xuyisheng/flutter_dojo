@@ -55,7 +55,7 @@ class _SliverAppBarWidgetState extends State<SliverAppBarWidget> {
                 expandedHeight: 200,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
-                    'images/flower.jpg',
+                    'assets/images/flower.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

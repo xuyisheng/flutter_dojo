@@ -15,7 +15,7 @@ class _DrawImageWidgetState extends State<DrawImageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    ImageUtil.drawImageWithClipShader('images/xys.jpg', 'images/mask.png').then((value) {
+    ImageUtil.drawImageWithClipShader('assets/images/xys.jpg', 'assets/images/mask.png').then((value) {
       setState(() => image = value);
     });
     return Column(

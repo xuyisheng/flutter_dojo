@@ -59,7 +59,7 @@ class _Login2State extends State<Login2> with TickerProviderStateMixin {
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             SizedBox(height: 75),
-            Image(width: 250, height: 191, image: AssetImage('images/book.jpg')),
+            Image(width: 250, height: 191, image: AssetImage('assets/images/book.jpg')),
             SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(top: 20.0),

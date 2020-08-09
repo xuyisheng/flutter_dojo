@@ -19,7 +19,7 @@ class _ColorFilteredWidgetState extends State<ColorFilteredWidget> {
         SubtitleWidget('除了图片，自定义Widget或者普通Widget同样可以使用'),
         ColorFiltered(
           colorFilter: ColorFilter.mode(Colors.green, mode),
-          child: Image.asset('images/logo.png'),
+          child: Image.asset('assets/images/logo.png'),
         ),
         MultiSelectionWidget('BlendMode', BlendMode.values, BlendMode.values, (value) {
           setState(() => mode = value);

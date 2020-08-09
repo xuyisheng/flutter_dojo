@@ -14,7 +14,7 @@ class SliverGridWidget extends StatelessWidget {
             titlePadding: EdgeInsets.only(left: 55, bottom: 15),
             collapseMode: CollapseMode.parallax,
             background: Image.asset(
-              'images/book.jpg',
+              'assets/images/book.jpg',
               fit: BoxFit.cover,
             ),
           ),

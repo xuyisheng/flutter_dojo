@@ -88,7 +88,7 @@ class _RichTextWidgetState extends State<RichTextWidget> {
               WidgetSpan(
                 alignment: ui.PlaceholderAlignment.middle,
                 child: Image.asset(
-                  'images/libtext.png',
+                  'assets/images/libtext.png',
                   width: 100,
                   height: 100,
                   fit: BoxFit.fill,

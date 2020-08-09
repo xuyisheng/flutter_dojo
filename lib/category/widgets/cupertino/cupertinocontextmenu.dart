@@ -20,7 +20,7 @@ class _CupertinoContextMenuWidgetState extends State<CupertinoContextMenuWidget>
           height: 100,
           child: CupertinoContextMenu(
             child: Container(
-              child: Image.asset('images/book.jpg'),
+              child: Image.asset('assets/images/book.jpg'),
             ),
             actions: <Widget>[
               CupertinoContextMenuAction(

@@ -66,7 +66,7 @@ class _PerspectiveShadowWidgetState extends State<PerspectiveShadowWidget> {
                     child: Opacity(
                       opacity: 0.4,
                       child: Image.asset(
-                        'images/book.jpg',
+                        'assets/images/book.jpg',
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -11,14 +11,14 @@ class _SliderWidgetState extends State<SliderWidget> {
   PageController _pageController = PageController(initialPage: 1); //索引从0开始，因为有增补，所以这里设为1
   int _currentIndex = 1;
   List<String> _images = [
-    'images/book.jpg',
-    'images/book.jpg',
-    'images/book.jpg',
-    'images/book.jpg',
-    'images/book.jpg',
-    'images/book.jpg',
-    'images/book.jpg',
-    'images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
+    'assets/images/book.jpg',
   ];
   Timer _timer;
 

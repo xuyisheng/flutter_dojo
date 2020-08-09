@@ -18,7 +18,7 @@ class AboutMeWidget extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(bottom: 30),
-                  child: Image.asset('images/book1.jpeg'),
+                  child: Image.asset('assets/images/book1.jpeg'),
                 ),
                 Container(
                   height: kToolbarHeight,
@@ -36,7 +36,7 @@ class AboutMeWidget extends StatelessWidget {
                       border: Border.all(color: Colors.black, width: 2),
                     ),
                     child: CircleAvatar(
-                      backgroundImage: AssetImage('images/xys.jpg'),
+                      backgroundImage: AssetImage('assets/images/xys.jpg'),
                     ),
                   ),
                 ),
@@ -107,7 +107,7 @@ class AboutMeWidget extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 Text('WeChat'),
-                                Image.asset('images/wechat.jpeg'),
+                                Image.asset('assets/images/wechat.jpeg'),
                               ],
                             ),
                           ),

@@ -150,7 +150,7 @@ class _CardSliderState extends State<CardSlider> {
                       bottom: (positionYLine2 - positionYLine1) * 0.02,
                       right: 20,
                       child: Image.asset(
-                        'images/book.jpg',
+                        'assets/images/book.jpg',
                         height: 100,
                         width: 80,
                       ),

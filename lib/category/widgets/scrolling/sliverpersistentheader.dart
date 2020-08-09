@@ -14,7 +14,7 @@ class SliverPersistentHeaderWidget extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
           flexibleSpace: FlexibleSpaceBar(
             collapseMode: CollapseMode.parallax,
-            background: Image.asset('images/book.jpg', fit: BoxFit.cover),
+            background: Image.asset('assets/images/book.jpg', fit: BoxFit.cover),
           ),
         ),
         SliverPersistentHeader(

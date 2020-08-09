@@ -6,7 +6,7 @@ class FocusWidget extends StatelessWidget {
       itemCount: 12,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
       itemBuilder: (context, index) {
-        return SmallCard('images/book.jpg');
+        return SmallCard('assets/images/book.jpg');
       },
     );
   }

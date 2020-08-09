@@ -13,7 +13,7 @@ class FadeInImageWidget extends StatelessWidget {
           child: FadeInImage.assetNetwork(
             fadeInDuration: Duration(milliseconds: 100),
             fadeInCurve: Curves.easeIn,
-            placeholder: 'images/flower.jpg',
+            placeholder: 'assets/images/flower.jpg',
             image:
                 'https://flutter.dev/assets/404/dash_nest-c64796b59b65042a2b40fae5764c13b7477a592db79eaf04c86298dcb75b78ea.png',
           ),

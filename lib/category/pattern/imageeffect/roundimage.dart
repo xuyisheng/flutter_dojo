@@ -16,7 +16,7 @@ class RoundImageWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 image: DecorationImage(
-                  image: AssetImage('images/book.jpg'),
+                  image: AssetImage('assets/images/book.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -27,13 +27,13 @@ class RoundImageWidget extends StatelessWidget {
               child: Container(
                 width: 100,
                 height: 100,
-                child: Image.asset('images/book.jpg'),
+                child: Image.asset('assets/images/book.jpg'),
               ),
             ),
             MainTitleWidget('CircleAvatar'),
             CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('images/book.jpg'),
+              backgroundImage: AssetImage('assets/images/book.jpg'),
             ),
             MainTitleWidget('通过Material进行裁切'),
             Material(
@@ -42,7 +42,7 @@ class RoundImageWidget extends StatelessWidget {
               child: Container(
                 width: 100,
                 height: 100,
-                child: Image.asset('images/book.jpg'),
+                child: Image.asset('assets/images/book.jpg'),
               ),
             )
           ],

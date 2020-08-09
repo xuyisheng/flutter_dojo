@@ -150,7 +150,7 @@ class ProfileCardHead extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 radius: 24,
-                backgroundImage: AssetImage('images/book.jpg'),
+                backgroundImage: AssetImage('assets/images/book.jpg'),
               ),
               SizedBox(width: 14),
               Column(

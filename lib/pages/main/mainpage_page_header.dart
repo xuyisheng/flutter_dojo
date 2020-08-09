@@ -86,7 +86,7 @@ class MainPagePageHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              'images/logo.png',
+              'assets/images/logo.png',
               width: 64,
             ),
             SizedBox(width: 16),

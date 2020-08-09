@@ -71,7 +71,7 @@ class _MainPageScrollContainerState extends State<MainPageScrollContainer> {
                         PageWidget(
                           'Widgets',
                           'Show Flutter Widgets in category',
-                          'images/widget_bg.png',
+                          'assets/images/widget_bg.png',
                           () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => WidgetMainPage()));
                           },
@@ -79,7 +79,7 @@ class _MainPageScrollContainerState extends State<MainPageScrollContainer> {
                         PageWidget(
                           'UI Pattern',
                           'Show UI Pattern in most Apps',
-                          'images/pattern_bg.png',
+                          'assets/images/pattern_bg.png',
                           () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => PatternMainPage()));
                           },
@@ -87,7 +87,7 @@ class _MainPageScrollContainerState extends State<MainPageScrollContainer> {
                         PageWidget(
                           'Animations',
                           'Show Flutter Animations',
-                          'images/animation_bg.jpg',
+                          'assets/images/animation_bg.jpg',
                           () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => AnimationMainPage()));
                           },
@@ -95,7 +95,7 @@ class _MainPageScrollContainerState extends State<MainPageScrollContainer> {
                         PageWidget(
                           'Back-end Util',
                           'Show Flutter back-end util',
-                          'images/backend.jpg',
+                          'assets/images/backend.jpg',
                           () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => BackendMainPage()));
                           },

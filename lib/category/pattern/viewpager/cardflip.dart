@@ -80,7 +80,7 @@ class CardScrollWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16.0),
                 child: AspectRatio(
                   aspectRatio: cardAspectRatio,
-                  child: Image.asset('images/owl.jpg', fit: BoxFit.cover),
+                  child: Image.asset('assets/images/owl.jpg', fit: BoxFit.cover),
                 ),
               ),
             );

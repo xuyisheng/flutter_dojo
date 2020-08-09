@@ -20,7 +20,7 @@ class _BackdropFilterWidgetState extends State<BackdropFilterWidget> {
           ClipRect(
             child: Stack(
               children: <Widget>[
-                Image.asset('images/flower.jpg'),
+                Image.asset('assets/images/flower.jpg'),
                 Positioned.fill(
                   child: BackdropFilter(
                     filter: ImageFilter.blur(
@@ -38,7 +38,7 @@ class _BackdropFilterWidgetState extends State<BackdropFilterWidget> {
           MainTitleWidget('BackdropFilter自定义范围'),
           Stack(
             children: <Widget>[
-              Image.asset('images/flower.jpg'),
+              Image.asset('assets/images/flower.jpg'),
               Positioned(
                 top: 50,
                 left: 50,

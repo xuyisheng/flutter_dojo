@@ -32,14 +32,9 @@ class _RestClient implements RestClient {
       r'per_page': per_page
     };
     final _data = <String, dynamic>{};
-    final Response<Map<String, dynamic>> _result = await _dio.request(
-        '/repositories',
+    final Response<Map<String, dynamic>> _result = await _dio.request('/repositories',
         queryParameters: queryParameters,
-        options: RequestOptions(
-            method: 'GET',
-            headers: <String, dynamic>{},
-            extra: _extra,
-            baseUrl: baseUrl),
+        options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl),
         data: _data);
     final value = FeedEntity.fromJson(_result.data);
     return value;

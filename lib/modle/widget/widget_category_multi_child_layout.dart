@@ -35,7 +35,8 @@ List<DemoItem> buildMultiChildLayoutDemoItems(String codePath) {
       subtitle: 'A widget that uses a delegate to size and position multiple children.',
       keyword: 'CustomMultiChildLayout',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CustomMultiChildLayout-class.html',
-      buildRoute: (context) => BaseWidget('CustomMultiChildLayout', codePath + 'custommultichildlayout', CustomMultiChildLayoutWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CustomMultiChildLayout', codePath + 'custommultichildlayout', CustomMultiChildLayoutWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,
@@ -96,7 +97,8 @@ List<DemoItem> buildMultiChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'ListBody',
-      subtitle: 'A widget that arranges its children sequentially along a given axis, forcing them to the dimension of the parent in the other axis.',
+      subtitle:
+          'A widget that arranges its children sequentially along a given axis, forcing them to the dimension of the parent in the other axis.',
       keyword: 'ListBody',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ListBody-class.html',
       buildRoute: (context) => BaseWidget('ListBody', codePath + 'listbody', ListBodyWidget()),
@@ -123,7 +125,8 @@ List<DemoItem> buildMultiChildLayoutDemoItems(String codePath) {
       subtitle: 'ReorderableListView',
       keyword: 'ReorderableListView',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ReorderableListView-class.html',
-      buildRoute: (context) => BaseWidget('ReorderableListView', codePath + 'reorderablelistview', ReorderableListViewWidget()),
+      buildRoute: (context) =>
+          BaseWidget('ReorderableListView', codePath + 'reorderablelistview', ReorderableListViewWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,

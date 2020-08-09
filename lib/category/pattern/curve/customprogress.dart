@@ -120,7 +120,8 @@ class CurvePainter extends CustomPainter {
     final center = new Offset(size.width / 2, size.height / 2);
     final radius = min(size.width / 2, size.height / 2) - (14 / 2);
 
-    canvas.drawArc(new Rect.fromCircle(center: center, radius: radius), degreeToRadians(278), degreeToRadians(360 - (365 - angle)), false, paint);
+    canvas.drawArc(new Rect.fromCircle(center: center, radius: radius), degreeToRadians(278),
+        degreeToRadians(360 - (365 - angle)), false, paint);
 
     final gradient1 = new SweepGradient(
       tileMode: TileMode.repeated,

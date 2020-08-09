@@ -19,8 +19,8 @@ class LoadingTypeFlip extends StatefulWidget {
       this.rotateIcon = true});
 
   @override
-  _LoadingTypeFlipState createState() =>
-      _LoadingTypeFlipState(this.loaderBackground, this.iconColor, this.icon, this.animationType, this.shape, this.rotateIcon);
+  _LoadingTypeFlipState createState() => _LoadingTypeFlipState(
+      this.loaderBackground, this.iconColor, this.icon, this.animationType, this.shape, this.rotateIcon);
 }
 
 class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProviderStateMixin {
@@ -82,21 +82,21 @@ class _LoadingTypeFlipState extends State<LoadingTypeFlip> with SingleTickerProv
         animCtrl = AnimationController(duration: const Duration(milliseconds: 4000), vsync: this);
 
         // Horizontal animation
-        this.rotationHorizontal =
-            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
+        this.rotationHorizontal = Tween<double>(begin: 0.0, end: 1.0)
+            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
 
         // Vertical animation
-        this.rotationVertical =
-            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
+        this.rotationVertical = Tween<double>(begin: 0.0, end: 1.0)
+            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
         break;
       case 'full_flip':
       default:
         animCtrl = AnimationController(duration: const Duration(milliseconds: 2000), vsync: this);
 
-        this.rotationHorizontal =
-            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
-        this.rotationVertical =
-            Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
+        this.rotationHorizontal = Tween<double>(begin: 0.0, end: 1.0)
+            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.0, 0.50, curve: Curves.linear)));
+        this.rotationVertical = Tween<double>(begin: 0.0, end: 1.0)
+            .animate(CurvedAnimation(parent: animCtrl, curve: Interval(0.50, 1.0, curve: Curves.linear)));
         break;
     }
 

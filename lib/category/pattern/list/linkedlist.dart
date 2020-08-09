@@ -132,7 +132,8 @@ class LinkedScrollControllerGroup {
     _offsetNotifier.removeListener(listener);
   }
 
-  Iterable<_LinkedScrollController> get _attachedControllers => _allControllers.where((controller) => controller.hasClients);
+  Iterable<_LinkedScrollController> get _attachedControllers =>
+      _allControllers.where((controller) => controller.hasClients);
 
   /// Animates the scroll position of all linked controllers to [offset].
   Future<void> animateTo(
@@ -190,7 +191,8 @@ class _LinkedScrollControllerGroupOffsetNotifier extends ChangeNotifier {
 class _LinkedScrollController extends ScrollController {
   final LinkedScrollControllerGroup _controllers;
 
-  _LinkedScrollController(this._controllers, {double initialScrollOffset}) : super(initialScrollOffset: initialScrollOffset);
+  _LinkedScrollController(this._controllers, {double initialScrollOffset})
+      : super(initialScrollOffset: initialScrollOffset);
 
   @override
   void dispose() {
@@ -223,7 +225,8 @@ class _LinkedScrollController extends ScrollController {
   @override
   _LinkedScrollPosition get position => super.position;
 
-  Iterable<_LinkedScrollController> get _allPeersWithClients => _controllers._attachedControllers.where((peer) => peer != this);
+  Iterable<_LinkedScrollController> get _allPeersWithClients =>
+      _controllers._attachedControllers.where((peer) => peer != this);
 
   bool get canLinkWithPeers => _allPeersWithClients.isNotEmpty;
 

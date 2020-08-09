@@ -62,7 +62,8 @@ List<DemoItem> buildStylingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.style,
       title: 'Theme',
-      subtitle: 'Applies a theme to descendant widgets. A theme describes the colors and typographic choices of an application.',
+      subtitle:
+          'Applies a theme to descendant widgets. A theme describes the colors and typographic choices of an application.',
       keyword: 'Theme',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Theme-class.html',
       buildRoute: (context) => BaseWidget('Theme', codePath + 'theme', ThemeWidget()),

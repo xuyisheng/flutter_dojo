@@ -22,7 +22,8 @@ class _FavorWidgetState extends State<FavorWidget> with TickerProviderStateMixin
     });
 
     scoreOutAnimationController = AnimationController(vsync: this, duration: duration);
-    scoreOutPositionAnimation = Tween(begin: 100.0, end: 150.0).animate(CurvedAnimation(parent: scoreOutAnimationController, curve: Curves.easeOut));
+    scoreOutPositionAnimation = Tween(begin: 100.0, end: 150.0)
+        .animate(CurvedAnimation(parent: scoreOutAnimationController, curve: Curves.easeOut));
     scoreOutPositionAnimation.addListener(() {
       setState(() {});
     });

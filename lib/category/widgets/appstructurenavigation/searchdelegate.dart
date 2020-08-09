@@ -10,7 +10,8 @@ class _SearchDelegateWidgetState extends State<SearchDelegateWidget> {
   _MySearchDelegate _delegate;
 
   _SearchDelegateWidgetState()
-      : kEnglishWords = ['a', 'ab', 'abc', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'aj']..sort((w1, w2) => w1.toLowerCase().compareTo(w2.toLowerCase())),
+      : kEnglishWords = ['a', 'ab', 'abc', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'aj']
+          ..sort((w1, w2) => w1.toLowerCase().compareTo(w2.toLowerCase())),
         super();
 
   @override

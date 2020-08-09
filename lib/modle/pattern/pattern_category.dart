@@ -208,7 +208,8 @@ List<DemoItem> buildViewPagerDemoItems(String codePath) {
       subtitle: 'Parallax ViewPager',
       keyword: 'ParallaxViewPager',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ParallaxViewPager', codePath + 'parallaxviewpager', ParallaxViewPagerWidget()),
+      buildRoute: (context) =>
+          BaseWidget('ParallaxViewPager', codePath + 'parallaxviewpager', ParallaxViewPagerWidget()),
     ),
     DemoItem(
       icon: Icons.vibration,
@@ -431,7 +432,8 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'ScrollToPosition2',
       keyword: 'ScrollToPosition2',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ScrollToPosition2', codePath + 'scrolltoposition1', ScrollablePositionedListPage()),
+      buildRoute: (context) =>
+          BaseWidget('ScrollToPosition2', codePath + 'scrolltoposition1', ScrollablePositionedListPage()),
     ),
     DemoItem(
       icon: Icons.library_add,
@@ -455,7 +457,8 @@ List<DemoItem> buildListDemoItems(String codePath) {
       subtitle: 'SliverHeaderWithEffect',
       keyword: 'SliverHeaderWithEffect',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('SliverHeaderWithEffect', codePath + 'sliverheaderwitheffect', SliverHeaderWithEffectWidget()),
+      buildRoute: (context) =>
+          BaseWidget('SliverHeaderWithEffect', codePath + 'sliverheaderwitheffect', SliverHeaderWithEffectWidget()),
     ),
     DemoItem(
       icon: Icons.library_add,
@@ -616,7 +619,8 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       subtitle: 'ScreenOrientation',
       keyword: 'ScreenOrientation',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ScreenOrientation', codePath + 'screenorientation', ScreenOrientationWidget()),
+      buildRoute: (context) =>
+          BaseWidget('ScreenOrientation', codePath + 'screenorientation', ScreenOrientationWidget()),
     ),
     DemoItem(
       icon: Icons.trending_up,
@@ -640,7 +644,8 @@ List<DemoItem> buildRenderInfoDemoItems(String codePath) {
       subtitle: 'VisibilityDetector',
       keyword: 'VisibilityDetector',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('VisibilityDetector', codePath + 'visibilitydetector', VisibilityDetectorWidget()),
+      buildRoute: (context) =>
+          BaseWidget('VisibilityDetector', codePath + 'visibilitydetector', VisibilityDetectorWidget()),
     ),
   ];
 }
@@ -722,7 +727,8 @@ List<DemoItem> buildPaintDemoItems(String codePath) {
       subtitle: 'GenerativeArtistry',
       keyword: 'GenerativeArtistry',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('GenerativeArtistry', codePath + 'generativeartistry', GenerativeArtistryWidget()),
+      buildRoute: (context) =>
+          BaseWidget('GenerativeArtistry', codePath + 'generativeartistry', GenerativeArtistryWidget()),
     ),
     DemoItem(
       icon: Icons.format_paint,

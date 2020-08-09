@@ -78,7 +78,8 @@ class _AnimateOnScrollFlutterState extends State<AnimateOnScrollFlutter> {
                           Spacer(),
                           GestureDetector(
                             onTap: () {
-                              controller.animateTo(-appBarHeight, duration: Duration(seconds: 4), curve: Curves.fastOutSlowIn);
+                              controller.animateTo(-appBarHeight,
+                                  duration: Duration(seconds: 4), curve: Curves.fastOutSlowIn);
                             },
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -128,7 +129,8 @@ class CirclePainter extends CustomPainter {
       ], false);
     }
     if (overallPercent > 50) {
-      path.arcTo(Rect.fromLTWH(size.width - (circleSize * 2), 0.0, circleSize * 2, size.height), math.pi / 2, -angle * 2, false);
+      path.arcTo(Rect.fromLTWH(size.width - (circleSize * 2), 0.0, circleSize * 2, size.height), math.pi / 2,
+          -angle * 2, false);
       if (overallPercent < 100) {
         path.addPolygon([
           Offset(overallPercent * (size.width - circleSize) / 100, size.height),
@@ -136,7 +138,8 @@ class CirclePainter extends CustomPainter {
         ], false);
       }
       if (overallPercent == 100) {
-        path.addArc(Rect.fromLTWH(size.width - (circleSize * 2), 0.0, circleSize * 2, size.height), math.pi / 2, math.pi * 2);
+        path.addArc(
+            Rect.fromLTWH(size.width - (circleSize * 2), 0.0, circleSize * 2, size.height), math.pi / 2, math.pi * 2);
       }
     }
 

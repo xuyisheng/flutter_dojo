@@ -30,7 +30,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'A run of text with a single style.',
       keyword: 'CupertinoActionSheet',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoActionSheet-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoActionSheet', codePath + 'cupertinoactionsheet', CupertinoActionSheetWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoActionSheet', codePath + 'cupertinoactionsheet', CupertinoActionSheetWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -38,7 +39,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: '''An iOS-style activity indicator. Displays a circular 'spinner'.''',
       keyword: 'CupertinoActivityIndicator',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoActivityIndicator-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoActivityIndicator', codePath + 'cupertinoactivityindicator', CupertinoActivityIndicatorWidget()),
+      buildRoute: (context) => BaseWidget(
+          'CupertinoActivityIndicator', codePath + 'cupertinoactivityindicator', CupertinoActivityIndicatorWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -46,7 +48,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style alert dialog.',
       keyword: 'CupertinoAlertDialog',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoAlertDialog-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoAlertDialog', codePath + 'cupertinoalertdialog', CupertinoAlertDialogWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoAlertDialog', codePath + 'cupertinoalertdialog', CupertinoAlertDialogWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -62,7 +65,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'A full-screen modal route that opens when the child is long-pressed.',
       keyword: 'CupertinoContextMenu',
       documentationUrl: 'https://api.flutter.dev/flutter/cupertino/CupertinoContextMenu-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoContextMenu', codePath + 'cupertinocontextmenu', CupertinoContextMenuWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoContextMenu', codePath + 'cupertinocontextmenu', CupertinoContextMenuWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -78,7 +82,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style date or date and time picker.',
       keyword: 'CupertinoDatePicker',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoDatePicker-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoDatePicker', codePath + 'cupertinotimerpicker', CupertinoTimerPickerWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoDatePicker', codePath + 'cupertinotimerpicker', CupertinoTimerPickerWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -86,7 +91,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style dialog.',
       keyword: 'CupertinoDialog',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoDialog-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoDialog', codePath + 'cupertinoalertdialog', CupertinoAlertDialogWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoDialog', codePath + 'cupertinoalertdialog', CupertinoAlertDialogWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -94,7 +100,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'A button typically used in a CupertinoAlertDialog.',
       keyword: 'CupertinoDialogAction',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoDialogAction-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoDialogAction', codePath + 'cupertinodialogaction', CupertinoDialogActionWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoDialogAction', codePath + 'cupertinodialogaction', CupertinoDialogActionWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -102,7 +109,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style transition used for summoning fullscreen dialogs.',
       keyword: 'CupertinoFullscreenDialogTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoFullscreenDialogTransition-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoFullscreenDialogTransition', codePath + 'cupertinofullscreendialogtransition', Container()),
+      buildRoute: (context) => BaseWidget(
+          'CupertinoFullscreenDialogTransition', codePath + 'cupertinofullscreendialogtransition', Container()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -118,7 +126,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style top navigation bar. Typically used with CupertinoPageScaffold.',
       keyword: 'CupertinoNavigationBar',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoNavigationBar-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoNavigationBar', codePath + 'cupertinonavigationbar', CupertinoNavigationBarWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoNavigationBar', codePath + 'cupertinonavigationbar', CupertinoNavigationBarWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -126,7 +135,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'Basic iOS style page layout structure. Positions a navigation bar and content on a background.',
       keyword: 'CupertinoPageScaffold',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoPageScaffold-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoPageScaffold', codePath + 'cupertinopagescaffold', CupertinoPageScaffoldWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoPageScaffold', codePath + 'cupertinopagescaffold', CupertinoPageScaffoldWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -142,15 +152,18 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style picker control. Used to select an item in a short list.',
       keyword: 'CupertinoPicker',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoPicker-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoPicker', codePath + 'cupertinotimerpicker', CupertinoTimerPickerWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoPicker', codePath + 'cupertinotimerpicker', CupertinoTimerPickerWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
       title: 'CupertinoPopupSurface',
-      subtitle: 'Rounded rectangle surface that looks like an iOS popup surface, such as an alert dialog or action sheet.',
+      subtitle:
+          'Rounded rectangle surface that looks like an iOS popup surface, such as an alert dialog or action sheet.',
       keyword: 'CupertinoPopupSurface',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoPopupSurface-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoPopupSurface', codePath + 'cupertinopopupsurface', CupertinoPopupSurfaceWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoPopupSurface', codePath + 'cupertinopopupsurface', CupertinoPopupSurfaceWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -158,7 +171,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style scrollbar that indicates which portion of a scrollable widget is currently visible.',
       keyword: 'CupertinoScrollbar',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoScrollbar-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoScrollbar', codePath + 'cupertinoscrollbar', CupertinoScrollbarWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoScrollbar', codePath + 'cupertinoscrollbar', CupertinoScrollbarWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -166,7 +180,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style segmented control. Used to select mutually exclusive options in a horizontal list.',
       keyword: 'CupertinoSegmentedControl',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoSegmentedControl-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoSegmentedControl', codePath + 'cupertinosegmentedcontrol', CupertinoSegmentedControlWidget()),
+      buildRoute: (context) => BaseWidget(
+          'CupertinoSegmentedControl', codePath + 'cupertinosegmentedcontrol', CupertinoSegmentedControlWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -174,8 +189,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS 13 style segmented control.',
       keyword: 'CupertinoSlidingSegmentedControl',
       documentationUrl: 'https://api.flutter.dev/flutter/cupertino/CupertinoSlidingSegmentedControl-class.html',
-      buildRoute: (context) =>
-          BaseWidget('CupertinoSlidingSegmentedControl', codePath + 'cupertinoslidingsegmentedcontrol', CupertinoSlidingSegmentedControlWidget()),
+      buildRoute: (context) => BaseWidget('CupertinoSlidingSegmentedControl',
+          codePath + 'cupertinoslidingsegmentedcontrol', CupertinoSlidingSegmentedControlWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
@@ -207,12 +222,14 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'Tabbed iOS app structure. Positions a tab bar on top of tabs of content.',
       keyword: 'CupertinoTabScaffold',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoTabScaffold-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoTabScaffold', codePath + 'cupertinotabscaffold', CupertinoTabScaffoldWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoTabScaffold', codePath + 'cupertinotabscaffold', CupertinoTabScaffoldWidget()),
     ),
     DemoItem(
       icon: Icons.tablet_mac,
       title: 'CupertinoTabView',
-      subtitle: 'Root content of a tab that supports parallel navigation between tabs. Typically used with CupertinoTabScaffold.',
+      subtitle:
+          'Root content of a tab that supports parallel navigation between tabs. Typically used with CupertinoTabScaffold.',
       keyword: 'CupertinoTabView',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoTabView-class.html',
       buildRoute: (context) => BaseWidget('CupertinoTabView', codePath + 'cupertinotabview', CupertinoTabViewWidget()),
@@ -231,7 +248,8 @@ List<DemoItem> buildCupertinoDemoItems(String codePath) {
       subtitle: 'An iOS-style countdown timer picker.',
       keyword: 'CupertinoTimerPicker',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CupertinoTimerPicker-class.html',
-      buildRoute: (context) => BaseWidget('CupertinoTimerPicker', codePath + 'cupertinotimerpicker', CupertinoTimerPickerWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CupertinoTimerPicker', codePath + 'cupertinotimerpicker', CupertinoTimerPickerWidget()),
     )
   ];
 }

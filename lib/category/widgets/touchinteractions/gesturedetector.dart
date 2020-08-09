@@ -43,8 +43,10 @@ class _GestureDetectorWidgetState extends State<GestureDetectorWidget> {
             debugPrint('onTapCancel');
             setState(() => state = ('onTapCancel'));
           },
-          onVerticalDragDown: (DragDownDetails details) => setState(() => state = ('onVerticalDragDown localPosition: ${details.localPosition}')),
-          onVerticalDragStart: (DragStartDetails details) => setState(() => state = ('onVerticalDragStart localPosition: ${details.localPosition}')),
+          onVerticalDragDown: (DragDownDetails details) =>
+              setState(() => state = ('onVerticalDragDown localPosition: ${details.localPosition}')),
+          onVerticalDragStart: (DragStartDetails details) =>
+              setState(() => state = ('onVerticalDragStart localPosition: ${details.localPosition}')),
           onVerticalDragUpdate: (DragUpdateDetails details) =>
               setState(() => state = ('onVerticalDragUpdate delta: ${details.delta.dx} - ${details.delta.dy}')),
           onVerticalDragEnd: (DragEndDetails details) => setState(() => state = ('onVerticalDragEnd')),

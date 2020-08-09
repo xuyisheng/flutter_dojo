@@ -76,7 +76,8 @@ List<DemoItem> buildTouchInteractionsDemoItems(String codePath) {
       subtitle: 'Makes its child draggable starting from long press.',
       keyword: 'LongPressDraggable',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/LongPressDraggable-class.html',
-      buildRoute: (context) => BaseWidget('LongPressDraggable', codePath + 'longpressdraggable', LongPressDraggableWidget()),
+      buildRoute: (context) =>
+          BaseWidget('LongPressDraggable', codePath + 'longpressdraggable', LongPressDraggableWidget()),
     ),
     DemoItem(
       icon: Icons.touch_app,

@@ -226,9 +226,11 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
     super.dispose();
   }
 
-  bool get _backdropPanelVisible => _controller.status == AnimationStatus.completed || _controller.status == AnimationStatus.forward;
+  bool get _backdropPanelVisible =>
+      _controller.status == AnimationStatus.completed || _controller.status == AnimationStatus.forward;
 
-  void _toggleBackdropPanelVisibility() => _controller.fling(velocity: _backdropPanelVisible ? -_kFlingVelocity : _kFlingVelocity);
+  void _toggleBackdropPanelVisibility() =>
+      _controller.fling(velocity: _backdropPanelVisible ? -_kFlingVelocity : _kFlingVelocity);
 
   double get _backdropHeight {
     final RenderBox renderBox = _backdropKey.currentContext.findRenderObject();
@@ -256,7 +258,8 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
     return LayoutBuilder(
       builder: (context, constraints) {
         final panelSize = constraints.biggest;
-        final closedPercentage = widget.frontHeaderVisibleClosed ? (panelSize.height - widget.frontHeaderHeight) / panelSize.height : 1.0;
+        final closedPercentage =
+            widget.frontHeaderVisibleClosed ? (panelSize.height - widget.frontHeaderHeight) / panelSize.height : 1.0;
         final openPercentage = widget.frontPanelOpenHeight / panelSize.height;
 
         final panelDetailsPosition = Tween<Offset>(

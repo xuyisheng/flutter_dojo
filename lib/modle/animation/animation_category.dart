@@ -240,7 +240,8 @@ List<DemoItem> buildPerspectiveDemoItems(String codePath) {
       subtitle: 'PerspectiveShadow',
       keyword: 'PerspectiveShadow',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('PerspectiveShadow', codePath + 'perspectiveshadow', PerspectiveShadowWidget()),
+      buildRoute: (context) =>
+          BaseWidget('PerspectiveShadow', codePath + 'perspectiveshadow', PerspectiveShadowWidget()),
     ),
   ];
 }
@@ -367,7 +368,8 @@ List<DemoItem> buildSequenceDemoItems(String codePath) {
       subtitle: 'ImplicitlyAnimatedWidget',
       keyword: 'ImplicitlyAnimatedWidget',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ImplicitlyAnimatedWidget', codePath + 'implicitlyanimatedwidget', ImplicitlyAnimatedWidgetWidget()),
+      buildRoute: (context) => BaseWidget(
+          'ImplicitlyAnimatedWidget', codePath + 'implicitlyanimatedwidget', ImplicitlyAnimatedWidgetWidget()),
     ),
     DemoItem(
       icon: Icons.settings_input_antenna,
@@ -391,7 +393,8 @@ List<DemoItem> buildSequenceDemoItems(String codePath) {
       subtitle: 'TweenAnimationBuilder',
       keyword: 'TweenAnimationBuilder',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('TweenAnimationBuilder', codePath + 'tweenanimationbuilder', TweenAnimationBuilderWidget()),
+      buildRoute: (context) =>
+          BaseWidget('TweenAnimationBuilder', codePath + 'tweenanimationbuilder', TweenAnimationBuilderWidget()),
     ),
   ];
 }
@@ -425,7 +428,8 @@ List<DemoItem> buildScrollAnimationDemoItems(String codePath) {
       subtitle: 'ScrollAnimation',
       keyword: 'ScrollAnimation',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ScrollingAnimation1', codePath + 'scrollinganimation1', ScrollingAnimation1Widget()),
+      buildRoute: (context) =>
+          BaseWidget('ScrollingAnimation1', codePath + 'scrollinganimation1', ScrollingAnimation1Widget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -433,7 +437,8 @@ List<DemoItem> buildScrollAnimationDemoItems(String codePath) {
       subtitle: 'ScrollAnimation',
       keyword: 'ScrollAnimation',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ScrollingAnimation2', codePath + 'scrollinganimation2', ScrollingAnimation2Widget()),
+      buildRoute: (context) =>
+          BaseWidget('ScrollingAnimation2', codePath + 'scrollinganimation2', ScrollingAnimation2Widget()),
     ),
     DemoItem(
       icon: Icons.pages,
@@ -441,7 +446,8 @@ List<DemoItem> buildScrollAnimationDemoItems(String codePath) {
       subtitle: 'ScrollAnimation',
       keyword: 'ScrollAnimation',
       documentationUrl: '',
-      buildRoute: (context) => BaseWidget('ScrollingAnimation3', codePath + 'scrollinganimation3', ScrollingAnimation3Widget()),
+      buildRoute: (context) =>
+          BaseWidget('ScrollingAnimation3', codePath + 'scrollinganimation3', ScrollingAnimation3Widget()),
     ),
     DemoItem(
       icon: Icons.pages,

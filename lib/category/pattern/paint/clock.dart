@@ -475,8 +475,8 @@ class TaiChiWidget extends CustomPainter {
     taiChiPathRight.addArc(Rect.fromCircle(center: Offset(0, -radius), radius: radius), -pi / 2, -pi);
     taiChiPathRight.arcTo(Rect.fromCircle(center: Offset(0, radius), radius: radius), -pi / 2, pi, true);
     taiChiPathRight.addArc(Rect.fromCircle(center: Offset(0, 0), radius: radius * 2), -pi / 2, pi);
-    var path = Path.combine(
-        PathOperation.difference, taiChiPathRight, Path()..addArc(Rect.fromCircle(center: Offset(0, radius), radius: radius), -pi / 2, pi));
+    var path = Path.combine(PathOperation.difference, taiChiPathRight,
+        Path()..addArc(Rect.fromCircle(center: Offset(0, radius), radius: radius), -pi / 2, pi));
     canvas.drawPath(path, paintRight);
 
     canvas.rotate(pi);

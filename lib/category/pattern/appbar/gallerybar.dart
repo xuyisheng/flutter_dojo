@@ -9,11 +9,25 @@ const Color _tomato = const Color(0xFFF95B57);
 const Color _mySin = const Color(0xFFF3A646);
 
 List<CardSection> allSections = <CardSection>[
-  CardSection(title: 'First Page', leftColor: _mediumPurple, rightColor: _mariner, contentWidget: Center(child: Text('Page One'))),
-  CardSection(title: 'Second Page', leftColor: _mariner, rightColor: _mySin, contentWidget: Center(child: Text('Page Two'))),
-  CardSection(title: 'Third Page', leftColor: _mySin, rightColor: _tomato, contentWidget: Center(child: Text('Page Three'))),
-  CardSection(title: 'Forth Page', leftColor: _tomato, rightColor: Colors.blue, contentWidget: Center(child: Text('Page Four'))),
-  CardSection(title: 'Fifth Page', leftColor: Colors.blue, rightColor: _mediumPurple, contentWidget: Center(child: Text('Page Five'))),
+  CardSection(
+      title: 'First Page',
+      leftColor: _mediumPurple,
+      rightColor: _mariner,
+      contentWidget: Center(child: Text('Page One'))),
+  CardSection(
+      title: 'Second Page', leftColor: _mariner, rightColor: _mySin, contentWidget: Center(child: Text('Page Two'))),
+  CardSection(
+      title: 'Third Page', leftColor: _mySin, rightColor: _tomato, contentWidget: Center(child: Text('Page Three'))),
+  CardSection(
+      title: 'Forth Page',
+      leftColor: _tomato,
+      rightColor: Colors.blue,
+      contentWidget: Center(child: Text('Page Four'))),
+  CardSection(
+      title: 'Fifth Page',
+      leftColor: Colors.blue,
+      rightColor: _mediumPurple,
+      contentWidget: Center(child: Text('Page Five'))),
 ];
 
 class GalleryBar extends StatefulWidget {
@@ -215,7 +229,8 @@ class _AllSectionsLayout extends MultiChildLayoutDelegate {
     // When tCollapsed > 0, the indicators move closer together
     //final double rowIndicatorWidth = 48.0 + (1.0 - tCollapsed) * (rowTitleWidth - 48.0);
     const double paddedSectionIndicatorWidth = kSectionIndicatorWidth + 8.0;
-    double rowIndicatorX = (size.width - paddedSectionIndicatorWidth) / 2.0 - selectedIndex * paddedSectionIndicatorWidth;
+    double rowIndicatorX =
+        (size.width - paddedSectionIndicatorWidth) / 2.0 - selectedIndex * paddedSectionIndicatorWidth;
 
     // Compute the size and origin of each card, title, and indicator for the maxHeight
     // "column" layout, and the midHeight "row" layout. The actual layout is just the
@@ -262,7 +277,9 @@ class _AllSectionsLayout extends MultiChildLayoutDelegate {
 
   @override
   bool shouldRelayout(_AllSectionsLayout oldDelegate) {
-    return tColumnToRow != oldDelegate.tColumnToRow || cardCount != oldDelegate.cardCount || selectedIndex != oldDelegate.selectedIndex;
+    return tColumnToRow != oldDelegate.tColumnToRow ||
+        cardCount != oldDelegate.cardCount ||
+        selectedIndex != oldDelegate.selectedIndex;
   }
 }
 
@@ -404,7 +421,8 @@ class _SnappingScrollPhysics extends ClampingScrollPhysics {
       // snap to minScrollOffset if they're more than halfway there,
       // otherwise snap to zero.
       final double snapThreshold = minScrollOffset / 2.0;
-      if (offset >= snapThreshold && offset < minScrollOffset) return _toMinScrollOffsetSimulation(offset, dragVelocity);
+      if (offset >= snapThreshold && offset < minScrollOffset)
+        return _toMinScrollOffsetSimulation(offset, dragVelocity);
       if (offset > 0.0 && offset < snapThreshold) return _toZeroScrollOffsetSimulation(offset, dragVelocity);
     }
     return simulation;
@@ -569,7 +587,8 @@ class _AnimateTabNavigationState extends State<AnimateTabNavigation> {
                       child: PageView(
                         physics: _headingScrollPhysics,
                         controller: _headingPageController,
-                        children: _allHeadingItems(appBarMaxHeight, _kAppBarMinHeight + statusBarHeight, appBarMinScrollOffset),
+                        children: _allHeadingItems(
+                            appBarMaxHeight, _kAppBarMinHeight + statusBarHeight, appBarMinScrollOffset),
                       ),
                     ),
                   ),

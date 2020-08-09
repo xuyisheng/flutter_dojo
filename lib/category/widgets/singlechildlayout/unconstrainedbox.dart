@@ -9,7 +9,8 @@ class UnconstrainedBoxWidget extends StatelessWidget {
       child: Column(
         children: <Widget>[
           MainTitleWidget('UnconstrainedBox基本使用'),
-          SubtitleWidget('子组件的大小会被父组件的constraints属性限制，通过UnconstrainedBox可以解除此限制，类似的还有Row、Column、Align、Center，以及alignment属性等'),
+          SubtitleWidget(
+              '子组件的大小会被父组件的constraints属性限制，通过UnconstrainedBox可以解除此限制，类似的还有Row、Column、Align、Center，以及alignment属性等'),
           ConstrainedBox(
             constraints: BoxConstraints(
               minWidth: 100,

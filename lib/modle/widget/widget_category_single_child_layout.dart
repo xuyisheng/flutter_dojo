@@ -28,7 +28,8 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'Align',
-      subtitle: '''A widget that aligns its child within itself and optionally sizes itself based on the child's size.''',
+      subtitle:
+          '''A widget that aligns its child within itself and optionally sizes itself based on the child's size.''',
       keyword: 'Align',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Align-class.html',
       buildRoute: (context) => BaseWidget('Align', codePath + 'align', AlignWidget()),
@@ -87,7 +88,8 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       subtitle: 'A widget that defers the layout of its single child to a delegate.',
       keyword: 'CustomSingleChildLayout',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CustomSingleChildLayout-class.html',
-      buildRoute: (context) => BaseWidget('CustomSingleChildLayout', codePath + 'customsinglechildlayout', CustomSingleChildLayoutWidget()),
+      buildRoute: (context) =>
+          BaseWidget('CustomSingleChildLayout', codePath + 'customsinglechildlayout', CustomSingleChildLayoutWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,
@@ -103,7 +105,8 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       subtitle: 'A widget that sizes its child to a fraction of the total available space.',
       keyword: 'FractionallySizedBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html',
-      buildRoute: (context) => BaseWidget('FractionallySizedBox', codePath + 'fractionallysizedbox', FractionallySizedBoxWidget()),
+      buildRoute: (context) =>
+          BaseWidget('FractionallySizedBox', codePath + 'fractionallysizedbox', FractionallySizedBoxWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,
@@ -166,7 +169,8 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'SizedOverflowBox',
-      subtitle: 'A widget that is a specific size but passes its original constraints through to its child, which will probably overflow.',
+      subtitle:
+          'A widget that is a specific size but passes its original constraints through to its child, which will probably overflow.',
       keyword: 'SizedOverflowBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html',
       buildRoute: (context) => BaseWidget('SizedOverflowBox', codePath + 'sizedoverflowbox', SizedOverflowBoxWidget()),

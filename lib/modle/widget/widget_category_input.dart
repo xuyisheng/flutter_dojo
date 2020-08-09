@@ -29,7 +29,8 @@ List<DemoItem> buildInputDemoItems(String codePath) {
       subtitle: 'A widget that calls a callback whenever the user presses or releases a key on a keyboard.',
       keyword: 'RawKeyboardListener',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RawKeyboardListener-class.html',
-      buildRoute: (context) => BaseWidget('RawKeyboardListener', codePath + 'rawkeyboardlistener', RawKeyboardListenerWidget()),
+      buildRoute: (context) =>
+          BaseWidget('RawKeyboardListener', codePath + 'rawkeyboardlistener', RawKeyboardListenerWidget()),
     )
   ];
 }

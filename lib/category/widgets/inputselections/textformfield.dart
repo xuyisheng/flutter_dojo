@@ -85,7 +85,11 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
         TextFormField(
           keyboardType: TextInputType.number,
           decoration: const InputDecoration(
-              border: OutlineInputBorder(), labelText: 'Salary', prefixText: '\$', suffixText: 'USD', suffixStyle: TextStyle(color: Colors.green)),
+              border: OutlineInputBorder(),
+              labelText: 'Salary',
+              prefixText: '\$',
+              suffixText: 'USD',
+              suffixStyle: TextStyle(color: Colors.green)),
           maxLines: 1,
         ),
         SizedBox(height: 24.0),

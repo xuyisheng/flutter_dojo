@@ -15,7 +15,8 @@ import 'category/backend/pageroute.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SpUtil.getInstance();
-  await SystemChrome.setPreferredOrientations(<DeviceOrientation>[DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
+  await SystemChrome.setPreferredOrientations(
+      <DeviceOrientation>[DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
     runApp(
       MultiProvider(
         providers: [

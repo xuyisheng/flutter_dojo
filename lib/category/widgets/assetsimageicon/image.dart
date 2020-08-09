@@ -76,7 +76,9 @@ class _ImageWidgetState extends State<ImageWidget> {
             if (loadingProgress == null) return child;
             return Center(
               child: CircularProgressIndicator(
-                value: loadingProgress.expectedTotalBytes != null ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes : null,
+                value: loadingProgress.expectedTotalBytes != null
+                    ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
+                    : null,
               ),
             );
           },

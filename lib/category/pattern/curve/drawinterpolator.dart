@@ -195,8 +195,10 @@ class _DemoPainter extends CustomPainter {
   bool shouldRepaint(_DemoPainter oldDelegate) => true;
 
   void drawText(Canvas canvas, Offset offset, String text) {
-    TextPainter tp =
-        TextPainter(text: TextSpan(style: TextStyle(color: Colors.black), text: text), textAlign: TextAlign.center, textDirection: TextDirection.ltr);
+    TextPainter tp = TextPainter(
+        text: TextSpan(style: TextStyle(color: Colors.black), text: text),
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.ltr);
     tp.layout();
     tp.paint(canvas, offset);
   }

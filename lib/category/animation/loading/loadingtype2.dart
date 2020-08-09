@@ -30,7 +30,8 @@ class _LoadingType2State extends State<LoadingType2> with SingleTickerProviderSt
 
     print(dotRadius);
 
-    controller = AnimationController(lowerBound: 0.0, upperBound: 1.0, duration: const Duration(milliseconds: 3000), vsync: this);
+    controller = AnimationController(
+        lowerBound: 0.0, upperBound: 1.0, duration: const Duration(milliseconds: 3000), vsync: this);
 
     animationRotation = Tween(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(

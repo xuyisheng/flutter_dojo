@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dojo/common/markdown/syntax_highlighter.dart';
 
-class MarkdownPage extends StatefulWidget {
+class CodePage extends StatefulWidget {
   final demoFilePath;
 
-  MarkdownPage(this.demoFilePath);
+  CodePage(this.demoFilePath);
 
   @override
-  _MarkdownPageState createState() => _MarkdownPageState();
+  _CodePageState createState() => _CodePageState();
 }
 
-class _MarkdownPageState extends State<MarkdownPage> {
+class _CodePageState extends State<CodePage> {
   String _markdownCodeString;
+  var style = SyntaxHighlighterStyle.darkThemeStyle();
 
   @override
   void didChangeDependencies() {
@@ -29,15 +30,13 @@ class _MarkdownPageState extends State<MarkdownPage> {
   @override
   Widget build(BuildContext context) {
     Widget mdCode;
-    var style = SyntaxHighlighterStyle.lightThemeStyle();
-
     try {
       DartSyntaxHighlighter(style).format(_markdownCodeString);
       mdCode = Padding(
         padding: const EdgeInsets.all(8.0),
         child: RichText(
           text: TextSpan(
-            style: const TextStyle(fontFamily: 'monospace', fontSize: 10.0),
+            style: const TextStyle(fontSize: 12.0),
             children: <TextSpan>[
               DartSyntaxHighlighter(style).format(_markdownCodeString),
             ],
@@ -48,8 +47,18 @@ class _MarkdownPageState extends State<MarkdownPage> {
       mdCode = Text(_markdownCodeString ??= '');
     }
     return Scaffold(
+      backgroundColor: style.codeBackground,
       appBar: AppBar(
         title: Text('Demo code'),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.wb_sunny),
+              onPressed: () {
+                setState(() {
+                  style = SyntaxHighlighterStyle.lightThemeStyle();
+                });
+              }),
+        ],
       ),
       body: _markdownCodeString == null
           ? Center(

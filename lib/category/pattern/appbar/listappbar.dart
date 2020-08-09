@@ -88,14 +88,21 @@ class _ListAppBarWidgetState extends State<ListAppBarWidget> with TickerProvider
                               bottomRight: Radius.circular(32.0),
                             ),
                             boxShadow: <BoxShadow>[
-                              BoxShadow(color: Colors.grey.withOpacity(0.4 * topBarOpacity), offset: const Offset(1.1, 1.1), blurRadius: 10.0),
+                              BoxShadow(
+                                  color: Colors.grey.withOpacity(0.4 * topBarOpacity),
+                                  offset: const Offset(1.1, 1.1),
+                                  blurRadius: 10.0),
                             ],
                           ),
                           child: Column(
                             children: <Widget>[
                               SizedBox(height: MediaQuery.of(context).padding.top),
                               Padding(
-                                padding: EdgeInsets.only(left: 16, right: 16, top: 16 - 8.0 * topBarOpacity, bottom: 12 - 8.0 * topBarOpacity),
+                                padding: EdgeInsets.only(
+                                    left: 16,
+                                    right: 16,
+                                    top: 16 - 8.0 * topBarOpacity,
+                                    bottom: 12 - 8.0 * topBarOpacity),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[

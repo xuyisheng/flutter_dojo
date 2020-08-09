@@ -35,7 +35,8 @@ List<DemoItem> buildInformationDisplaysDemoItems(String codePath) {
       subtitle: 'A material design circular progress indicator, which spins to indicate that the application is busy.',
       keyword: 'CircularProgressIndicator',
       documentationUrl: 'https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html',
-      buildRoute: (context) => BaseWidget('CircularProgressIndicator', codePath + 'circularprogressindicator', CircularProgressIndicatorWidget()),
+      buildRoute: (context) => BaseWidget(
+          'CircularProgressIndicator', codePath + 'circularprogressindicator', CircularProgressIndicatorWidget()),
     ),
     DemoItem(
       icon: Icons.dialpad,
@@ -77,12 +78,14 @@ List<DemoItem> buildInformationDisplaysDemoItems(String codePath) {
       subtitle: 'A material design linear progress indicator, also known as a progress bar.',
       keyword: 'LinearProgressIndicator',
       documentationUrl: 'https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html',
-      buildRoute: (context) => BaseWidget('LinearProgressIndicator', codePath + 'linearprogressindicator', LinearProgressIndicatorWidget()),
+      buildRoute: (context) =>
+          BaseWidget('LinearProgressIndicator', codePath + 'linearprogressindicator', LinearProgressIndicatorWidget()),
     ),
     DemoItem(
       icon: Icons.dialpad,
       title: 'Tooltip',
-      subtitle: 'Tooltips provide text labels that help explain the function of a button or other user interface action.',
+      subtitle:
+          'Tooltips provide text labels that help explain the function of a button or other user interface action.',
       keyword: 'Tooltip',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Tooltip-class.html',
       buildRoute: (context) => BaseWidget('Tooltip', codePath + 'tooltip', TooltipWidget()),

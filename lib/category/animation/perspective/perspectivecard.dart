@@ -275,7 +275,9 @@ class _FlipPanelState<T> extends State<FlipPanel> with TickerProviderStateMixin 
     } else {
       _child1 = _child2 != null
           ? _child2
-          : _isStreamMode ? widget.streamItemBuilder(context, _currentValue) : widget.indexedItemBuilder(context, _currentIndex % widget.itemsCount);
+          : _isStreamMode
+              ? widget.streamItemBuilder(context, _currentValue)
+              : widget.indexedItemBuilder(context, _currentIndex % widget.itemsCount);
       _upperChild1 = _upperChild2 != null ? _upperChild2 : makeUpperClip(_child1);
       _lowerChild1 = _lowerChild2 != null ? _lowerChild2 : makeLowerClip(_child1);
     }

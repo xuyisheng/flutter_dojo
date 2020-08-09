@@ -103,9 +103,12 @@ class _CartItemState extends State<CartItem> with TickerProviderStateMixin {
                     height: 200,
                     padding: EdgeInsets.all(8),
                     margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(12)), boxShadow: [
-                      BoxShadow(color: Colors.grey[300], blurRadius: 1),
-                    ]),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                        boxShadow: [
+                          BoxShadow(color: Colors.grey[300], blurRadius: 1),
+                        ]),
                   ),
                 );
               },

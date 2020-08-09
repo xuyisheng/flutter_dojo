@@ -79,7 +79,8 @@ class MyPainter extends CustomPainter {
     canvas.drawRect(Rect.fromCircle(center: Offset(60.0, 180.0), radius: 30), mPaint);
     canvas.drawRect(Rect.fromCircle(center: Offset(150.0, 180.0), radius: 30), mPaintStroke);
     // 画圆角矩形
-    canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromCircle(center: Offset(60.0, 270.0), radius: 30), Radius.circular(16)), mPaint);
+    canvas.drawRRect(
+        RRect.fromRectAndRadius(Rect.fromCircle(center: Offset(60.0, 270.0), radius: 30), Radius.circular(16)), mPaint);
     canvas.drawRRect(
         RRect.fromRectAndCorners(
           Rect.fromCircle(center: Offset(150.0, 270.0), radius: 30),

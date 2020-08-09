@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dojo/common/markdown/widget_markdown_page.dart';
+import 'package:flutter_dojo/common/markdown/widget_code_page.dart';
 import 'package:flutter_dojo/common/sp_util.dart';
 import 'package:share/share.dart';
 
@@ -67,7 +67,7 @@ class _BaseWidgetState extends State<BaseWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MarkdownPage(widget.codePath + '.dart'),
+                    builder: (context) => CodePage(widget.codePath + '.dart'),
                   ),
                 );
               },

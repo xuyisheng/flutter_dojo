@@ -7,7 +7,8 @@ class LinearProgressIndicatorWidget extends StatefulWidget {
   _LinearProgressIndicatorWidgetState createState() => _LinearProgressIndicatorWidgetState();
 }
 
-class _LinearProgressIndicatorWidgetState extends State<LinearProgressIndicatorWidget> with SingleTickerProviderStateMixin {
+class _LinearProgressIndicatorWidgetState extends State<LinearProgressIndicatorWidget>
+    with SingleTickerProviderStateMixin {
   var animation;
   AnimationController controller;
 

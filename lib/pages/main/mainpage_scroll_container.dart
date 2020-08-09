@@ -126,6 +126,64 @@ class _MainPageScrollContainerState extends State<MainPageScrollContainer> {
             ),
           ],
         ),
+        drawer: Drawer(
+          child: Container(
+            padding: const EdgeInsets.all(24),
+            color: Colors.black26,
+            child: ListView(
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: CircleAvatar(
+                    radius: 40,
+                    child: Text('Xu'),
+                    backgroundColor: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text('Username'),
+                  subtitle: Text('Email'),
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                ),
+                SizedBox(height: 16),
+                ListTile(
+                  title: Text('代码主题设置'),
+                  subtitle: Wrap(
+                    children: <Widget>[
+                      ChoiceChip(
+                        backgroundColor: Colors.grey,
+                        selectedColor: Colors.blueAccent,
+                        label: Text('Light'),
+                        labelStyle: TextStyle(fontSize: 15),
+                        onSelected: (value) {},
+                        selected: true,
+                      ),
+                      SizedBox(width: 16),
+                      ChoiceChip(
+                        backgroundColor: Colors.grey,
+                        selectedColor: Colors.blueAccent,
+                        label: Text('Dark'),
+                        labelStyle: TextStyle(fontSize: 15),
+                        onSelected: (value) {},
+                        selected: false,
+                      ),
+                      SizedBox(width: 16),
+                      ChoiceChip(
+                        backgroundColor: Colors.grey,
+                        selectedColor: Colors.blueAccent,
+                        label: Text('Github'),
+                        labelStyle: TextStyle(fontSize: 15),
+                        onSelected: (value) {},
+                        selected: false,
+                      ),
+                      SizedBox(width: 16),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

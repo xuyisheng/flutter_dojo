@@ -117,15 +117,19 @@ class StarCliper extends CustomClipper<Path> {
     double radiusIn = (radius * math.sin(radian / 2) / math.cos(radian)); // 中间五边形的半径
 
     path.moveTo((radius * math.cos(radian / 2)), 0.0); // 此点为多边形的起点
-    path.lineTo((radius * math.cos(radian / 2) + radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
+    path.lineTo(
+        (radius * math.cos(radian / 2) + radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
     path.lineTo((radius * math.cos(radian / 2) * 2), (radius - radius * math.sin(radian / 2)));
-    path.lineTo((radius * math.cos(radian / 2) + radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
+    path.lineTo(
+        (radius * math.cos(radian / 2) + radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
     path.lineTo((radius * math.cos(radian / 2) + radius * math.sin(radian)), (radius + radius * math.cos(radian)));
     path.lineTo((radius * math.cos(radian / 2)), (radius + radiusIn));
     path.lineTo((radius * math.cos(radian / 2) - radius * math.sin(radian)), (radius + radius * math.cos(radian)));
-    path.lineTo((radius * math.cos(radian / 2) - radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
+    path.lineTo(
+        (radius * math.cos(radian / 2) - radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
     path.lineTo(0.0, (radius - radius * math.sin(radian / 2)));
-    path.lineTo((radius * math.cos(radian / 2) - radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
+    path.lineTo(
+        (radius * math.cos(radian / 2) - radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
 
     path.close(); // 使这些点构成封闭的多边形
 

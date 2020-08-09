@@ -17,6 +17,18 @@ class MainPagePageHeader extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 16),
+                  child: Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => SearchMainPage()));
                 },
                 child: Container(
@@ -31,7 +43,7 @@ class MainPagePageHeader extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              InkWell(
+              GestureDetector(
                 onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => CollectPage())),
                 child: Container(
                   margin: EdgeInsets.only(right: 16),
@@ -60,7 +72,7 @@ class MainPagePageHeader extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(right: 16),
                   child: Icon(
-                    Icons.menu,
+                    Icons.person,
                     color: Colors.white,
                   ),
                 ),

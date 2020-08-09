@@ -47,7 +47,8 @@ class _FractionallySizedBoxWidgetState extends State<FractionallySizedBoxWidget>
             ),
           ),
           SizedBox(height: 100),
-          SubtitleWidget('widthFactor: ${widthFactor.toStringAsFixed(2)}, heightFactor: ${heightFactor.toStringAsFixed(2)}'),
+          SubtitleWidget(
+              'widthFactor: ${widthFactor.toStringAsFixed(2)}, heightFactor: ${heightFactor.toStringAsFixed(2)}'),
           MainTitleWidget('FractionallySizedBox 百分百布局'),
           SubtitleWidget('size the child to a fraction of the total available space'),
           FractionallySizedBox(

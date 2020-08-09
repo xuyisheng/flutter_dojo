@@ -6,7 +6,8 @@ class RelativePositionedTransitionWidget extends StatefulWidget {
   _RelativePositionedTransitionWidgetState createState() => _RelativePositionedTransitionWidgetState();
 }
 
-class _RelativePositionedTransitionWidgetState extends State<RelativePositionedTransitionWidget> with SingleTickerProviderStateMixin {
+class _RelativePositionedTransitionWidgetState extends State<RelativePositionedTransitionWidget>
+    with SingleTickerProviderStateMixin {
   AnimationController animationController;
 
   @override

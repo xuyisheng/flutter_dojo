@@ -2,15 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:string_scanner/string_scanner.dart';
 
 class SyntaxHighlighterStyle {
-  SyntaxHighlighterStyle(
-      {this.baseStyle,
-      this.numberStyle,
-      this.commentStyle,
-      this.keywordStyle,
-      this.stringStyle,
-      this.punctuationStyle,
-      this.classStyle,
-      this.constantStyle});
+  SyntaxHighlighterStyle({
+    this.baseStyle,
+    this.numberStyle,
+    this.commentStyle,
+    this.keywordStyle,
+    this.stringStyle,
+    this.punctuationStyle,
+    this.classStyle,
+    this.constantStyle,
+    this.codeBackground = Colors.white,
+  });
+
+  static get styleType => 0;
 
   static SyntaxHighlighterStyle lightThemeStyle() {
     return SyntaxHighlighterStyle(
@@ -26,14 +30,16 @@ class SyntaxHighlighterStyle {
 
   static SyntaxHighlighterStyle darkThemeStyle() {
     return SyntaxHighlighterStyle(
-        baseStyle: const TextStyle(color: Color(0xFFFFFFFF)),
-        numberStyle: const TextStyle(color: Color(0xFF1565C0)),
-        commentStyle: const TextStyle(color: Color(0xFF9E9E9E)),
-        keywordStyle: const TextStyle(color: Color(0xFF80CBC4)),
-        stringStyle: const TextStyle(color: Color(0xFF009688)),
-        punctuationStyle: const TextStyle(color: Color(0xFFFFFFFF)),
-        classStyle: const TextStyle(color: Color(0xFF009688)),
-        constantStyle: const TextStyle(color: Color(0xFF795548)));
+      baseStyle: const TextStyle(color: Color(0xFFFFFFFF)),
+      numberStyle: const TextStyle(color: Color(0xFF1565C0)),
+      commentStyle: const TextStyle(color: Color(0xFF9E9E9E)),
+      keywordStyle: const TextStyle(color: Color(0xFF80CBC4)),
+      stringStyle: const TextStyle(color: Color(0xFF009688)),
+      punctuationStyle: const TextStyle(color: Color(0xFFFFFFFF)),
+      classStyle: const TextStyle(color: Color(0xFF009688)),
+      constantStyle: const TextStyle(color: Color(0xFF795548)),
+      codeBackground: Colors.black54,
+    );
   }
 
   final TextStyle baseStyle;
@@ -44,6 +50,7 @@ class SyntaxHighlighterStyle {
   final TextStyle punctuationStyle;
   final TextStyle classStyle;
   final TextStyle constantStyle;
+  final Color codeBackground;
 }
 
 abstract class SyntaxHighlighter {
@@ -133,14 +140,16 @@ class DartSyntaxHighlighter extends SyntaxHighlighter {
       int currentPosition = 0;
 
       for (_HighlightSpan span in _spans) {
-        if (currentPosition != span.start) formattedText.add(TextSpan(text: _src.substring(currentPosition, span.start)));
+        if (currentPosition != span.start)
+          formattedText.add(TextSpan(text: _src.substring(currentPosition, span.start)));
 
         formattedText.add(TextSpan(style: span.textStyle(_style), text: span.textForSpan(_src)));
 
         currentPosition = span.end;
       }
 
-      if (currentPosition != _src.length) formattedText.add(TextSpan(text: _src.substring(currentPosition, _src.length)));
+      if (currentPosition != _src.length)
+        formattedText.add(TextSpan(text: _src.substring(currentPosition, _src.length)));
 
       return TextSpan(style: _style.baseStyle, children: formattedText);
     } else {
@@ -255,7 +264,8 @@ class DartSyntaxHighlighter extends SyntaxHighlighter {
           type = _HighlightType.keyword;
         else if (_firstLetterIsUpperCase(word))
           type = _HighlightType.klass;
-        else if (word.length >= 2 && word.startsWith('k') && _firstLetterIsUpperCase(word.substring(1))) type = _HighlightType.constant;
+        else if (word.length >= 2 && word.startsWith('k') && _firstLetterIsUpperCase(word.substring(1)))
+          type = _HighlightType.constant;
 
         if (type != null) {
           _spans.add(_HighlightSpan(type, _scanner.lastMatch.start, _scanner.lastMatch.end));

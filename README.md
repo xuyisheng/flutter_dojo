@@ -223,3 +223,6 @@ Tools • Dart 2.8.4
 ```
 
 Flutter Dojo 3.0 在GitHub Action CI编译通过。
+
+[![Stargazers over time](https://starchart.cc/xuyisheng/flutter_dojo.svg)](https://starchart.cc/xuyisheng/flutter_dojo)
+

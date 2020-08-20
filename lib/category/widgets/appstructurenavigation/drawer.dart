@@ -25,6 +25,7 @@ class DrawerWidget extends StatelessWidget {
                 ),
               ),
             ),
+            // A material design [Drawer] header that identifies the app's user.
             UserAccountsDrawerHeader(
               accountName: Text('XuYisheng'),
               accountEmail: Text('XuYisheng89@163.com'),

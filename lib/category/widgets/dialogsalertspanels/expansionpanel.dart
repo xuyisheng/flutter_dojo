@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ExpansionPanelWidget extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
     return ListView(
       children: <Widget>[
         MainTitleWidget('ExpansionPanel基本使用'),
+        SubtitleWidget('A material expansion panel list that lays out its children and animates expansions.'),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 2),
           child: buildPanel(),

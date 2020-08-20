@@ -31,6 +31,7 @@ class SliverPersistentHeaderWidget extends StatelessWidget {
             ),
           ),
         ),
+        // A sliver that contains a single box widget.
         SliverToBoxAdapter(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 8),

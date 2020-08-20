@@ -14,7 +14,7 @@ List<DemoItem> buildStylingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.style,
       title: 'Flexible',
-      subtitle: 'Flexible',
+      subtitle: 'A widget that controls how a child of a [Row], [Column], or [Flex] flexes.',
       keyword: 'Flexible',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Flexible-class.html',
       buildRoute: (context) => BaseWidget('Flexible', codePath + 'flexible', FlexibleWidget()),
@@ -30,7 +30,7 @@ List<DemoItem> buildStylingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.style,
       title: 'Material',
-      subtitle: 'Material',
+      subtitle: 'A piece of material.',
       keyword: 'Material',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Material-class.html',
       buildRoute: (context) => BaseWidget('Material', codePath + 'material', MaterialWidget()),
@@ -38,8 +38,9 @@ List<DemoItem> buildStylingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.style,
       title: 'MaterialSlice',
-      subtitle: 'MaterialSlice',
-      keyword: 'MaterialSlice',
+      subtitle:
+          'Displays a list of [MergeableMaterialItem] children. The list contains [MaterialSlice] items whose boundaries are either \"merged\" with adjacent items or separated by a [MaterialGap]. The [children] are distributed along the given [mainAxis] in the same way as the children of a [ListBody]. When the list of children changes, gaps are automatically animated open or closed as needed.',
+      keyword: 'MaterialSlice MergeableMaterial',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/MaterialSlice-class.html',
       buildRoute: (context) => BaseWidget('MaterialSlice', codePath + 'materialslice', MaterialSliceWidget()),
     ),
@@ -54,7 +55,8 @@ List<DemoItem> buildStylingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.style,
       title: 'Spacer',
-      subtitle: 'Spacer',
+      subtitle:
+          'Spacer creates an adjustable, empty spacer that can be used to tune the spacing between widgets in a [Flex] container, like [Row] or [Column].',
       keyword: 'Spacer',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Spacer-class.html',
       buildRoute: (context) => BaseWidget('Spacer', codePath + 'spacer', SpacerWidget()),
@@ -62,9 +64,8 @@ List<DemoItem> buildStylingDemoItems(String codePath) {
     DemoItem(
       icon: Icons.style,
       title: 'Theme',
-      subtitle:
-          'Applies a theme to descendant widgets. A theme describes the colors and typographic choices of an application.',
-      keyword: 'Theme',
+      subtitle: 'Applies a theme to descendant widgets. A theme describes the colors and typographic choices of an application.',
+      keyword: 'Theme CupertinoTheme',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Theme-class.html',
       buildRoute: (context) => BaseWidget('Theme', codePath + 'theme', ThemeWidget()),
     ),

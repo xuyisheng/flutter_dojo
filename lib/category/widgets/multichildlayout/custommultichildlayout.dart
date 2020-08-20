@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class CustomMultiChildLayoutWidget extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
     return Column(
       children: <Widget>[
         MainTitleWidget('自定义视图示例'),
+        SubtitleWidget('LayoutId: Metadata for identifying children in a [CustomMultiChildLayout].'),
         Container(
           width: 300,
           height: 200,

@@ -65,9 +65,7 @@ class _LoadingType6State extends State<LoadingType6> with SingleTickerProviderSt
         Opacity(
           opacity: loaderAnimation1.value <= 0.3
               ? 2.5 * loaderAnimation1.value
-              : (loaderAnimation1.value > 0.30 && loaderAnimation1.value <= 0.70)
-                  ? 1.0
-                  : 2.5 - (2.5 * loaderAnimation1.value),
+              : (loaderAnimation1.value > 0.30 && loaderAnimation1.value <= 0.70) ? 1.0 : 2.5 - (2.5 * loaderAnimation1.value),
           child: Padding(
             padding: const EdgeInsets.only(right: 8),
             child: Container(
@@ -80,9 +78,7 @@ class _LoadingType6State extends State<LoadingType6> with SingleTickerProviderSt
         Opacity(
           opacity: loaderAnimation2.value <= 0.3
               ? 2.5 * loaderAnimation2.value
-              : (loaderAnimation2.value > 0.30 && loaderAnimation2.value <= 0.70)
-                  ? 1.0
-                  : 2.5 - (2.5 * loaderAnimation2.value),
+              : (loaderAnimation2.value > 0.30 && loaderAnimation2.value <= 0.70) ? 1.0 : 2.5 - (2.5 * loaderAnimation2.value),
           child: Padding(
             padding: const EdgeInsets.only(right: 8),
             child: Container(
@@ -95,9 +91,7 @@ class _LoadingType6State extends State<LoadingType6> with SingleTickerProviderSt
         Opacity(
           opacity: loaderAnimation3.value <= 0.3
               ? 2.5 * loaderAnimation3.value
-              : (loaderAnimation3.value > 0.30 && loaderAnimation3.value <= 0.70)
-                  ? 1.0
-                  : 2.5 - (2.5 * loaderAnimation3.value),
+              : (loaderAnimation3.value > 0.30 && loaderAnimation3.value <= 0.70) ? 1.0 : 2.5 - (2.5 * loaderAnimation3.value),
           child: Padding(
             padding: const EdgeInsets.only(right: 8),
             child: Container(

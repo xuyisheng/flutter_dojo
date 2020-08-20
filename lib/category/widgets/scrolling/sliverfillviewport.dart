@@ -16,6 +16,7 @@ class _SliverFillViewportWidgetState extends State<SliverFillViewportWidget> {
       children: <Widget>[
         MainTitleWidget('SliverFillViewport基本使用'),
         SubtitleWidget('通过viewportFraction修改视图在列表中的占比'),
+        SubtitleWidget('A sliver that contains multiple box children that each fills the viewport.'),
         Expanded(
           child: CustomScrollView(
             slivers: <Widget>[

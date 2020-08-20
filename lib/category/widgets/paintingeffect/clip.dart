@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/item_util.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ClipWidget extends StatefulWidget {
   @override
@@ -20,10 +21,12 @@ class _ClipWidgetState extends State<ClipWidget> {
           child: SizedItem(100),
         ),
         MainTitleWidget('ClipOval基本使用'),
+        SubtitleWidget('A widget that clips its child using an oval.'),
         ClipOval(
           child: SizedItem(100),
         ),
         MainTitleWidget('ClipPath基本使用'),
+        SubtitleWidget(' widget that clips its child using a path.'),
         ClipPath(
           clipper: ArcClipper(),
           child: SizedBox(
@@ -48,6 +51,8 @@ class _ClipWidgetState extends State<ClipWidget> {
             child: Image.asset('assets/images/flower.jpg'),
           ),
         ),
+        MainTitleWidget('ClipRRect基本使用'),
+        SubtitleWidget('A widget that clips its child using a rounded rectangle.'),
         ClipRRect(
           borderRadius: BorderRadius.circular(12),
           child: Container(
@@ -117,19 +122,15 @@ class StarCliper extends CustomClipper<Path> {
     double radiusIn = (radius * math.sin(radian / 2) / math.cos(radian)); // 中间五边形的半径
 
     path.moveTo((radius * math.cos(radian / 2)), 0.0); // 此点为多边形的起点
-    path.lineTo(
-        (radius * math.cos(radian / 2) + radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
+    path.lineTo((radius * math.cos(radian / 2) + radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
     path.lineTo((radius * math.cos(radian / 2) * 2), (radius - radius * math.sin(radian / 2)));
-    path.lineTo(
-        (radius * math.cos(radian / 2) + radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
+    path.lineTo((radius * math.cos(radian / 2) + radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
     path.lineTo((radius * math.cos(radian / 2) + radius * math.sin(radian)), (radius + radius * math.cos(radian)));
     path.lineTo((radius * math.cos(radian / 2)), (radius + radiusIn));
     path.lineTo((radius * math.cos(radian / 2) - radius * math.sin(radian)), (radius + radius * math.cos(radian)));
-    path.lineTo(
-        (radius * math.cos(radian / 2) - radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
+    path.lineTo((radius * math.cos(radian / 2) - radiusIn * math.cos(radian / 2)), (radius + radiusIn * math.sin(radian / 2)));
     path.lineTo(0.0, (radius - radius * math.sin(radian / 2)));
-    path.lineTo(
-        (radius * math.cos(radian / 2) - radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
+    path.lineTo((radius * math.cos(radian / 2) - radiusIn * math.sin(radian)), (radius - radius * math.sin(radian / 2)));
 
     path.close(); // 使这些点构成封闭的多边形
 

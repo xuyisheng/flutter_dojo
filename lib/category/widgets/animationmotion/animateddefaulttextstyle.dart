@@ -7,11 +7,30 @@ class AnimatedDefaultTextStyleWidget extends StatefulWidget {
   _AnimatedDefaultTextStyleWidgetState createState() => _AnimatedDefaultTextStyleWidgetState();
 }
 
-class _AnimatedDefaultTextStyleWidgetState extends State<AnimatedDefaultTextStyleWidget> {
+class _AnimatedDefaultTextStyleWidgetState extends State<AnimatedDefaultTextStyleWidget> with SingleTickerProviderStateMixin {
   var style = TextStyle(
     fontSize: 20,
     color: Colors.cyan,
   );
+
+  AnimationController _animationController;
+  Animation _animation;
+
+  @override
+  void initState() {
+    _animationController = AnimationController(duration: Duration(seconds: 2), vsync: this);
+    _animation = TextStyleTween(
+      begin: TextStyle(color: Colors.blue, fontSize: 16),
+      end: TextStyle(color: Colors.red, fontSize: 32),
+    ).animate(_animationController);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +56,15 @@ class _AnimatedDefaultTextStyleWidgetState extends State<AnimatedDefaultTextStyl
                 fontStyle: FontStyle.italic,
               );
             });
+            _animationController.forward();
           },
           child: Text('Change Text Style'),
+        ),
+        MainTitleWidget('Change Text Style'),
+        SubtitleWidget('Animated version of a [DefaultTextStyle] that animates the different properties of its [TextStyle].'),
+        DefaultTextStyleTransition(
+          style: _animation,
+          child: Text('DefaultTextStyleTransition'),
         ),
       ],
     );

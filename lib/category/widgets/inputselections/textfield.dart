@@ -38,6 +38,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     return ListView(
       children: <Widget>[
         MainTitleWidget('TextField基本用法'),
+        SubtitleWidget('InputDecorator: Defines the appearance of a Material Design text field.'),
         TextField(),
         MainTitleWidget('设置TextField可输入最大行数'),
         Container(

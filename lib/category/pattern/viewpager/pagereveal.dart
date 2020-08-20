@@ -456,8 +456,7 @@ class PagerIndicator extends StatelessWidget {
         percentActive = 0.0;
       }
 
-      bool isHollow = i > viewModel.activeIndex ||
-          (i == viewModel.activeIndex && viewModel.slideDirection == SlideDirection.leftToRight);
+      bool isHollow = i > viewModel.activeIndex || (i == viewModel.activeIndex && viewModel.slideDirection == SlideDirection.leftToRight);
 
       bubbles.add(
         PageBubble(
@@ -520,13 +519,9 @@ class PageBubble extends StatelessWidget {
           height: lerpDouble(20.0, 45.0, viewModel.activePercent),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: viewModel.isHollow
-                ? const Color(0x88FFFFFF).withAlpha(0x88 * viewModel.activePercent.round())
-                : const Color(0x88FFFFFF),
+            color: viewModel.isHollow ? const Color(0x88FFFFFF).withAlpha(0x88 * viewModel.activePercent.round()) : const Color(0x88FFFFFF),
             border: Border.all(
-              color: viewModel.isHollow
-                  ? const Color(0x88FFFFFF).withAlpha((0x88 * (1.0 - viewModel.activePercent)).round())
-                  : Colors.transparent,
+              color: viewModel.isHollow ? const Color(0x88FFFFFF).withAlpha((0x88 * (1.0 - viewModel.activePercent)).round()) : Colors.transparent,
               width: 3.0,
             ),
           ),

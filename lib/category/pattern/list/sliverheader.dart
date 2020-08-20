@@ -44,6 +44,7 @@ class _SliverHeaderWidgetState extends State<SliverHeaderWidget> with SingleTick
               ),
             ),
           ),
+          // A sliver that contains a single box child that fills the remaining space in the viewport.
           SliverFillRemaining(
             child: TabBarView(
               controller: this.tabController,

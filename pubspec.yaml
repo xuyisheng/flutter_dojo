@@ -96,6 +96,7 @@ flutter:
     - lib/category/widgets/appstructurenavigation/navigationrail.dart
     - lib/category/widgets/appstructurenavigation/searchdelegate.dart
     - lib/category/widgets/appstructurenavigation/tabpageselector.dart
+    - lib/category/widgets/appstructurenavigation/navigationtoolbar.dart
     - lib/category/widgets/appstructurenavigation/widgetsapp.dart
     - lib/category/widgets/appstructurenavigation/safearea.dart
     - lib/category/widgets/appstructurenavigation/tabbar.dart
@@ -135,6 +136,7 @@ flutter:
     - lib/category/widgets/cupertino/cupertinobutton.dart
     - lib/category/widgets/cupertino/cupertinoalertdialog.dart
     - lib/category/widgets/cupertino/cupertinodialogaction.dart
+    - lib/category/widgets/cupertino/cupertinosliverrefreshcontrol.dart
     - lib/category/widgets/cupertino/cupertinoslider.dart
     - lib/category/widgets/cupertino/cupertinoswitch.dart
     - lib/category/widgets/cupertino/cupertinotabbar.dart
@@ -184,6 +186,7 @@ flutter:
     - lib/category/widgets/layout/divider.dart
     - lib/category/widgets/layout/expansiontile.dart
     - lib/category/widgets/layout/listtile.dart
+    - lib/category/widgets/layout/orientationbuilder.dart
     - lib/category/widgets/layout/stepper.dart
     - lib/category/widgets/layout/verticaldivider.dart
 
@@ -214,6 +217,7 @@ flutter:
     - lib/category/widgets/paintingeffect/opacity.dart
     - lib/category/widgets/paintingeffect/colorfiltered.dart
     - lib/category/widgets/paintingeffect/physicalmodel.dart
+    - lib/category/widgets/paintingeffect/physicalshape.dart
     - lib/category/widgets/paintingeffect/rotatedbox.dart
     - lib/category/widgets/paintingeffect/shadermask.dart
 
@@ -237,12 +241,16 @@ flutter:
     - lib/category/widgets/scrolling/sliverlist.dart
     - lib/category/widgets/scrolling/sliveropacity.dart
     - lib/category/widgets/scrolling/sliverpadding.dart
+    - lib/category/widgets/scrolling/sliverlayoutbuilder.dart
     - lib/category/widgets/scrolling/sliverpersistentheader.dart
 
     - lib/category/widgets/singlechildlayout/align.dart
     - lib/category/widgets/singlechildlayout/aspectratio.dart
     - lib/category/widgets/singlechildlayout/baseline.dart
+    - lib/category/widgets/singlechildlayout/builder.dart
+    - lib/category/widgets/singlechildlayout/modalbarrier.dart
     - lib/category/widgets/singlechildlayout/center.dart
+    - lib/category/widgets/singlechildlayout/directionality.dart
     - lib/category/widgets/singlechildlayout/circleavatar.dart
     - lib/category/widgets/singlechildlayout/constrainedbox.dart
     - lib/category/widgets/singlechildlayout/container.dart
@@ -281,6 +289,7 @@ flutter:
     - lib/category/widgets/touchinteractions/draggable.dart
     - lib/category/widgets/touchinteractions/willpopscope.dart
     - lib/category/widgets/touchinteractions/gesturedetector.dart
+    - lib/category/widgets/touchinteractions/rawgesturedetector.dart
     - lib/category/widgets/touchinteractions/listener.dart
 
     - lib/category/pattern/appbar/appbar.dart

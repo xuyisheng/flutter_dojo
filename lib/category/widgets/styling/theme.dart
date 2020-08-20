@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 import 'package:flutter_dojo/common/subtitle_widget.dart';
@@ -57,6 +58,20 @@ class ThemeWidget extends StatelessWidget {
                 child: Text('Theme2'),
               )
             ],
+          ),
+        ),
+        MainTitleWidget('CupertinoTheme'),
+        SubtitleWidget('Applies a visual styling theme to descendant Cupertino widgets.'),
+        CupertinoTheme(
+          data: CupertinoThemeData(
+            barBackgroundColor: CupertinoColors.activeGreen,
+          ),
+          child: CupertinoPageScaffold(
+            navigationBar: CupertinoNavigationBar(
+              leading: Icon(Icons.arrow_back),
+              middle: Text('CupertinoTheme'),
+            ),
+            child: Container(),
           ),
         ),
       ],

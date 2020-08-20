@@ -7,6 +7,7 @@ import 'package:flutter_dojo/category/widgets/touchinteractions/gesturedetector.
 import 'package:flutter_dojo/category/widgets/touchinteractions/ignorepointer.dart';
 import 'package:flutter_dojo/category/widgets/touchinteractions/listener.dart';
 import 'package:flutter_dojo/category/widgets/touchinteractions/longpressdraggable.dart';
+import 'package:flutter_dojo/category/widgets/touchinteractions/rawgesturedetector.dart';
 import 'package:flutter_dojo/category/widgets/touchinteractions/scrollable.dart';
 import 'package:flutter_dojo/category/widgets/touchinteractions/willpopscope.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
@@ -65,7 +66,7 @@ List<DemoItem> buildTouchInteractionsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.touch_app,
       title: 'Listener',
-      subtitle: 'Listener',
+      subtitle: 'A widget that calls callbacks in response to common pointer events.',
       keyword: 'Listener',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Listener-class.html',
       buildRoute: (context) => BaseWidget('Listener', codePath + 'listener', ListenerWidget()),
@@ -76,8 +77,15 @@ List<DemoItem> buildTouchInteractionsDemoItems(String codePath) {
       subtitle: 'Makes its child draggable starting from long press.',
       keyword: 'LongPressDraggable',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/LongPressDraggable-class.html',
-      buildRoute: (context) =>
-          BaseWidget('LongPressDraggable', codePath + 'longpressdraggable', LongPressDraggableWidget()),
+      buildRoute: (context) => BaseWidget('LongPressDraggable', codePath + 'longpressdraggable', LongPressDraggableWidget()),
+    ),
+    DemoItem(
+      icon: Icons.touch_app,
+      title: 'RawGestureDetector',
+      subtitle: 'A widget that detects gestures described by the given gesture factories.',
+      keyword: 'RawGestureDetector',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/RawGestureDetector-class.html',
+      buildRoute: (context) => BaseWidget('RawGestureDetector', codePath + 'rawgesturedetector', RawGestureDetectorWidget()),
     ),
     DemoItem(
       icon: Icons.touch_app,
@@ -90,7 +98,7 @@ List<DemoItem> buildTouchInteractionsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.touch_app,
       title: 'WillPopScope',
-      subtitle: 'WillPopScope',
+      subtitle: 'Registers a callback to veto attempts by the user to dismiss the enclosing [ModalRoute].',
       keyword: 'WillPopScope',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/WillPopScope-class.html',
       buildRoute: (context) => BaseWidget('WillPopScope', codePath + 'willpopscope', WillPopScopeWidget()),

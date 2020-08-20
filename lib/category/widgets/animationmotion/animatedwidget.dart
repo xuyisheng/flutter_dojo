@@ -14,6 +14,7 @@ class _AnimatedWidgetWidgetState extends State<AnimatedWidgetWidget> with Single
   Animation<double> _animationSize;
   Animation<Offset> _animationSlide;
   Animation<double> _animationOutline;
+  Animation<AlignmentGeometry> _animationAlign;
   bool status = false;
 
   @override
@@ -28,6 +29,7 @@ class _AnimatedWidgetWidgetState extends State<AnimatedWidgetWidget> with Single
     _animationSize = Tween(begin: 0.0, end: 1.0).animate(_controller);
     _animationSlide = Tween(begin: Offset(0, 0), end: Offset(0.5, 0.5)).animate(_controller);
     _animationOutline = Tween(begin: 2.0, end: 8.0).animate(_controller);
+    _animationAlign = Tween<AlignmentGeometry>(begin: Alignment.topLeft, end: Alignment.bottomRight).animate(_controller);
   }
 
   @override
@@ -74,6 +76,15 @@ class _AnimatedWidgetWidgetState extends State<AnimatedWidgetWidget> with Single
             color: Colors.cyan,
             height: 100,
             child: Text('SlideTransition'),
+          ),
+        ),
+        AlignTransition(
+          alignment: _animationAlign,
+          child: Container(
+            color: Colors.blueAccent,
+            height: 100,
+            width: 100,
+            child: FlutterLogo(),
           ),
         ),
         MainTitleWidget('自定义AnimatedWidget'),

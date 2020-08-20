@@ -138,8 +138,7 @@ class RadialExpansionDemo extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 PageRouteBuilder<void>(
-                  pageBuilder:
-                      (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+                  pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
                     return AnimatedBuilder(
                         animation: animation,
                         builder: (BuildContext context, Widget child) {

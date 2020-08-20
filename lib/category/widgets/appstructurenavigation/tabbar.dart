@@ -59,6 +59,7 @@ class _TabBarWidgetState extends State<TabBarWidget> with SingleTickerProviderSt
           ),
         ),
         SubtitleWidget('自定义TabBar位置'),
+        SubtitleWidget('TabBarView: A page view that displays the widget which corresponds to the currently selected tab.'),
         Expanded(
           child: Scaffold(
             appBar: PreferredSize(

@@ -30,17 +30,25 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
   return [
     DemoItem(
       icon: Icons.move_to_inbox,
+      title: 'AlignTransition',
+      subtitle: 'Animated version of an [Align] that animates its [Align.alignment] property.',
+      keyword: 'AlignTransition',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/AlignTransition-class.html',
+      buildRoute: (context) => BaseWidget('AlignTransition', codePath + 'animatedwidget', AnimatedWidgetWidget()),
+    ),
+    DemoItem(
+      icon: Icons.move_to_inbox,
       title: 'AlwaysStoppedAnimation',
       subtitle: 'AlwaysStoppedAnimation',
       keyword: 'AlwaysStoppedAnimation',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AlwaysStoppedAnimation-class.html',
-      buildRoute: (context) =>
-          BaseWidget('AlwaysStoppedAnimation', codePath + 'alwaysstoppedanimation', AlwaysStoppedAnimationWidget()),
+      buildRoute: (context) => BaseWidget('AlwaysStoppedAnimation', codePath + 'alwaysstoppedanimation', AlwaysStoppedAnimationWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedAlign',
-      subtitle: 'AnimatedAlign',
+      subtitle:
+          '''Animated version of [Align] which automatically transitions the child's position over a given duration whenever the given [alignment] changes.''',
       keyword: 'AnimatedAlign',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedAlign-class.html',
       buildRoute: (context) => BaseWidget('AnimatedAlign', codePath + 'animatedalign', AnimatedAlignWidget()),
@@ -56,11 +64,10 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedContainer',
-      subtitle: 'A container that gradually changes its values over a period of time.',
+      subtitle: '''Animated version of [Container] that gradually changes its values over a period of time.''',
       keyword: 'AnimatedContainer',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html',
-      buildRoute: (context) =>
-          BaseWidget('AnimatedContainer', codePath + 'animatedcontainer', AnimatedContainerWidget()),
+      buildRoute: (context) => BaseWidget('AnimatedContainer', codePath + 'animatedcontainer', AnimatedContainerWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -68,8 +75,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'A widget that cross-fades between two given children and animates itself between their sizes.',
       keyword: 'AnimatedCrossFade',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedCrossFade-class.html',
-      buildRoute: (context) =>
-          BaseWidget('AnimatedCrossFade', codePath + 'animatedcrossfade', AnimatedCrossFadeWidget()),
+      buildRoute: (context) => BaseWidget('AnimatedCrossFade', codePath + 'animatedcrossfade', AnimatedCrossFadeWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -78,13 +84,12 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
           'Animated version of DefaultTextStyle which automatically transitions the default text style (the text style to apply to descendant Text widgets without explicit style) over a given duration whenever the given style changes.',
       keyword: 'AnimatedDefaultTextStyle',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedDefaultTextStyle-class.html',
-      buildRoute: (context) => BaseWidget(
-          'AnimatedDefaultTextStyle', codePath + 'animateddefaulttextstyle', AnimatedDefaultTextStyleWidget()),
+      buildRoute: (context) => BaseWidget('AnimatedDefaultTextStyle', codePath + 'animateddefaulttextstyle', AnimatedDefaultTextStyleWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedIcon',
-      subtitle: 'AnimatedIcon',
+      subtitle: 'Shows an animated icon at a given animation [progress].',
       keyword: 'AnimatedIcon',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedIcon-class.html',
       buildRoute: (context) => BaseWidget('AnimatedIcon', codePath + 'animatedicon', AnimatedIconWidget()),
@@ -92,7 +97,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedList',
-      subtitle: 'AnimatedList',
+      subtitle: 'A scrolling container that animates items when they are inserted or removed.',
       keyword: 'AnimatedList',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedList-class.html',
       buildRoute: (context) => BaseWidget('AnimatedList', codePath + 'animatedlist', AnimatedListWidget()),
@@ -108,11 +113,10 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedModalBarrier',
-      subtitle: 'A widget that prevents the user from interacting with widgets behind itself.',
+      subtitle: 'A widget that prevents the user from interacting with widgets behind itself, and can be configured with an animated color value.',
       keyword: 'AnimatedModalBarrier',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedModalBarrier-class.html',
-      buildRoute: (context) =>
-          BaseWidget('AnimatedModalBarrier', codePath + 'animatedmodalbarrier', AnimatedModalBarrierWidget()),
+      buildRoute: (context) => BaseWidget('AnimatedModalBarrier', codePath + 'animatedmodalbarrier', AnimatedModalBarrierWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -126,7 +130,8 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedPadding',
-      subtitle: 'AnimatedPadding',
+      subtitle:
+          'Animated version of [Padding] which automatically transitions the indentation over a given duration whenever the given inset changes.',
       keyword: 'AnimatedPadding',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedPadding-class.html',
       buildRoute: (context) => BaseWidget('AnimatedPadding', codePath + 'animatedpadding', AnimatedPaddingWidget()),
@@ -137,24 +142,21 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'Animated version of PhysicalModel.',
       keyword: 'AnimatedPhysicalModel',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedPhysicalModel-class.html',
-      buildRoute: (context) =>
-          BaseWidget('AnimatedPhysicalModel', codePath + 'animatedphysicalmodel', AnimatedPhysicalModelWidget()),
+      buildRoute: (context) => BaseWidget('AnimatedPhysicalModel', codePath + 'animatedphysicalmodel', AnimatedPhysicalModelWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedPositioned',
       subtitle:
           '''Animated version of Positioned which automatically transitions the child's position over a given duration whenever the given position changes.''',
-      keyword: 'AnimatedPositioned',
+      keyword: 'AnimatedPositioned AnimatedPositionedDirectional',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html',
-      buildRoute: (context) =>
-          BaseWidget('AnimatedPositioned', codePath + 'animatedpositioned', AnimatedPositionedWidget()),
+      buildRoute: (context) => BaseWidget('AnimatedPositioned', codePath + 'animatedpositioned', AnimatedPositionedWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedSize',
-      subtitle:
-          '''Animated widget that automatically transitions its size over a given duration whenever the given child's size changes.''',
+      subtitle: '''Animated widget that automatically transitions its size over a given duration whenever the given child's size changes.''',
       keyword: 'AnimatedSize',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedSize-class.html',
       buildRoute: (context) => BaseWidget('AnimatedSize', codePath + 'animatedsize', AnimatedSizeWidget()),
@@ -162,7 +164,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedSwitcher',
-      subtitle: 'AnimatedSwitcher',
+      subtitle: 'A widget that by default does a cross-fade between a new widget and the widget previously set on the [AnimatedSwitcher] as a child.',
       keyword: 'AnimatedSwitcher',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedSwitcher-class.html',
       buildRoute: (context) => BaseWidget('AnimatedSwitcher', codePath + 'animatedswitcher', AnimatedSwitcherWidget()),
@@ -170,7 +172,8 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'AnimatedTheme',
-      subtitle: 'AnimatedTheme',
+      subtitle:
+          'Animated version of [Theme] which automatically transitions the colors, etc, over a given duration whenever the given theme changes.',
       keyword: 'AnimatedTheme',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/AnimatedTheme-class.html',
       buildRoute: (context) => BaseWidget('AnimatedTheme', codePath + 'animatedtheme', AnimatedThemeWidget()),
@@ -189,8 +192,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'Animated version of a DecoratedBox that animates the different properties of its Decoration.',
       keyword: 'DecoratedBoxTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/DecoratedBoxTransition-class.html',
-      buildRoute: (context) =>
-          BaseWidget('DecoratedBoxTransition', codePath + 'decoratedboxtransition', DecoratedBoxTransitionWidget()),
+      buildRoute: (context) => BaseWidget('DecoratedBoxTransition', codePath + 'decoratedboxtransition', DecoratedBoxTransitionWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -203,7 +205,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'FadeInImage',
-      subtitle: 'FadeInImage',
+      subtitle: 'An image that shows a [placeholder] image while the target [image] is loading, then fades in the new image when it loads.',
       keyword: 'FadeInImage',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/FadeInImage-class.html',
       buildRoute: (context) => BaseWidget('FadeInImage', codePath + 'fadeinimage', FadeInImageWidget()),
@@ -223,8 +225,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
           '''Animated version of Positioned which takes a specific Animation to transition the child's position from a start position to and end position over the lifetime of the animation.''',
       keyword: 'PositionedTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/PositionedTransition-class.html',
-      buildRoute: (context) =>
-          BaseWidget('PositionedTransition', codePath + 'positionedtransition', PositionedTransitionWidget()),
+      buildRoute: (context) => BaseWidget('PositionedTransition', codePath + 'positionedtransition', PositionedTransitionWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -232,17 +233,17 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'Animates the rotation of a widget.',
       keyword: 'RotationTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RotationTransition-class.html',
-      buildRoute: (context) =>
-          BaseWidget('RotationTransition', codePath + 'rotationtransition', RotationTransitionWidget()),
+      buildRoute: (context) => BaseWidget('RotationTransition', codePath + 'rotationtransition', RotationTransitionWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
       title: 'RelativePositionedTransition',
-      subtitle: 'RelativePositionedTransition',
+      subtitle:
+          '''Animated version of [Positioned] which transitions the child's position based on the value of [rect] relative to a bounding box with the specified [size].''',
       keyword: 'RelativePositionedTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RelativePositionedTransition-class.html',
-      buildRoute: (context) => BaseWidget('RelativePositionedTransition', codePath + 'relativepositionedtransition',
-          RelativePositionedTransitionWidget()),
+      buildRoute: (context) =>
+          BaseWidget('RelativePositionedTransition', codePath + 'relativepositionedtransition', RelativePositionedTransitionWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -250,7 +251,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'Animates the scale of transformed widget.',
       keyword: 'ScaleTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ScaleTransition-class.html',
-      buildRoute: (context) => BaseWidget('ScaleTransition', codePath + 'rotationtransition', AnimatedWidgetWidget()),
+      buildRoute: (context) => BaseWidget('ScaleTransition', codePath + 'animatedwidget', AnimatedWidgetWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -258,7 +259,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'Animates its own size and clips and aligns the child.',
       keyword: 'SizeTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SizeTransition-class.html',
-      buildRoute: (context) => BaseWidget('SizeTransition', codePath + 'rotationtransition', AnimatedWidgetWidget()),
+      buildRoute: (context) => BaseWidget('SizeTransition', codePath + 'animatedwidget', AnimatedWidgetWidget()),
     ),
     DemoItem(
       icon: Icons.move_to_inbox,
@@ -266,7 +267,7 @@ List<DemoItem> buildAnimationMotionDemoItems(String codePath) {
       subtitle: 'Animates the position of a widget relative to its normal position.',
       keyword: 'SlideTransition',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SlideTransition-class.html',
-      buildRoute: (context) => BaseWidget('SlideTransition', codePath + 'rotationtransition', AnimatedWidgetWidget()),
+      buildRoute: (context) => BaseWidget('SlideTransition', codePath + 'animatedwidget', AnimatedWidgetWidget()),
     ),
   ];
 }

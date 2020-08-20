@@ -60,8 +60,7 @@ class DrawImage extends CustomPainter {
 }
 
 class ImageUtil {
-  static AssetBundle getAssetBundle() =>
-      (rootBundle != null) ? rootBundle : NetworkAssetBundle(Uri.directory(Uri.base.origin));
+  static AssetBundle getAssetBundle() => (rootBundle != null) ? rootBundle : NetworkAssetBundle(Uri.directory(Uri.base.origin));
 
   static Future<ui.Image> load(String url) {
     ImageStream stream = AssetImage(url, bundle: getAssetBundle()).resolve(ImageConfiguration.empty);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class DividerWidget extends StatelessWidget {
   @override
@@ -29,6 +30,13 @@ class DividerWidget extends StatelessWidget {
           Divider(indent: 100),
           MainTitleWidget('Divider颜色 color'),
           Divider(color: Colors.red),
+          MainTitleWidget('DividerTheme'),
+          SubtitleWidget(
+              '''An inherited widget that defines the configuration for [Divider]s, [VerticalDivider]s, dividers between [ListTile]s, and dividers between rows in [DataTable]s in this widget's subtree.'''),
+          DividerTheme(
+            data: DividerThemeData(color: Colors.blueAccent),
+            child: Divider(),
+          )
         ],
       ),
     );

@@ -29,6 +29,13 @@ class CircularProgressIndicatorWidget extends StatelessWidget {
             backgroundColor: Colors.yellow,
           ),
         ),
+        MainTitleWidget('RefreshProgressIndicator'),
+        SubtitleWidget('An indicator for the progress of refreshing the contents of a widget.'),
+        RefreshProgressIndicator(
+          backgroundColor: Colors.blueAccent,
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.redAccent),
+          strokeWidth: 4.0,
+        )
       ],
     );
   }

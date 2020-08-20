@@ -7,8 +7,7 @@ class AlwaysStoppedAnimationWidget extends StatefulWidget {
   _AlwaysStoppedAnimationWidgetState createState() => _AlwaysStoppedAnimationWidgetState();
 }
 
-class _AlwaysStoppedAnimationWidgetState extends State<AlwaysStoppedAnimationWidget>
-    with SingleTickerProviderStateMixin {
+class _AlwaysStoppedAnimationWidgetState extends State<AlwaysStoppedAnimationWidget> with SingleTickerProviderStateMixin {
   AnimationController controller;
 
   @override
@@ -29,8 +28,7 @@ class _AlwaysStoppedAnimationWidgetState extends State<AlwaysStoppedAnimationWid
             return ScaleTransition(
               scale: AlwaysStoppedAnimation<double>(1.0 - (controller.value) * 0.4),
               child: RotationTransition(
-                turns: Tween<double>(begin: 0.0, end: 1.0)
-                    .animate(CurvedAnimation(parent: controller, curve: Curves.fastOutSlowIn)),
+                turns: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: controller, curve: Curves.fastOutSlowIn)),
                 child: Container(
                   height: 120,
                   width: 120,

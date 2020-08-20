@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class DropdownButtonWidget extends StatefulWidget {
   @override
@@ -25,6 +26,7 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
     return ListView(
       children: <Widget>[
         MainTitleWidget('DropdownButton基本用法'),
+        SubtitleWidget('DropdownMenuItem: An item in a menu created by a [DropdownButton].'),
         ButtonBar(
           alignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -58,6 +60,7 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
           iconSize: 50.0, //设置三角标icon的大小
         ),
         MainTitleWidget('无下边线的DropdownButton'),
+        SubtitleWidget('An inherited widget that causes any descendant [DropdownButton] widgets to not include their regular underline.'),
         DropdownButtonHideUnderline(
           child: DropdownButton(
             hint: Text('DropdownButton choose a item'),
@@ -67,6 +70,15 @@ class _DropdownButtonWidgetState extends State<DropdownButtonWidget> {
               setState(() => selectValue = value);
             },
           ),
+        ),
+        MainTitleWidget('DropdownButtonFormField'),
+        SubtitleWidget('A convenience widget that makes a [DropdownButton] into a [FormField].'),
+        DropdownButtonFormField(
+          value: selectValue,
+          items: generateItemList(),
+          onChanged: (value) {
+            setState(() => selectValue = value);
+          },
         ),
       ],
     );

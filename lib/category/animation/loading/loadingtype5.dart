@@ -28,8 +28,8 @@ class BollView extends CustomPainter {
       //第三个球 15 + 5r
       //第四个球 30 + 7r
       //半径也是随着动画值改变
-      canvas.drawCircle(Offset((i + 1) * bollRadius + i * bollRadius + i * 5, size.height / 2),
-          bollRadius * (value > 1 ? (2 - value) : value), paint);
+      canvas.drawCircle(
+          Offset((i + 1) * bollRadius + i * bollRadius + i * 5, size.height / 2), bollRadius * (value > 1 ? (2 - value) : value), paint);
     }
   }
 
@@ -71,8 +71,7 @@ class LoadingType5State extends State<LoadingType5> with TickerProviderStateMixi
     super.initState();
     for (int i = 0; i < widget.count; i++) {
       //创建动画控制器
-      AnimationController animationController =
-          AnimationController(vsync: this, duration: Duration(milliseconds: widget.count * widget.seconds));
+      AnimationController animationController = AnimationController(vsync: this, duration: Duration(milliseconds: widget.count * widget.seconds));
       //添加到控制器集合
       animationControllers.add(animationController);
       //颜色随机

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ChipWidget extends StatefulWidget {
   @override
@@ -16,6 +17,30 @@ class _ChipWidgetState extends State<ChipWidget> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
+        MainTitleWidget('RawChip'),
+        Wrap(
+          spacing: 8,
+          children: [
+            RawChip(
+              label: Text('XuYisheng'),
+              labelStyle: TextStyle(color: Colors.blue),
+              labelPadding: EdgeInsets.symmetric(horizontal: 8),
+            ),
+            RawChip(
+              label: Text('XuYisheng'),
+              onDeleted: () {},
+              deleteIcon: Icon(Icons.delete),
+              deleteIconColor: Colors.red,
+              deleteButtonTooltipMessage: 'Del',
+            ),
+            RawChip(
+              label: Text('XuYisheng'),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              backgroundColor: Colors.red,
+              padding: EdgeInsets.symmetric(vertical: 8),
+            ),
+          ],
+        ),
         MainTitleWidget('Chip基本用法'),
         Chip(
           padding: EdgeInsets.only(
@@ -74,6 +99,8 @@ class _ChipWidgetState extends State<ChipWidget> {
           // shape: _MyBorder(),
         ),
         MainTitleWidget('Choice Chip'),
+        SubtitleWidget(
+            'ChipTheme: Applies a chip theme to descendant [RawChip]-based widgets, like [Chip], [InputChip], [ChoiceChip], [FilterChip], and [ActionChip].'),
         ChipTheme(
           data: ChipTheme.of(context).copyWith(backgroundColor: Colors.red.shade800),
           child: ChoiceChip(
@@ -219,6 +246,15 @@ class _ChipWidgetState extends State<ChipWidget> {
               },
             );
           }).toList(),
+        ),
+        MainTitleWidget('ActionChip'),
+        ActionChip(
+          avatar: CircleAvatar(
+            backgroundColor: Colors.blueAccent,
+            child: Text('X'),
+          ),
+          label: Text('XuYisheng'),
+          onPressed: () {},
         ),
       ],
     );

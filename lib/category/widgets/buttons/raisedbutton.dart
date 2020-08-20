@@ -39,6 +39,7 @@ class _RaisedButtonWidgetState extends State<RaisedButtonWidget> {
         ),
         MainTitleWidget('设置RaisedButton的宽度'),
         SubtitleWidget('修改ButtonTheme'),
+        SubtitleWidget('Used with [ButtonThemeData] to configure the color and geometry of buttons.'),
         Center(
           child: ButtonTheme(
             minWidth: 200,

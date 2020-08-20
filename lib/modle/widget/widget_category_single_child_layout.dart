@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/align.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/aspectratio.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/baseline.dart';
+import 'package:flutter_dojo/category/widgets/singlechildlayout/builder.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/center.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/circleavatar.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/constrainedbox.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/container.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/customsinglechildlayout.dart';
+import 'package:flutter_dojo/category/widgets/singlechildlayout/directionality.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/fittedbox.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/fractionallysizedbox.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/intrinsicheight.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/intrinsicwidth.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/limitedbox.dart';
+import 'package:flutter_dojo/category/widgets/singlechildlayout/modalbarrier.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/offstage.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/overflowbox.dart';
 import 'package:flutter_dojo/category/widgets/singlechildlayout/padding.dart';
@@ -28,8 +31,7 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'Align',
-      subtitle:
-          '''A widget that aligns its child within itself and optionally sizes itself based on the child's size.''',
+      subtitle: '''A widget that aligns its child within itself and optionally sizes itself based on the child's size.''',
       keyword: 'Align',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Align-class.html',
       buildRoute: (context) => BaseWidget('Align', codePath + 'align', AlignWidget()),
@@ -52,6 +54,14 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     ),
     DemoItem(
       icon: Icons.child_care,
+      title: 'Builder',
+      subtitle: 'A platonic widget that calls a closure to obtain its child widget.',
+      keyword: 'Builder',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/Builder-class.html',
+      buildRoute: (context) => BaseWidget('Builder', codePath + 'builder', BuilderWidget()),
+    ),
+    DemoItem(
+      icon: Icons.child_care,
       title: 'Center',
       subtitle: 'A widget that centers its child within itself.',
       keyword: 'Center',
@@ -61,7 +71,7 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'CircleAvatar',
-      subtitle: 'CircleAvatar',
+      subtitle: 'A circle that represents a user.',
       keyword: 'CircleAvatar',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CircleAvatar-class.html',
       buildRoute: (context) => BaseWidget('CircleAvatar', codePath + 'circleavatar', CircleAvatarWidget()),
@@ -88,8 +98,15 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       subtitle: 'A widget that defers the layout of its single child to a delegate.',
       keyword: 'CustomSingleChildLayout',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/CustomSingleChildLayout-class.html',
-      buildRoute: (context) =>
-          BaseWidget('CustomSingleChildLayout', codePath + 'customsinglechildlayout', CustomSingleChildLayoutWidget()),
+      buildRoute: (context) => BaseWidget('CustomSingleChildLayout', codePath + 'customsinglechildlayout', CustomSingleChildLayoutWidget()),
+    ),
+    DemoItem(
+      icon: Icons.child_care,
+      title: 'Directionality',
+      subtitle: 'A widget that determines the ambient directionality of text and text-direction-sensitive render objects.',
+      keyword: 'Directionality',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/Directionality-class.html',
+      buildRoute: (context) => BaseWidget('Directionality', codePath + 'directionality', DirectionalityWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,
@@ -102,11 +119,11 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'FractionallySizedBox',
-      subtitle: 'A widget that sizes its child to a fraction of the total available space.',
+      subtitle:
+          'A widget that sizes its child to a fraction of the total available space. For more details about the layout algorithm, see [RenderFractionallySizedOverflowBox].',
       keyword: 'FractionallySizedBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html',
-      buildRoute: (context) =>
-          BaseWidget('FractionallySizedBox', codePath + 'fractionallysizedbox', FractionallySizedBoxWidget()),
+      buildRoute: (context) => BaseWidget('FractionallySizedBox', codePath + 'fractionallysizedbox', FractionallySizedBoxWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,
@@ -131,6 +148,14 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
       keyword: 'LimitedBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/LimitedBox-class.html',
       buildRoute: (context) => BaseWidget('LimitedBox', codePath + 'limitedbox', LimitedBoxWidget()),
+    ),
+    DemoItem(
+      icon: Icons.child_care,
+      title: 'ModalBarrier',
+      subtitle: 'A widget that prevents the user from interacting with widgets behind itself.',
+      keyword: 'ModalBarrier',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/ModalBarrier-class.html',
+      buildRoute: (context) => BaseWidget('ModalBarrier', codePath + 'modalbarrier', ModalBarrierWidget()),
     ),
     DemoItem(
       icon: Icons.child_care,
@@ -169,8 +194,7 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'SizedOverflowBox',
-      subtitle:
-          'A widget that is a specific size but passes its original constraints through to its child, which will probably overflow.',
+      subtitle: 'A widget that is a specific size but passes its original constraints through to its child, which will probably overflow.',
       keyword: 'SizedOverflowBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/SizedOverflowBox-class.html',
       buildRoute: (context) => BaseWidget('SizedOverflowBox', codePath + 'sizedoverflowbox', SizedOverflowBoxWidget()),
@@ -186,7 +210,7 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'UnconstraindBox',
-      subtitle: 'UnconstraindBox',
+      subtitle: 'A widget that imposes no constraints on its child, allowing it to render at its \"natural\" size.',
       keyword: 'UnconstraindBox',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/UnconstraindBox-class.html',
       buildRoute: (context) => BaseWidget('UnconstraindBox', codePath + 'unconstrainedbox', UnconstrainedBoxWidget()),
@@ -194,7 +218,7 @@ List<DemoItem> buildSingleChildLayoutDemoItems(String codePath) {
     DemoItem(
       icon: Icons.child_care,
       title: 'Visibility',
-      subtitle: 'Visibility',
+      subtitle: 'Whether to show or hide a child.',
       keyword: 'Visibility',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Visibility-class.html',
       buildRoute: (context) => BaseWidget('Visibility', codePath + 'visibility', VisibilityWidget()),

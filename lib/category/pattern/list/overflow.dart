@@ -6,8 +6,7 @@ class OverflowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        SubtitleWidget(
-            '通过SingleChildScrollView或者在Scaffold中设置resizeToAvoidBottomInset\\resizeToAvoidBottomPadding为false来解决布局Overflow的问题'),
+        SubtitleWidget('通过SingleChildScrollView或者在Scaffold中设置resizeToAvoidBottomInset\\resizeToAvoidBottomPadding为false来解决布局Overflow的问题'),
         Text(
           'Login',
           style: TextStyle(fontSize: 30, color: Colors.black),

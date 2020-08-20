@@ -28,7 +28,7 @@ class SliverOpacityWidget extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 margin: EdgeInsets.all(8),
                 child: Text(
-                  'ssss',
+                  'SliverOpacity',
                   style: TextStyle(color: Colors.black38),
                 ),
               ),

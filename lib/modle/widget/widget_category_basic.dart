@@ -18,17 +18,15 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
     DemoItem(
       icon: Icons.format_bold,
       title: 'Appbar',
-      subtitle:
-          'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
+      subtitle: 'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
       keyword: 'Appbar',
       documentationUrl: 'https://api.flutter.dev/flutter/material/AppBar-class.html',
-      buildRoute: (context) =>
-          BaseWidget('Appbar', 'lib/category/widgets/appstructurenavigation/appbar', AppbarWidget()),
+      buildRoute: (context) => BaseWidget('Appbar', 'lib/category/widgets/appstructurenavigation/appbar', AppbarWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,
       title: 'Column',
-      subtitle: 'Layout a list of child widgets in the vertical direction.',
+      subtitle: 'A widget that displays its children in a vertical array.',
       keyword: 'Column',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Column-class.html',
       buildRoute: (context) => BaseWidget('Column', 'lib/category/widgets/multichildlayout/column', ColumnWidget()),
@@ -39,22 +37,22 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
       subtitle: 'A convenience widget that combines common painting, positioning, and sizing widgets.',
       keyword: 'Container',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Container-class.html',
-      buildRoute: (context) =>
-          BaseWidget('Container', 'lib/category/widgets/singlechildlayout/container', ContainerWidget()),
+      buildRoute: (context) => BaseWidget('Container', 'lib/category/widgets/singlechildlayout/container', ContainerWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,
       title: 'FlutterLogo',
-      subtitle: 'The Flutter logo, in widget form. This widget respects the IconTheme.',
+      subtitle:
+          'The Flutter logo, in widget form. This widget respects the [IconTheme]. For guidelines on using the Flutter logo, visit https://flutter.dev/brand.',
       keyword: 'FlutterLogo',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/FlutterLogo-class.html',
-      buildRoute: (context) =>
-          BaseWidget('FlutterLogo', 'lib/category/widgets/paintingeffect/flutterlogo', FlutterLogoWidget()),
+      buildRoute: (context) => BaseWidget('FlutterLogo', 'lib/category/widgets/paintingeffect/flutterlogo', FlutterLogoWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,
       title: 'Icon',
-      subtitle: 'A Material Design icon.',
+      subtitle:
+          '''A graphical icon widget drawn with a glyph from a font described in an [IconData] such as material's predefined [IconData]s in [Icons].''',
       keyword: 'Icon',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Icon-class.html',
       buildRoute: (context) => BaseWidget('Icon', 'lib/category/widgets/assetsimageicon/icon', IconWidget()),
@@ -78,12 +76,10 @@ List<DemoItem> buildBasicDemoItems(String codePath) {
     DemoItem(
       icon: Icons.format_bold,
       title: 'RaisedButton',
-      subtitle:
-          'A Material Design raised button. A raised button consists of a rectangular piece of material that hovers over the interface.',
+      subtitle: 'A Material Design raised button. A raised button consists of a rectangular piece of material that hovers over the interface.',
       keyword: 'RaisedButton',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/RaisedButton-class.html',
-      buildRoute: (context) =>
-          BaseWidget('RaisedButton', codePath + 'lib/category/widgets/buttons/raisedbutton', RaisedButtonWidget()),
+      buildRoute: (context) => BaseWidget('RaisedButton ButtonTheme', codePath + 'lib/category/widgets/buttons/raisedbutton', RaisedButtonWidget()),
     ),
     DemoItem(
       icon: Icons.format_bold,

@@ -24,13 +24,7 @@ class _RestClient implements RestClient {
     ArgumentError.checkNotNull(page, 'page');
     ArgumentError.checkNotNull(per_page, 'per_page');
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'q': q,
-      r'sort': sort,
-      r'order': order,
-      r'page': page,
-      r'per_page': per_page
-    };
+    final queryParameters = <String, dynamic>{r'q': q, r'sort': sort, r'order': order, r'page': page, r'per_page': per_page};
     final _data = <String, dynamic>{};
     final Response<Map<String, dynamic>> _result = await _dio.request('/repositories',
         queryParameters: queryParameters,

@@ -67,6 +67,7 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
               displayedMonth: DateTime.now()),
         ),
         SubtitleWidget('直接展示 月'),
+        SubtitleWidget('A scrollable list of months to allow picking a month.'),
         Container(
           height: 350,
           child: MonthPicker(
@@ -77,6 +78,7 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
           ),
         ),
         SubtitleWidget('直接展示 年'),
+        SubtitleWidget('A scrollable list of years to allow picking a year.'),
         Container(
           height: 350,
           child: YearPicker(
@@ -87,6 +89,7 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
           ),
         ),
         MainTitleWidget('在新版本CalendarDatePicker替代其它DatePicker'),
+        SubtitleWidget('Displays a grid of days for a given month and allows the user to select a date.'),
         Container(
           height: 350,
           child: CalendarDatePicker(

@@ -12,6 +12,7 @@ class BackButtonWidget extends StatelessWidget {
         BackButton(color: Colors.red),
         SizedBox(height: 20),
         SubtitleWidget('BackButtonIcon，只是一张图'),
+        SubtitleWidget('''A \"back\" icon that's appropriate for the current [TargetPlatform].'''),
         BackButtonIcon(),
         SizedBox(height: 20),
         SubtitleWidget('CloseButton与BackButton功能相同，图标不同'),

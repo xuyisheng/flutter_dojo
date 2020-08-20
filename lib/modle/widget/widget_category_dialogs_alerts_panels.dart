@@ -14,7 +14,8 @@ List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.dialpad,
       title: 'AboutDialog',
-      subtitle: 'AboutDialog',
+      subtitle:
+          '''An about box. This is a dialog box with the application's icon, name, version number, and copyright, plus a button to show licenses for software used by the application.''',
       keyword: 'AboutDialog',
       documentationUrl: 'https://api.flutter.dev/flutter/material/AboutDialog-class.html',
       buildRoute: (context) => BaseWidget('AboutDialog', codePath + 'aboutdialog', AboutDialogWidget()),
@@ -24,7 +25,7 @@ List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
       title: 'AlertDialog',
       subtitle:
           'Alerts are urgent interruptions requiring acknowledgement that inform the user about a situation. The AlertDialog widget implements this component.',
-      keyword: 'AlertDialog',
+      keyword: 'AlertDialog StatefulBuilder',
       documentationUrl: 'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
       buildRoute: (context) => BaseWidget('AlertDialog', codePath + 'alertdialog', AlertDialogWidget()),
     ),
@@ -49,7 +50,7 @@ List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
       title: 'ExpansionPanel',
       subtitle:
           'Expansion panels contain creation flows and allow lightweight editing of an element. The ExpansionPanel widget implements this component.',
-      keyword: 'ExpansionPanel',
+      keyword: 'ExpansionPanelList',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ExpansionPanel-class.html',
       buildRoute: (context) => BaseWidget('ExpansionPanel', codePath + 'expansionpanel', ExpansionPanelWidget()),
     ),
@@ -65,7 +66,7 @@ List<DemoItem> buildDialogsAlertsPanelsDemoItems(String codePath) {
       icon: Icons.dialpad,
       title: 'SnackBar',
       subtitle: 'A lightweight message with an optional action which briefly displays at the bottom of the screen.',
-      keyword: 'SnackBar',
+      keyword: 'SnackBar SnackBarAction',
       documentationUrl: 'https://api.flutter.dev/flutter/material/SnackBar-class.html',
       buildRoute: (context) => BaseWidget('SnackBar', codePath + 'snackbar', SnackBarWidget()),
     )

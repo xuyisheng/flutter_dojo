@@ -9,6 +9,7 @@ class PositionedWidget extends StatelessWidget {
       children: <Widget>[
         MainTitleWidget('Positioned基本使用'),
         SubtitleWidget('Positioned与PositionedDirectional的区别为横方向上使用的参数名不同'),
+        SubtitleWidget('A widget that controls where a child of a [Stack] is positioned without committing to a specific [TextDirection].'),
         Expanded(
           child: Stack(
             children: <Widget>[

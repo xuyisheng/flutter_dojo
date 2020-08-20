@@ -8,6 +8,7 @@ class SimpleDialogWidget extends StatelessWidget {
     return ListView(
       children: <Widget>[
         MainTitleWidget('SimpleDialog基本使用'),
+        SubtitleWidget('SimpleDialogOption: An option used in a [SimpleDialog].'),
         RaisedButton(
           onPressed: () => showSimpleDialog(context),
           child: Text('Show SimpleDialog'),

@@ -22,6 +22,9 @@ class _RandomColorWidgetState extends State<RandomColorWidget> {
             height: 100,
             color: Colors.teal[100 * (index % 9)],
           ),
+          Container(
+            color: Colors.primaries[index % Colors.primaries.length],
+          ),
           Slider(
             max: 10,
             min: 0,

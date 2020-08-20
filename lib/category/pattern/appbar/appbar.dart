@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class AppbarWidget extends StatelessWidget {
   @override
@@ -29,21 +30,37 @@ class AppbarWidget extends StatelessWidget {
           ),
         ),
         MainTitleWidget('PreferdSize'),
+        SubtitleWidget('A widget with a preferred size.'),
         Container(
           height: 200,
           child: Scaffold(
             appBar: PreferredSize(
               child: AppBar(
-                title: Row(
-                  children: <Widget>[
-                    Text(
-                      'PreferdSize修改APPBar默认高度',
-                      style: TextStyle(fontSize: 16),
-                    )
-                  ],
+                title: Text(
+                  'PreferdSize修改APPBar默认高度',
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
               preferredSize: Size.fromHeight(100),
+            ),
+            body: Container(),
+          ),
+        ),
+        Container(
+          height: 200,
+          child: Scaffold(
+            appBar: AppBar(
+              title: Text(
+                'PreferdSize修改APPBar默认高度',
+                style: TextStyle(fontSize: 16),
+              ),
+              bottom: PreferredSize(
+                preferredSize: Size.fromHeight(48),
+                child: Container(
+                  height: 48,
+                  color: Colors.redAccent,
+                ),
+              ),
             ),
             body: Container(),
           ),

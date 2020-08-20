@@ -56,10 +56,8 @@ class _ItemAnimListWidgetState extends State<ItemAnimListWidget> {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: ClipRRect(
-                              borderRadius:
-                                  BorderRadius.only(topLeft: Radius.circular(15), bottomLeft: Radius.circular(15)),
-                              child:
-                                  Image.asset('assets/images/book.jpg', fit: BoxFit.fitWidth, width: (size.width - 40) * 0.45),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(15), bottomLeft: Radius.circular(15)),
+                              child: Image.asset('assets/images/book.jpg', fit: BoxFit.fitWidth, width: (size.width - 40) * 0.45),
                             ),
                           ),
                           Column(

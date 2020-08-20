@@ -137,7 +137,7 @@ List<DemoItem> buildBackendCategoryList = [
   DemoItem(
     icon: Icons.build,
     title: 'PageStorageKey',
-    subtitle: 'PageStorageKey',
+    subtitle: 'Establish a subtree in which widgets can opt into persisting states after being destroyed.',
     documentationUrl: '',
     keyword: 'PageStorageKey',
     buildRoute: (context) => BaseWidget('PageStorageKey', codePath + 'pagestoragekey', PageStorageKeyWidget()),

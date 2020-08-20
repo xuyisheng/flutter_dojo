@@ -33,8 +33,7 @@ class FeedMainPage extends StatelessWidget {
                       }
                       var detail = feedList[index];
                       return GestureDetector(
-                        onTap: () => Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => FeedDetailPage(article: detail))),
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FeedDetailPage(article: detail))),
                         child: Card(
                           elevation: 2,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -106,17 +105,7 @@ class FeedMainPage extends StatelessWidget {
                                       ),
                                       SizedBox(width: 24),
                                       Text(
-                                        '${formatDate(DateTime.parse(detail.createdAt), [
-                                          yyyy,
-                                          '-',
-                                          mm,
-                                          '-',
-                                          dd,
-                                          ' ',
-                                          HH,
-                                          ':',
-                                          nn
-                                        ])}',
+                                        '${formatDate(DateTime.parse(detail.createdAt), [yyyy, '-', mm, '-', dd, ' ', HH, ':', nn])}',
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.grey.shade500,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ListTileWidget extends StatelessWidget {
   @override
@@ -51,6 +52,28 @@ class ListTileWidget extends StatelessWidget {
           isThreeLine: true,
           subtitle: Text('subtitle'),
         ),
+        MainTitleWidget('ListTileTheme'),
+        SubtitleWidget('''An inherited widget that defines color and style parameters for [ListTile]s in this widget's subtree.'''),
+        ListTileTheme(
+          dense: true,
+          textColor: Colors.red,
+          child: ListTile(
+            title: Text('title'),
+            leading: Icon(Icons.access_alarm),
+            trailing: Icon(Icons.account_balance),
+            isThreeLine: true,
+            subtitle: Text('subtitle'),
+          ),
+        ),
+        MainTitleWidget('AboutListTile'),
+        SubtitleWidget('A [ListTile] that shows an about box.'),
+        AboutListTile(
+            icon: FlutterLogo(),
+            child: Text('XuYisheng'),
+            applicationName: 'Android群英传',
+            applicationVersion: 'V4.0.0',
+            applicationIcon: FlutterLogo(),
+            applicationLegalese: 'Android & Flutter')
       ],
     );
   }

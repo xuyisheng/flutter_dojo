@@ -15,6 +15,8 @@ class _InkWellWidgetState extends State<InkWellWidget> {
           MainTitleWidget('InkWell基本使用'),
           SubtitleWidget('InkWell需要设置在Material Widget中'),
           SubtitleWidget('InkWell的Child有背景色时会被遮挡，需要设置在Material中'),
+          SubtitleWidget(
+              'Ink: A convenience widget for drawing images and other decorations on [Material] widgets, so that [InkWell] and [InkResponse] splashes will render over them.'),
           Container(
             height: 100,
             width: 100,

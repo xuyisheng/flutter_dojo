@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class ToggleButtonWidget extends StatefulWidget {
   @override
@@ -26,6 +27,20 @@ class _ToggleButtonWidgetState extends State<ToggleButtonWidget> {
             setState(() => selectedList1[index] = !selectedList1[index]);
           },
           isSelected: selectedList1,
+        ),
+        MainTitleWidget('ToggleButtonsTheme'),
+        SubtitleWidget('''An inherited widget that defines color and border parameters for [ToggleButtons] in this widget's subtree.'''),
+        ToggleButtonsTheme(
+          data: ToggleButtonsTheme.of(context).copyWith(color: Colors.green),
+          child: ToggleButtons(
+            isSelected: selectedList2,
+            children: <Widget>[
+              Icon(Icons.account_box),
+              Icon(Icons.verified_user),
+              Icon(Icons.query_builder),
+            ],
+            onPressed: (index) {},
+          ),
         ),
         MainTitleWidget('ToggleButton in custom'),
         ToggleButtons(

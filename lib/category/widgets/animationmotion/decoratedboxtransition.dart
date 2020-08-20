@@ -7,8 +7,7 @@ class DecoratedBoxTransitionWidget extends StatefulWidget {
   _DecoratedBoxTransitionWidgetState createState() => _DecoratedBoxTransitionWidgetState();
 }
 
-class _DecoratedBoxTransitionWidgetState extends State<DecoratedBoxTransitionWidget>
-    with SingleTickerProviderStateMixin {
+class _DecoratedBoxTransitionWidgetState extends State<DecoratedBoxTransitionWidget> with SingleTickerProviderStateMixin {
   AnimationController _controller;
   bool status = true;
   final DecorationTween decorationTween = DecorationTween(

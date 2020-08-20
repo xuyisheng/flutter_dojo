@@ -48,10 +48,8 @@ class _ScrollablePositionedListPageState extends State<ScrollablePositionedListP
     super.initState();
     final heightGenerator = Random(328902348);
     final colorGenerator = Random(42490823);
-    itemHeights = List<double>.generate(
-        numberOfItems, (int _) => heightGenerator.nextDouble() * (maxItemHeight - minItemHeight) + minItemHeight);
-    itemColors =
-        List<Color>.generate(numberOfItems, (int _) => Color(colorGenerator.nextInt(pow(2, 32) - 1)).withOpacity(1));
+    itemHeights = List<double>.generate(numberOfItems, (int _) => heightGenerator.nextDouble() * (maxItemHeight - minItemHeight) + minItemHeight);
+    itemColors = List<Color>.generate(numberOfItems, (int _) => Color(colorGenerator.nextInt(pow(2, 32) - 1)).withOpacity(1));
   }
 
   @override
@@ -113,16 +111,14 @@ class _ScrollablePositionedListPageState extends State<ScrollablePositionedListP
             // item whose trailing edge in visible in the viewport.
             min = positions
                 .where((ItemPosition position) => position.itemTrailingEdge > 0)
-                .reduce((ItemPosition min, ItemPosition position) =>
-                    position.itemTrailingEdge < min.itemTrailingEdge ? position : min)
+                .reduce((ItemPosition min, ItemPosition position) => position.itemTrailingEdge < min.itemTrailingEdge ? position : min)
                 .index;
             // Determine the last visible item by finding the item with the
             // greatest leading edge that is less than 1.  i.e. the last
             // item whose leading edge in visible in the viewport.
             max = positions
                 .where((ItemPosition position) => position.itemLeadingEdge < 1)
-                .reduce((ItemPosition max, ItemPosition position) =>
-                    position.itemLeadingEdge > max.itemLeadingEdge ? position : max)
+                .reduce((ItemPosition max, ItemPosition position) => position.itemLeadingEdge > max.itemLeadingEdge ? position : max)
                 .index;
           }
           return Row(
@@ -176,8 +172,8 @@ class _ScrollablePositionedListPageState extends State<ScrollablePositionedListP
         child: Padding(padding: const EdgeInsets.symmetric(horizontal: 20), child: Text('$value')),
       );
 
-  void scrollTo(int index) => itemScrollController.scrollTo(
-      index: index, duration: scrollDuration, curve: Curves.easeInOutCubic, alignment: alignment);
+  void scrollTo(int index) =>
+      itemScrollController.scrollTo(index: index, duration: scrollDuration, curve: Curves.easeInOutCubic, alignment: alignment);
 
   void jumpTo(int index) => itemScrollController.jumpTo(index: index, alignment: alignment);
 

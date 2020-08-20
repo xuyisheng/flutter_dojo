@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class CupertinoActionSheetWidget extends StatelessWidget {
   @override
@@ -8,6 +9,7 @@ class CupertinoActionSheetWidget extends StatelessWidget {
     return Column(
       children: <Widget>[
         MainTitleWidget('ActionSheet基本使用'),
+        SubtitleWidget('CupertinoActionSheet: A button typically used in a [CupertinoActionSheet]'),
         RaisedButton(
           onPressed: () => showActionSheet(context),
           child: Text('Show ActionSheet'),

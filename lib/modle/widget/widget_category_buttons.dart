@@ -19,16 +19,16 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.check_box,
       title: 'ButtonBar',
-      subtitle: 'A horizontal arrangement of buttons.',
-      keyword: 'ButtonBar',
+      subtitle: 'An end-aligned row of buttons, laying out into a column if there is not enough horizontal space.',
+      keyword: 'ButtonBar ButtonBarTheme',
       documentationUrl: 'https://api.flutter.dev/flutter/material/ButtonBar-class.html',
       buildRoute: (context) => BaseWidget('ButtonBar', codePath + 'buttonbar', ButtonBarWidget()),
     ),
     DemoItem(
       icon: Icons.check_box,
       title: 'BackButton',
-      subtitle: 'BackButton',
-      keyword: 'BackButton',
+      subtitle: 'A material design back button.',
+      keyword: 'BackButton BackButtonIcon CloseButton',
       documentationUrl: 'https://docs.flutter.io/flutter/material/BackButton-class.html',
       buildRoute: (context) => BaseWidget('BackButton', codePath + 'backbutton', BackButtonWidget()),
     ),
@@ -43,7 +43,8 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.check_box,
       title: 'ExpandIcon',
-      subtitle: 'ExpandIcon',
+      subtitle:
+          'A widget representing a rotating expand/collapse button. The icon rotates 180 degrees when pressed, then reverts the animation on a second press. The underlying icon is [Icons.expand_more].',
       keyword: 'ExpandIcon',
       documentationUrl: 'https://api.flutter.dev/flutter/material/ExpandIcon-class.html',
       buildRoute: (context) => BaseWidget('ExpandIcon', codePath + 'expandicon', ExpandIconWidget()),
@@ -51,8 +52,7 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.check_box,
       title: 'FlatButton',
-      subtitle:
-          'A flat button is a section printed on a Material Components widget that reacts to touches by filling with color.',
+      subtitle: 'A flat button is a section printed on a Material Components widget that reacts to touches by filling with color.',
       keyword: 'FlatButton',
       documentationUrl: 'https://docs.flutter.io/flutter/material/FlatButton-class.html',
       buildRoute: (context) => BaseWidget('FlatButton', codePath + 'flatbutton', FlatButtonWidget()),
@@ -64,14 +64,12 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
           'A floating action button is a circular icon button that hovers over content to promote a primary action in the application. Floating action buttons are most commonly used in the Scaffold.floatingActionButton field.',
       keyword: 'FloatingActionButton',
       documentationUrl: 'https://api.flutter.dev/flutter/material/FloatingActionButton-class.html',
-      buildRoute: (context) =>
-          BaseWidget('FloatingActionButton', codePath + 'floatingactionbutton', FloatingActionButtonWidget()),
+      buildRoute: (context) => BaseWidget('FloatingActionButton', codePath + 'floatingactionbutton', FloatingActionButtonWidget()),
     ),
     DemoItem(
       icon: Icons.check_box,
       title: 'IconButton',
-      subtitle:
-          'An icon button is a picture printed on a Material widget that reacts to touches by filling with color (ink).',
+      subtitle: 'An icon button is a picture printed on a Material widget that reacts to touches by filling with color (ink).',
       keyword: 'IconButton',
       documentationUrl: 'https://api.flutter.dev/flutter/material/IconButton-class.html',
       buildRoute: (context) => BaseWidget('IconButton', codePath + 'iconbutton', IconButtonWidget()),
@@ -79,7 +77,7 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.check_box,
       title: 'OutlineButton',
-      subtitle: 'OutlineButton',
+      subtitle: 'Similar to a [FlatButton] with a thin grey rounded rectangle border.',
       keyword: 'OutlineButton',
       documentationUrl: 'https://docs.flutter.io/flutter/material/OutlineButton-class.html',
       buildRoute: (context) => BaseWidget('OutlineButton', codePath + 'outlinebutton', OutlineButtonWidget()),
@@ -87,34 +85,31 @@ List<DemoItem> buildButtonsDemoItems(String codePath) {
     DemoItem(
       icon: Icons.check_box,
       title: 'PopupMenuButton',
-      subtitle:
-          'Displays a menu when pressed and calls onSelected when the menu is dismissed because an item was selected.',
-      keyword: 'PopupMenuButton',
+      subtitle: 'Displays a menu when pressed and calls onSelected when the menu is dismissed because an item was selected.',
+      keyword: 'PopupMenuButton CheckedPopupMenuItem PopupMenuEntry PopupMenuDivider PopupMenuItem PopupMenuTheme',
       documentationUrl: 'https://api.flutter.dev/flutter/material/PopupMenuButton-class.html',
       buildRoute: (context) => BaseWidget('PopupMenuButton', codePath + 'popupmenubutton', PopupMenuButtonWidget()),
     ),
     DemoItem(
       icon: Icons.check_box,
       title: 'RaisedButton',
-      subtitle:
-          'A Material Design raised button. A raised button consists of a rectangular piece of material that hovers over the interface.',
-      keyword: 'RaisedButton',
+      subtitle: 'A Material Design raised button. A raised button consists of a rectangular piece of material that hovers over the interface.',
+      keyword: 'RaisedButton ButtonTheme',
       documentationUrl: 'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
       buildRoute: (context) => BaseWidget('RaisedButton', codePath + 'raisedbutton', RaisedButtonWidget()),
     ),
     DemoItem(
       icon: Icons.check_box,
       title: 'RawMaterialButton',
-      subtitle: 'RawMaterialButton',
+      subtitle: 'A utility class for building Material buttons that depend on the ambient [ButtonTheme] and [Theme].',
       keyword: 'RawMaterialButton',
       documentationUrl: 'https://docs.flutter.io/flutter/material/RawMaterialButton-class.html',
-      buildRoute: (context) =>
-          BaseWidget('RawMaterialButton', codePath + 'rawmaterialbutton', RawMaterialButtonWidget()),
+      buildRoute: (context) => BaseWidget('RawMaterialButton', codePath + 'rawmaterialbutton', RawMaterialButtonWidget()),
     ),
     DemoItem(
       icon: Icons.check_box,
       title: 'ToggleButton',
-      subtitle: 'ToggleButton',
+      subtitle: 'A horizontal set of toggle buttons.',
       keyword: 'ToggleButton',
       documentationUrl: 'https://docs.flutter.io/flutter/material/ToggleButton-class.html',
       buildRoute: (context) => BaseWidget('ToggleButton', codePath + 'togglebutton', ToggleButtonWidget()),

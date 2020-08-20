@@ -62,9 +62,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
 
   Widget _buildItem1(BuildContext context, int index, Animation<double> animation) {
     return SlideTransition(
-      position: animation
-          .drive(CurveTween(curve: Curves.easeIn))
-          .drive(Tween<Offset>(begin: Offset(1, 1), end: Offset(0, 1))),
+      position: animation.drive(CurveTween(curve: Curves.easeIn)).drive(Tween<Offset>(begin: Offset(1, 1), end: Offset(0, 1))),
       key: ValueKey<int>(index),
       child: ListTile(
         title: Text(list[index]),

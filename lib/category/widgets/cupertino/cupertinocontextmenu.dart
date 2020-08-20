@@ -15,6 +15,7 @@ class _CupertinoContextMenuWidgetState extends State<CupertinoContextMenuWidget>
       children: <Widget>[
         MainTitleWidget('CupertinoContextMenu基本使用'),
         SubtitleWidget('长按弹出ContextMenu'),
+        SubtitleWidget('CupertinoContextMenuAction: A button in a _ContextMenuSheet.'),
         Container(
           width: 100,
           height: 100,

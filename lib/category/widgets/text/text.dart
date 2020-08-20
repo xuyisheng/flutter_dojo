@@ -173,6 +173,7 @@ class _TextWidgetState extends State<TextWidget> {
           ],
         ),
         MainTitleWidget('SelectableText'),
+        SubtitleWidget('A run of selectable text with a single style.'),
         SelectableText(
           '我是一段可以被选择的Text' * 3,
           showCursor: true,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class GridTileWidget extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class GridTileWidget extends StatelessWidget {
     return Column(
       children: <Widget>[
         MainTitleWidget('GridTile基本使用'),
+        SubtitleWidget('GridTileBar: A header used in a material design [GridTile].'),
         Expanded(
           child: Container(
             color: Colors.blue,

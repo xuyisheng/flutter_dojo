@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class SnackBarWidget extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class SnackBarWidget extends StatelessWidget {
     return ListView(
       children: <Widget>[
         MainTitleWidget('SnackBar基本使用'),
+        SubtitleWidget('SnackBarAction: A button for a [SnackBar], known as an \"action\".'),
         RaisedButton(
           onPressed: () {
             final snackBar = SnackBar(

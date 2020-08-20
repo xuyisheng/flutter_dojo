@@ -14,14 +14,15 @@ List<DemoItem> buildAssetsImageIconDemoItems(String codePath) {
       icon: Icons.assessment,
       title: 'AssetBundle',
       subtitle: 'Asset bundles contain resources, such as images and strings, that can be used by an application. ',
-      keyword: 'AssetBundle',
+      keyword: 'AssetBundle DefaultAssetBundle',
       documentationUrl: 'https://api.flutter.dev/flutter/services/AssetBundle-class.html',
       buildRoute: (context) => BaseWidget('AssetBundle', codePath + 'assetbundle', AssetBundleWidget()),
     ),
     DemoItem(
       icon: Icons.assessment,
       title: 'Icon',
-      subtitle: 'A Material Design icon.',
+      subtitle:
+          '''A graphical icon widget drawn with a glyph from a font described in an [IconData] such as material's predefined [IconData]s in [Icons].''',
       keyword: 'Icon',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/Icon-class.html',
       buildRoute: (context) => BaseWidget('Icon', codePath + 'icon', IconWidget()),
@@ -37,7 +38,7 @@ List<DemoItem> buildAssetsImageIconDemoItems(String codePath) {
     DemoItem(
       icon: Icons.assessment,
       title: 'IconTheme',
-      subtitle: 'IconTheme',
+      subtitle: 'Controls the default color, opacity, and size of icons in a widget subtree.',
       keyword: 'IconTheme',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/IconTheme-class.html',
       buildRoute: (context) => BaseWidget('IconTheme', codePath + 'icontheme', IconThemeWidget()),

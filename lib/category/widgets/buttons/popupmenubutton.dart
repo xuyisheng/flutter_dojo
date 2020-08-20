@@ -16,6 +16,9 @@ class _PopupMenuButtonWidgetState extends State<PopupMenuButtonWidget> {
       children: <Widget>[
         MainTitleWidget('PopupMenuButton基本使用'),
         SubtitleWidget('Icon Style'),
+        SubtitleWidget('PopupMenuEntry: A base class for entries in a material design popup menu.'),
+        SubtitleWidget('PopupMenuDivider: A horizontal divider in a material design popup menu.'),
+        SubtitleWidget('PopupMenuItem: An item in a material design popup menu.'),
         PopupMenuButton<Selections>(
           icon: Icon(Icons.input),
           onSelected: (Selections result) {},
@@ -92,7 +95,8 @@ class _PopupMenuButtonWidgetState extends State<PopupMenuButtonWidget> {
             ],
           ),
         ),
-        MainTitleWidget('带选中态'),
+        MainTitleWidget('带选中态-CheckedPopupMenuItem'),
+        SubtitleWidget('An item with a checkmark in a material design popup menu.'),
         ListTile(
           title: Text('Title'),
           subtitle: Text('Subtitle'),
@@ -161,6 +165,29 @@ class _PopupMenuButtonWidgetState extends State<PopupMenuButtonWidget> {
             showPopMenu();
           },
           child: Text('Show'),
+        ),
+        MainTitleWidget('PopupMenuTheme'),
+        SubtitleWidget('''An inherited widget that defines the configuration for popup menus in this widget's subtree.'''),
+        PopupMenuTheme(
+          data: PopupMenuThemeData(color: Colors.red),
+          child: PopupMenuButton<String>(
+            itemBuilder: (context) {
+              return <PopupMenuEntry<String>>[
+                PopupMenuItem<String>(
+                  value: 'Android',
+                  child: Text('Android'),
+                ),
+                PopupMenuItem<String>(
+                  value: 'iOS',
+                  child: Text('iOS'),
+                ),
+                PopupMenuItem<String>(
+                  value: 'Flutter',
+                  child: Text('Flutter'),
+                ),
+              ];
+            },
+          ),
         ),
       ],
     );

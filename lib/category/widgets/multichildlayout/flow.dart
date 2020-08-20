@@ -211,8 +211,8 @@ class CircleAnimLayoutDelegate extends FlowDelegate {
       context.paintChild(i, transform: Matrix4.translationValues(offsetX - cSizeX, offsetY - cSizeY, 0.0));
     }
     context.paintChild(context.childCount - 1,
-        transform: Matrix4.translationValues(radius - context.getChildSize(context.childCount - 1).width / 2,
-            radius - context.getChildSize(context.childCount - 1).height / 2, 0.0));
+        transform: Matrix4.translationValues(
+            radius - context.getChildSize(context.childCount - 1).width / 2, radius - context.getChildSize(context.childCount - 1).height / 2, 0.0));
   }
 
   @override

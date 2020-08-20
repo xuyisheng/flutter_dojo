@@ -98,8 +98,7 @@ class _BottomBarViewState extends State<BottomBarView> with TickerProviderStateM
                             ),
                             SizedBox(
                               width: Tween<double>(begin: 0.0, end: 1.0)
-                                      .animate(
-                                          CurvedAnimation(parent: animationController, curve: Curves.fastOutSlowIn))
+                                      .animate(CurvedAnimation(parent: animationController, curve: Curves.fastOutSlowIn))
                                       .value *
                                   64.0,
                             ),
@@ -147,8 +146,7 @@ class _BottomBarViewState extends State<BottomBarView> with TickerProviderStateM
                   padding: const EdgeInsets.all(8.0),
                   child: ScaleTransition(
                     alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0)
-                        .animate(CurvedAnimation(parent: animationController, curve: Curves.fastOutSlowIn)),
+                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: animationController, curve: Curves.fastOutSlowIn)),
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.blueAccent,
@@ -158,10 +156,7 @@ class _BottomBarViewState extends State<BottomBarView> with TickerProviderStateM
                         ], begin: Alignment.topLeft, end: Alignment.bottomRight),
                         shape: BoxShape.circle,
                         boxShadow: <BoxShadow>[
-                          BoxShadow(
-                              color: Colors.blueAccent.withOpacity(0.4),
-                              offset: const Offset(8.0, 16.0),
-                              blurRadius: 16.0),
+                          BoxShadow(color: Colors.blueAccent.withOpacity(0.4), offset: const Offset(8.0, 16.0), blurRadius: 16.0),
                         ],
                       ),
                       child: Material(
@@ -255,12 +250,9 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
               children: <Widget>[
                 ScaleTransition(
                   alignment: Alignment.center,
-                  scale: Tween<double>(begin: 0.88, end: 1.0).animate(CurvedAnimation(
-                      parent: widget.tabIconData.animationController,
-                      curve: Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
-                  child: Image.asset(widget.tabIconData.isSelected
-                      ? widget.tabIconData.selectedImagePath
-                      : widget.tabIconData.imagePath),
+                  scale: Tween<double>(begin: 0.88, end: 1.0).animate(
+                      CurvedAnimation(parent: widget.tabIconData.animationController, curve: Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
+                  child: Image.asset(widget.tabIconData.isSelected ? widget.tabIconData.selectedImagePath : widget.tabIconData.imagePath),
                 ),
                 Positioned(
                   top: 4,
@@ -268,9 +260,8 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                   right: 0,
                   child: ScaleTransition(
                     alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                        parent: widget.tabIconData.animationController,
-                        curve: Interval(0.2, 1.0, curve: Curves.fastOutSlowIn))),
+                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
+                        CurvedAnimation(parent: widget.tabIconData.animationController, curve: Interval(0.2, 1.0, curve: Curves.fastOutSlowIn))),
                     child: Container(
                       width: 8,
                       height: 8,
@@ -287,9 +278,8 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                   bottom: 8,
                   child: ScaleTransition(
                     alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                        parent: widget.tabIconData.animationController,
-                        curve: Interval(0.5, 0.8, curve: Curves.fastOutSlowIn))),
+                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
+                        CurvedAnimation(parent: widget.tabIconData.animationController, curve: Interval(0.5, 0.8, curve: Curves.fastOutSlowIn))),
                     child: Container(
                       width: 4,
                       height: 4,
@@ -306,9 +296,8 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                   bottom: 0,
                   child: ScaleTransition(
                     alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                        parent: widget.tabIconData.animationController,
-                        curve: Interval(0.5, 0.6, curve: Curves.fastOutSlowIn))),
+                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
+                        CurvedAnimation(parent: widget.tabIconData.animationController, curve: Interval(0.5, 0.6, curve: Curves.fastOutSlowIn))),
                     child: Container(
                       width: 6,
                       height: 6,
@@ -340,14 +329,12 @@ class TabClipper extends CustomClipper<Path> {
     final double v = radius * 2;
     path.lineTo(0, 0);
     path.arcTo(Rect.fromLTWH(0, 0, radius, radius), degreeToRadians(180), degreeToRadians(90), false);
-    path.arcTo(Rect.fromLTWH(((size.width / 2) - v / 2) - radius + v * 0.04, 0, radius, radius), degreeToRadians(270),
-        degreeToRadians(70), false);
+    path.arcTo(Rect.fromLTWH(((size.width / 2) - v / 2) - radius + v * 0.04, 0, radius, radius), degreeToRadians(270), degreeToRadians(70), false);
+
+    path.arcTo(Rect.fromLTWH((size.width / 2) - v / 2, -v / 2, v, v), degreeToRadians(160), degreeToRadians(-140), false);
 
     path.arcTo(
-        Rect.fromLTWH((size.width / 2) - v / 2, -v / 2, v, v), degreeToRadians(160), degreeToRadians(-140), false);
-
-    path.arcTo(Rect.fromLTWH((size.width - ((size.width / 2) - v / 2)) - v * 0.04, 0, radius, radius),
-        degreeToRadians(200), degreeToRadians(70), false);
+        Rect.fromLTWH((size.width - ((size.width / 2) - v / 2)) - v * 0.04, 0, radius, radius), degreeToRadians(200), degreeToRadians(70), false);
     path.arcTo(Rect.fromLTWH(size.width - radius, 0, radius, radius), degreeToRadians(270), degreeToRadians(90), false);
     path.lineTo(size.width, 0);
     path.lineTo(size.width, size.height);

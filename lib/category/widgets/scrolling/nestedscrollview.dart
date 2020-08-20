@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class NestedScrollViewWidget extends StatefulWidget {
   @override
@@ -14,6 +15,8 @@ class _NestedScrollViewWidgetState extends State<NestedScrollViewWidget> {
     return Column(
       children: <Widget>[
         MainTitleWidget('NestedScrollView基本使用'),
+        SubtitleWidget('SliverOverlapAbsorber: A sliver that wraps another, forcing its layout extent to be treated as overlap.'),
+        SubtitleWidget('SliverOverlapInjector: A sliver that has a sliver geometry based on the values stored in a [SliverOverlapAbsorberHandle].'),
         Expanded(
           child: DefaultTabController(
             length: _tabs.length, // This is the number of tabs.

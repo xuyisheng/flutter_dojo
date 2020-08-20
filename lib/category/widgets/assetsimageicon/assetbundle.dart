@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class AssetBundleWidget extends StatelessWidget {
   @override
@@ -17,6 +18,7 @@ class AssetBundleWidget extends StatelessWidget {
           ),
         ),
         MainTitleWidget('通过DefaultAssetBundle获取asste'),
+        SubtitleWidget('A widget that determines the default asset bundle for its descendants.'),
         Container(
           child: FutureBuilder(
             builder: (context, snapshot) {

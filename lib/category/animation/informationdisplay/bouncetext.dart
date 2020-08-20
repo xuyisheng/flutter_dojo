@@ -60,8 +60,7 @@ class AnimatedStrWidget extends AnimatedWidget {
   final Tween<Offset> offsetTween = Tween(begin: Offset(0, 3), end: Offset(0, 0));
   final Widget child;
 
-  AnimatedStrWidget({Key key, @required Animation<double> animation, @required this.child})
-      : super(key: key, listenable: animation);
+  AnimatedStrWidget({Key key, @required Animation<double> animation, @required this.child}) : super(key: key, listenable: animation);
 
   @override
   Widget build(BuildContext context) {

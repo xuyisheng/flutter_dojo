@@ -33,7 +33,7 @@ class _RawImageWidgetState extends State<RawImageWidget> {
     return Column(
       children: <Widget>[
         MainTitleWidget('RawImage基本使用'),
-        SubtitleWidget('RawImage是Image的原始实现'),
+        SubtitleWidget('RawImage是Image的原始实现，A widget that displays a [dart:ui.Image] directly.'),
         Container(
           child: RawImage(image: _img),
         ),

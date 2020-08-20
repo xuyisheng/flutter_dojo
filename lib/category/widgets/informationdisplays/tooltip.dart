@@ -17,9 +17,19 @@ class TooltipWidget extends StatelessWidget {
             size: 50,
           ),
         ),
-        SizedBox(
-          height: 20,
+        SizedBox(height: 20),
+        MainTitleWidget('TooltipTheme'),
+        SubtitleWidget('''An inherited widget that defines the configuration for [Tooltip]s in this widget's subtree.'''),
+        TooltipTheme(
+          data: TooltipTheme.of(context).copyWith(
+            decoration: BoxDecoration(color: Colors.blueAccent),
+          ),
+          child: Tooltip(
+            message: 'tooltip',
+            child: Icon(Icons.android),
+          ),
         ),
+        SizedBox(height: 20),
         MainTitleWidget('Tooltip in IconButton'),
         IconButton(
           icon: Icon(Icons.backup),

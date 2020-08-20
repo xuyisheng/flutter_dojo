@@ -200,9 +200,7 @@ class ReadMoreTextState extends State<ReadMoreText> {
             if (textPainter.didExceedMaxLines) {
               textSpan = TextSpan(
                 style: effectiveTextStyle,
-                text: _readMore
-                    ? widget.data.substring(0, endIndex) + (linkLongerThanLine ? _kLineSeparator : '')
-                    : widget.data,
+                text: _readMore ? widget.data.substring(0, endIndex) + (linkLongerThanLine ? _kLineSeparator : '') : widget.data,
                 children: <TextSpan>[link],
               );
             } else {

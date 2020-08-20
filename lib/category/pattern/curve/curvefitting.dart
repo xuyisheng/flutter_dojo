@@ -101,8 +101,8 @@ class BezierCurve {
         targetPoints[i + 1].dx - (targetPoints[i + 2].dx - targetPoints[i].dx) / 4,
         targetPoints[i + 1].dy - (targetPoints[i + 2].dy - targetPoints[i].dy) / 4,
       );
-      path.cubicTo(controllerPoint1.dx, controllerPoint1.dy, controllerPoint2.dx, controllerPoint2.dy,
-          targetPoints[i + 1].dx, targetPoints[i + 1].dy);
+      path.cubicTo(
+          controllerPoint1.dx, controllerPoint1.dy, controllerPoint2.dx, controllerPoint2.dy, targetPoints[i + 1].dx, targetPoints[i + 1].dy);
     }
     canvas.drawPath(path, paint);
   }

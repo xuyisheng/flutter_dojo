@@ -21,7 +21,8 @@ List<DemoItem> buildAsyncDemoItems(String codePath) {
     DemoItem(
       icon: Icons.network_wifi,
       title: 'InheritedModel',
-      subtitle: 'InheritedModel',
+      subtitle:
+          '''An [InheritedWidget] that's intended to be used as the base class for models whose dependents may only depend on one part or \"aspect\" of the overall model.''',
       keyword: 'InheritedModel',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/InheritedModel-class.html',
       buildRoute: (context) => BaseWidget('InheritedModel', codePath + 'inheritedmodel', InheritedModelWidget()),
@@ -29,7 +30,7 @@ List<DemoItem> buildAsyncDemoItems(String codePath) {
     DemoItem(
       icon: Icons.network_wifi,
       title: 'InheritedWidget',
-      subtitle: 'InheritedWidget',
+      subtitle: 'Base class for widgets that efficiently propagate information down the tree.',
       keyword: 'InheritedWidget',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html',
       buildRoute: (context) => BaseWidget('InheritedWidget', codePath + 'inheritedwidget', InheritedWidgetWidget()),
@@ -45,11 +46,10 @@ List<DemoItem> buildAsyncDemoItems(String codePath) {
     DemoItem(
       icon: Icons.network_wifi,
       title: 'ValueListenableBuilder',
-      subtitle: 'ValueListenableBuilder',
+      subtitle: 'A widget whose content stays synced with a [ValueListenable].',
       keyword: 'ValueListenableBuilder',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html',
-      buildRoute: (context) =>
-          BaseWidget('ValueListenableBuilder', codePath + 'valuelistenablebuilder', ValueListenableBuilderWidget()),
+      buildRoute: (context) => BaseWidget('ValueListenableBuilder', codePath + 'valuelistenablebuilder', ValueListenableBuilderWidget()),
     ),
     DemoItem(
       icon: Icons.network_wifi,

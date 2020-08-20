@@ -50,6 +50,7 @@ class AlertDialogWidget extends StatelessWidget {
         MainTitleWidget('修改Dialog界面'),
         SubtitleWidget('showDialog方法调用后，Context改变为新的Layer的Content，导致原有页面的setState失效'),
         SubtitleWidget('使用StatefulBuilder'),
+        SubtitleWidget('A platonic widget that both has state and calls a closure to obtain its child widget.'),
         RaisedButton(
           onPressed: () {
             showDialogModify(context);

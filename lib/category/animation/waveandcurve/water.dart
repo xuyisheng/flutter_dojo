@@ -59,8 +59,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
         animList1.add(
           Offset(
             i.toDouble() + bottleOffset1.dx.toInt(),
-            sin((waveAnimationController.value * 360 - i) % 360 * vector.degrees2Radians) * 4 +
-                (((100 - widget.percentageValue) * 160 / 100)),
+            sin((waveAnimationController.value * 360 - i) % 360 * vector.degrees2Radians) * 4 + (((100 - widget.percentageValue) * 160 / 100)),
           ),
         );
       }
@@ -69,8 +68,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
         animList2.add(
           Offset(
             i.toDouble() + bottleOffset2.dx.toInt(),
-            sin((waveAnimationController.value * 360 - i) % 360 * vector.degrees2Radians) * 4 +
-                (((100 - widget.percentageValue) * 160 / 100)),
+            sin((waveAnimationController.value * 360 - i) % 360 * vector.degrees2Radians) * 4 + (((100 - widget.percentageValue) * 160 / 100)),
           ),
         );
       }
@@ -166,8 +164,8 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
               bottom: 8,
               child: ScaleTransition(
                 alignment: Alignment.center,
-                scale: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                    parent: animationController, curve: Interval(0.0, 1.0, curve: Curves.fastOutSlowIn))),
+                scale: Tween(begin: 0.0, end: 1.0)
+                    .animate(CurvedAnimation(parent: animationController, curve: Interval(0.0, 1.0, curve: Curves.fastOutSlowIn))),
                 child: Container(
                   width: 4,
                   height: 4,
@@ -184,8 +182,8 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
               bottom: 16,
               child: ScaleTransition(
                 alignment: Alignment.center,
-                scale: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                    parent: animationController, curve: Interval(0.4, 1.0, curve: Curves.fastOutSlowIn))),
+                scale: Tween(begin: 0.0, end: 1.0)
+                    .animate(CurvedAnimation(parent: animationController, curve: Interval(0.4, 1.0, curve: Curves.fastOutSlowIn))),
                 child: Container(
                   width: 7,
                   height: 7,
@@ -202,8 +200,8 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
               bottom: 32,
               child: ScaleTransition(
                 alignment: Alignment.center,
-                scale: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                    parent: animationController, curve: Interval(0.6, 0.8, curve: Curves.fastOutSlowIn))),
+                scale: Tween(begin: 0.0, end: 1.0)
+                    .animate(CurvedAnimation(parent: animationController, curve: Interval(0.6, 0.8, curve: Curves.fastOutSlowIn))),
                 child: Container(
                   width: 4,
                   height: 4,

@@ -80,14 +80,7 @@ class _PageRouteWidgetState extends State<PageRouteWidget> {
         MainTitleWidget('自定义PageRoute动画'),
         MultiSelectionWidget(
           'transition',
-          [
-            buildTransitionScale,
-            buildTransitionSlide,
-            buildTransitionFade,
-            buildTransitionRotate,
-            buildTransitionClipPath,
-            buildTransitionCompose
-          ],
+          [buildTransitionScale, buildTransitionSlide, buildTransitionFade, buildTransitionRotate, buildTransitionClipPath, buildTransitionCompose],
           ['Scale', 'Slide', 'Fade', 'Rotate', 'Path', 'Compose'],
           (value) => setState(() => transitionSelection = value),
         ),

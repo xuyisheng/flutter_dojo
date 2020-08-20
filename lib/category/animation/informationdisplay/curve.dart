@@ -544,8 +544,7 @@ class ParentState extends State<Parent> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     controller = AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    growingAnimation =
-        Tween(begin: 10.0, end: 100.0).animate(CurvedAnimation(parent: controller, curve: Curves.easeIn));
+    growingAnimation = Tween(begin: 10.0, end: 100.0).animate(CurvedAnimation(parent: controller, curve: Curves.easeIn));
     animation = Tween(begin: -0.25, end: 0.0).animate(CurvedAnimation(
       parent: controller,
       curve: Curves.easeIn,

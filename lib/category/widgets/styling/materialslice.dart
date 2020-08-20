@@ -6,6 +6,7 @@ class MaterialSliceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+        MainTitleWidget('MergeableMaterial'),
         MergeableMaterial(
           hasDividers: true,
           children: [

@@ -8,6 +8,8 @@ class ValueNotifierWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ValueNotifier<String> valueNotifier = ValueNotifier<String>('Init String Data');
+    PersonNotifier customNotifier = PersonNotifier(People('xuyisheng', 18));
+
     return Column(
       children: <Widget>[
         MainTitleWidget('ValueNotifier基本使用'),
@@ -15,6 +17,12 @@ class ValueNotifierWidget extends StatelessWidget {
         NotifierWidget(data: valueNotifier),
         RaisedButton(
           onPressed: () => valueNotifier.value = 'New Value ${Random().nextInt(100)}',
+          child: Text('Change'),
+        ),
+        MainTitleWidget('Custom ValueNotifier'),
+        CustomNotifierWidget(data: customNotifier),
+        RaisedButton(
+          onPressed: () => customNotifier.changePeopleName('zhujia'),
           child: Text('Change'),
         ),
       ],
@@ -57,5 +65,59 @@ class _NotifierWidgetState extends State<NotifierWidget> {
   dispose() {
     widget.data.removeListener(changeNotifier);
     super.dispose();
+  }
+}
+
+class CustomNotifierWidget extends StatefulWidget {
+  final ValueNotifier<People> data;
+
+  CustomNotifierWidget({this.data});
+
+  @override
+  _CustomNotifierWidgetState createState() => _CustomNotifierWidgetState();
+}
+
+class _CustomNotifierWidgetState extends State<CustomNotifierWidget> {
+  People info;
+
+  @override
+  initState() {
+    super.initState();
+    widget.data.addListener(changeNotifier);
+    info = widget.data.value;
+  }
+
+  void changeNotifier() {
+    setState(() => info = widget.data.value);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '${info.name},${info.age}',
+      style: TextStyle(fontSize: 30),
+    );
+  }
+
+  @override
+  dispose() {
+    widget.data.removeListener(changeNotifier);
+    super.dispose();
+  }
+}
+
+class People {
+  String name;
+  int age;
+
+  People(this.name, this.age);
+}
+
+class PersonNotifier extends ValueNotifier<People> {
+  PersonNotifier(People value) : super(value);
+
+  void changePeopleName(String name) {
+    value.name = name;
+    notifyListeners();
   }
 }

@@ -197,6 +197,22 @@ Flutter Dojo具体该怎么使用呢？首先，大家可以在GitHub下载最�
 
 当你觉得整体差不多后，可以将整个工程clone下来，针对代码和工程做进一步的学习。
 
+## 修仙
+
+Flutter Dojo开源至今，受到了很多Flutter学习者和爱好者的喜爱，也有越来越多的人加入到Flutter的学习中来，所以我建了个Flutter修仙群，但是人数太多，所以分成了【Flutter修仙指南】【Flutter修仙指北】两个群，对Flutter感兴趣的朋友，可以添加我的微信，注明加入Flutter修仙群。
+
+<p align="center">
+  <img src="https://user-gold-cdn.xitu.io/2020/7/25/173845eee975fa26" width="300"/>
+  <img src="https://user-gold-cdn.xitu.io/2020/7/25/17384621ec0f5c96" width="300"/>
+</p>
+
+当然，开源不易，国际惯例。
+
+<p align="center">
+  <img src="https://user-gold-cdn.xitu.io/2020/7/25/1738463a9fbd479f" width="300"/>
+  <img src="https://user-gold-cdn.xitu.io/2020/7/25/1738463bd42440a5" width="300"/>
+</p>
+
 ## 编译环境
 
 ```

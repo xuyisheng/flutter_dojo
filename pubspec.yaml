@@ -186,6 +186,7 @@ flutter:
     - lib/category/widgets/layout/divider.dart
     - lib/category/widgets/layout/expansiontile.dart
     - lib/category/widgets/layout/listtile.dart
+    - lib/category/widgets/layout/sizechangedlayoutnotifier.dart
     - lib/category/widgets/layout/orientationbuilder.dart
     - lib/category/widgets/layout/stepper.dart
     - lib/category/widgets/layout/verticaldivider.dart
@@ -405,6 +406,7 @@ flutter:
     - lib/category/backend/catcherror.dart
     - lib/category/backend/file.dart
     - lib/category/backend/dio.dart
+    - lib/category/backend/bloc.dart
     - lib/category/backend/json.dart
     - lib/category/backend/isolate.dart
     - lib/category/backend/key.dart
@@ -425,6 +427,7 @@ flutter:
     - lib/category/backend/keeppressing.dart
     - lib/category/backend/eventbus.dart
     - lib/category/backend/pagestate.dart
+    - lib/category/backend/generators.dart
     - lib/category/backend/pagestoragekey.dart
     - lib/category/backend/platform.dart
 

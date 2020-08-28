@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
+import 'package:flutter_dojo/common/multi_selection_widget.dart';
+import 'package:flutter_dojo/common/subtitle_widget.dart';
 
 class NotificationListenerWidget extends StatefulWidget {
   @override
@@ -10,6 +12,10 @@ class NotificationListenerWidget extends StatefulWidget {
 
 class _NotificationListenerWidgetState extends State<NotificationListenerWidget> {
   final StreamController<String> _controller = StreamController();
+  String msg = '';
+  String msgParent = '';
+  bool returnValue = true;
+  var state = '';
 
   @override
   void dispose() {
@@ -42,7 +48,6 @@ class _NotificationListenerWidgetState extends State<NotificationListenerWidget>
               itemCount: 30,
             ),
             onNotification: (notification) {
-              var state = '';
               switch (notification.runtimeType) {
                 case ScrollStartNotification:
                   state = '开始滚动';
@@ -75,7 +80,47 @@ class _NotificationListenerWidgetState extends State<NotificationListenerWidget>
             },
           ),
         ),
+        MainTitleWidget('自定义Notification'),
+        SubtitleWidget('onNotification返回值控制通知的传递'),
+        MultiSelectionWidget('onNotification返回值', [true, false], [true, false], (value) {
+          setState(() => returnValue = value);
+        }),
+        NotificationListener<MyNotification>(
+          onNotification: (notification) {
+            setState(() => msgParent = notification.msg);
+            return true;
+          },
+          child: NotificationListener<MyNotification>(
+            onNotification: (notification) {
+              setState(() => msg = notification.msg);
+              return returnValue;
+            },
+            child: Column(
+              children: [
+                Text('自定义Msg: $msg, \n父Widget是否收到消息: ${msgParent.isEmpty ? false : true}'),
+                Builder(
+                  builder: (BuildContext context) {
+                    return RaisedButton(
+                      onPressed: () {
+                        msg = '';
+                        msgParent = '';
+                        MyNotification('MyNotification').dispatch(context);
+                      },
+                      child: Text('Send'),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
+}
+
+class MyNotification extends Notification {
+  MyNotification(this.msg);
+
+  final String msg;
 }

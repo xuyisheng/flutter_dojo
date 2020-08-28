@@ -3,6 +3,7 @@ import 'package:flutter_dojo/category/widgets/layout/divider.dart';
 import 'package:flutter_dojo/category/widgets/layout/expansiontile.dart';
 import 'package:flutter_dojo/category/widgets/layout/listtile.dart';
 import 'package:flutter_dojo/category/widgets/layout/orientationbuilder.dart';
+import 'package:flutter_dojo/category/widgets/layout/sizechangedlayoutnotifier.dart';
 import 'package:flutter_dojo/category/widgets/layout/stepper.dart';
 import 'package:flutter_dojo/category/widgets/layout/verticaldivider.dart';
 import 'package:flutter_dojo/common/base_widget.dart';
@@ -41,6 +42,14 @@ List<DemoItem> buildLayoutDemoItems(String codePath) {
       keyword: 'OrientationBuilder',
       documentationUrl: 'https://api.flutter.dev/flutter/widgets/OrientationBuilder-class.html',
       buildRoute: (context) => BaseWidget('OrientationBuilder', codePath + 'orientationbuilder', OrientationBuilderWidget()),
+    ),
+    DemoItem(
+      icon: Icons.layers,
+      title: 'SizeChangedLayoutNotifier',
+      subtitle: 'A widget that automatically dispatches a [SizeChangedLayoutNotification] when the layout dimensions of its child change.',
+      keyword: 'SizeChangedLayoutNotifier',
+      documentationUrl: 'https://api.flutter.dev/flutter/widgets/OrientationBuilder-class.html',
+      buildRoute: (context) => BaseWidget('SizeChangedLayoutNotifier', codePath + 'sizechangedlayoutnotifier', SizeChangedLayoutNotifierWidget()),
     ),
     DemoItem(
       icon: Icons.layers,

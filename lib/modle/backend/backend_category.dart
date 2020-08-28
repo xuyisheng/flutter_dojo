@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/backend/asyncmemoizer.dart';
+import 'package:flutter_dojo/category/backend/bloc.dart';
 import 'package:flutter_dojo/category/backend/catcherror.dart';
 import 'package:flutter_dojo/category/backend/dio.dart';
 import 'package:flutter_dojo/category/backend/eventbus.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
+import 'package:flutter_dojo/category/backend/generators.dart';
 import 'package:flutter_dojo/category/backend/isolate.dart';
 import 'package:flutter_dojo/category/backend/json.dart';
 import 'package:flutter_dojo/category/backend/keeppressing.dart';
@@ -40,6 +42,14 @@ List<DemoItem> buildBackendCategoryList = [
   ),
   DemoItem(
     icon: Icons.build,
+    title: 'BLoC',
+    subtitle: 'BLoC',
+    documentationUrl: '',
+    keyword: 'BLoC',
+    buildRoute: (context) => BaseWidget('BLoC', codePath + 'bloc', BLoCWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
     title: 'CatchError',
     subtitle: 'CatchError',
     documentationUrl: '',
@@ -69,6 +79,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'File',
     buildRoute: (context) => BaseWidget('File', codePath + 'file', FileWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'Generators',
+    subtitle: 'Generators',
+    documentationUrl: '',
+    keyword: 'Generators',
+    buildRoute: (context) => BaseWidget('Generators', codePath + 'generators', GeneratorsWidget()),
   ),
   DemoItem(
     icon: Icons.build,

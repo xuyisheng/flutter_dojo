@@ -46,7 +46,7 @@ class Child extends StatelessWidget {
 
 // 同时支持读取和写入
 class Root extends InheritedWidget {
-  static Root of(BuildContext context) => context.inheritFromWidgetOfExactType(Root) as Root;
+  static Root of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<Root>();
 
   final _InheritedWidgetWidgetState state;
 
@@ -66,7 +66,7 @@ class Root extends InheritedWidget {
 
 // 仅支持读取属性
 class ReadOnlyRoot extends InheritedWidget {
-  static ReadOnlyRoot of(BuildContext context) => context.inheritFromWidgetOfExactType(Root) as ReadOnlyRoot;
+  static ReadOnlyRoot of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<ReadOnlyRoot>();
 
   final int count;
 

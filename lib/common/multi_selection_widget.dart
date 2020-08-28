@@ -16,6 +16,14 @@ class _MultiSelectionWidgetState extends State<MultiSelectionWidget> {
   var selectValue;
 
   @override
+  void initState() {
+    super.initState();
+    if (widget.items.length > 0) {
+      selectValue = widget.items[0];
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return widget.items.length > 2
         ? ListTile(

@@ -58,7 +58,7 @@ class InheritedRoot extends InheritedWidget {
   }) : super(key: key, child: child);
 
   static InheritedRoot of(BuildContext context) {
-    return context.inheritFromWidgetOfExactType(InheritedRoot);
+    return context.dependOnInheritedWidgetOfExactType<InheritedRoot>();
   }
 
   @override

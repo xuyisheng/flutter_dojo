@@ -9,13 +9,12 @@ class InheritedWidgetWidget extends StatefulWidget {
 class _InheritedWidgetWidgetState extends State<InheritedWidgetWidget> {
   int count = 0;
 
-  void _incrementCounter() => setState(() => count++);
+  void incrementCounter() => setState(() => count++);
 
   @override
   Widget build(BuildContext context) {
     return Root(
       state: this,
-      increment: _incrementCounter,
       child: Child(),
     );
   }
@@ -35,7 +34,7 @@ class Child extends StatelessWidget {
         ),
         RaisedButton(
           onPressed: () {
-            root.increment();
+            root.state.incrementCounter();
           },
           child: Text('Add'),
         ),
@@ -50,12 +49,9 @@ class Root extends InheritedWidget {
 
   final _InheritedWidgetWidgetState state;
 
-  final increment;
-
   Root({
     Key key,
     @required this.state,
-    @required this.increment,
     @required Widget child,
   }) : super(key: key, child: child);
 

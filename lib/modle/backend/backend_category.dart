@@ -6,6 +6,7 @@ import 'package:flutter_dojo/category/backend/dio.dart';
 import 'package:flutter_dojo/category/backend/eventbus.dart';
 import 'package:flutter_dojo/category/backend/file.dart';
 import 'package:flutter_dojo/category/backend/generators.dart';
+import 'package:flutter_dojo/category/backend/inheritedwidgetpattern.dart';
 import 'package:flutter_dojo/category/backend/isolate.dart';
 import 'package:flutter_dojo/category/backend/json.dart';
 import 'package:flutter_dojo/category/backend/keeppressing.dart';
@@ -87,6 +88,14 @@ List<DemoItem> buildBackendCategoryList = [
     documentationUrl: '',
     keyword: 'Generators',
     buildRoute: (context) => BaseWidget('Generators', codePath + 'generators', GeneratorsWidget()),
+  ),
+  DemoItem(
+    icon: Icons.build,
+    title: 'InheritedWidgetPattern',
+    subtitle: 'InheritedWidgetPattern',
+    documentationUrl: '',
+    keyword: 'InheritedWidgetPattern',
+    buildRoute: (context) => BaseWidget('InheritedWidgetPattern', codePath + 'inheritedwidgetpattern', InheritedWidgetPattern()),
   ),
   DemoItem(
     icon: Icons.build,

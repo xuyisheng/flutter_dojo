@@ -5,30 +5,18 @@ class ProviderState1Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => Model1(modelValue: 1),
-      child: MainPage(),
-    );
-  }
-}
-
-class MainPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Flexible(
-          flex: 1,
-          child: ChildWidget1(),
+      create: (_) => TestModel(modelValue: 1),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ChildWidget1(),
+            SizedBox(height: 24),
+            ChildWidget2(),
+          ],
         ),
-        Flexible(
-          flex: 1,
-          child: ChildWidget2(),
-        ),
-        Flexible(
-          flex: 1,
-          child: Container(),
-        ),
-      ],
+      ),
     );
   }
 }
@@ -38,16 +26,16 @@ var style = TextStyle(color: Colors.white);
 class ChildWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var model = Provider.of<Model1>(context);
-
+    debugPrint('ChildWidget1 build');
+    var model = Provider.of<TestModel>(context);
     return Container(
-      constraints: BoxConstraints.expand(),
-      color: Colors.red,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      color: Colors.redAccent,
+      height: 48,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text('Child1', style: style),
-          Text('Modle data: ${model.value}', style: style),
+          Text('Model data: ${model.value}', style: style),
           RaisedButton(
             onPressed: () => model.add(),
             child: Text('add'),
@@ -61,16 +49,16 @@ class ChildWidget1 extends StatelessWidget {
 class ChildWidget2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var model = Provider.of<Model1>(context);
-
+    debugPrint('ChildWidget2 build');
+    var model = Provider.of<TestModel>(context);
     return Container(
-      constraints: BoxConstraints.expand(),
-      color: Colors.blue,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      color: Colors.blueAccent,
+      height: 48,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text('Child2', style: style),
-          Text('Modle data: ${model.value}', style: style),
+          Text('Model data: ${model.value}', style: style),
           RaisedButton(
             onPressed: () => model.add(),
             child: Text('add'),
@@ -81,12 +69,12 @@ class ChildWidget2 extends StatelessWidget {
   }
 }
 
-class Model1 with ChangeNotifier {
+class TestModel with ChangeNotifier {
   int modelValue;
 
   int get value => modelValue;
 
-  Model1({this.modelValue = 0});
+  TestModel({this.modelValue = 0});
 
   void add() {
     modelValue++;

@@ -9,15 +9,15 @@ class InheritedWidgetPattern extends StatelessWidget {
       child: Column(
         children: [
           MainTitleWidget('InheritedWidget使用的一般范式'),
-          AnotherViewController(),
-          ViewController(),
+          View2(),
+          View1(),
         ],
       ),
     );
   }
 }
 
-class ViewController extends StatelessWidget {
+class View1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final CustomModel model = ModelBinding.of<CustomModel>(context);
@@ -30,7 +30,7 @@ class ViewController extends StatelessWidget {
   }
 }
 
-class AnotherViewController extends StatelessWidget {
+class View2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text('Show text ${ModelBinding.of<CustomModel>(context).value}');

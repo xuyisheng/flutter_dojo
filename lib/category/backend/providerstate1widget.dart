@@ -59,8 +59,9 @@ class ChildWidget2 extends StatelessWidget {
         children: <Widget>[
           Text('Child2', style: style),
           Text('Model data: ${model.value}', style: style),
+          Text('watch: ${context.watch<TestModel>().value}', style: style),
           RaisedButton(
-            onPressed: () => model.add(),
+            onPressed: () => Provider.of<TestModel>(context, listen: false).add(),
             child: Text('add'),
           ),
         ],

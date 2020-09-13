@@ -24,10 +24,10 @@ class NewWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text('Child1', style: style),
-              Consumer(
+              Consumer<TestModel>(
                 builder: (BuildContext context, value, Widget child) {
                   return Text(
-                    'Model data: ${Provider.of<TestModel>(context).value}',
+                    'Model data: ${value.value}',
                     style: style,
                   );
                 },

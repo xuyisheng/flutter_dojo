@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dojo/category/backend/providerstate1widget.dart';
 import 'package:flutter_dojo/category/backend/providerstate2widget.dart';
 import 'package:flutter_dojo/category/backend/providerstate3widget.dart';
-import 'package:flutter_dojo/category/backend/providerstate5widget.dart';
+import 'package:flutter_dojo/category/backend/providerstate4widget.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 
 class ProviderStateWidget extends StatelessWidget {
@@ -59,12 +59,12 @@ class ProviderStateWidget extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => Scaffold(
-                  body: Center(child: ProviderState5Widget()),
+                  body: Center(child: ProviderState4Widget()),
                 ),
               ),
             );
           },
-          child: Text('data'),
+          child: Text('综合示例'),
         ),
       ],
     );

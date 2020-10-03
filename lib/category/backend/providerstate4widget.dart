@@ -3,19 +3,20 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 
-class ProviderState5Widget extends StatefulWidget {
+class ProviderState4Widget extends StatefulWidget {
   @override
-  _ProviderState5WidgetState createState() => _ProviderState5WidgetState();
+  _ProviderState4WidgetState createState() => _ProviderState4WidgetState();
 }
 
-class _ProviderState5WidgetState extends State<ProviderState5Widget> {
+class _ProviderState4WidgetState extends State<ProviderState4Widget> {
   DataModel data = DataModel();
   int pageIndex = 0;
+  int checkedCount = 0;
 
   @override
   void initState() {
     data.getData(pageIndex).then((value) {
-      setState(() => data = value);
+      setState(() => data.dataList = value);
     });
     super.initState();
   }
@@ -23,25 +24,33 @@ class _ProviderState5WidgetState extends State<ProviderState5Widget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Provider'),
-      ),
+      appBar: AppBar(title: Text('Provider')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            MainTitleWidget('title'),
+            MainTitleWidget('刷新 加载更多 收藏'),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() => data.dataList.clear());
+                    data.getData(0).then((value) {
+                      setState(() => data.dataList = value);
+                    });
+                  },
                   child: Text('Refresh'),
                 ),
                 RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    data.getData(++pageIndex).then((value) {
+                      setState(() => data.dataList = value);
+                    });
+                  },
                   child: Text('Load More'),
                 ),
-                Text('Checked'),
+                Text('Checked Count $checkedCount'),
               ],
             ),
             Expanded(
@@ -54,7 +63,19 @@ class _ProviderState5WidgetState extends State<ProviderState5Widget> {
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
                               children: [
-                                Checkbox(value: itemModel.isCheck, onChanged: (flag) {}),
+                                Checkbox(
+                                    value: itemModel.isCheck,
+                                    onChanged: (flag) {
+                                      setState(() {
+                                        var isCheck = itemModel.isCheck;
+                                        if (isCheck) {
+                                          checkedCount--;
+                                        } else {
+                                          checkedCount++;
+                                        }
+                                        return itemModel.isCheck = !isCheck;
+                                      });
+                                    }),
                                 Text(itemModel.title),
                                 Spacer(),
                                 Icon(Icons.favorite),
@@ -79,28 +100,31 @@ class _ProviderState5WidgetState extends State<ProviderState5Widget> {
 }
 
 class ItemModel {
-  final String title;
-  final bool isCheck;
-  final int likeCount;
+  String title;
+  bool isCheck;
+  int likeCount;
 
   ItemModel(this.title, this.isCheck, this.likeCount);
 }
 
 class DataModel {
   List<ItemModel> dataList = List();
-  int pageIndex = 0;
 
-  getData(int pageIndex) async {
+  Future<List<ItemModel>> getData(int pageIndex) async {
     List<ItemModel> items = await api.getListDataOfIndex(pageIndex);
     dataList.addAll(items);
+    return dataList;
   }
 }
 
 class API {
   Future<List<ItemModel>> getListDataOfIndex(int pageIndex) async {
     List<ItemModel> data = List();
-    Future.delayed(Duration(seconds: 2));
-    List.generate(10, (index) => (data.add(ItemModel('title $index Page $pageIndex', false, Random().nextInt(20) + 1))));
+    await Future.delayed(Duration(seconds: 3));
+    List.generate(
+      10,
+      (index) => (data.add(ItemModel('Title $index  @Page $pageIndex', false, Random().nextInt(20) + 1))),
+    );
     return data;
   }
 }

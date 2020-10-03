@@ -67,7 +67,7 @@ class _RollCardWithRotationState extends State<RollCardWithRotation> with Single
                 padding: EdgeInsets.symmetric(vertical: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(color: _color.withOpacity(0.2), border: Border.all(color: Colors.grey)),
-                child: FlutterLogo(colors: _color, size: double.maxFinite),
+                child: FlutterLogo(textColor: _color, size: double.maxFinite),
               ),
             );
           },
@@ -174,7 +174,7 @@ class CustomCard extends StatelessWidget {
         color: colors.shade50,
         border: Border.all(color: Color(0xFF9E9E9E)),
       ),
-      child: FlutterLogo(size: 100.0, colors: colors),
+      child: FlutterLogo(size: 100.0, textColor: colors),
     );
   }
 }

@@ -16,19 +16,17 @@ class FlutterLogoWidget extends StatelessWidget {
           FlutterLogo(
             size: 120,
             style: FlutterLogoStyle.horizontal,
-            colors: Colors.green,
+            textColor: Colors.green,
           ),
           FlutterLogo(
             size: 120,
             style: FlutterLogoStyle.stacked,
-            colors: Colors.yellow,
-            textColor: Colors.blue,
+            textColor: Colors.yellow,
           ),
           FlutterLogo(
             size: 120,
             style: FlutterLogoStyle.markOnly,
-            colors: Colors.red,
-            textColor: Colors.blue,
+            textColor: Colors.red,
           )
         ],
       ),

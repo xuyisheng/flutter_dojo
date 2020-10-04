@@ -3,6 +3,7 @@ import 'package:flutter_dojo/category/backend/providerstate1widget.dart';
 import 'package:flutter_dojo/category/backend/providerstate2widget.dart';
 import 'package:flutter_dojo/category/backend/providerstate3widget.dart';
 import 'package:flutter_dojo/category/backend/providerstate4widget.dart';
+import 'package:flutter_dojo/category/backend/providerstate5widget.dart';
 import 'package:flutter_dojo/common/main_title_widget.dart';
 
 class ProviderStateWidget extends StatelessWidget {
@@ -65,6 +66,20 @@ class ProviderStateWidget extends StatelessWidget {
             );
           },
           child: Text('综合示例'),
+        ),
+        MainTitleWidget('Provider不在App顶层共享跨页面数据'),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Scaffold(
+                  body: Center(child: ProviderState5Widget()),
+                ),
+              ),
+            );
+          },
+          child: Text('子路由'),
         ),
       ],
     );

@@ -18,6 +18,7 @@ class ProviderCategoryWidget extends StatelessWidget {
         createItem(context, 'ValueListenableProvider', CatalogValueListenableProvider()),
         createItem(context, 'StreamProvider', CatalogStreamProvider()),
         createItem(context, 'FutureProvider', CatalogFutureProvider()),
+        createItem(context, 'ProxyProvider', CatalogProxyProvider()),
         createItem(context, 'Selector', CatalogSelector()),
         createItem(context, 'Select', CatalogSelect()),
       ],
@@ -490,5 +491,67 @@ class SelectorModel extends ChangeNotifier {
   void increment2() {
     _count2++;
     notifyListeners();
+  }
+}
+
+class CatalogProxyProvider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: MultiProvider(
+          providers: [
+            ChangeNotifierProvider<PicModel>(create: (context) => PicModel()),
+            ProxyProvider<PicModel, SubmitModel>(update: (context, myModel, anotherModel) => SubmitModel(myModel)),
+          ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                '如果要提供两个Model，其中一个Model取决于另一个Model，在这种情况下，可以使用ProxyProvider。'
+                'ProxyProvider可以从一个Provider获取值，然后将其注入另一个Provider',
+                textAlign: TextAlign.center,
+              ),
+              Builder(
+                builder: (context) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('获取图片地址：${Provider.of<PicModel>(context).imageUrl}'),
+                  );
+                },
+              ),
+              Consumer<SubmitModel>(
+                builder: (context, model, child) {
+                  return RaisedButton(
+                    onPressed: model.submit,
+                    child: Text("submit image"),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class PicModel with ChangeNotifier {
+  String imageUrl = '';
+
+  Future upLoadPic() async {
+    await Future.delayed(Duration(seconds: 2));
+    imageUrl = 'https://cos........';
+    notifyListeners();
+  }
+}
+
+class SubmitModel {
+  PicModel _model;
+
+  SubmitModel(this._model);
+
+  submit() async {
+    await _model.upLoadPic();
   }
 }

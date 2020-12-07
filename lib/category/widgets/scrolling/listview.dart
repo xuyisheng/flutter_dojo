@@ -13,7 +13,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
   var scrollPhysics1 = NeverScrollableScrollPhysics();
   var scrollPhysics2 = BouncingScrollPhysics();
   var scrollPhysics3 = ClampingScrollPhysics();
-  var scrollDirection = Axis.vertical;
+  var scrollDirection = Axis.horizontal;
   var _currentIndex = 0;
 
   @override

@@ -12,15 +12,15 @@ class _PageStateWidgetState extends State<PageStateWidget> {
   List<BottomNavigationBarItem> navigationItem = [
     BottomNavigationBarItem(
       icon: Icon(Icons.home),
-      title: Text('Page1'),
+      label: 'Page1',
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.comment),
-      title: Text('Page2'),
+      label: 'Page2',
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.settings),
-      title: Text('Page3'),
+      label: 'Page3',
     ),
   ];
   final _widgetOptions = [

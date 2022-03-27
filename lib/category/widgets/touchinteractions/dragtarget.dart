@@ -48,7 +48,7 @@ class _DragTargetWidgetState extends State<DragTargetWidget> {
                       color: Colors.blue,
                       child: Text(
                         'Drag',
-                        style: Theme.of(context).textTheme.body1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ),
                   ),

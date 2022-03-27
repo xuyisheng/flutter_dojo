@@ -131,7 +131,7 @@ class ReadMoreTextState extends State<ReadMoreText> {
     final textDirection = widget.textDirection ?? Directionality.of(context);
     final textScaleFactor = widget.textScaleFactor ?? MediaQuery.textScaleFactorOf(context);
     final overflow = defaultTextStyle.overflow;
-    final locale = widget.locale ?? Localizations.localeOf(context, nullOk: true);
+    final locale = widget.locale ?? Localizations.localeOf(context);
 
     final colorClickableText = widget.colorClickableText ?? Theme.of(context).accentColor;
 

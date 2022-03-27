@@ -8,7 +8,7 @@ class FormWidget extends StatefulWidget {
 
 class _FormWidgetState extends State<FormWidget> {
   final formKey = GlobalKey<FormState>();
-  bool isAutoValidate = false;
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   var name;
   var tel;
   var email;
@@ -37,7 +37,7 @@ class _FormWidgetState extends State<FormWidget> {
         MainTitleWidget('Form AutoValidate'),
         Form(
           key: formKey,
-          autovalidate: isAutoValidate,
+          autovalidateMode: autovalidateMode,
           child: Column(
             children: <Widget>[
               TextFormField(
@@ -93,7 +93,7 @@ class _FormWidgetState extends State<FormWidget> {
       formKey.currentState.save();
     } else {
       // 输入后再开启自动检查
-      setState(() => isAutoValidate = true);
+      setState(() => autovalidateMode = AutovalidateMode.always);
     }
   }
 

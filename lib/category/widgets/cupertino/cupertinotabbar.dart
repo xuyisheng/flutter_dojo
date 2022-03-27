@@ -15,8 +15,8 @@ class _CupertinoTabBarWidgetState extends State<CupertinoTabBarWidget> {
         backgroundColor: Colors.grey,
         activeColor: Colors.red,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), title: Text('home')),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), title: Text('mine')),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: 'home'),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: 'mine'),
         ],
       ),
       tabBuilder: (BuildContext context, int index) {

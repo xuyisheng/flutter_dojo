@@ -7,8 +7,8 @@ class CupertinoTabScaffoldWidget extends StatelessWidget {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), title: Text('Item1')),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), title: Text('Item2')),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: 'Item1'),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: 'Item2'),
         ],
       ),
       tabBuilder: (BuildContext context, int index) {

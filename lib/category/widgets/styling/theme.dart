@@ -24,7 +24,7 @@ class ThemeWidget extends StatelessWidget {
           color: Theme.of(context).accentColor,
           child: Text(
             '通过Theme.of(context)使用Theme',
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
         MainTitleWidget('拓展Theme'),
@@ -32,7 +32,7 @@ class ThemeWidget extends StatelessWidget {
           color: Theme.of(context).copyWith(accentColor: Colors.cyan).accentColor,
           child: Text(
             '通过Theme.of(context).copyWith拓展Theme',
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
         MainTitleWidget('通过Theme统一样式'),
